@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import 'tailwindcss';
+/* @import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/preflight.css' layer(base);
+@import 'tailwindcss/utilities.css' layer(utilities); */
+/* @layer theme, base, components, utilities; */
+
+@theme {
+  --font-sans: 'Noto Sans JP', sans-serif;
+}
+
+@layer base {
+  * {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.7em;
+  }
+
+  h1 {
+    font-size: 2em;
+    line-height: 1em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .h1-inline {
+    display: inline;
+  }
+
+  .h2-inline {
+    margin-left: 1rem;
+    display: inline;
+  }
+
+  main {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  a {
+    color: var(--color-blue-600);
+    text-decoration-line: underline;
+  }
+}
