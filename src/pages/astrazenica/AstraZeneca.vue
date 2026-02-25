@@ -3,6 +3,9 @@
     <h1 class="text-red">AstraZeneca</h1>
 
     <Box>
+      <div class="w-3/5">
+        <Vue3Lottie :animationData="MRDashboard" speed="1" />
+      </div>
       <h1 class="h1-inline">AstraZeneca's Tool Problem</h1>
 
       <h2 class="h2-inline">(Astrazeneca K.K.)</h2>
@@ -14,12 +17,16 @@
         prototyping an improved medical representative tool.
       </h2>
     </Box>
+
     <Box>
       <h2 class="centered-text-box">
         The medical representatives already had 16 tools, we didn&apos;t want to design a 17th.
       </h2>
     </Box>
+
     <Box>
+      <img src="./images/02-workshop-planning.jpg" alt="" class="w-4/5" />
+
       <h2>Process</h2>
 
       <p>
@@ -61,10 +68,12 @@
 
     <Box>
       <h1>Primary Persona: High-Tech Hiroyuki</h1>
+      <img src="./images/03-hiroyuki.svg" alt="" class="w-4/5" />
     </Box>
 
     <Box>
       <h1>Secondary Persona: Reliable Tool Reiko</h1>
+      <img src="./images/04-reiko.svg" alt="" class="w-4/5" />
     </Box>
 
     <Box>
@@ -76,24 +85,40 @@
         determine a direction.
       </p>
 
+      <img src="./images/05-tower-of-the-sun.jpeg" alt="" class="w-2/5" />
+
       <p>Off to Osaka!</p>
+      <img src="./images/06-round-robin.jpeg" alt="" class="w-4/5" />
 
       <h2>5 Concepts to Rule Them All, Or Just Frankenstein Together</h2>
+      <div class="flex">
+        <img src="./images/07-game-changing-innovation.jpg" alt="" class="w-4/5" />
+        <img src="./images/08-memorever.jpg" alt="" class="w-4/5" />
+        <img src="./images/09-avengers-research-program.jpg" alt="" class="w-4/5" />
+        <img src="./images/10-suggestions-for-mrs.jpg" alt="" class="w-4/5" />
+        <img src="./images/11-champion-system.jpg" alt="" class="w-4/5" />
+      </div>
     </Box>
 
     <Box>
       <h2>A Nautical Themed Retro to Keep Things Fun</h2>
+      <img src="./images/12-retro-board.jpg" alt="" class="w-4/5" />
     </Box>
 
     <Box>
       <h2>Now It's Time To Start Storyboarding, Right?</h2>
+      <img src="./images/13-mr-storyboard.jpg" alt="" class="w-4/5" />
     </Box>
 
     <Box>
       <h2>So What Did We Make?</h2>
+      <img src="./images/14-az-clickable-prototype.gif" alt="" class="w-4/5" />
       <h2>Healthcare Provider Dashboard</h2>
+      <img src="./images/15-dashboard-landing page-description.svg" alt="" />
       <h2>Expanded Widget</h2>
+      <img src="./images/16-widget-detail.svg" alt="" />
       <h2>Data Input Page</h2>
+      <img src="./images/17-data-input.svg" alt="" />
     </Box>
 
     <Box>
@@ -120,4 +145,11 @@
 <script setup>
 import Box from '@/components/Box.vue'
 import Button from '@/components/Button.vue'
+import { Vue3Lottie } from 'vue3-lottie'
+import MRDashboard from './images/01-mr-dashboard-animation.json'
 </script>
+
+<!-- <script
+  src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"
+  type="module"
+></script> -->
