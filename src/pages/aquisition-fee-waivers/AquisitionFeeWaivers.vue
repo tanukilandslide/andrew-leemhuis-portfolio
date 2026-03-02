@@ -19,6 +19,7 @@
       "Acquisition fee waiver" is a fancy way word for a coupon to convince dealerships to choose
       Chrysler Capital over other auto lenders.
     </p>
+    <img src="./images/01_car-and-coupon.svg" alt="" class="w-4/5" />
   </Box>
 
   <Box>
@@ -34,11 +35,15 @@
       The current process includes mailing an excel document back and forth, leading to… less than
       accurate results…
     </h2>
+    <img src="./images/02_pong.svg" alt="" class="w-4/5" />
   </Box>
 
-  <Box></Box>
+  <Box>
+    <img src="./images/03-lender-dealer-customer-relationship.svg" alt="" class="w-4/5" />
+  </Box>
 
   <Box>
+    <img src="./images/04-rbm-map.svg" alt="" class="w-4/5" />
     <h2>Who will use the new software?</h2>
 
     <p>
@@ -50,6 +55,8 @@
 
   <Box>
     <h2>But what could be so bad about one spreadsheet O_O</h2>
+
+    <img src="./images/05-acq-fee-waiver-spreadsheet.PNG" alt="" class="w-4/5" />
 
     <h2>What&apos;s wrong with the current tool?</h2>
 
@@ -135,11 +142,20 @@
 
     <h4>1&rpar; In Progress</h4>
 
+    <img src="./images/06-in-progress.jpg" alt="" class="w-4/5" />
+
     <h4>2&rpar; Pending Approval</h4>
+
+    <img src="./images/07-pending-approval.jpg" alt="" class="w-4/5" />
 
     <h4>3&rpar; Manager Approved</h4>
 
-    <h2>Search</h2>
+    <img src="./images/08-manager-approved.jpg" alt="" class="w-4/5" />
+
+    <div class="flex">
+      <img src="./images/09-search-icon.svg" alt="" class="" />
+      <h2>Search</h2>
+    </div>
 
     <h3>
       Vehicles with acquisition fee waivers from the previous month often receive waivers this month
@@ -147,17 +163,26 @@
       cart.
     </h3>
 
+    <img src="./images/10-last-months-waivers.jpg" alt="" class="w-4/5" />
+
     <h3>
       Now the vehicles have been added and sorted by make and model with filters at the top for easy
       searching
     </h3>
 
-    <h2>Vehicle Cart</h2>
+    <img src="./images/11-vehicles-added.png" alt="" class="w-4/5" />
+
+    <div class="flex">
+      <img src="./images/12-cart-icon.svg" alt="" class="" />
+      <h2>Vehicle Cart</h2>
+    </div>
 
     <h3>
       Regional Brand Managers can update each vehicle&apos;s Acquisition Fee Waivers in one
       location&comma; using the same conceptual model as the shopping cart as storefront websites
     </h3>
+
+    <img src="./images/13-vehicle-cart.jpg" alt="" class="w-4/5" />
 
     <h2>Mass Update</h2>
 
@@ -167,6 +192,8 @@
       all. Updated waivers are outlined in blue.
     </h3>
 
+    <img src="./images/14-mass-update.jpg" alt="" class="w-4/5" />
+
     <h2>Mananger Review</h2>
     <h3>
       Managers can view all vehicles with adjusted Acquisition Fees, but cannot edit them. By
@@ -174,6 +201,8 @@
       become highlighted in red. Rejected waivers will be returned to Regional Brand Managers to get
       fixed.
     </h3>
+
+    <img src="./images/15-rejected-waivers.jpg" alt="" class="w-4/5" />
   </Box>
 
   <Box>
@@ -216,11 +245,15 @@
 
     <h2>Clear Action Confirmation Messaging</h2>
 
+    <img src="./images/16-system-notifications.jpg" alt="" class="w-4/5" />
+
     <h2>Search&sol;Vehicle Cart Toggle</h2>
     <h3>
       The &quot;Search&quot; and &quot;Vehicle Cart&quot; toggle have been combined to show their
       relationship. The toggle lives in a bar that stays on the bottom of the screen on scroll.
     </h3>
+
+    <img src="./images/17-page-toggle.jpg" alt="" class="w-4/5" />
 
     <h2>Checkbox Adds to Cart</h2>
     <h3>
@@ -228,12 +261,16 @@
       vehicle to the cart without needing an &quot;Add To Cart&quot; button
     </h3>
 
+    <img src="./images/18-checkbox-added-to-cart.jpg" alt="" class="w-4/5" />
+
     <h2>Rejected Vehicles are Shown at Top of List</h2>
     <h3>
       When a manager rejects vehicles elected for acquisition fee waivers&comma; they get returned
       to the Regional Brand Manager for revision. Those rejected vehicles are collected in a list at
       the top to avoid requireing searching through hundreds of rows of vehicles.
     </h3>
+
+    <img src="./images/19-rejected-waivers.jpg" alt="" class="w-4/5" />
   </Box>
 
   <Box>
