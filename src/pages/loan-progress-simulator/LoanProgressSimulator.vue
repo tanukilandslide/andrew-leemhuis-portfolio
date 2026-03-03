@@ -15,7 +15,7 @@
     <h2>Don't want to read? Watch the case study I created for our World Design Summit!</h2>
   </Box>
 
-  <Box>
+  <SlidingBox>
     <h2>What is Simple Interest</h2>
 
     <p>
@@ -25,7 +25,7 @@
     </p>
 
     <h2>Principal × (Interest Rate ÷ 365 ) = Daily Interest</h2>
-  </Box>
+  </SlidingBox>
 
   <Box>
     <h2>How customers think simple interest works:</h2>
@@ -217,4 +217,5 @@
 <script setup>
 import Box from '@/components/Box.vue'
 import Button from '@/components/Button.vue'
+import SlidingBox from '@/components/SlidingBox.vue';
 </script>
