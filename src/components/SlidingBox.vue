@@ -1,10 +1,12 @@
 <template>
-<div class=" h-[75vh] sticky top-5">
-  <box>
-    <slot>
+<div class=" h-[75vh]">
+  <div class="sticky top-5">
+    <box>
+      <slot>
 
-    </slot>
-  </box>
+      </slot>
+    </box>
+  </div>
 </div>
 
 </template>
