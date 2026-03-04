@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="max-w-[980px]">
     <h1>Homepage</h1>
     <RouterLink v-for="project in projects" :to="'/' + project.url">
       <project-badge :project-name="project.name" />

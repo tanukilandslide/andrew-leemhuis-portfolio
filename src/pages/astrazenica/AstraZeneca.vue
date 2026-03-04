@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="max-w-[980px]">
     <h1 class="text-red">AstraZeneca</h1>
 
     <Box>
