@@ -1,6 +1,11 @@
 <template>
+  <banner />
   <main class="max-w-[980px]">
     <Box>
+      <img
+        src="./images/02_Robo_Calendar.jpg"
+        alt="Robot showing a calendar to a warehouse employee"
+      />
       <h1 class="h1-inline">Links HME Marketing Website</h1>
 
       <h2 class="h2-inline">(Links HME)</h2>
@@ -31,6 +36,7 @@
 </template>
 
 <script setup>
+import Banner from './components/Banner.vue'
 import Box from '@/components/Box.vue'
 import Button from '@/components/Button.vue'
 </script>

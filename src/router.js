@@ -32,7 +32,11 @@ const router = createRouter({
     },
     {path: '/personal-projects', component: PersonalProjects},
     {path: '/:notFound(.*)', component: NotFound}
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    // always scroll to top
+    return { top: 0 }
+  },
 })
 
 export default router
