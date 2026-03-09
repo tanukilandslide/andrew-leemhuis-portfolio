@@ -1,27 +1,34 @@
 <template>
   <Banner />
   <main class="max-w-[980px]">
-    <Box>
-      <h1>Research</h1>
-      <p>
-        Being new to the Home Medical Equipment (HME) industry, I knew it was critical to understand
-        the needs of the stakeholders. I began interviewing key decision makers to understand what
-        message our website needed to convey.
-      </p>
+    <Box class="">
+      <div class="">
+        <h1>Research</h1>
+        <p>
+          Being new to the Home Medical Equipment (HME) industry, I knew it was critical to
+          understand the needs of the stakeholders. I began interviewing key decision makers to
+          understand what message our website needed to convey.
+        </p>
 
-      <p>
-        It was difficult pulling key members from their duties, but after interviewing a customer
-        service manager, a billing manager, a vice president, an HR manager, a trainer, and the IT
-        administrator, I felt I had a solid foundation of information about the company.
-      </p>
+        <p>
+          It was difficult pulling key members from their duties, but after interviewing a customer
+          service manager, a billing manager, a vice president, an HR manager, a trainer, and the IT
+          administrator, I felt I had a solid foundation of information about the company.
+        </p>
 
-      <h2>Research Findings</h2>
+        <h2>Research Findings</h2>
 
-      <p>
-        After completing all interviews, it was time to compile the info. I created an affinity
-        diagram by writing out my notes on sticky notes and grouping on a white board. Groups with
-        greater numbers of sticky notes indicated themes that should be addressed on the website.
-      </p>
+        <p>
+          After completing all interviews, it was time to compile the info. I created an affinity
+          diagram by writing out my notes on sticky notes and grouping on a white board. Groups with
+          greater numbers of sticky notes indicated themes that should be addressed on the website.
+        </p>
+      </div>
+      <img
+        src="./images/03_affinity_diagram.jpg"
+        alt="Whiteboard with copious amounts of sticky notes arranged in an affinity diagram"
+        class=""
+      />
     </Box>
 
     <Box>
@@ -35,6 +42,10 @@
     </Box>
 
     <Box>
+      <img
+        src="./images/04_craig.jpg"
+        alt="CEO of the company, Craig, sitting in a business suit, looking attentive to customer's needs"
+      />
       <h1 class="persona_h1">Craig (53): Primary Persona</h1>
 
       <h2>Owner</h2>
@@ -73,6 +84,8 @@
     </Box>
 
     <Box>
+      <img src="./images/05_kaitlin.jpg" alt="" />
+
       <h1 class="persona_h1">Kaitlin (31): Secondary Persona</h1>
 
       <h2>Customer Service Representative</h2>
@@ -113,6 +126,8 @@
     </Box>
 
     <Box>
+      <img src="./images/06_frank.jpg" alt="" />
+
       <h1 class="persona_h1">Frank (35)</h1>
 
       <h2>Trainer/Compliance</h2>
