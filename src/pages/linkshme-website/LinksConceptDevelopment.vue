@@ -12,6 +12,18 @@
     </Box>
 
     <Box>
+      <h2>Competitor's Websites</h2>
+      <div class="">
+        <img src="./images/07_brightree.jpg" alt="" class="" />
+        <img src="./images/08_team_dme.jpg" alt="" class="" />
+      </div>
+      <div class="">
+        <img src="./images/09_bflow.jpg" alt="" class="" />
+        <img src="./images/10_dme_works.jpg" alt="" class="" />
+      </div>
+    </Box>
+
+    <Box>
       <h2>Competitive Analysis</h2>
       <p>
         Through my competitive analysis of the voice and tone of other sites I determined which
@@ -19,9 +31,9 @@
         opposing words to show where each company&apos;s tone lay relative to other companies. This
         made apparent where Links HME could distinguish itself from the competition.
       </p>
-    </Box>
 
-    <Box> </Box>
+      <img src="./images/11_voice_and_tone_comparison.svg" alt="" />
+    </Box>
 
     <Box>
       <h2>Competitive Analysis</h2>
@@ -86,13 +98,12 @@
     </Box>
 
     <Box>
+      <img
+        class="error_robot"
+        src="./images/12_error_robot.png"
+        alt="Robot being resuscitated by a mechanic using a defibrillator"
+      />
       <h2>Error Message</h2>
-
-      <!-- <img
-      class="error_robot"
-      src="images/12_error_robot.png"
-      alt="Robot being resuscitated by a mechanic using a defibrillator"
-    /> -->
 
       <h4>Who</h4>
       <p>Kaitlin Summers (Customer Service Representative)</p>
