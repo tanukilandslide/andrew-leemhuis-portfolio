@@ -7,6 +7,10 @@
 
 @theme {
   --font-sans: 'Noto Sans JP', sans-serif;
+
+  --color-summer: #914626;
+
+  --color-winter: #3a6185;
 }
 
 @layer base {

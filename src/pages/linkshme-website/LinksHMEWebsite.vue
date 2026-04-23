@@ -1,6 +1,6 @@
 <template>
   <banner />
-  <main class="max-w-[980px]">
+  <main class="max-w-245">
     <Box>
       <img
         src="./images/02_Robo_Calendar.jpg"
@@ -39,4 +39,9 @@
 import Banner from './components/Banner.vue'
 import Box from '@/components/Box.vue'
 import Button from '@/components/Button.vue'
+import { useCounterStore } from '@/stores/counter'
+
+const store = useCounterStore()
+
+store.setNavbarColor('white')
 </script>

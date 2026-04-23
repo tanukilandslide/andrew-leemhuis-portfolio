@@ -1,36 +1,38 @@
 <template>
-<div class="bg-blue-100">
-    <div class="nav-bar">
-      <div class="content">
-        <div class="nav-bar-content flex">
-          <header>
-            <a href="../index.html">
-              <RouterLink to="/">
-                <div class="logo">
-                  <h1 class="logo-name">Andrew Leemhuis</h1>
-                  <h2 class="logo-subtitle">UX Design Portfolio</h2>
-                </div>
-              </RouterLink>
-            </a>
-          </header>
+  <div :class="`bg-${store.navbarColor} py-3 px-3`">
+    <div class="flex justify-between items-center max-w-245 mx-auto">
+      <header>
+        <RouterLink to="/" class="no-underline text-white font-bold">
+          <h1>Andrew Leemhuis</h1>
+          <h2>UX Development Portfolio</h2>
+        </RouterLink>
+      </header>
 
-          <nav>
-            <ul class="navigation">
-              <!-- <a href="index.html"><button><li class="nav-item">Projects</li></button></a> -->
+      <nav>
+        <ul class="flex gap-5">
+          <!-- <a href="index.html"><button><li class="nav-item">Projects</li></button></a> -->
 
-              <a href="files/andrew-leemhuis-resume-a4.pdf" target="_blank"
-                ><button><li class="nav-item">Resume</li></button></a
-              >
+          <a
+            href="/public/andrew-leemhuis-resume.pdf"
+            class="no-underline text-white border rounded-full px-4 py-2 my-auto"
+          >
+            <li class="">Resume</li>
+          </a>
 
-              <a href="about/about.html"
-                ><button>
-                  <li class="nav-item"><RouterLink to="/about">About</RouterLink></li>
-                </button></a
-              >
-            </ul>
-          </nav>
-        </div>
-      </div>
+          <RouterLink
+            to="/about"
+            class="no-underline text-white border rounded-full px-4 py-2 my-auto"
+          >
+            <li class="">About</li>
+          </RouterLink>
+        </ul>
+      </nav>
     </div>
   </div>
 </template>
+
+<script setup>
+import { useCounterStore } from '@/stores/counter'
+
+const store = useCounterStore()
+</script>

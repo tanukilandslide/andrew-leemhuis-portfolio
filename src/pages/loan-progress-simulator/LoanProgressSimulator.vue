@@ -237,4 +237,9 @@
 import Box from '@/components/Box.vue'
 import Button from '@/components/Button.vue'
 import SlidingBox from '@/components/SlidingBox.vue'
+import { useCounterStore } from '@/stores/counter'
+
+const store = useCounterStore()
+
+store.setNavbarColor('summer')
 </script>

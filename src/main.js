@@ -5,9 +5,9 @@ import router from './router'
 import Vue3Lottie from 'vue3-lottie'
 
 const app = createApp(App)
-
-app.use(createPinia())
+const pinia = createPinia()
 
 app.use(router)
+app.use(pinia)
 
 app.use(Vue3Lottie).mount('#app')
