@@ -1,5 +1,5 @@
 <template>
-  <div :class="`bg-${store.navbarColor} py-3 px-3`">
+  <div :class="`bg-${store.navbarColor} py-3`">
     <div class="flex justify-between items-center max-w-245 mx-auto">
       <header>
         <RouterLink to="/" class="no-underline text-white font-bold">

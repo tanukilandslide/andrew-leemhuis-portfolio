@@ -1,10 +1,11 @@
 <template>
+  <div class="h-screen">
+    <NavBar class="px-3"></NavBar>
 
-  <NavBar></NavBar>
-
-  <router-view></router-view>
+    <router-view class="px-3"></router-view>
+  </div>
 </template>
 
 <script setup>
-  import NavBar from './components/NavBar.vue';
+import NavBar from './components/NavBar.vue'
 </script>
