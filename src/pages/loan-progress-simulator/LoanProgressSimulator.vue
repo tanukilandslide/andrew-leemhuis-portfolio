@@ -1,5 +1,5 @@
 <template>
-  <main class="max-w-[980px]">
+  <main class="max-w-245 bg-loanprogresssimulator">
     <Box>
       <h1 class="h1-inline">Loan Progress Simulator</h1>
 
@@ -241,5 +241,5 @@ import { useCounterStore } from '@/stores/counter'
 
 const store = useCounterStore()
 
-store.setNavbarColor('summer')
+store.setNavbarColor('loanprogresssimulator')
 </script>

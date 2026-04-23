@@ -1,5 +1,5 @@
 <template>
-  <main class="max-w-[980px]">
+  <main class="max-w-245 bg-acquisitionfeewaivers">
     <Box>
       <h1 class="h1-inline">Chrysler Capital: Acquisition Fee Waivers</h1>
 
@@ -8,9 +8,9 @@
       </h2>
 
       <p>
-        Chrysler Capital, a collaboration between the automotive manufacturing corporation Stellantis
-        and the auto lending company Santander Consumer USA, needed to improve their method of
-        communicating which cars to provide discounts to each month.
+        Chrysler Capital, a collaboration between the automotive manufacturing corporation
+        Stellantis and the auto lending company Santander Consumer USA, needed to improve their
+        method of communicating which cars to provide discounts to each month.
       </p>
     </Box>
 
@@ -26,8 +26,8 @@
     <Box>
       <h2>
         Because Chrysler Capital and Stellantis are two separate companies, they must communicate
-        which vehicles in which regions need a coupon (aquisition fee waiver) to stay competitive with
-        other lending companies.
+        which vehicles in which regions need a coupon (aquisition fee waiver) to stay competitive
+        with other lending companies.
       </h2>
     </Box>
 
@@ -86,8 +86,8 @@
       <title>Excel Pong, now with 100% more servers</title>
       <desc
         >A Pong-like game screen with Stellantis's paddle on the left side and Chrysler Capital's
-        paddle on the other with a server in the middle bouncing two separate excel documents with the
-        paddles.</desc
+        paddle on the other with a server in the middle bouncing two separate excel documents with
+        the paddles.</desc
       >
     </Box>
 
@@ -159,16 +159,16 @@
       </div>
 
       <h3>
-        Vehicles with acquisition fee waivers from the previous month often receive waivers this month
-        as well&comma; so I added the ability to quickly select those vehicles and add them to the
-        cart.
+        Vehicles with acquisition fee waivers from the previous month often receive waivers this
+        month as well&comma; so I added the ability to quickly select those vehicles and add them to
+        the cart.
       </h3>
 
       <img src="./images/10-last-months-waivers.jpg" alt="" class="w-4/5" />
 
       <h3>
-        Now the vehicles have been added and sorted by make and model with filters at the top for easy
-        searching
+        Now the vehicles have been added and sorted by make and model with filters at the top for
+        easy searching
       </h3>
 
       <img src="./images/11-vehicles-added.png" alt="" class="w-4/5" />
@@ -188,9 +188,9 @@
       <h2>Mass Update</h2>
 
       <h3>
-        By clicking the checkboxes on the left&comma; the mass update feature is activated. A user can
-        either remove a group of vehicles from the cart or enter a value on the top row and update
-        all. Updated waivers are outlined in blue.
+        By clicking the checkboxes on the left&comma; the mass update feature is activated. A user
+        can either remove a group of vehicles from the cart or enter a value on the top row and
+        update all. Updated waivers are outlined in blue.
       </h3>
 
       <img src="./images/14-mass-update.jpg" alt="" class="w-4/5" />
@@ -199,8 +199,8 @@
       <h3>
         Managers can view all vehicles with adjusted Acquisition Fees, but cannot edit them. By
         clicking the note icon on the left, they can reject individual waivers&comma; which then
-        become highlighted in red. Rejected waivers will be returned to Regional Brand Managers to get
-        fixed.
+        become highlighted in red. Rejected waivers will be returned to Regional Brand Managers to
+        get fixed.
       </h3>
 
       <img src="./images/15-rejected-waivers.jpg" alt="" class="w-4/5" />
@@ -217,15 +217,16 @@
       <ul>
         <li>System feedback is essential when adding and removing vehicles</li>
         <li>
-          Users would like to be able to download an excel file once acquisition fee waivers have been
-          approved
+          Users would like to be able to download an excel file once acquisition fee waivers have
+          been approved
         </li>
         <li>
           Users needed to understand that the Search/Vehicle Cart button is a toggle, and the
           iconography needs to be consistent
         </li>
         <li>
-          Users would like to have a list of the rejected acquisition fee waivers to fix them quickly
+          Users would like to have a list of the rejected acquisition fee waivers to fix them
+          quickly
         </li>
         <li>More specificity in button names</li>
       </ul>
@@ -267,8 +268,8 @@
       <h2>Rejected Vehicles are Shown at Top of List</h2>
       <h3>
         When a manager rejects vehicles elected for acquisition fee waivers&comma; they get returned
-        to the Regional Brand Manager for revision. Those rejected vehicles are collected in a list at
-        the top to avoid requireing searching through hundreds of rows of vehicles.
+        to the Regional Brand Manager for revision. Those rejected vehicles are collected in a list
+        at the top to avoid requireing searching through hundreds of rows of vehicles.
       </h3>
 
       <img src="./images/19-rejected-waivers.jpg" alt="" class="w-4/5" />
@@ -280,7 +281,9 @@
       <p>Now that the designs have been signed off on, the next steps are&colon;</p>
 
       <ol>
-        <li>Shepherding the development of the tool and any questions or changes that are needed</li>
+        <li>
+          Shepherding the development of the tool and any questions or changes that are needed
+        </li>
         <li>QA and UAT testing</li>
         <li>
           Future development may also add more of the functionality of the current spreadsheet tool
@@ -311,4 +314,9 @@
 <script setup>
 import Box from '@/components/Box.vue'
 import Button from '@/components/Button.vue'
+import { useCounterStore } from '@/stores/counter'
+
+const store = useCounterStore()
+
+store.setNavbarColor('acquisitionfeewaivers')
 </script>

@@ -1,16 +1,14 @@
 <template>
-  <main class="max-w-[980px]">
+  <main class="max-w-[980px] bg-astrazeneca">
     <h1 class="text-red">AstraZeneca</h1>
 
     <Box>
-      <div class="w-3/5">
-        <Vue3Lottie :animationData="MRDashboard" speed="1" />
+      <div class="w-3/5 mx-auto">
+        <Vue3Lottie class="rounded-xl" :animationData="MRDashboard" speed="1" />
       </div>
       <h1 class="h1-inline">AstraZeneca's Tool Problem</h1>
 
       <h2 class="h2-inline">(Astrazeneca K.K.)</h2>
-
-      <p>This is a paragraph</p>
 
       <h2>
         Role: Contract UX designer tasked with researching&comma; conceptualizing&comma; and
@@ -147,6 +145,11 @@ import Box from '@/components/Box.vue'
 import Button from '@/components/Button.vue'
 import { Vue3Lottie } from 'vue3-lottie'
 import MRDashboard from './images/01-mr-dashboard-animation.json'
+import { useCounterStore } from '@/stores/counter'
+
+const store = useCounterStore()
+
+store.setNavbarColor('astrazeneca')
 </script>
 
 <!-- <script

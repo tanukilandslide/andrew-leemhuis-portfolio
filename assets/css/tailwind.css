@@ -13,6 +13,14 @@
   --color-summer: #914626;
 
   --color-winter: #3a6185;
+
+  --color-astrazeneca: #7f1f50;
+
+  --color-loanprogresssimulator: #e2f4fa;
+
+  --color-acquisitionfeewaivers: #2e76ad;
+
+  --color-linkshmewebsite: #e2f4fa;
 }
 
 @layer base {

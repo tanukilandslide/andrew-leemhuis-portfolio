@@ -1,6 +1,6 @@
 <template>
   <banner />
-  <main class="max-w-245">
+  <main class="max-w-245 bg-linkshmewebsite">
     <Box>
       <img
         src="./images/02_Robo_Calendar.jpg"
@@ -43,5 +43,5 @@ import { useCounterStore } from '@/stores/counter'
 
 const store = useCounterStore()
 
-store.setNavbarColor('white')
+store.setNavbarColor('linkshmewebsite')
 </script>
