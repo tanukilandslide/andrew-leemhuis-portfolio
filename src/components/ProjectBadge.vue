@@ -1,6 +1,8 @@
 <template>
-  <logo class="w-16 h-16"></logo>
-  <h2>{{ projectName }}</h2>
+  <div class="flex flex-col items-center">
+    <img :src="logo" alt="" class="w-20" />
+    <h2 class="text-white">{{ projectName }}</h2>
+  </div>
 </template>
 
 <script setup>

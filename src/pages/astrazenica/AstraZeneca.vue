@@ -1,7 +1,5 @@
 <template>
   <main class="max-w-[980px] bg-astrazeneca">
-    <h1 class="text-red">AstraZeneca</h1>
-
     <Box>
       <div class="w-3/5 mx-auto">
         <Vue3Lottie class="rounded-xl" :animationData="MRDashboard" speed="1" />

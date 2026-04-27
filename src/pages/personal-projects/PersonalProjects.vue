@@ -1,6 +1,5 @@
 <template>
   <main class="max-w-[980px]">
-    <h1>Personal Projects</h1>
     <ImageGallery :image-set="currentProject.images"></ImageGallery>
     <div class="flex justify-between">
       <div

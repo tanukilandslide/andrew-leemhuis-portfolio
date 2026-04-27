@@ -1,5 +1,5 @@
 <template>
-  <div :class="'h-screen bg-' + store.navbarColor">
+  <div :class="' bg-' + store.navbarColor">
     <NavBar class="px-3"></NavBar>
 
     <router-view class="px-3"></router-view>
