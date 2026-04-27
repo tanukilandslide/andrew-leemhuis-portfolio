@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen">
+  <div :class="'h-screen bg-' + store.navbarColor">
     <NavBar class="px-3"></NavBar>
 
     <router-view class="px-3"></router-view>
@@ -8,4 +8,7 @@
 
 <script setup>
 import NavBar from './components/NavBar.vue'
+import { useStyleStore } from '@/stores/styles'
+
+const store = useStyleStore()
 </script>

@@ -1,8 +1,8 @@
 <template>
-  <main :class="'max-w-245 bg-' + store.navbarColor">
+  <main :class="'max-w-245 bg-' + useStyleStore().navbarColor">
     <div class="flex flex-wrap content-center justify-center gap-20 h-[80vh]">
       <RouterLink class="no-underline text-white" v-for="project in projects" :to="project.url">
-        <project-badge :project-name="project.name" />
+        <project-badge :project-name="project.name" :logo="project.logo" />
       </RouterLink>
     </div>
   </main>
@@ -10,14 +10,14 @@
 
 <script setup>
 import ProjectBadge from '@/components/ProjectBadge.vue'
-import { useCounterStore } from '@/stores/counter'
+import { useStyleStore } from '@/stores/styles'
 
-const store = useCounterStore()
+const store = useStyleStore()
 
-store.setNavbarColor('winter')
+store.setNavbarColor('summer')
 
 const projects = [
-  { name: 'AstraZeneca', url: 'astrazeneca', logo: 'astrazeneca' },
+  { name: 'AstraZeneca', url: '/astrazeneca', logo: 'astrazeneca' },
   {
     name: 'Loan Progress Simulator',
     url: '/loan-progress-simulator',

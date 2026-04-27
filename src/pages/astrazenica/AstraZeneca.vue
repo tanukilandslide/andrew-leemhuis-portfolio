@@ -145,9 +145,9 @@ import Box from '@/components/Box.vue'
 import Button from '@/components/Button.vue'
 import { Vue3Lottie } from 'vue3-lottie'
 import MRDashboard from './images/01-mr-dashboard-animation.json'
-import { useCounterStore } from '@/stores/counter'
+import { useStyleStore } from '@/stores/styles'
 
-const store = useCounterStore()
+const store = useStyleStore()
 
 store.setNavbarColor('astrazeneca')
 </script>

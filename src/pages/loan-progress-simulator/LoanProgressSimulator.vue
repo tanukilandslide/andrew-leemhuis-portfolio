@@ -237,9 +237,9 @@
 import Box from '@/components/Box.vue'
 import Button from '@/components/Button.vue'
 import SlidingBox from '@/components/SlidingBox.vue'
-import { useCounterStore } from '@/stores/counter'
+import { useStyleStore } from '@/stores/styles'
 
-const store = useCounterStore()
+const store = useStyleStore()
 
 store.setNavbarColor('loanprogresssimulator')
 </script>

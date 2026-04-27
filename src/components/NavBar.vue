@@ -32,7 +32,7 @@
 </template>
 
 <script setup>
-import { useCounterStore } from '@/stores/counter'
+import { useStyleStore } from '@/stores/styles'
 
-const store = useCounterStore()
+const store = useStyleStore()
 </script>
