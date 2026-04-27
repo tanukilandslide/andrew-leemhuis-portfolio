@@ -15,11 +15,11 @@
         </h2>
       </Box>
 
-      <Box>
+      <SlidingBox>
         <h2 class="centered-text-box px-20 text-center m-0">
           The medical representatives already had 16 tools, we didn&apos;t want to design a 17th.
         </h2>
-      </Box>
+      </SlidingBox>
 
       <Box>
         <img src="./images/02-workshop-planning.jpg" alt="" class="w-4/5 m-auto mb-5" />
@@ -37,7 +37,7 @@
         </p>
       </Box>
 
-      <Box>
+      <SlidingBox>
         <h2>Medical Representative Tasks</h2>
 
         <p>What we found was that medical representatives have four distinct times of day:</p>
@@ -61,7 +61,7 @@
             for internal, strategic AstraZeneca use
           </li>
         </ol>
-      </Box>
+      </SlidingBox>
 
       <Box>
         <h1 class="mb-5">Primary Persona: High-Tech Hiroyuki</h1>
@@ -98,15 +98,15 @@
         </div>
       </Box>
 
-      <Box>
+      <SlidingBox>
         <h2>A Nautical Themed Retro to Keep Things Fun</h2>
         <img src="./images/12-retro-board.jpg" alt="" class="w-4/5 m-auto" />
-      </Box>
+      </SlidingBox>
 
-      <Box>
+      <SlidingBox>
         <h2>Now It's Time To Start Storyboarding, Right?</h2>
         <img src="./images/13-mr-storyboard.jpg" alt="" class="w-4/5 m-auto" />
-      </Box>
+      </SlidingBox>
 
       <Box>
         <h2>So What Did We Make?</h2>
@@ -149,6 +149,7 @@ import Button from '@/components/Button.vue'
 import { Vue3Lottie } from 'vue3-lottie'
 import MRDashboard from './images/01-mr-dashboard-animation.json'
 import { useStyleStore } from '@/stores/styles'
+import SlidingBox from '@/components/SlidingBox.vue'
 
 const store = useStyleStore()
 
