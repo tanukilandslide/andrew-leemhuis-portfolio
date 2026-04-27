@@ -5,10 +5,18 @@ export const useStyleStore = defineStore('styles', () => {
 
   let navbarColor = ref('')
 
+  let backgroundColor = ref('')
+
   function setNavbarColor(newColor) {
     navbarColor.value = newColor
     console.log(navbarColor.value)
     return navbarColor.value
+  }
+
+    function setBackgroundColor(newColor) {
+    backgroundColor.value = newColor
+    console.log(navbarColor.value)
+    return backgroundColor.value
   }
 
   const count = ref(4)
@@ -30,5 +38,16 @@ export const useStyleStore = defineStore('styles', () => {
   })
 
 
-  return { count, doubleCount, increment, date, simpleDate, doubleCountValue,navbarColor, setNavbarColor }
+  return {
+    count,
+    doubleCount,
+    increment,
+    date,
+    simpleDate,
+    doubleCountValue,
+    navbarColor,
+    backgroundColor,
+    setNavbarColor,
+    setBackgroundColor
+    }
 })

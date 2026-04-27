@@ -1,11 +1,13 @@
 <template>
-  <main :class="'max-w-245 bg-' + useStyleStore().navbarColor">
-    <div class="flex flex-wrap content-center justify-center gap-20 h-[87vh]">
-      <RouterLink v-for="project in projects" class="no-underline" :to="project.url">
-        <project-badge :project-name="project.name" :logo="project.logo" />
-      </RouterLink>
-    </div>
-  </main>
+  <div :class="'w-screen bg-' + store.backgroundColor">
+    <main :class="'max-w-245'">
+      <div class="flex flex-wrap content-center justify-center gap-20 h-[88vh]">
+        <RouterLink v-for="project in projects" class="no-underline" :to="project.url">
+          <project-badge :project-name="project.name" :logo="project.logo" />
+        </RouterLink>
+      </div>
+    </main>
+  </div>
 </template>
 
 <script setup>
@@ -15,6 +17,8 @@ import { useStyleStore } from '@/stores/styles'
 const store = useStyleStore()
 
 store.setNavbarColor('summer')
+
+store.setBackgroundColor('summer')
 
 const projects = [
   {

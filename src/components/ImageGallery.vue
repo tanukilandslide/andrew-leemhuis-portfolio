@@ -1,5 +1,4 @@
 <template>
-  <h2>Image Gallery</h2>
   <div class="flex w-full gap-3">
     <img
       :src="`/src/pages/personal-projects/images/${heroImage}`"

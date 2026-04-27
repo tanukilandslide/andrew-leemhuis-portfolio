@@ -1,8 +1,8 @@
 <template>
-  <div :class="' bg-' + store.navbarColor">
-    <NavBar class="px-3"></NavBar>
+  <div>
+    <NavBar></NavBar>
 
-    <router-view class="px-3"></router-view>
+    <router-view></router-view>
   </div>
 </template>
 

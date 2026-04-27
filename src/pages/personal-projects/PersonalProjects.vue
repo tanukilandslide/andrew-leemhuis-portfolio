@@ -1,27 +1,35 @@
 <template>
-  <main class="max-w-[980px]">
-    <ImageGallery :image-set="currentProject.images"></ImageGallery>
-    <div class="flex justify-between">
-      <div
-        v-for="project in projects"
-        :key="project"
-        class="cursor-pointer"
-        @click="setProject(project)"
-      >
-        <h3>{{ project.name }}</h3>
-        <img
-          :src="`/src/pages/personal-projects/images/${project.thumbnail}`"
-          alt=""
-          class="rounded-full"
-        />
+  <div :class="'w-screen bg-' + store.backgroundColor">
+    <main class="max-w-[980px]">
+      <ImageGallery :image-set="currentProject.images"></ImageGallery>
+      <div class="flex justify-between">
+        <div
+          v-for="project in projects"
+          :key="project"
+          class="cursor-pointer"
+          @click="setProject(project)"
+        >
+          <h3>{{ project.name }}</h3>
+          <img
+            :src="`/src/pages/personal-projects/images/${project.thumbnail}`"
+            alt=""
+            class="rounded-full"
+          />
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
+  </div>
 </template>
 
 <script setup>
 import ImageGallery from '@/components/ImageGallery.vue'
 import { ref } from 'vue'
+import { useStyleStore } from '@/stores/styles'
+
+const store = useStyleStore()
+
+store.setNavbarColor('summer')
+store.setBackgroundColor('summer')
 
 const projects = [
   {

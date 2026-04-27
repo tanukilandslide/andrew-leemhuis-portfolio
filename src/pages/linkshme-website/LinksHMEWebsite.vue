@@ -1,38 +1,40 @@
 <template>
-  <banner />
-  <main class="max-w-245 bg-linkshmewebsite">
-    <Box>
-      <img
-        src="./images/02_Robo_Calendar.jpg"
-        alt="Robot showing a calendar to a warehouse employee"
-      />
-      <h1 class="h1-inline">Links HME Marketing Website</h1>
+  <div :class="'w-screen bg-' + store.backgroundColor">
+    <banner />
+    <main class="max-w-245 bg-linkshmewebsite">
+      <Box>
+        <img
+          src="./images/02_Robo_Calendar.jpg"
+          alt="Robot showing a calendar to a warehouse employee"
+        />
+        <h1 class="h1-inline">Links HME Marketing Website</h1>
 
-      <h2 class="h2-inline">(Links HME)</h2>
+        <h2 class="h2-inline">(Links HME)</h2>
 
-      <h2>
-        Role: Lead UX Designer assigned with designing Links HME&apos;s customer facing website
-      </h2>
+        <h2>
+          Role: Lead UX Designer assigned with designing Links HME&apos;s customer facing website
+        </h2>
 
-      <p>
-        A home medical equipment startup, Links HME, had been designing enterprise software to
-        facilitate monthly medical supply delivery, billing, and inventory, but lacked a web
-        presence. My first task as their lead UX Designer was to create a website that catered to
-        their key audience.
-      </p>
-    </Box>
-  </main>
+        <p>
+          A home medical equipment startup, Links HME, had been designing enterprise software to
+          facilitate monthly medical supply delivery, billing, and inventory, but lacked a web
+          presence. My first task as their lead UX Designer was to create a website that catered to
+          their key audience.
+        </p>
+      </Box>
+    </main>
 
-  <Button>
-    <RouterLink to="/">
-      <h2>Home</h2>
-    </RouterLink>
-  </Button>
-  <Button>
-    <RouterLink to="/linkshme-website/research">
-      <h2>Research</h2>
-    </RouterLink>
-  </Button>
+    <Button>
+      <RouterLink to="/">
+        <h2>Home</h2>
+      </RouterLink>
+    </Button>
+    <Button>
+      <RouterLink to="/linkshme-website/research">
+        <h2>Research</h2>
+      </RouterLink>
+    </Button>
+  </div>
 </template>
 
 <script setup>
@@ -44,4 +46,5 @@ import { useStyleStore } from '@/stores/styles'
 const store = useStyleStore()
 
 store.setNavbarColor('linkshmewebsite')
+store.setBackgroundColor('linkshmewebsite')
 </script>

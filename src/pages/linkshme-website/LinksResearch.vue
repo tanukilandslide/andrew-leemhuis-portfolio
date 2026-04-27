@@ -1,184 +1,194 @@
 <template>
-  <Banner />
-  <main class="max-w-[980px]">
-    <Box class="">
-      <div class="">
-        <h1>Research</h1>
-        <p>
-          Being new to the Home Medical Equipment (HME) industry, I knew it was critical to
-          understand the needs of the stakeholders. I began interviewing key decision makers to
-          understand what message our website needed to convey.
-        </p>
+  <div :class="'w-screen bg-' + store.backgroundColor">
+    <Banner />
+    <main class="max-w-[980px]">
+      <Box class="">
+        <div class="">
+          <h1>Research</h1>
+          <p>
+            Being new to the Home Medical Equipment (HME) industry, I knew it was critical to
+            understand the needs of the stakeholders. I began interviewing key decision makers to
+            understand what message our website needed to convey.
+          </p>
+
+          <p>
+            It was difficult pulling key members from their duties, but after interviewing a
+            customer service manager, a billing manager, a vice president, an HR manager, a trainer,
+            and the IT administrator, I felt I had a solid foundation of information about the
+            company.
+          </p>
+
+          <h2>Research Findings</h2>
+
+          <p>
+            After completing all interviews, it was time to compile the info. I created an affinity
+            diagram by writing out my notes on sticky notes and grouping on a white board. Groups
+            with greater numbers of sticky notes indicated themes that should be addressed on the
+            website.
+          </p>
+        </div>
+        <img
+          src="./images/03_affinity_diagram.jpg"
+          alt="Whiteboard with copious amounts of sticky notes arranged in an affinity diagram"
+          class=""
+        />
+      </Box>
+
+      <Box>
+        <h2>Personas</h2>
 
         <p>
-          It was difficult pulling key members from their duties, but after interviewing a customer
-          service manager, a billing manager, a vice president, an HR manager, a trainer, and the IT
-          administrator, I felt I had a solid foundation of information about the company.
+          Once the key themes were determined, I was able to create 3 distinct personas. These
+          personas were the main parties who would ultimately determine what software would manage
+          their shipments to customers, billing of customer insurance, and inventory.
         </p>
+      </Box>
 
-        <h2>Research Findings</h2>
+      <Box>
+        <img
+          src="./images/04_craig.jpg"
+          alt="CEO of the company, Craig, sitting in a business suit, looking attentive to customer's needs"
+        />
+        <h1 class="persona_h1">Craig (53): Primary Persona</h1>
+
+        <h2>Owner</h2>
 
         <p>
-          After completing all interviews, it was time to compile the info. I created an affinity
-          diagram by writing out my notes on sticky notes and grouping on a white board. Groups with
-          greater numbers of sticky notes indicated themes that should be addressed on the website.
+          Craig helps with a little bit of everything around the company. He makes sure that
+          patients get their medical supplies on time regardless of cost. He still wants to balance
+          the budget and make sure employees feel enabled. Since he has little interaction with the
+          software, he will listen to his employees for their recomendations.
         </p>
-      </div>
-      <img
-        src="./images/03_affinity_diagram.jpg"
-        alt="Whiteboard with copious amounts of sticky notes arranged in an affinity diagram"
-        class=""
-      />
-    </Box>
 
-    <Box>
-      <h2>Personas</h2>
+        <h2>Needs</h2>
 
-      <p>
-        Once the key themes were determined, I was able to create 3 distinct personas. These
-        personas were the main parties who would ultimately determine what software would manage
-        their shipments to customers, billing of customer insurance, and inventory.
-      </p>
-    </Box>
+        <p>
+          Software needs to be cost-effective and compliant with applicable laws. It must also be
+          viable in the long term (5-10 years).
+        </p>
 
-    <Box>
-      <img
-        src="./images/04_craig.jpg"
-        alt="CEO of the company, Craig, sitting in a business suit, looking attentive to customer's needs"
-      />
-      <h1 class="persona_h1">Craig (53): Primary Persona</h1>
+        <h2>Nice to Haves</h2>
 
-      <h2>Owner</h2>
+        <ul>
+          <li>Functionality across branches of company</li>
 
-      <p>
-        Craig helps with a little bit of everything around the company. He makes sure that patients
-        get their medical supplies on time regardless of cost. He still wants to balance the budget
-        and make sure employees feel enabled. Since he has little interaction with the software, he
-        will listen to his employees for their recomendations.
-      </p>
+          <li>Software flexibility with company structure</li>
+        </ul>
 
-      <h2>Needs</h2>
+        <h2>Other Considerations</h2>
 
-      <p>
-        Software needs to be cost-effective and compliant with applicable laws. It must also be
-        viable in the long term (5-10 years).
-      </p>
+        <ul>
+          <li>Has final say on which software to use</li>
 
-      <h2>Nice to Haves</h2>
+          <li>Is concerned about cost and loss of efficiency during conversion</li>
 
-      <ul>
-        <li>Functionality across branches of company</li>
+          <li>Is primarily concerned with keeping the company running, not the small details</li>
+        </ul>
+      </Box>
 
-        <li>Software flexibility with company structure</li>
-      </ul>
+      <Box>
+        <img src="./images/05_kaitlin.jpg" alt="" />
 
-      <h2>Other Considerations</h2>
+        <h1 class="persona_h1">Kaitlin (31): Secondary Persona</h1>
 
-      <ul>
-        <li>Has final say on which software to use</li>
+        <h2>Customer Service Representative</h2>
 
-        <li>Is concerned about cost and loss of efficiency during conversion</li>
+        <p>
+          Kaitlin enjoys working directly with customers. Her biggest challenge is working with
+          insurance companies and with software that is inflexible to internal processes. She works
+          closely with the billing team and guides other customer service reps with the software.
+        </p>
 
-        <li>Is primarily concerned with keeping the company running, not the small details</li>
-      </ul>
-    </Box>
+        <h2>Needs</h2>
 
-    <Box>
-      <img src="./images/05_kaitlin.jpg" alt="" />
+        <ul>
+          <li>Needs to try software before buying</li>
 
-      <h1 class="persona_h1">Kaitlin (31): Secondary Persona</h1>
+          <li>Needs access to date in all situations</li>
 
-      <h2>Customer Service Representative</h2>
+          <li>Accurate billing</li>
 
-      <p>
-        Kaitlin enjoys working directly with customers. Her biggest challenge is working with
-        insurance companies and with software that is inflexible to internal processes. She works
-        closely with the billing team and guides other customer service reps with the software.
-      </p>
+          <li>Needs software to be flexible</li>
+        </ul>
 
-      <h2>Needs</h2>
+        <h2>Nice to Haves</h2>
 
-      <ul>
-        <li>Needs to try software before buying</li>
+        <ul>
+          <li>Other CSRs to be held accountable by the software</li>
 
-        <li>Needs access to date in all situations</li>
+          <li>Quick printing</li>
+        </ul>
 
-        <li>Accurate billing</li>
+        <h2>Other Considerations</h2>
 
-        <li>Needs software to be flexible</li>
-      </ul>
+        <ul>
+          <li>Time is important while entering data</li>
 
-      <h2>Nice to Haves</h2>
+          <li>Will be a key voice after demoing software</li>
+        </ul>
+      </Box>
 
-      <ul>
-        <li>Other CSRs to be held accountable by the software</li>
+      <Box>
+        <img src="./images/06_frank.jpg" alt="" />
 
-        <li>Quick printing</li>
-      </ul>
+        <h1 class="persona_h1">Frank (35)</h1>
 
-      <h2>Other Considerations</h2>
+        <h2>Trainer/Compliance</h2>
 
-      <ul>
-        <li>Time is important while entering data</li>
+        <p>
+          Frank runs all educational programs. He is comfortable with the software, but not a pro.
+          He works directly with the billing and customer service departments and loves making
+          people's jobs easier. He combats damaging policies and works closely with case managers.
+        </p>
 
-        <li>Will be a key voice after demoing software</li>
-      </ul>
-    </Box>
+        <h2>Needs</h2>
 
-    <Box>
-      <img src="./images/06_frank.jpg" alt="" />
+        <ul>
+          <li>Easily printable reports</li>
 
-      <h1 class="persona_h1">Frank (35)</h1>
+          <li>To be able to find support for training purposes</li>
+        </ul>
 
-      <h2>Trainer/Compliance</h2>
+        <h2>Nice to Haves</h2>
 
-      <p>
-        Frank runs all educational programs. He is comfortable with the software, but not a pro. He
-        works directly with the billing and customer service departments and loves making people's
-        jobs easier. He combats damaging policies and works closely with case managers.
-      </p>
+        <ul>
+          <li>Software Flexibility</li>
+        </ul>
 
-      <h2>Needs</h2>
+        <h2>Other Considerations</h2>
 
-      <ul>
-        <li>Easily printable reports</li>
+        <ul>
+          <li>Prints lots of information</li>
 
-        <li>To be able to find support for training purposes</li>
-      </ul>
+          <li>Not a power user</li>
 
-      <h2>Nice to Haves</h2>
+          <li>Opinion will be considered when demoing software</li>
+        </ul>
+      </Box>
+    </main>
 
-      <ul>
-        <li>Software Flexibility</li>
-      </ul>
+    <Button>
+      <RouterLink to="/linkshme-website">
+        <h2>Overview</h2>
+      </RouterLink>
+    </Button>
 
-      <h2>Other Considerations</h2>
-
-      <ul>
-        <li>Prints lots of information</li>
-
-        <li>Not a power user</li>
-
-        <li>Opinion will be considered when demoing software</li>
-      </ul>
-    </Box>
-  </main>
-
-  <Button>
-    <RouterLink to="/linkshme-website">
-      <h2>Overview</h2>
-    </RouterLink>
-  </Button>
-
-  <Button>
-    <RouterLink to="/linkshme-website/concept-development">
-      <h2>Concept Development</h2>
-    </RouterLink>
-  </Button>
+    <Button>
+      <RouterLink to="/linkshme-website/concept-development">
+        <h2>Concept Development</h2>
+      </RouterLink>
+    </Button>
+  </div>
 </template>
 
 <script setup>
 import Banner from './components/Banner.vue'
 import Box from '@/components/Box.vue'
 import Button from '@/components/Button.vue'
+import { useStyleStore } from '@/stores/styles'
+
+const store = useStyleStore()
+
+store.setNavbarColor('linkshmewebsite')
+store.setBackgroundColor('linkshmewebsite')
 </script>
