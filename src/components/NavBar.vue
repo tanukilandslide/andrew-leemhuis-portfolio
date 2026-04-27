@@ -3,8 +3,8 @@
     <div class="flex justify-between items-center max-w-245 mx-auto">
       <header>
         <RouterLink to="/" class="no-underline text-white font-bold">
-          <h1>Andrew Leemhuis</h1>
-          <h2>UX Development Portfolio</h2>
+          <h1 class="m-0">Andrew Leemhuis</h1>
+          <h2 class="m-0">UX Development Portfolio</h2>
         </RouterLink>
       </header>
 

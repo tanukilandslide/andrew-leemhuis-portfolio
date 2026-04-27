@@ -2,7 +2,7 @@
   <div :class="'w-screen bg-' + store.backgroundColor">
     <main class="max-w-245">
       <Box>
-        <div class="w-3/5 mx-auto">
+        <div class="w-3/5 mx-auto mb-5">
           <Vue3Lottie class="rounded-xl" :animationData="MRDashboard" speed="1" />
         </div>
         <h1 class="h1-inline">AstraZeneca's Tool Problem</h1>
@@ -16,13 +16,13 @@
       </Box>
 
       <Box>
-        <h2 class="centered-text-box">
+        <h2 class="centered-text-box px-20 text-center m-0">
           The medical representatives already had 16 tools, we didn&apos;t want to design a 17th.
         </h2>
       </Box>
 
       <Box>
-        <img src="./images/02-workshop-planning.jpg" alt="" class="w-4/5" />
+        <img src="./images/02-workshop-planning.jpg" alt="" class="w-4/5 m-auto mb-5" />
 
         <h2>Process</h2>
 
@@ -64,17 +64,17 @@
       </Box>
 
       <Box>
-        <h1>Primary Persona: High-Tech Hiroyuki</h1>
-        <img src="./images/03-hiroyuki.svg" alt="" class="w-4/5" />
+        <h1 class="mb-5">Primary Persona: High-Tech Hiroyuki</h1>
+        <img src="./images/03-hiroyuki.svg" alt="" class="w-fit m-auto" />
       </Box>
 
       <Box>
-        <h1>Secondary Persona: Reliable Tool Reiko</h1>
-        <img src="./images/04-reiko.svg" alt="" class="w-4/5" />
+        <h1 class="mb-5">Secondary Persona: Reliable Tool Reiko</h1>
+        <img src="./images/04-reiko.svg" alt="" class="w-fit m-auto" />
       </Box>
 
-      <Box>
-        <h2>First Design Thinking Workshop</h2>
+      <Box class="flex flex-col gap-5">
+        <h2 class="m-0">First Design Thinking Workshop</h2>
 
         <p>
           A workshop was scheduled in the Osaka office to inform stakeholders about the research we
@@ -82,14 +82,15 @@
           would determine a direction.
         </p>
 
-        <img src="./images/05-tower-of-the-sun.jpeg" alt="" class="w-2/5" />
+        <img src="./images/05-tower-of-the-sun.jpeg" alt="" class="w-2/5 m-auto" />
 
-        <p>Off to Osaka!</p>
-        <img src="./images/06-round-robin.jpeg" alt="" class="w-4/5" />
+        <p class="text-center">Off to Osaka!</p>
+
+        <img src="./images/06-round-robin.jpeg" alt="" class="w-4/5 m-auto" />
 
         <h2>5 Concepts to Rule Them All, Or Just Frankenstein Together</h2>
-        <div class="flex">
-          <img src="./images/07-game-changing-innovation.jpg" alt="" class="w-4/5" />
+        <div class="flex gap-3">
+          <img src="./images/07-game-changing-innovation.jpg" alt="" class="w-4/5 m-auto" />
           <img src="./images/08-memorever.jpg" alt="" class="w-4/5" />
           <img src="./images/09-avengers-research-program.jpg" alt="" class="w-4/5" />
           <img src="./images/10-suggestions-for-mrs.jpg" alt="" class="w-4/5" />
@@ -99,17 +100,17 @@
 
       <Box>
         <h2>A Nautical Themed Retro to Keep Things Fun</h2>
-        <img src="./images/12-retro-board.jpg" alt="" class="w-4/5" />
+        <img src="./images/12-retro-board.jpg" alt="" class="w-4/5 m-auto" />
       </Box>
 
       <Box>
         <h2>Now It's Time To Start Storyboarding, Right?</h2>
-        <img src="./images/13-mr-storyboard.jpg" alt="" class="w-4/5" />
+        <img src="./images/13-mr-storyboard.jpg" alt="" class="w-4/5 m-auto" />
       </Box>
 
       <Box>
         <h2>So What Did We Make?</h2>
-        <img src="./images/14-az-clickable-prototype.gif" alt="" class="w-4/5" />
+        <img src="./images/14-az-clickable-prototype.gif" alt="" class="w-4/5 m-auto" />
         <h2>Healthcare Provider Dashboard</h2>
         <img src="./images/15-dashboard-landing page-description.svg" alt="" />
         <h2>Expanded Widget</h2>
@@ -126,16 +127,18 @@
           testing and collaborating with developers to deliver it in the next 6 months.
         </p>
       </Box>
-      <Button>
+      <div class="m-auto w-fit flex gap-5 pb-5">
         <RouterLink to="/">
-          <h2>Home</h2>
+          <Button>
+            <h2 class="no-underline text-white mt-0 mb-1">Home</h2>
+          </Button>
         </RouterLink>
-      </Button>
-      <Button>
         <RouterLink to="/">
-          <h2>Next Project</h2>
+          <Button>
+            <h2 class="no-underline text-white mt-0 mb-1">Next Project</h2>
+          </Button>
         </RouterLink>
-      </Button>
+      </div>
     </main>
   </div>
 </template>
