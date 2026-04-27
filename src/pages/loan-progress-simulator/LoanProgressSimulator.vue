@@ -247,6 +247,6 @@ import { useStyleStore } from '@/stores/styles'
 
 const store = useStyleStore()
 
-store.setNavbarColor('loanprogresssimulator')
+store.setNavbarColor('loanprogresssimulator-navbar')
 store.setBackgroundColor('loanprogresssimulator')
 </script>

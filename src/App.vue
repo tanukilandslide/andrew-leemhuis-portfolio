@@ -8,7 +8,4 @@
 
 <script setup>
 import NavBar from './components/NavBar.vue'
-import { useStyleStore } from '@/stores/styles'
-
-const store = useStyleStore()
 </script>
