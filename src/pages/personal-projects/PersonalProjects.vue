@@ -1,21 +1,28 @@
 <template>
   <div :class="'w-screen bg-' + store.backgroundColor">
-    <main class="max-w-[980px]">
-      <ImageGallery :image-set="currentProject.images"></ImageGallery>
-      <div class="flex justify-between">
-        <div
-          v-for="project in projects"
-          :key="project"
-          class="cursor-pointer"
-          @click="setProject(project)"
-        >
-          <h3>{{ project.name }}</h3>
-          <img
-            :src="`/src/pages/personal-projects/images/${project.thumbnail}`"
-            alt=""
-            class="rounded-full"
-          />
+    <main class="max-w-245 h-[95vh] mx-auto px-3">
+      <div class="flex flex-col gap-5 align-center">
+        <div class="flex justify-between flex-wrap">
+          <div
+            v-for="project in projects"
+            :key="project"
+            class="cursor-pointer max-w-48 flex flex-col justify-between"
+            @click="setProject(project)"
+          >
+            <h3 class="text-center text-white wrap-anywhere">{{ project.name }}</h3>
+            <img
+              :src="`/src/pages/personal-projects/images/${project.thumbnail}`"
+              alt=""
+              class="rounded-full"
+            />
+          </div>
         </div>
+        <ImageGallery
+          :name="currentProject.name"
+          :description="currentProject.description"
+          :thumbnail="currentProject.thumbnail"
+          :images="currentProject.images"
+        />
       </div>
     </main>
   </div>
@@ -34,6 +41,8 @@ store.setBackgroundColor('summer')
 const projects = [
   {
     name: 'Breathe Chair',
+    description:
+      'A student project to design a chair based on a poem, taking mercurial meanings and turning them alchemy-like into a physical object. I took inspiration for a humble form from a haiku and used bent plywood to make a pleasing and ergonomic form.',
     thumbnail: 'chair_project/00-chair-icon.jpg',
     images: [
       'chair_project/01-initial-chair-sketches.jpg',
@@ -45,6 +54,8 @@ const projects = [
   },
   {
     name: 'Fence Flower Pot',
+    description:
+      'After seeing a similar flowerpot I had made, a friend commisioned me to design and print a version that would fit his fence. Though he lived thousands of miles away&comma; I was able to use the measurments provided to create a modular bracket that fit snuggly and allowed his plant friends to get enough sunlight, drain properly, and avoid cat-tastrophes &#128576;',
     thumbnail: 'flower_pot/00_flower-pot-icon.jpg',
     images: [
       'flower_pot/01_initial_sketch.jpg',
@@ -56,6 +67,7 @@ const projects = [
   },
   {
     name: 'Sketches',
+    description: 'Periodically I like to catch up on making some art.',
     thumbnail: 'sketches/00-fringilla-icon.jpg',
     images: [
       'sketches/01-fringilla.jpg',

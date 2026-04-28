@@ -818,16 +818,16 @@
 
 <script setup>
 const spinCss = [
-  'animate-[spin_16s_linear_infinite]',
-  'animate-[spin_18s_linear_infinite]',
+  'animate-[spin_10s_linear_infinite]',
   'animate-[spin_20s_linear_infinite]',
-  'animate-[spin_22s_linear_infinite]',
-  'animate-[spin_24s_linear_infinite]',
-  'animate-[spin_26s_linear_infinite]',
-  'animate-[spin_28s_linear_infinite]',
   'animate-[spin_30s_linear_infinite]',
-  'animate-[spin_32s_linear_infinite]',
-  'animate-[spin_34s_linear_infinite]',
+  'animate-[spin_40s_linear_infinite]',
+  'animate-[spin_50s_linear_infinite]',
+  'animate-[spin_60s_linear_infinite]',
+  'animate-[spin_70s_linear_infinite]',
+  'animate-[spin_80s_linear_infinite]',
+  'animate-[spin_90s_linear_infinite]',
+  'animate-[spin_100s_linear_infinite]',
 ]
 
 function randomSpin() {

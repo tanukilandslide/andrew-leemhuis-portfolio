@@ -48,6 +48,12 @@
     margin-bottom: 0.5em;
   }
 
+  h3 {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
   .h1-inline {
     display: inline;
   }
