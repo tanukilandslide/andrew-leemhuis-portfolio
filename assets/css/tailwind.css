@@ -23,6 +23,8 @@
   --color-acquisitionfeewaivers: #2e76ad;
 
   --color-linkshmewebsite: #e2f4fa;
+
+  --color-linkshmewebsite-navbar: #52ADCC;
 }
 
 @layer base {

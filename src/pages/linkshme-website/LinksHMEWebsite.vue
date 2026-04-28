@@ -1,5 +1,5 @@
 <template>
-  <div :class="'w-screen bg-' + store.backgroundColor">
+  <div :class="'w-screen h-[95vh] bg-' + store.backgroundColor">
     <banner />
     <main class="max-w-245 bg-linkshmewebsite">
       <Box>
@@ -45,6 +45,6 @@ import { useStyleStore } from '@/stores/styles'
 
 const store = useStyleStore()
 
-store.setNavbarColor('linkshmewebsite')
+store.setNavbarColor('linkshmewebsite-navbar')
 store.setBackgroundColor('linkshmewebsite')
 </script>
