@@ -6,19 +6,31 @@
   />
   <div class="flex justify-between m-3">
     <RouterLink to="/linkshme-website">
-      <h2>Project Overview</h2>
+      <Button class=" border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
+        <h2 class="mb-1">Project Overview</h2>
+      </Button>
     </RouterLink>
 
     <RouterLink to="/linkshme-website/research">
-      <h2>Research</h2>
+      <Button class=" border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
+        <h2 class="mb-1">Research</h2>
+      </Button>
     </RouterLink>
 
     <RouterLink to="/linkshme-website/concept-development">
-      <h2>Concept Development</h2>
+      <Button class=" border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
+        <h2 class="mb-1">Concept Development</h2>
+      </Button>
     </RouterLink>
 
     <RouterLink to="/linkshme-website/visual-style-development">
-      <h2>Visual Style Development</h2>
+      <Button class=" border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
+        <h2 class="mb-1">Visual Style Development</h2>
+      </Button>
     </RouterLink>
   </div>
 </template>
+
+<script setup>
+import Button from '@/components/Button.vue';
+</script>

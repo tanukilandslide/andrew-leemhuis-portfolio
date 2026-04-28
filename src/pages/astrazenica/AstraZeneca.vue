@@ -129,12 +129,12 @@
       </Box>
       <div class="m-auto w-fit flex gap-5 pb-5">
         <RouterLink to="/">
-          <Button>
+          <Button class="border-white">
             <h2 class="no-underline text-white mt-0 mb-1">Home</h2>
           </Button>
         </RouterLink>
         <RouterLink to="/">
-          <Button>
+          <Button class="border-white">
             <h2 class="no-underline text-white mt-0 mb-1">Next Project</h2>
           </Button>
         </RouterLink>
