@@ -1,6 +1,6 @@
 <template>
   <div :class="'w-screen bg-' + store.backgroundColor">
-    <main class="max-w-245">
+    <main class="max-w-245 pt-5">
       <Box>
         <h1 class="h1-inline">Loan Progress Simulator</h1>
 
@@ -10,7 +10,7 @@
           Role: UX Designer in charge of leading research, development of a loan education tool
         </h2>
 
-        <p>
+        <p class="mb-5">
           A tool to give Customer Service Agents and customers transparency into their loan
           payments. The goal for this project was to make a tool that would go beyond a basic loan
           calculator and give personalized information about how simple interest is calculated on a
@@ -38,9 +38,21 @@
 
       <SlidingBox>
         <h2>How customers think simple interest works:</h2>
-        <img src="./images/01_interest_perception.svg" alt="" class="w-4/5" />
+        <div class="flex justify-center gap-3 mb-5">
+          <img src="./images/01_interest_perception.svg" alt="" class="w-4/5" />
+          <div class="flex flex-col justify-around">
+            <h3 class="text-[#E72E31]">Interest</h3>
+            <h3 class="text-[#0087AA]">Principal</h3>
+          </div>
+        </div>
         <h2>How simple interest actually works:</h2>
-        <img src="./images/02_interest_reality.svg" alt="" class="w-4/5" />
+        <div class="flex justify-center gap-3">
+          <img src="./images/02_interest_reality.svg" alt="" class="w-4/5" />
+          <div class="flex flex-col justify-around">
+            <h3 class="text-[#E72E31]">Interest</h3>
+            <h3 class="text-[#0087AA]">Principal</h3>
+          </div>
+        </div>
       </SlidingBox>
 
       <SlidingBox>
@@ -54,17 +66,21 @@
       <SlidingBox>
         <h2>Side By Sides with Customer Service Agents</h2>
 
-        <p>
+        <p class="mb-5">
           To better understand our customers, I sat with customer service agents and listened to
           their conversations with customers calling about their loans. After listening to 70 calls,
           I compiled my notes to create 3 personas.
         </p>
 
-        <img src="./images/03_call-center.jpg" alt="" class="w-4/5" />
+        <img src="./images/03_call-center.jpg" alt="" />
       </SlidingBox>
 
       <Box>
-        <img src="./images/04_early-stage-customer.png" alt="" class="w-4/5" />
+        <img
+          src="./images/04_early-stage-customer.png"
+          alt=""
+          class="w-4/5 mx-auto max-w-60 mb-5"
+        />
         <h1>Primary Persona: Early Stage Delinquency Customer</h1>
 
         <p>
@@ -103,7 +119,7 @@
       </Box>
 
       <Box>
-        <img src="./images/05_proactive-customer.png" alt="" class="w-4/5" />
+        <img src="./images/05_proactive-customer.png" alt="" class="w-4/5 mx-auto max-w-60 mb-5" />
         <h1>Secondary Persona: Proactive Customer</h1>
 
         <p>
@@ -129,7 +145,11 @@
       </Box>
 
       <Box>
-        <img src="./images/06_customer-service-agent.png" alt="" class="w-4/5" />
+        <img
+          src="./images/06_customer-service-agent.png"
+          alt=""
+          class="w-4/5 mx-auto max-w-60 mb-5"
+        />
         <h1>Customer Service Agent</h1>
 
         <p>
@@ -163,13 +183,13 @@
         </ul>
       </Box>
 
-      <SlidingBox>
-        <img src="./images/07_analytics.svg" alt="" class="w-4/5" />
+      <SlidingBox class="">
+        <img src="./images/07_analytics.svg" alt="" class="" />
       </SlidingBox>
 
       <Box>
         <h2>First Prototype</h2>
-        <img src="./images/08_first-prototype.jpg" alt="" class="w-4/5" />
+        <img src="./images/08_first-prototype.jpg" alt="" class="w-full mb-5" />
         <h2>Usability Test Results</h2>
 
         <p>
@@ -193,7 +213,7 @@
         <img
           src="./images/09_second-prototype.jpg"
           alt="A user interface with bars indicating the amount of the loan paid off, a graph showing payments, and one indicating a timeline of loan events"
-          class="w-4/5"
+          class="w-full mb-5"
         />
 
         <h2>Usability Test Results</h2>
@@ -218,23 +238,27 @@
         </video>
       </SlidingBox>
 
-      <Button>
-        <RouterLink to="/">
-          <h2>Previous Project</h2>
+      <div class="m-auto w-fit flex gap-5 pb-5">
+        <RouterLink to="/astrazeneca">
+          <Button class="border-loanprogresssimulator-navbar">
+            <h2 class="no-underline text-loanprogresssimulator-navbar mt-0 mb-1">
+              Previous Project
+            </h2>
+          </Button>
         </RouterLink>
-      </Button>
 
-      <Button>
         <RouterLink to="/">
-          <h2>Home</h2>
+          <Button class="border-loanprogresssimulator-navbar">
+            <h2 class="no-underline text-loanprogresssimulator-navbar mt-0 mb-1">Home</h2>
+          </Button>
         </RouterLink>
-      </Button>
 
-      <Button>
-        <RouterLink to="/">
-          <h2>Next Project</h2>
+        <RouterLink to="/aquisition-fee-waivers">
+          <Button class="border-loanprogresssimulator-navbar">
+            <h2 class="no-underline text-loanprogresssimulator-navbar mt-0 mb-1">Next Project</h2>
+          </Button>
         </RouterLink>
-      </Button>
+      </div>
     </main>
   </div>
 </template>

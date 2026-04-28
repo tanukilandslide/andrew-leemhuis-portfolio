@@ -833,6 +833,4 @@ const spinCss = [
 function randomSpin() {
   return spinCss[Math.floor(Math.random() * 10)]
 }
-
-console.log(randomSpin())
 </script>

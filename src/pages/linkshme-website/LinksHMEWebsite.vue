@@ -4,21 +4,21 @@
     <main class="max-w-245 bg-linkshmewebsite">
       <Box class="flex m-0">
         <div class="max-w-2/3">
-        <h1 class="h1-inline">Links HME Marketing Website</h1>
+          <h1 class="h1-inline">Links HME Marketing Website</h1>
 
-        <h2 class="h2-inline">(Links HME)</h2>
+          <h2 class="h2-inline">(Links HME)</h2>
 
-        <h2>
-          Role: Lead UX Designer assigned with designing Links HME&apos;s customer facing website
-        </h2>
+          <h2>
+            Role: Lead UX Designer assigned with designing Links HME&apos;s customer facing website
+          </h2>
 
-        <p>
-          A home medical equipment startup, Links HME, had been designing enterprise software to
-          facilitate monthly medical supply delivery, billing, and inventory, but lacked a web
-          presence. My first task as their lead UX Designer was to create a website that catered to
-          their key audience.
-        </p>
-      </div>
+          <p>
+            A home medical equipment startup, Links HME, had been designing enterprise software to
+            facilitate monthly medical supply delivery, billing, and inventory, but lacked a web
+            presence. My first task as their lead UX Designer was to create a website that catered
+            to their key audience.
+          </p>
+        </div>
         <img
           src="./images/02_Robo_Calendar.jpg"
           alt="Robot showing a calendar to a warehouse employee"
@@ -27,20 +27,19 @@
       </Box>
     </main>
 
-<div class="m-auto w-fit flex gap-5 pb-5">
+    <div class="m-auto w-fit flex gap-5 pb-5">
       <RouterLink to="/">
-        <Button class=" border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
+        <Button class="border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
           <h2 class="mb-1">Home</h2>
         </Button>
       </RouterLink>
 
-
       <RouterLink to="/linkshme-website/research">
-        <Button class=" border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
+        <Button class="border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
           <h2 class="mb-1">Research</h2>
         </Button>
       </RouterLink>
-</div>
+    </div>
   </div>
 </template>
 

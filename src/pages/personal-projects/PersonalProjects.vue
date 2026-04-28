@@ -1,6 +1,6 @@
 <template>
   <div :class="'w-screen bg-' + store.backgroundColor">
-    <main class="max-w-245 h-[95vh] mx-auto px-3">
+    <main class="max-w-245 min-h-[95vh] mx-auto px-3">
       <div class="flex flex-col gap-5 align-center">
         <div class="flex justify-between flex-wrap">
           <div
