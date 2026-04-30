@@ -22,12 +22,18 @@
         <img
           src="./images/02_Robo_Calendar.jpg"
           alt="Robot showing a calendar to a warehouse employee"
-          class="max-w-1/3 max-h-full"
+          class="self-center h-max"
         />
       </Box>
     </main>
 
     <div class="m-auto w-fit flex gap-5 pb-5">
+      <RouterLink to="/acquisition-fee-waivers">
+        <Button class="border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
+          <h2 class="mb-1">Previous project</h2>
+        </Button>
+      </RouterLink>
+
       <RouterLink to="/">
         <Button class="border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
           <h2 class="mb-1">Home</h2>

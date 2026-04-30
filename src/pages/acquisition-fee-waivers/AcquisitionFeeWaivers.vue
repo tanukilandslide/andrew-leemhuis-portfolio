@@ -27,7 +27,7 @@
       <Box>
         <h2>
           Because Chrysler Capital and Stellantis are two separate companies, they must communicate
-          which vehicles in which regions need a coupon (aquisition fee waiver) to stay competitive
+          which vehicles in which regions need a coupon (acquisition fee waiver) to stay competitive
           with other lending companies.
         </h2>
       </Box>

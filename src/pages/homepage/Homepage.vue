@@ -36,7 +36,7 @@ const projects = [
   },
   {
     name: 'Acquisition Fee Waivers',
-    url: '/aquisition-fee-waivers',
+    url: '/acquisition-fee-waivers',
     logo: '../../assets/icons/acquisition-fee-waivers.svg',
   },
   {

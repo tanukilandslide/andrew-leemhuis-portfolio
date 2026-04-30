@@ -257,7 +257,7 @@
           </Button>
         </RouterLink>
 
-        <RouterLink to="/aquisition-fee-waivers">
+        <RouterLink to="/acquisition-fee-waivers">
           <Button class="border-loanprogresssimulator-navbar">
             <h2 class="no-underline text-loanprogresssimulator-navbar mt-0 mb-1">Next Project</h2>
           </Button>
