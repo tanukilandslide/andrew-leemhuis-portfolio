@@ -1,10 +1,15 @@
 <template>
-  <div :class="'w-screen bg-' + store.backgroundColor">
+  <div
+    :class="`w-screen h-[95vh] bg-image bg-[url('/src/pages/loan-progress-simulator/images/00_lps_background_pattern.svg')] bg-cover bg-center overflow-auto bg-${store.backgroundColor}`"
+    ref="container"
+  >
     <main class="max-w-245 pt-5">
       <Box>
         <h1 class="h1-inline">Loan Progress Simulator</h1>
 
         <h2 class="h2-inline">(Santander Consumer USA)</h2>
+
+        <h1 class="text-astrazeneca">{{ isScrolling.isScrolling }}</h1>
 
         <h2>
           Role: UX Designer in charge of leading research, development of a loan education tool
@@ -26,7 +31,6 @@
 
       <SlidingBox>
         <h2>What is Simple Interest</h2>
-
         <p>
           Simple interest is how homes and car loans are calculated. Interest changes over the life
           of the loan based on how much of the principal is left. Daily interest, or per diem, can
@@ -183,7 +187,7 @@
         </ul>
       </Box>
 
-      <SlidingBox class="">
+      <SlidingBox>
         <img src="./images/07_analytics.svg" alt="" class="" />
       </SlidingBox>
 
@@ -268,6 +272,11 @@ import Box from '@/components/Box.vue'
 import Button from '@/components/Button.vue'
 import SlidingBox from '@/components/SlidingBox.vue'
 import { useStyleStore } from '@/stores/styles'
+import { useScroll } from '@vueuse/core'
+import { ref } from 'vue'
+
+const container = ref(null)
+const isScrolling = useScroll(container)
 
 const store = useStyleStore()
 

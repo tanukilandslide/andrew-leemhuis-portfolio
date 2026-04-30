@@ -18,8 +18,8 @@
       <Box>
         <h2>What's an Acquisition Fee Waiver?</h2>
         <p>
-          "Acquisition fee waiver" is a fancy way word for a coupon to convince dealerships to
-          choose Chrysler Capital over other auto lenders.
+          "Acquisition fee waiver" is a fancy word for a coupon to convince dealerships to choose
+          Chrysler Capital over other auto lenders.
         </p>
         <img src="./images/01_car-and-coupon.svg" alt="" class="w-4/5" />
       </Box>

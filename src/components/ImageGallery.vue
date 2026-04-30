@@ -2,7 +2,7 @@
   <div class="flex flex-col w-full gap-3">
     <h2 class="text-white">{{ projectData.name }}</h2>
     <p class="text-white">{{ projectData.description }}</p>
-    <img :src="`/src/pages/personal-projects/images/${heroImage}`" alt="" class="w-full" />
+
     <div class="flex justify-between gap-2">
       <img
         v-for="image in projectData.images"
@@ -11,6 +11,13 @@
         :key="image"
         @click="imageChange(image)"
         class="cursor-pointer basis-auto max-h-32 w-full object-cover"
+      />
+    </div>
+    <div class="h-[65vh]">
+      <img
+        :src="`/src/pages/personal-projects/images/${heroImage}`"
+        alt=""
+        class="m-auto w-max max-h-full"
       />
     </div>
   </div>

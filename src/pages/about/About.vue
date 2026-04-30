@@ -1,5 +1,5 @@
 <template>
-  <main class="max-w-[980px]">
+  <main :class="`max-w-[980px] bg-${store.backgroundColor} h-[95vh]`">
     <div class="flex">
       <img
         src="./images/me.jpeg"
@@ -21,5 +21,13 @@
         <h2>Email me</h2>
       </div>
     </div>
+    <ScrollPractice />
   </main>
 </template>
+
+<script setup>
+import ScrollPractice from '@/components/ScrollPractice.vue'
+import { useStyleStore } from '@/stores/styles'
+
+const store = useStyleStore()
+</script>
