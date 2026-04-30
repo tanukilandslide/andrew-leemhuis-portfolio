@@ -32,20 +32,23 @@
         </h2>
       </Box>
 
+      <SlidingBox>
+        <div class="bg-black p-5 rounded-md">
+          <h2 class="text-white">
+            The current process includes mailing an excel document back and forth, leading to… less
+            than accurate results…
+          </h2>
+          <!-- <img src="./images/02_pong.svg" alt="" class="w-4/5" /> -->
+          <DirectPong class="w-full h-full rounded-md" />
+        </div>
+      </SlidingBox>
+
       <Box>
-        <h2>
-          The current process includes mailing an excel document back and forth, leading to… less
-          than accurate results…
-        </h2>
-        <img src="./images/02_pong.svg" alt="" class="w-4/5" />
+        <img src="./images/03-lender-dealer-customer-relationship.svg" alt="" class="w-full" />
       </Box>
 
       <Box>
-        <img src="./images/03-lender-dealer-customer-relationship.svg" alt="" class="w-4/5" />
-      </Box>
-
-      <Box>
-        <img src="./images/04-rbm-map.svg" alt="" class="w-4/5" />
+        <img src="./images/04-rbm-map.svg" alt="" class="w-4/5 m-auto" />
         <h2>Who will use the new software?</h2>
 
         <p>
@@ -58,7 +61,7 @@
       <Box>
         <h2>But what could be so bad about one spreadsheet O_O</h2>
 
-        <img src="./images/05-acq-fee-waiver-spreadsheet.PNG" alt="" class="w-4/5" />
+        <img src="./images/05-acq-fee-waiver-spreadsheet.PNG" alt="" class="w-4/5 m-auto" />
 
         <h2>What&apos;s wrong with the current tool?</h2>
 
@@ -78,19 +81,15 @@
         </ul>
       </Box>
 
-      <Box>
-        <h2 class="white-text">
-          Our new tool would use a server in the middle to check for mistakes before they get sent
-          to the other team
-        </h2>
-
-        <title>Excel Pong, now with 100% more servers</title>
-        <desc
-          >A Pong-like game screen with Stellantis's paddle on the left side and Chrysler Capital's
-          paddle on the other with a server in the middle bouncing two separate excel documents with
-          the paddles.</desc
-        >
-      </Box>
+      <SlidingBox>
+        <div class="bg-black p-5 rounded-md">
+          <h2 class="text-white bg-black">
+            Our new tool would use a server in the middle to check for mistakes before they get sent
+            to the other team
+          </h2>
+          <PongServer class="w-full h-full" />
+        </div>
+      </SlidingBox>
 
       <Box>
         <h2>Understanding the Domain by Interviewing the Regional Brand Managers</h2>
@@ -144,15 +143,15 @@
 
         <h4>1&rpar; In Progress</h4>
 
-        <img src="./images/06-in-progress.jpg" alt="" class="w-4/5" />
+        <img src="./images/06-in-progress.jpg" alt="" class="w-4/5 mx-auto mb-7" />
 
         <h4>2&rpar; Pending Approval</h4>
 
-        <img src="./images/07-pending-approval.jpg" alt="" class="w-4/5" />
+        <img src="./images/07-pending-approval.jpg" alt="" class="w-4/5 mx-auto mb-7" />
 
         <h4>3&rpar; Manager Approved</h4>
 
-        <img src="./images/08-manager-approved.jpg" alt="" class="w-4/5" />
+        <img src="./images/08-manager-approved.jpg" alt="" class="w-4/5 mx-auto mb-7" />
 
         <div class="flex">
           <img src="./images/09-search-icon.svg" alt="" class="" />
@@ -165,14 +164,14 @@
           to the cart.
         </h3>
 
-        <img src="./images/10-last-months-waivers.jpg" alt="" class="w-4/5" />
+        <img src="./images/10-last-months-waivers.jpg" alt="" class="w-4/5 mx-auto mb-7" />
 
         <h3>
           Now the vehicles have been added and sorted by make and model with filters at the top for
           easy searching
         </h3>
 
-        <img src="./images/11-vehicles-added.png" alt="" class="w-4/5" />
+        <img src="./images/11-vehicles-added.png" alt="" class="w-4/5 mx-auto mb-7" />
 
         <div class="flex">
           <img src="./images/12-cart-icon.svg" alt="" class="" />
@@ -185,7 +184,7 @@
           websites
         </h3>
 
-        <img src="./images/13-vehicle-cart.jpg" alt="" class="w-4/5" />
+        <img src="./images/13-vehicle-cart.jpg" alt="" class="w-4/5 mx-auto mb-7" />
 
         <h2>Mass Update</h2>
 
@@ -195,7 +194,7 @@
           update all. Updated waivers are outlined in blue.
         </h3>
 
-        <img src="./images/14-mass-update.jpg" alt="" class="w-4/5" />
+        <img src="./images/14-mass-update.jpg" alt="" class="w-4/5 mx-auto mb-7" />
 
         <h2>Mananger Review</h2>
         <h3>
@@ -205,7 +204,7 @@
           get fixed.
         </h3>
 
-        <img src="./images/15-rejected-waivers.jpg" alt="" class="w-4/5" />
+        <img src="./images/15-rejected-waivers.jpg" alt="" class="w-4/5 mx-auto mb-7" />
       </Box>
 
       <Box>
@@ -249,7 +248,7 @@
 
         <h2>Clear Action Confirmation Messaging</h2>
 
-        <img src="./images/16-system-notifications.jpg" alt="" class="w-4/5" />
+        <img src="./images/16-system-notifications.jpg" alt="" class="w-4/5 mx-auto mb-7" />
 
         <h2>Search&sol;Vehicle Cart Toggle</h2>
         <h3>
@@ -258,7 +257,7 @@
           scroll.
         </h3>
 
-        <img src="./images/17-page-toggle.jpg" alt="" class="w-4/5" />
+        <img src="./images/17-page-toggle.jpg" alt="" class="w-4/5 mx-auto mb-7" />
 
         <h2>Checkbox Adds to Cart</h2>
         <h3>
@@ -266,7 +265,7 @@
           that vehicle to the cart without needing an &quot;Add To Cart&quot; button
         </h3>
 
-        <img src="./images/18-checkbox-added-to-cart.jpg" alt="" class="w-4/5" />
+        <img src="./images/18-checkbox-added-to-cart.jpg" alt="" class="w-4/5 mx-auto mb-7" />
 
         <h2>Rejected Vehicles are Shown at Top of List</h2>
         <h3>
@@ -275,7 +274,7 @@
           in a list at the top to avoid requireing searching through hundreds of rows of vehicles.
         </h3>
 
-        <img src="./images/19-rejected-waivers.jpg" alt="" class="w-4/5" />
+        <img src="./images/19-rejected-waivers.jpg" alt="" class="w-4/5 mx-auto mb-7" />
       </Box>
 
       <Box>
@@ -294,29 +293,35 @@
           </li>
         </ol>
       </Box>
-      <Button>
-        <RouterLink to="/">
-          <h2>Previous Project</h2>
-        </RouterLink>
-      </Button>
 
-      <Button>
-        <RouterLink to="/">
-          <h2>Home</h2>
+      <div class="m-auto w-fit flex gap-5 pb-5">
+        <RouterLink to="/loan-progress-simulator">
+          <Button class="border-white">
+            <h2 class="text-white mt-0 mb-1">Previous Project</h2>
+          </Button>
         </RouterLink>
-      </Button>
 
-      <Button>
         <RouterLink to="/">
-          <h2>Next Project</h2>
+          <Button class="border-white">
+            <h2 class="text-white mt-0 mb-1">Home</h2>
+          </Button>
         </RouterLink>
-      </Button>
+
+        <RouterLink to="/linkshme-website">
+          <Button class="border-white">
+            <h2 class="text-white mt-0 mb-1">Next Project</h2>
+          </Button>
+        </RouterLink>
+      </div>
     </main>
   </div>
 </template>
 
 <script setup>
 import Box from '@/components/Box.vue'
+import SlidingBox from '@/components/SlidingBox.vue'
+import DirectPong from './components/DirectPong.vue'
+import PongServer from './components/PongServer.vue'
 import Button from '@/components/Button.vue'
 import { useStyleStore } from '@/stores/styles'
 
