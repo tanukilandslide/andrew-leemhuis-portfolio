@@ -11,13 +11,13 @@
           HME companies.
         </p>
 
-        <div class="flex">
-          <img src="./images/13_bebbeh.jpg" alt="" />
-          <img src="./images/14_bebbeh_vector.jpg" alt="" />
-          <img src="./images/15_iv_stand.jpg" alt="" />
-          <img src="./images/16_iv_stand_vector.jpg" alt="" />
-          <img src="./images/17_kimberlin.jpg" alt="" />
-          <img src="./images/18_kimberlin_vector.jpg" alt="" />
+        <div class="flex w-full">
+          <img src="./images/13_bebbeh.jpg" alt="" class="max-w-max" />
+          <img src="./images/14_bebbeh_vector.jpg" alt="" class="max-w-max" />
+          <img src="./images/15_iv_stand.jpg" alt="" class="max-w-max" />
+          <img src="./images/16_iv_stand_vector.jpg" alt="" class="max-w-max" />
+          <img src="./images/17_kimberlin.jpg" alt="" class="max-w-max" />
+          <img src="./images/18_kimberlin_vector.jpg" alt="" class="max-w-max" />
         </div>
       </SlidingBox>
 
@@ -109,19 +109,21 @@
         <img src="./images/32_homepage_first_draft.jpg" alt="" />
         <img src="./images/33_homepage_final.jpg" alt="" />
       </Box>
+
+      <div class="m-auto w-fit flex gap-5 pb-5">
+        <RouterLink to="/linkshme-website/concept-development">
+          <Button class="border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
+            <h2 class="mb-1">Concept Development</h2>
+          </Button>
+        </RouterLink>
+
+        <RouterLink to="/">
+          <Button class="border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
+            <h2 class="mb-1">Home</h2>
+          </Button>
+        </RouterLink>
+      </div>
     </main>
-
-    <Button>
-      <RouterLink to="/linkshme-website/concept-development">
-        <h2>Concept Development</h2>
-      </RouterLink>
-    </Button>
-
-    <Button>
-      <RouterLink to="/">
-        <h2>Home</h2>
-      </RouterLink>
-    </Button>
   </div>
 </template>
 
@@ -134,6 +136,6 @@ import { useStyleStore } from '@/stores/styles'
 
 const store = useStyleStore()
 
-store.setNavbarColor('linkshmewebsite')
+store.setNavbarColor('linkshmewebsite-navbar')
 store.setBackgroundColor('linkshmewebsite')
 </script>

@@ -14,19 +14,21 @@
 
       <Box>
         <h2>Competitor's Websites</h2>
-        <div class="">
-          <img src="./images/07_brightree.jpg" alt="" class="" />
-          <img src="./images/08_team_dme.jpg" alt="" class="" />
-        </div>
-        <div class="">
-          <img src="./images/09_bflow.jpg" alt="" class="" />
-          <img src="./images/10_dme_works.jpg" alt="" class="" />
+        <div class="flex gap-3">
+          <div class="flex flex-col gap-3">
+            <img src="./images/07_brightree.jpg" alt="" class="w-full h-max" />
+            <img src="./images/08_team_dme.jpg" alt="" class="w-full h-max" />
+          </div>
+          <div class="flex flex-col gap-3">
+            <img src="./images/09_bflow.jpg" alt="" class="w-full h-max" />
+            <img src="./images/10_dme_works.jpg" alt="" class="w-full h-max" />
+          </div>
         </div>
       </Box>
 
       <Box>
         <h2>Competitive Analysis</h2>
-        <p>
+        <p class="mb-3">
           Through my competitive analysis of the voice and tone of other sites I determined which
           tonal niche was not currently being filled. I created a four point sliding scale with two
           opposing words to show where each company&apos;s tone lay relative to other companies.
@@ -38,7 +40,7 @@
 
       <Box>
         <h2>Competitive Analysis</h2>
-        <p>
+        <p class="mb-3">
           Through my competitive analysis of the voice and tone of other sites I determined which
           tonal niche was not currently being filled. I created a four point sliding scale with two
           opposing words to show where each company&apos;s tone lay relative to other companies.
@@ -89,46 +91,50 @@
         <h3>Displayed Message</h3>
         <p>Empathetic, Encouraging, Somewhat Enthusiastic, Respectful tone:</p>
 
-        <p class="">
+        <p class="font-bold text-center">
           “Change can be scary, but it doesn&apos;t have to be. We have conversion specialists to
           help you on your journey to better office management and customer service. We want to show
           you how our software can help your business be more efficient so you can focus on what
           matters most, those that rely on your care.
         </p>
-        <p class="">&apos;A journey of a thousand miles begins with a single step&apos; -Laozi”</p>
-      </Box>
-
-      <Box>
-        <img
-          class="error_robot"
-          src="./images/12_error_robot.png"
-          alt="Robot being resuscitated by a mechanic using a defibrillator"
-        />
-        <h2>Error Message</h2>
-
-        <h4>Who</h4>
-        <p>Kaitlin Summers (Customer Service Representative)</p>
-
-        <h4>When</h4>
-        <p>Login error, Server is down</p>
-
-        <h4>Emotions</h4>
-        <p>Mild frustration, Boredom, Stress</p>
-
-        <h3>User Thoughts</h3>
-        <p class="">
-          “I think our billing date is coming soon and I want to make sure it will be payed on time.
-          Oh no, I guess I&apos;ll have to check later when the site is fixed.”
-        </p>
-
-        <h3>Displayed Message</h3>
-        <p>Somewhat funny, Casual, Somewhat Enthusiastic, Respectful tone:</p>
-
-        <p class="">
-          “Agh, errors are the worst. We&apos;re plugging in cables, resetting modems, and will be
-          back online asap.”
+        <p class="font-bold text-center mt-5">
+          &apos;A journey of a thousand miles begins with a single step&apos; -Laozi”
         </p>
       </Box>
+
+      <SlidingBox>
+        <div>
+          <img
+            class="error_robot absolute w-1/2 left-1/2 -translate-y-22"
+            src="./images/12_error_robot.png"
+            alt="Robot being resuscitated by a mechanic using a defibrillator"
+          />
+          <h2>Error Message</h2>
+
+          <h4>Who</h4>
+          <p>Kaitlin Summers (Customer Service Representative)</p>
+
+          <h4>When</h4>
+          <p>Login error, Server is down</p>
+
+          <h4>Emotions</h4>
+          <p>Mild frustration, Boredom, Stress</p>
+
+          <h3>User Thoughts</h3>
+          <p class="">
+            “I think our billing date is coming soon and I want to make sure it will be payed on
+            time. Oh no, I guess I&apos;ll have to check later when the site is fixed.”
+          </p>
+
+          <h3>Displayed Message</h3>
+          <p>Somewhat funny, Casual, Somewhat Enthusiastic, Respectful tone:</p>
+
+          <p class="font-bold text-center">
+            “Agh, errors are the worst. We&apos;re plugging in cables, resetting modems, and will be
+            back online asap.”
+          </p>
+        </div>
+      </SlidingBox>
 
       <Box>
         <h2>Explaining Our Services</h2>
@@ -152,26 +158,28 @@
         <h3>Displayed Message</h3>
         <p>Knowledgeable, Conversational, Somewhat Enthusiastic, Concise tone (Steve Jobs):</p>
 
-        <p class="">
+        <p class="font-bold text-center">
           “Elements add flexibility to your software with additional features tailored to your
           company&apos;s specific requirements. We know you don&apos;t want to change how your
           company is structured because of the software you use. With Elements, you can add specific
           features to best meet your customer&apos;s needs and make your company more efficient.”
         </p>
       </Box>
+
+      <div class="m-auto w-fit flex gap-5 pb-5">
+        <RouterLink to="/linkshme-website/research">
+          <Button class="border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
+            <h2 class="mb-1">Research</h2>
+          </Button>
+        </RouterLink>
+
+        <RouterLink to="/linkshme-website/visual-style-development">
+          <Button class="border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
+            <h2 class="mb-1">Visual Style Development</h2>
+          </Button>
+        </RouterLink>
+      </div>
     </main>
-
-    <Button>
-      <RouterLink to="/linkshme-website/research">
-        <h2>Research</h2>
-      </RouterLink>
-    </Button>
-
-    <Button>
-      <RouterLink to="/linkshme-website/visual-style-development">
-        <h2>Visual Style Development</h2>
-      </RouterLink>
-    </Button>
   </div>
 </template>
 
@@ -184,6 +192,6 @@ import { useStyleStore } from '@/stores/styles'
 
 const store = useStyleStore()
 
-store.setNavbarColor('linkshmewebsite')
+store.setNavbarColor('linkshmewebsite-navbar')
 store.setBackgroundColor('linkshmewebsite')
 </script>

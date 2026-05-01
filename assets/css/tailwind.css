@@ -24,7 +24,7 @@
 
   --color-linkshmewebsite: #e2f4fa;
 
-  --color-linkshmewebsite-navbar: #52ADCC;
+  --color-linkshmewebsite-navbar: #52adcc;
 }
 
 @layer base {
@@ -54,6 +54,15 @@
     font-size: 1.25em;
     font-weight: bold;
     margin-bottom: 0.5em;
+  }
+
+  h4 {
+    font-weight: bold;
+    margin-bottom: 0.25em;
+  }
+
+  p {
+    margin-bottom: 0.25em;
   }
 
   .h1-inline {

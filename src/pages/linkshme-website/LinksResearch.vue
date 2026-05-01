@@ -165,19 +165,21 @@
           <li>Opinion will be considered when demoing software</li>
         </ul>
       </Box>
+
+      <div class="m-auto w-fit flex gap-5 pb-5">
+        <RouterLink to="/linkshme-website">
+          <Button class="border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
+            <h2 class="mb-1">Overview</h2>
+          </Button>
+        </RouterLink>
+
+        <RouterLink to="/linkshme-website/concept-development">
+          <Button class="border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
+            <h2 class="mb-1">Concept Development</h2>
+          </Button>
+        </RouterLink>
+      </div>
     </main>
-
-    <Button>
-      <RouterLink to="/linkshme-website">
-        <h2>Overview</h2>
-      </RouterLink>
-    </Button>
-
-    <Button>
-      <RouterLink to="/linkshme-website/concept-development">
-        <h2>Concept Development</h2>
-      </RouterLink>
-    </Button>
   </div>
 </template>
 
@@ -189,6 +191,6 @@ import { useStyleStore } from '@/stores/styles'
 
 const store = useStyleStore()
 
-store.setNavbarColor('linkshmewebsite')
+store.setNavbarColor('linkshmewebsite-navbar')
 store.setBackgroundColor('linkshmewebsite')
 </script>
