@@ -32,15 +32,13 @@
         </h2>
       </Box>
 
-      <SlidingBox>
-        <div class="bg-black p-5 rounded-md">
-          <h2 class="text-white">
-            The current process includes mailing an excel document back and forth, leading to… less
-            than accurate results…
-          </h2>
-          <!-- <img src="./images/02_pong.svg" alt="" class="w-4/5" /> -->
-          <DirectPong class="w-full h-full rounded-md" />
-        </div>
+      <SlidingBox :style="'bg-black p-7 rounded-md'">
+        <h2 class="text-white">
+          The current process includes mailing an excel document back and forth, leading to… less
+          than accurate results…
+        </h2>
+        <!-- <img src="./images/02_pong.svg" alt="" class="w-4/5" /> -->
+        <DirectPong class="w-full h-full rounded-md" />
       </SlidingBox>
 
       <Box>
@@ -81,14 +79,12 @@
         </ul>
       </Box>
 
-      <SlidingBox>
-        <div class="bg-black p-5 rounded-md">
-          <h2 class="text-white bg-black">
-            Our new tool would use a server in the middle to check for mistakes before they get sent
-            to the other team
-          </h2>
-          <PongServer class="w-full h-full" />
-        </div>
+      <SlidingBox :style="'bg-black p-7 rounded-md'">
+        <h2 class="text-white bg-black">
+          Our new tool would use a server in the middle to check for mistakes before they get sent
+          to the other team
+        </h2>
+        <PongServer class="w-full h-full" />
       </SlidingBox>
 
       <Box>

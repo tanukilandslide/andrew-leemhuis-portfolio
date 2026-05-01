@@ -11,13 +11,13 @@
           HME companies.
         </p>
 
-        <div class="flex w-full">
-          <img src="./images/13_bebbeh.jpg" alt="" class="max-w-max" />
-          <img src="./images/14_bebbeh_vector.jpg" alt="" class="max-w-max" />
-          <img src="./images/15_iv_stand.jpg" alt="" class="max-w-max" />
-          <img src="./images/16_iv_stand_vector.jpg" alt="" class="max-w-max" />
-          <img src="./images/17_kimberlin.jpg" alt="" class="max-w-max" />
-          <img src="./images/18_kimberlin_vector.jpg" alt="" class="max-w-max" />
+        <div class="flex justify-between">
+          <img src="./images/13_bebbeh.jpg" alt="" class="h-60" />
+          <img src="./images/14_bebbeh_vector.jpg" alt="" class="h-60" />
+          <img src="./images/15_iv_stand.jpg" alt="" class="h-60" />
+          <img src="./images/16_iv_stand_vector.jpg" alt="" class="h-60" />
+          <img src="./images/17_kimberlin.jpg" alt="" class="h-60" />
+          <img src="./images/18_kimberlin_vector.jpg" alt="" class="h-60" />
         </div>
       </SlidingBox>
 

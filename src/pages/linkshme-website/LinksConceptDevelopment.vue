@@ -69,7 +69,7 @@
         </p>
       </SlidingBox>
 
-      <Box>
+      <SlidingBox>
         <h2>Call To Action</h2>
 
         <h4>Who</h4>
@@ -100,7 +100,7 @@
         <p class="font-bold text-center mt-5">
           &apos;A journey of a thousand miles begins with a single step&apos; -Laozi”
         </p>
-      </Box>
+      </SlidingBox>
 
       <SlidingBox>
         <div>
@@ -136,7 +136,7 @@
         </div>
       </SlidingBox>
 
-      <Box>
+      <SlidingBox>
         <h2>Explaining Our Services</h2>
 
         <h4>Who</h4>
@@ -164,7 +164,7 @@
           company is structured because of the software you use. With Elements, you can add specific
           features to best meet your customer&apos;s needs and make your company more efficient.”
         </p>
-      </Box>
+      </SlidingBox>
 
       <div class="m-auto w-fit flex gap-5 pb-5">
         <RouterLink to="/linkshme-website/research">
