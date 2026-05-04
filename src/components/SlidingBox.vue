@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-5 h-[90vh]">
+  <div class="mb-5 h-[110vh]">
     <div class="sticky top-5">
       <box :style="props.style">
         <slot> </slot>

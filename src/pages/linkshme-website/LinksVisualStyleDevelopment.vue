@@ -22,34 +22,47 @@
       </SlidingBox>
 
       <Box>
-        <h2 class="">Illustrations for Features Page</h2>
+        <h2>Illustrations for Features Page</h2>
         <p>
           Taking the characters created for the banner page, I was able to fully realize our voice
           through the visual design of our website by creating illustrations for our features pages.
         </p>
-        <h3 class="">Customer Center Portal</h3>
-        <img src="./images/19_feature-banner-customer-center-portal.png" alt="" />
-        <img src="./images/20_feature-banner-customer-center-portal_sketch.jpg" alt="" />
 
-        <h3 class="">Integration with Vendor Catalogs</h3>
-        <img src="./images/21_feature-banner-integration-with-vendor-catalogs.png" alt="" />
-        <img src="./images/22_feature-banner-integration-with-vendor-catalogs_sketch.jpg" alt="" />
+        <FeatureIllustrations
+          :title="'Customer Center Portal'"
+          :final-image="'/src/pages/linkshme-website//images/19_feature-banner-customer-center-portal.png'"
+          :sketch="'/src/pages/linkshme-website/images/20_feature-banner-customer-center-portal_sketch.jpg'"
+        />
 
-        <h3 class="">Fulfillment Service Integration</h3>
-        <img src="./images/23_feature-banner-fulfillment-service-integration.png" alt="" />
-        <img src="./images/24_feature-banner-fulfillment-service-integration_sketch.jpg" alt="" />
+        <FeatureIllustrations
+          :title="'Integration with Vendor Catalogs'"
+          :final-image="'/src/pages/linkshme-website/images/21_feature-banner-integration-with-vendor-catalogs.png'"
+          :sketch="'/src/pages/linkshme-website/images/22_feature-banner-integration-with-vendor-catalogs_sketch.jpg'"
+        />
 
-        <h3 class="">Conversion</h3>
-        <img src="./images/25_feature-banner-conversion.png" alt="" />
-        <img src="./images/26_feature-banner-conversion_sketch.jpg" alt="" />
+        <FeatureIllustrations
+          :title="'Fulfillment Service Integration'"
+          :final-image="'/src/pages/linkshme-website/images/23_feature-banner-fulfillment-service-integration.png'"
+          :sketch="'/src/pages/linkshme-website/images/24_feature-banner-fulfillment-service-integration_sketch.jpg'"
+        />
 
-        <h3 class="">Cloud Connectivity</h3>
-        <img src="./images/27_feature-banner-cloud-connectivity.png" alt="" />
-        <img src="./images/28_feature-banner-cloud-connectivity_sketch.jpg" alt="" />
+        <FeatureIllustrations
+          :title="'Conversion'"
+          :final-image="'/src/pages/linkshme-website/images/25_feature-banner-conversion.png'"
+          :sketch="'/src/pages/linkshme-website/images/26_feature-banner-conversion_sketch.jpg'"
+        />
 
-        <h3 class="text_content">Real Time Billing</h3>
-        <img src="./images/29_feature-banner-automatic-real-time-billing.png" alt="" />
-        <img src="./images/30_feature-banner-automatic-real-time-billing_sketch.jpg" alt="" />
+        <FeatureIllustrations
+          :title="'Cloud Connectivity'"
+          :final-image="'/src/pages/linkshme-website/images/27_feature-banner-cloud-connectivity.png'"
+          :sketch="'/src/pages/linkshme-website/images/28_feature-banner-cloud-connectivity_sketch.jpg'"
+        />
+
+        <FeatureIllustrations
+          :title="'Real Time Billing'"
+          :final-image="'/src/pages/linkshme-website/'"
+          :sketch="'/src/pages/linkshme-website/'"
+        />
       </Box>
 
       <Box>
@@ -132,6 +145,7 @@ import Banner from './components/Banner.vue'
 import Box from '@/components/Box.vue'
 import SlidingBox from '@/components/SlidingBox.vue'
 import Button from '@/components/Button.vue'
+import FeatureIllustrations from './components/FeatureIllustrations.vue'
 import { useStyleStore } from '@/stores/styles'
 
 const store = useStyleStore()
