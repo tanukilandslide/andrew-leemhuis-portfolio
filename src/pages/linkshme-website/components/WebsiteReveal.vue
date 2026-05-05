@@ -1,8 +1,8 @@
 <template>
   <Box :style="' my-5'">
-    <h2 class="text-linkshmewebsite-navbar top-640">Homepage First Draft</h2>
+    <h2 class="text-linkshmewebsite-accent top-640">Homepage First Draft</h2>
     <div class="homepage_image_bottom">
-      <h2 class="links_header text-linkshmewebsite-navbar">Final Homepage</h2>
+      <h2 class="links_header text-linkshmewebsite-accent">Final Homepage</h2>
       <img
         class="homepage_image_bottom"
         src="/src/pages/linkshme-website/images/33_homepage_final.jpg"

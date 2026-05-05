@@ -3,7 +3,7 @@
     <Banner />
     <main class="max-w-[980px]">
       <SlidingBox>
-        <h1 class="">Visual Style Development</h1>
+        <h1 class="text-linkshmewebsite-accent">Visual Style Development</h1>
         <p>
           Our site needed a focused visual style. Deciding that using images of actual patients was
           problematic, and that the normal clip art usually employed by other HME companies would
@@ -22,7 +22,7 @@
       </SlidingBox>
 
       <Box>
-        <h2>Illustrations for Features Page</h2>
+        <h2 class="text-linkshmewebsite-accent">Illustrations for Features Page</h2>
         <p>
           Taking the characters created for the banner page, I was able to fully realize our voice
           through the visual design of our website by creating illustrations for our features pages.
@@ -60,13 +60,13 @@
 
         <FeatureIllustrations
           :title="'Real Time Billing'"
-          :final-image="'/src/pages/linkshme-website/'"
-          :sketch="'/src/pages/linkshme-website/'"
+          :final-image="'/src/pages/linkshme-website/images/28_feature-banner-automatic-real-time-billing.png'"
+          :sketch="'/src/pages/linkshme-website/images/29_feature-banner-cloud-connectivity_sketch.jpg'"
         />
       </Box>
 
       <Box>
-        <h2 class="links_header">Retesting Style</h2>
+        <h2 class="text-linkshmewebsite-accent">Retesting Style</h2>
         <p>
           Now that I had created a rough design of our homepage, I knew I needed to test it. The
           cartoon characters were a bit of a jump, so I gave potential users a page of adjectives
@@ -77,33 +77,37 @@
           understanding, I also asked them several questions as well. The results are as follows:
         </p>
 
-        <img src="./images/31_re-testing.jpg" alt="" />
-        <h3 class="links_header">Top Adjective Results</h3>
-        <div class="flex">
-          <ul class="adjective_ul pe-3">
-            <li class="adjective_li">Friendly</li>
-            <li class="adjective_li">Easy To Use</li>
-            <li class="adjective_li">Useful</li>
-            <li class="adjective_li">Clear</li>
-            <li class="adjective_li">Convenient</li>
-            <li class="adjective_li">Creative</li>
-            <li class="adjective_li">Clean</li>
-          </ul>
+        <div class="flex m-5 justify-around">
+          <img src="./images/31_re-testing.jpg" alt="" class="w-2/5" />
+          <div>
+            <h3 class="text-linkshmewebsite-accent">Top Adjective Results</h3>
+            <div class="flex">
+              <ul class="adjective_ul w-5/6">
+                <li class="border-b-2 border-linkshmewebsite-accent">Friendly</li>
+                <li class="border-b-2 border-linkshmewebsite-accent">Easy To Use</li>
+                <li class="border-b-2 border-linkshmewebsite-accent">Useful</li>
+                <li class="border-b-2 border-linkshmewebsite-accent">Clear</li>
+                <li class="border-b-2 border-linkshmewebsite-accent">Convenient</li>
+                <li class="border-b-2 border-linkshmewebsite-accent">Creative</li>
+                <li class="border-b-2 border-linkshmewebsite-accent">Clean</li>
+              </ul>
 
-          <ul class="adjective_ul">
-            <li class="adjective_li_num">8</li>
-            <li class="adjective_li_num">13</li>
-            <li class="adjective_li_num">5</li>
-            <li class="adjective_li_num">6</li>
-            <li class="adjective_li_num">5</li>
-            <li class="adjective_li_num">5</li>
-            <li class="adjective_li_num">6</li>
-          </ul>
+              <ul class="adjective_ul w-1/6">
+                <li class="border-b-2 border-linkshmewebsite-accent">8</li>
+                <li class="border-b-2 border-linkshmewebsite-accent">13</li>
+                <li class="border-b-2 border-linkshmewebsite-accent">5</li>
+                <li class="border-b-2 border-linkshmewebsite-accent">6</li>
+                <li class="border-b-2 border-linkshmewebsite-accent">5</li>
+                <li class="border-b-2 border-linkshmewebsite-accent">5</li>
+                <li class="border-b-2 border-linkshmewebsite-accent">6</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <h2>What Did the Users Think?</h2>
+        <h2 class="text-linkshmewebsite-accent">What Did the Users Think?</h2>
 
-        <ul>
+        <ul class="list-disc list-inside">
           <li>Likes avatars-good for marketing down the road</li>
           <li>Hard to tell it's a DME</li>
           <li>It feels easier to use if it’s cute</li>
@@ -116,10 +120,6 @@
           <li>"I'm not a real serious person"</li>
           <li>Feels clean and not lots of content on the screen</li>
         </ul>
-      </Box>
-
-      <Box :style="'m-0'">
-        <h2 class="text-linkshmewebsite-navbar">Homepage First Draft</h2>
       </Box>
 
       <WebsiteReveal />

@@ -1,7 +1,7 @@
 <template>
-  <h3>{{ props.title }}</h3>
+  <h3 class="text-linkshmewebsite-accent">{{ props.title }}</h3>
 
-  <div class="container">
+  <div class="container mb-5">
     <img class="feature_images" :src="props.finalImage" alt="" />
 
     <div class="overlay">

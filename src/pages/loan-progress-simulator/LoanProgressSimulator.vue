@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="`w-screen h-[95vh] bg-image bg-[url('/src/pages/loan-progress-simulator/images/00_lps_background_pattern.svg')] bg-cover bg-center overflow-auto bg-${store.backgroundColor}`"
+    :class="`w-screen h-[95vh] bg-image bg-[url('/src/pages/loan-progress-simulator/images/00_lps_background_pattern.svg')] bg-repeat  bg-${store.backgroundColor}`"
     ref="container"
   >
     <main class="max-w-245 pt-5">

@@ -25,6 +25,8 @@
   --color-linkshmewebsite: #e2f4fa;
 
   --color-linkshmewebsite-navbar: #52adcc;
+
+  --color-linkshmewebsite-accent: #f1684e;
 }
 
 @layer base {
