@@ -1,0 +1,52 @@
+<template>
+  <Box :style="' my-5'">
+    <h2 class="text-linkshmewebsite-navbar top-640">Homepage First Draft</h2>
+    <div class="homepage_image_bottom">
+      <h2 class="links_header text-linkshmewebsite-navbar">Final Homepage</h2>
+      <img
+        class="homepage_image_bottom"
+        src="/src/pages/linkshme-website/images/33_homepage_final.jpg"
+        alt=""
+      />
+    </div>
+
+    <img
+      class="homepage_image_top rounded-md"
+      src="/src/pages/linkshme-website/images/32_homepage_first_draft.jpg"
+      alt=""
+    />
+  </Box>
+</template>
+
+<script setup>
+import Box from '@/components/Box.vue'
+</script>
+
+<style scoped>
+/* .box {
+  background-color: white;
+  border-radius: 8px;
+  margin: 16px 0;
+  padding: 0;
+} */
+
+/* .text_content {
+  padding: 0.25rem 1rem;
+} */
+
+.homepage_image_bottom {
+  max-width: 100%;
+  z-index: 3;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10rem;
+  /* border-radius: 0 0 16px 16px; */
+}
+
+.homepage_image_top {
+  max-width: 100%;
+  position: relative;
+  top: -160rem;
+  z-index: 5;
+}
+</style>

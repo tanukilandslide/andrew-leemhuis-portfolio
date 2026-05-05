@@ -118,10 +118,11 @@
         </ul>
       </Box>
 
-      <Box>
-        <img src="./images/32_homepage_first_draft.jpg" alt="" />
-        <img src="./images/33_homepage_final.jpg" alt="" />
+      <Box :style="'m-0'">
+        <h2 class="text-linkshmewebsite-navbar">Homepage First Draft</h2>
       </Box>
+
+      <WebsiteReveal />
 
       <div class="m-auto w-fit flex gap-5 pb-5">
         <RouterLink to="/linkshme-website/concept-development">
@@ -146,6 +147,7 @@ import Box from '@/components/Box.vue'
 import SlidingBox from '@/components/SlidingBox.vue'
 import Button from '@/components/Button.vue'
 import FeatureIllustrations from './components/FeatureIllustrations.vue'
+import WebsiteReveal from './components/WebsiteReveal.vue'
 import { useStyleStore } from '@/stores/styles'
 
 const store = useStyleStore()
