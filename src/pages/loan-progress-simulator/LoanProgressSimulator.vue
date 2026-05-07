@@ -1,15 +1,16 @@
 <template>
-  <div
+  <!-- <div
     :class="`w-screen h-[95vh] bg-image bg-[url('/src/pages/loan-progress-simulator/images/00_lps_background_pattern.svg')] bg-repeat  bg-${store.backgroundColor}`"
     ref="container"
-  >
+  > -->
+  <div :class="`w-screen bg-${store.backgroundColor}`" ref="container">
     <main class="max-w-245 pt-5">
       <Box>
         <h1 class="h1-inline">Loan Progress Simulator</h1>
 
         <h2 class="h2-inline">(Santander Consumer USA)</h2>
 
-        <h1 class="text-astrazeneca">{{ isScrolling.isScrolling }}</h1>
+        <!-- <h1 class="text-astrazeneca">{{ isScrolling.isScrolling }}</h1> -->
 
         <h2>
           Role: UX Designer in charge of leading research, development of a loan education tool
@@ -43,7 +44,8 @@
       <SlidingBox>
         <h2>How customers think simple interest works:</h2>
         <div class="flex justify-center gap-3 mb-5">
-          <img src="./images/01_interest_perception.svg" alt="" class="w-4/5" />
+          <!-- <img src="./images/01_interest_perception.svg" alt="" class="w-4/5" /> -->
+          <InterestPerception class="w-4/5" />
           <div class="flex flex-col justify-around">
             <h3 class="text-[#E72E31]">Interest</h3>
             <h3 class="text-[#0087AA]">Principal</h3>
@@ -51,7 +53,8 @@
         </div>
         <h2>How simple interest actually works:</h2>
         <div class="flex justify-center gap-3">
-          <img src="./images/02_interest_reality.svg" alt="" class="w-4/5" />
+          <!-- <img src="./images/02_interest_reality.svg" alt="" class="w-4/5" /> -->
+          <InterestReality class="w-4/5" />
           <div class="flex flex-col justify-around">
             <h3 class="text-[#E72E31]">Interest</h3>
             <h3 class="text-[#0087AA]">Principal</h3>
@@ -188,7 +191,7 @@
       </Box>
 
       <SlidingBox>
-        <img src="./images/07_analytics.svg" alt="" class="" />
+        <Analytics />
       </SlidingBox>
 
       <Box>
@@ -274,6 +277,9 @@ import SlidingBox from '@/components/SlidingBox.vue'
 import { useStyleStore } from '@/stores/styles'
 import { useScroll } from '@vueuse/core'
 import { ref } from 'vue'
+import InterestPerception from './images/01_interest_perception.svg'
+import InterestReality from './images/02_interest_reality.svg'
+import Analytics from './images/07_analytics.svg'
 
 const container = ref(null)
 const isScrolling = useScroll(container)

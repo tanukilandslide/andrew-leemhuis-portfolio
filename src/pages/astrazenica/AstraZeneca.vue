@@ -133,7 +133,7 @@
             <h2 class="no-underline text-white mt-0 mb-1">Home</h2>
           </Button>
         </RouterLink>
-        <RouterLink to="/">
+        <RouterLink to="/loan-progress-simulator">
           <Button class="border-white">
             <h2 class="no-underline text-white mt-0 mb-1">Next Project</h2>
           </Button>

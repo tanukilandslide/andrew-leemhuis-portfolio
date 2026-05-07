@@ -6,7 +6,7 @@
     <div class="flex justify-between gap-2">
       <img
         v-for="image in projectData.images"
-        :src="`/src/pages/personal-projects/images/${image}`"
+        :src="image"
         alt=""
         :key="image"
         @click="imageChange(image)"
@@ -14,11 +14,7 @@
       />
     </div>
     <div class="h-[65vh]">
-      <img
-        :src="`/src/pages/personal-projects/images/${heroImage}`"
-        alt=""
-        class="m-auto w-max max-h-full"
-      />
+      <img :src="`${heroImage}`" alt="" class="m-auto w-max max-h-full" />
     </div>
   </div>
 </template>

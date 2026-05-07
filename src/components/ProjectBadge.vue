@@ -4,12 +4,23 @@
     @mouseenter="showText = true"
     @mouseleave="showText = false"
   >
-    <img v-if="!showText" :src="logo" alt="" class="w-20 m-auto" />
+    <AstraZenecaLogo
+      v-if="projectName === 'AstraZeneca'"
+      class="w-20 h-max flex flex-col justify-center m-auto"
+    />
+    <LoanProgressSimulatorLogo
+      v-if="projectName === 'Loan Progress Simulator'"
+      class="w-20 h-max flex flex-col justify-center m-auto"
+    />
+
+    <!-- <img v-if="!showText" :src="logo" alt="" class="w-20 m-auto" /> -->
     <h2 v-if="showText" class="text-white text-center break-normal">{{ projectName }}</h2>
   </div>
 </template>
 
 <script setup>
+import AstraZenecaLogo from '../../assets/icons/astrazeneca-logo.svg'
+import LoanProgressSimulatorLogo from '../../assets/icons/santander-logo.svg'
 import { ref } from 'vue'
 defineProps({
   projectName: {

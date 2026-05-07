@@ -1,10 +1,12 @@
 <template>
-  <div class="flex justify-center items-center">
+  <div class="flex justify-center w-60 h-60 items-center">
     <slot> </slot>
     <svg
-      class="rotating-icon fill-red w-60 h-60 absolute"
+      class="w-60 h-60 absolute"
       data-name="Layer 2"
       xmlns="http://www.w3.org/2000/svg"
+      width="100"
+      height="100"
       viewBox="0 0 300 300"
     >
       <g
