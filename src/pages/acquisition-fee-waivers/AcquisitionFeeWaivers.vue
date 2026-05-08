@@ -21,7 +21,8 @@
           "Acquisition fee waiver" is a fancy word for a coupon to convince dealerships to choose
           Chrysler Capital over other auto lenders.
         </p>
-        <img src="./images/01_car-and-coupon.svg" alt="" class="w-4/5" />
+
+        <CarAndCoupon class="w-4/5 mx-auto" />
       </Box>
 
       <Box>
@@ -42,7 +43,13 @@
       </SlidingBox>
 
       <Box>
-        <img src="./images/03-lender-dealer-customer-relationship.svg" alt="" class="w-full" />
+        <h2>Lender, Dealer, and Customer Relationship</h2>
+        <!-- <img
+          src="/assets/images/acquisition-fee-waivers/03-lender-dealer-customer-relationship.svg"
+          alt=""
+          class="w-full"
+        /> -->
+        <LenderDealerCustomerRelationship class="w-4/5 mx-auto" />
       </Box>
 
       <Box>
@@ -318,6 +325,8 @@ import Box from '@/components/Box.vue'
 import SlidingBox from '@/components/SlidingBox.vue'
 import DirectPong from './components/DirectPong.vue'
 import PongServer from './components/PongServer.vue'
+import CarAndCoupon from './images/01_car-and-coupon.svg'
+import LenderDealerCustomerRelationship from './images/03-lender-dealer-customer-relationship.svg'
 import Button from '@/components/Button.vue'
 import { useStyleStore } from '@/stores/styles'
 

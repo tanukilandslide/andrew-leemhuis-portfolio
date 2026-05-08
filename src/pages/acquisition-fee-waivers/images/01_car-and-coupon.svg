@@ -70,6 +70,7 @@
 
       .cls-5, .cls-7 {
         font-size: 30.29px;
+        fill: #fff;
       }
 
       .cls-6 {
