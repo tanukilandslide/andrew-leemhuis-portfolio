@@ -4,21 +4,15 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import tailwindcss from '@tailwindcss/vite'
 import svgLoader from 'vite-svg-loader'
 
-import { fileURLToPath, URL } from 'node:url';
-
+import { fileURLToPath, URL } from 'node:url'
 
 // https://vite.dev/config/
 export default defineConfig({
   base: '/',
-  plugins: [
-    vue(),
-    vueDevTools(),
-    tailwindcss(),
-    svgLoader()
-  ],
+  plugins: [vue(), vueDevTools(), tailwindcss(), svgLoader()],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
 })

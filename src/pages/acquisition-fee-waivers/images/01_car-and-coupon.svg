@@ -1,89 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 531.23 241.56">
+<svg id="car-and-coupon" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 531.23 241.56">
   <defs>
     <style>
-      .cls-1 {
+      #car-and-coupon .cls-1 {
         stroke-width: 3px;
       }
 
-      .cls-1, .cls-2 {
+      #car-and-coupon .cls-1, #car-and-coupon .cls-2 {
         fill: none;
         stroke: #5a7e9c;
       }
 
-      .cls-1, .cls-2, .cls-3 {
+      #car-and-coupon .cls-1, #car-and-coupon .cls-2, .cls-3 {
         stroke-miterlimit: 10;
       }
 
-      .cls-4, .cls-5, .cls-6, .cls-7 {
+      #car-and-coupon .cls-4, .cls-6, .cls-7 {
         fill: #fff;
       }
 
-      .cls-8 {
+      #car-and-coupon .cls-8 {
         fill: #a5bdc1;
       }
 
-      .cls-9 {
+      #car-and-coupon .cls-9 {
         fill: #c4c4c3;
       }
 
-      .cls-10, .cls-3 {
+      #car-and-coupon .cls-10, .cls-3 {
         fill: #ae0d1d;
       }
 
-      .cls-11 {
+      #car-and-coupon .cls-11 {
         fill: #dc7b1d;
       }
 
-      .cls-12 {
+      #car-and-coupon .cls-12 {
         fill: #141213;
       }
 
-      .cls-13 {
+      #car-and-coupon .cls-13 {
         fill: #1e2741;
       }
 
-      .cls-14 {
+      #car-and-coupon .cls-14 {
         fill: #5a7e9c;
       }
 
-      .cls-15 {
+      #car-and-coupon .cls-15 {
         fill: #75a5c6;
       }
 
-      .cls-16 {
+      #car-and-coupon .cls-16 {
         fill: #78a4c2;
       }
 
-      .cls-17 {
+      #car-and-coupon .cls-17 {
         fill: #25629d;
       }
 
-      .cls-2 {
+      #car-and-coupon .cls-2 {
         stroke-width: 5px;
       }
 
-      .cls-5 {
+      #car-and-coupon .cls-5 {
         font-family: NotoSansJP-Bold-83pv-RKSJ-H, 'Noto Sans JP';
         font-weight: 700;
-      }
-
-      .cls-5, .cls-7 {
-        font-size: 30.29px;
         fill: #fff;
       }
 
-      .cls-6 {
+      #car-and-coupon .cls-5, .cls-7 {
+        font-size: 30.29px;
+      }
+
+      #car-and-coupon .cls-6 {
         font-family: NotoSansJP-Regular-83pv-RKSJ-H, 'Noto Sans JP';
         font-size: 23.45px;
       }
 
-      .cls-7 {
+      #car-and-coupon .cls-7 {
         font-family: NotoSansJP-Medium-83pv-RKSJ-H, 'Noto Sans JP';
         font-weight: 500;
       }
 
-      .cls-3 {
+      #car-and-coupon .cls-3 {
         stroke: #010101;
         stroke-width: 1.5px;
       }

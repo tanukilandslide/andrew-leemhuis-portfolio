@@ -35,6 +35,10 @@
     line-height: 1.7em;
   }
 
+  svg {
+    overflow: hidden;
+  }
+
   img {
     border-radius: var(--radius-md);
   }
