@@ -145,13 +145,13 @@
 
 <script setup>
 import Box from '@/components/Box.vue'
+import SlidingBox from '@/components/SlidingBox.vue'
 import Button from '@/components/Button.vue'
 import { Vue3Lottie } from 'vue3-lottie'
 import MRDashboard from './images/01-mr-dashboard-animation.json'
 import HiroyukiPersona from './images/03-hiroyuki.svg'
 import ReikoPersona from './images/04-reiko.svg'
 import { useStyleStore } from '@/stores/styles'
-import SlidingBox from '@/components/SlidingBox.vue'
 
 const store = useStyleStore()
 

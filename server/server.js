@@ -1,8 +1,16 @@
-const cors = require('cors')
-const express = require('express')
-const blogsRouter = require('./blogs')
+import dotenv from 'dotenv'
+dotenv.config({ path: '.env.local' })
+
+import cors from 'cors'
+import express from 'express'
+import blogsRouter from './blogs.js'
+import { createClient } from '@supabase/supabase-js'
 
 const app = express()
+
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_PUBLISHABLE_KEY)
+
+const router = express.Router()
 
 app.use(
   cors({
@@ -17,9 +25,9 @@ app.use((req, res, next) => {
 
 app.use(express.json())
 
-app.use('/blogs', blogsRouter)
+app.use('/blogs', blogsRouter(supabase))
 
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
   res.send('Hello from Express')
 })
 

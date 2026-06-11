@@ -13,6 +13,8 @@ import Resume from './pages/resume/Resume.vue'
 import LoanProgressSimulator from './pages/loan-progress-simulator/LoanProgressSimulator.vue'
 import NotFound from './pages/NotFound.vue'
 import PortfolioBlog from './pages/blog/PortfolioBlog.vue'
+import ZaikoAdmin from './pages/zaiko-admin/ZaikoAdmin.vue'
+import TestPage from './pages/test-page/TestPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -21,6 +23,7 @@ const router = createRouter({
     { path: '/resume', component: Resume },
     { path: '/about', component: About },
     { path: '/blog', component: PortfolioBlog },
+    { path: '/zaiko-admin', component: ZaikoAdmin },
     { path: '/astrazeneca', component: AstraZeneca },
     { path: '/loan-progress-simulator', component: LoanProgressSimulator },
     { path: '/acquisition-fee-waivers', component: AcquisitionFeeWaivers },
@@ -34,6 +37,7 @@ const router = createRouter({
       ],
     },
     { path: '/personal-projects', component: PersonalProjects },
+    { path: '/test', component: TestPage },
     { path: '/:notFound(.*)', component: NotFound },
   ],
   scrollBehavior(to, from, savedPosition) {

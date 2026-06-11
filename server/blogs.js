@@ -1,44 +1,56 @@
-const express = require('express')
-const router = express.Router()
+import express from 'express'
 
-let blogs = [
-  {
-    id: 1,
-    title: 'The Blog and the Furious',
-    date: 'May 5, 2026',
-    content:
-      "This is my first blog! It's not much, but I hope it can be a springboard to learn and demonstrate my growth in software development. \n \n Follow me on my journey!",
-  },
-  {
-    id: 2,
-    title: '2 Blog 2 Furious',
-    date: 'May 6, 2026',
-    content:
-      "This is my second blog! It's not much, but hopefully it's better than the last one. \n \n Follow me on my journey!",
-  },
-]
+async function getAllBlogs(supabase) {
+  const { data, error } = await supabase
+    .from('blogs')
+    .select('*, user:user_id (username)')
+    .order('id', { ascending: true })
 
-router.get('/', (req, res) => {
-  res.json(blogs)
-})
+  if (error) throw error
+  return data
+}
 
-router.get('/:id', (req, res) => {
-  const id = Number(req.params.id)
+export default function blogsRouter(supabase) {
+  const router = express.Router()
 
-  const blog = blogs.find((blog) => blogs.id === blog)
+  router.get('/', async (req, res) => {
+    try {
+      const data = await getAllBlogs(supabase)
+      console.log(data)
+      res.json(data)
+    } catch (err) {
+      res.status(500).json({
+        error: err.message,
+      })
+    }
+  })
 
-  req.json(blog)
-})
+  router.get('/:id', async (req, res) => {
+    const id = Number(req.params.id)
 
-router.post('/', (req, res) => {
-  const blog = req.body
-  console.log('New blog: ', blog)
+    try {
+      const { data, error } = await supabase.from('blogs').select('*').eq('id', id).single()
 
-  blog.id = blogs.length + 1
+      if (error) throw error
+      res.json(data)
+    } catch (err) {
+      res.status(404).json({ error: err.message })
+    }
+  })
 
-  blogs.push(blog)
+  router.post('/', async (req, res) => {
+    const blog = req.body
 
-  res.json({ blogs })
-})
+    try {
+      const { error } = await supabase.from('blogs').insert([blog])
+      if (error) throw error
 
-module.exports = router
+      const allBlogs = await getAllBlogs(supabase)
+      res.json(allBlogs)
+    } catch (err) {
+      res.status(500).json({ error: err.message })
+    }
+  })
+
+  return router
+}

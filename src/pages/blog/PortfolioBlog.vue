@@ -11,9 +11,12 @@
       >
         <div class="flex items-center gap-3">
           <h2>{{ blog.title }}</h2>
-          <p>{{ blog.date }}</p>
+          <p>{{ blog.created_at }}</p>
         </div>
-        <p v-if="blog.contentVisible">{{ blog.content }}</p>
+        <div v-if="blog.contentVisible">
+          <p>Written by: {{ blog.user.username }}</p>
+          <p>{{ blog.body }}</p>
+        </div>
         <!-- <p>{{ blog.content }}</p> -->
       </div>
 
@@ -30,12 +33,12 @@
           </div>
 
           <div class="flex flex-col">
-            <label class="" for="content">Blog content</label>
+            <label class="" for="body">Blog content</label>
             <input
               class="border-[#008F11] bg-black/20 text-[#00FF41] border-2 p-3 mt-3 rounded-md"
-              id="content"
+              id="body"
               placeholder="Type your thoughts"
-              v-model="content"
+              v-model="body"
             />
           </div>
 
@@ -71,12 +74,12 @@
 
 <script setup>
 import { useStyleStore } from '@/stores/styles'
-import { onMounted, reactive, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 
 const store = useStyleStore()
 let allBlogs = ref()
 let title = ref('')
-let content = ref('')
+let body = ref('')
 // let message = ref('')
 
 store.setNavbarColor('summer')
@@ -141,9 +144,11 @@ function handleSubmit() {
 async function tryHandleSubmit() {
   const newBlog = {
     title: title.value,
-    content: content.value,
-    date: new Date(),
+    body: body.value,
+    user_id: 1,
   }
+
+  console.log(newBlog)
 
   try {
     let response = await fetch('http://localhost:3000/blogs', {
@@ -157,7 +162,7 @@ async function tryHandleSubmit() {
     let data = await response.json()
     console.log(data)
 
-    allBlogs.value = data.blogs
+    allBlogs.value = data
   } catch (error) {
     console.error('Error fetching data: ', error)
   }
