@@ -1,7 +1,37 @@
 <template>
-  <div :class="`w-screen bg-${store.backgroundColor}`" ref="container">
-    <main class="max-w-245 pt-5">
-      <Box>
+  <div
+    :class="`w-screen h-screen overflow-auto bg-${store.backgroundColor}`"
+    ref="container"
+    @scroll="jumpToFrame(isScrolling.y.value)"
+  >
+    <main class="max-w-245 sticky h-[200vh] pt-5">
+      <!-- <p v-for="i in 4" :key="i">Item {{ i }}</p> -->
+      <div class="sticky w-1/2 p-5 pointer-events-none">
+        <button
+          class="m-3 p-3 bg-acquisitionfeewaivers rounded-md cursor-pointer pointer-events-auto"
+          @click="isScrolling.y.value = 2500"
+        >
+          Click me!
+        </button>
+        <h1>Here's the box! {{ isScrolling.y }}</h1>
+      </div>
+      <!-- <Vue3Lottie
+              class="rounded-xl"
+              loop="true"
+              ref="zaikoIntro"
+              :animationData="ZaikoIntro"
+              speed=".5"
+            /> -->
+      <div class="p-10 top-5 sticky bg-white">
+        <Vue3Lottie loop="true" ref="timeline" :animationData="Timeline" speed="1" />
+      </div>
+
+      <!-- <h1 class="sticky">Sliding box</h1>
+      <h2>{{ isScrolling.y }}</h2>
+      <Vue3Lottie :loop="true" :animationData="Timeline" :speed="0.5" @click="consoleLog()" />
+      <h2>{{ isScrolling.y }}</h2> -->
+
+      <!-- <Box>
         <h1>Zaiko's New Groove</h1>
         <Vue3Lottie class="rounded-xl" loop="false" :animationData="ZaikoIntro" speed="1" />
         <p>
@@ -17,6 +47,7 @@
           Post event
         </h2>
       </SlidingBox>
+
       <Box>
         <h2>The workshop</h2>
         <p>
@@ -120,20 +151,33 @@
             <h2 class="no-underline text-white mt-0 mb-1">Next Project</h2>
           </Button>
         </RouterLink>
-      </div>
+      </div> -->
     </main>
   </div>
 </template>
 
 <script setup>
 import { useStyleStore } from '@/stores/styles'
-import Box from '@/components/Box.vue'
-import Button from '@/components/Button.vue'
-import SlidingBox from '@/components/SlidingBox.vue'
 import { Vue3Lottie } from 'vue3-lottie'
-import ZaikoIntro from './images/01-zaiko-intro.json'
+import Timeline from './images/Timeline.json'
+import { useScroll } from '@vueuse/core'
+import { ref } from 'vue'
 
 const store = useStyleStore()
+
+const timeline = ref(null)
+const container = ref(null)
+
+let isScrolling = useScroll(container)
+
+const jumpToFrame = (frame) => {
+  // zaikoIntro.value.goToAndStop(frame, true)
+  timeline.value.goToAndStop(frame, true)
+}
+
+function consoleLog() {
+  console.log(isScrolling.y.value)
+}
 
 store.setNavbarColor('summer')
 store.setBackgroundColor('summer')
