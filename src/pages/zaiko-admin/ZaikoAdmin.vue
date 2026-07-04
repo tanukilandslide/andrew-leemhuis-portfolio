@@ -1,29 +1,57 @@
 <template>
   <div
-    :class="`w-screen h-screen overflow-auto bg-${store.backgroundColor}`"
+    :class="`w-screen h-screen overflow-auto  bg-${store.backgroundColor}`"
     ref="container"
     @scroll="jumpToFrame(isScrolling.y.value)"
   >
-    <main class="max-w-245 sticky h-[200vh] pt-5">
-      <!-- <p v-for="i in 4" :key="i">Item {{ i }}</p> -->
-      <div class="sticky w-1/2 p-5 pointer-events-none">
+    <main class="w-screen sticky pt-5">
+      <div
+        :class="
+          isScrolling.isScrolling.value
+            ? ` h-full w-screen absolute left-0 top-0 bg-[url(/00_medical_pattern.png)] opacity-100 duration-1000 transition-opacity z-0`
+            : `h-full w-screen absolute left-0 top-0 bg-[url(/00_medical_pattern.png)] opacity-0 duration-1000 transition-opacity z-0`
+        "
+      ></div>
+      <div class="h-[200vh]">
+        <!-- <p v-for="i in 4" :key="i">Item {{ i }}</p> -->
+        <!-- <div class="sticky w-1/2 p-5 pointer-events-none">
         <button
           class="m-3 p-3 bg-acquisitionfeewaivers rounded-md cursor-pointer pointer-events-auto"
-          @click="isScrolling.y.value = 2500"
+          @click="totalDurationCalculated()"
         >
           Click me!
         </button>
         <h1>Here's the box! {{ isScrolling.y }}</h1>
-      </div>
-      <!-- <Vue3Lottie
+        <h1>Total duration is {{ totalDuration }}</h1>
+      </div> -->
+        <!-- <Vue3Lottie
               class="rounded-xl"
               loop="true"
               ref="zaikoIntro"
               :animationData="ZaikoIntro"
               speed=".5"
             /> -->
-      <div class="p-10 top-5 sticky bg-white">
-        <Vue3Lottie loop="true" ref="timeline" :animationData="Timeline" speed="1" />
+        <div class="px-30 top-5 sticky bg-white">
+          <div class="flex justify-between">
+            <div class="p-3 bg-blue-400" @click="returnToLastSection()"><p>Last section</p></div>
+            <h2>{{ isScrolling.y }} / {{ backgroundHeight }}</h2>
+            <div class="flex">
+              <div class="p-3 bg-green-600" @click="playLottie()"><p>Play</p></div>
+              <div class="p-3 bg-yellow-400" @click="pauseLottie()"><p>Pause</p></div>
+              <div class="p-3 bg-red-400" @click="jumpToFrame(0)"><p>Return</p></div>
+            </div>
+            <h2>{{ currentSection }}</h2>
+            <div class="p-3 bg-blue-400" @click="playUntilNextSection()"><p>Next section</p></div>
+          </div>
+
+          <Vue3Lottie
+            class="content-center"
+            loop="true"
+            ref="timeline"
+            :animationData="Timeline"
+            speed="1"
+          />
+        </div>
       </div>
 
       <!-- <h1 class="sticky">Sliding box</h1>
@@ -31,15 +59,6 @@
       <Vue3Lottie :loop="true" :animationData="Timeline" :speed="0.5" @click="consoleLog()" />
       <h2>{{ isScrolling.y }}</h2> -->
 
-      <!-- <Box>
-        <h1>Zaiko's New Groove</h1>
-        <Vue3Lottie class="rounded-xl" loop="false" :animationData="ZaikoIntro" speed="1" />
-        <p>
-          Zaiko had found that their admin section didn't neatly map with how users actually managed
-          events. I was tasked with redesigning the UI with help from our other UX designer and a
-          product manager.
-        </p>
-      </Box>
       <SlidingBox>
         <h2>
           Our product manager had noticed through watching people set up events that there were 4
@@ -47,8 +66,17 @@
           Post event
         </h2>
       </SlidingBox>
+      <SlidingBox>
+        <h1>Zaiko's New Groove</h1>
+        <Vue3Lottie class="rounded-xl" loop="false" :animationData="ZaikoIntro" speed="1" />
+        <p>
+          Zaiko had found that their admin section didn't neatly map with how users actually managed
+          events. I was tasked with redesigning the UI with help from our other UX designer and a
+          product manager.
+        </p>
+      </SlidingBox>
 
-      <Box>
+      <!--<Box>
         <h2>The workshop</h2>
         <p>
           We wanted to align our teams and get feedback from both the English speaking product side
@@ -157,11 +185,13 @@
 </template>
 
 <script setup>
+import Box from '@/components/Box.vue'
+import SlidingBox from '@/components/SlidingBox.vue'
 import { useStyleStore } from '@/stores/styles'
 import { Vue3Lottie } from 'vue3-lottie'
 import Timeline from './images/Timeline.json'
 import { useScroll } from '@vueuse/core'
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 const store = useStyleStore()
 
@@ -170,14 +200,87 @@ const container = ref(null)
 
 let isScrolling = useScroll(container)
 
+const sectionAnchors = [0, 100, 200, 300, 400]
+
+// System needs to know which section it is in
+// if Y < 500, section === 0
+// make a computed variable that keeps track of the current section
+// When next button is clicked, a function will check what section it is currently in
+// The animation will play until section changes
+// when the Y coordinate equals the next anchor, it will stop
+
 const jumpToFrame = (frame) => {
-  // zaikoIntro.value.goToAndStop(frame, true)
   timeline.value.goToAndStop(frame, true)
 }
 
-function consoleLog() {
-  console.log(isScrolling.y.value)
+// const playUntilNextSection = () => {
+//   const current = currentSection
+//   while (isScrolling.y != sectionAnchors[currentSection.value + 1]) {
+//     setInterval(jumpToFrame(isScrolling.y + 1), 1000)
+//   }
+
+//   timeline.value.pause()
+// }
+
+function playUntilNextSection() {
+  let currentFrame = isScrolling.y.value
+
+  const gotoFrame = sectionAnchors[currentSection.value + 1]
+
+  const intervalAnimation = setInterval(() => {
+    jumpToFrame(currentFrame)
+    currentFrame++
+    isScrolling.y.value = currentFrame
+    if (currentFrame >= gotoFrame) {
+      clearInterval(intervalAnimation)
+    }
+  }, 10)
 }
+
+function returnToLastSection() {
+  let currentFrame = isScrolling.y.value - 1
+
+  const gotoFrame = sectionAnchors[currentSection.value]
+
+  const intervalAnimation = setInterval(() => {
+    jumpToFrame(currentFrame)
+    currentFrame--
+    isScrolling.y.value = currentFrame
+    if (currentFrame < gotoFrame) {
+      clearInterval(intervalAnimation)
+    }
+  }, 10)
+}
+
+const playLottie = () => {
+  let currentFrame = isScrolling.y.value
+
+  const intervalAnimation = setInterval(() => {
+    jumpToFrame(currentFrame)
+    currentFrame++
+    isScrolling.y.value = currentFrame
+    if (currentFrame >= 650) {
+      clearInterval(intervalAnimation)
+    }
+  }, 33)
+}
+
+const pauseLottie = () => {
+  timeline.value.pause()
+  console.log(document.body.scrollHeight)
+}
+
+let currentSection = computed(() => {
+  if (isScrolling.y.value < sectionAnchors[1]) {
+    return 0
+  } else if (isScrolling.y.value < sectionAnchors[2]) {
+    return 1
+  } else if (isScrolling.y.value < sectionAnchors[3]) {
+    return 3
+  } else {
+    return 4
+  }
+})
 
 store.setNavbarColor('summer')
 store.setBackgroundColor('summer')

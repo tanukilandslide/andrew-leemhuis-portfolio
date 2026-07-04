@@ -3,7 +3,7 @@
     :class="`w-screen h-[95vh] bg-image bg-[url('/src/pages/loan-progress-simulator/images/00_lps_background_pattern.svg')] bg-repeat  bg-${store.backgroundColor}`"
     ref="container"
   > -->
-  <div :class="`w-screen bg-${store.backgroundColor}`" ref="container">
+  <div :class="`w-screen h-screen -z-10 overflow-auto bg-${store.backgroundColor}`" ref="container">
     <main class="max-w-245 pt-5">
       <Box>
         <h1 class="h1-inline">Loan Progress Simulator</h1>
@@ -280,9 +280,6 @@ import { ref } from 'vue'
 import InterestPerception from './images/01_interest_perception.svg'
 import InterestReality from './images/02_interest_reality.svg'
 import Analytics from './images/07_analytics.svg'
-
-const container = ref(null)
-const isScrolling = useScroll(container)
 
 const store = useStyleStore()
 

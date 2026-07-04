@@ -1,5 +1,5 @@
 <template>
-  <div :class="'w-screen bg-' + store.backgroundColor">
+  <div :class="'w-screen bg-[url(/00_medical_pattern.png)] bg-' + store.backgroundColor">
     <main class="max-w-245">
       <Box>
         <div class="w-3/5 mx-auto mb-5">
