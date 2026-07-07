@@ -2,6 +2,12 @@
   <div :class="'w-screen bg-' + store.backgroundColor">
     <main :class="'max-w-245'">
       <div class="flex flex-wrap content-center justify-center gap-20 h-[95vh]">
+        <RouterLink class="no-underline" to="/zaiko-admin">
+          <ProjectItem>
+            <ZaikoLogo />
+          </ProjectItem>
+        </RouterLink>
+
         <RouterLink class="no-underline" to="/astrazeneca">
           <ProjectItem>
             <AstraZenecaLogo />
@@ -40,6 +46,7 @@
 import ProjectBadge from '@/components/ProjectBadge.vue'
 import ProjectItem from '@/components/ProjectItem.vue'
 
+import ZaikoLogo from '../../../assets/icons/zaiko-logo.svg'
 import AstraZenecaLogo from '../../../assets/icons/astrazeneca-logo.svg'
 import LoanProgressSimulatorLogo from '../../../assets/icons/santander-logo.svg'
 import AcqFeeWaiversLogo from '../../../assets/icons/acquisition-fee-waivers.svg'

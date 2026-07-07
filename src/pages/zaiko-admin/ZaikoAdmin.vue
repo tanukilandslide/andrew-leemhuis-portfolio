@@ -12,7 +12,7 @@
             : `h-full w-screen absolute left-0 top-0 bg-[url(/00_medical_pattern.png)] opacity-0 duration-1000 transition-opacity z-0`
         "
       ></div>
-      <div class="h-[200vh]">
+      <div class="h-[200vh] mb-20 flex">
         <!-- <p v-for="i in 4" :key="i">Item {{ i }}</p> -->
         <!-- <div class="sticky w-1/2 p-5 pointer-events-none">
         <button
@@ -31,7 +31,43 @@
               :animationData="ZaikoIntro"
               speed=".5"
             /> -->
-        <div class="px-30 top-5 sticky bg-white">
+
+        <div class="h-fill w-1/3 bg-cyan-800">
+          <div class="h-1/3 m-5 bg-amber-600">
+            <div class="sticky top-0 bg-amber-600">
+              <h1>First checkpoint</h1>
+              <ul>
+                <li>• Info about the first part of the project</li>
+                <li>• Info about the first part of the project</li>
+                <li>• Info about the first part of the project</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="h-1/3 m-5 bg-amber-600">
+            <div class="sticky top-0 bg-amber-600">
+              <h1>Second checkpoint</h1>
+              <ul>
+                <li>• Info about the second part of the project</li>
+                <li>• Info about the second part of the project</li>
+                <li>• Info about the second part of the project</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="h-1/3 m-5 bg-amber-600">
+            <div class="sticky top-0 bg-amber-600">
+              <h1>Third checkpoint</h1>
+              <ul>
+                <li>• Info about the third part of the project</li>
+                <li>• Info about the third part of the project</li>
+                <li>• Info about the third part of the project</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-30 h-min w-2/3 top-5 sticky bg-white">
           <div class="flex justify-between">
             <div class="p-3 bg-blue-400" @click="returnToLastSection()"><p>Last section</p></div>
             <h2>{{ isScrolling.y }} / {{ backgroundHeight }}</h2>
