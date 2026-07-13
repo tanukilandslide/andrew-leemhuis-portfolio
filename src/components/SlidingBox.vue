@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-5 h-[110vh]">
+  <div :class="props.slidingClass ? props.slidingClass : 'mb-5 h-[110vh]'">
     <div class="sticky top-5">
       <box :style="props.style">
         <slot> </slot>
@@ -13,6 +13,10 @@ import Box from './Box.vue'
 
 const props = defineProps({
   style: {
+    type: String,
+    required: false,
+  },
+  slidingClass: {
     type: String,
     required: false,
   },
