@@ -120,31 +120,61 @@
           </div>
         </div>
 
-        <div
-          class="h-screen overflow-auto"
-          ref="timelineSection"
-          @scroll="jumpToFrame(timelineScrolling.y.value)"
-        >
-          <div class="h-[200vh]">
-            <div class="sticky top-0">
-              <h1 class="text-white sticky">UI Evolution</h1>
-              <h2 class="text-white sticky top-5">
-                {{ timelineScrolling.isScrolling }} Timeline Scroll:
-                {{ timelineScrolling.y }} Window Scroll: {{ windowScroll.y }}
-              </h2>
-              <h2 class="text-white">
-                Section 1: {{ firstHeight }} Section 2: {{ secondHeight }} Total:
-                {{ firstHeight + secondHeight }}
-              </h2>
-              <Vue3Lottie
-                class="content-center"
-                loop="true"
-                ref="timeline"
-                :animationData="Timeline"
-                :autoPlay="false"
-                speed="1"
-              />
+        <div class="h-[7000px] flex">
+          <div class="w-1/3">
+            <div class="h-[2500px]">
+              <div class="p-5 sticky top-5">
+                <h1 class="text-white sticky">Timeline</h1>
+              </div>
             </div>
+
+            <div class="h-[500px]">
+              <div class="p-5 sticky top-5">
+                <h1 class="text-white">Feature Cards</h1>
+                <p class="text-white">
+                  Is this event a draft? Is it today? Did it happen 2 years ago? Who knows!
+                </p>
+              </div>
+            </div>
+
+            <div class="h-[1200px]">
+              <div class="p-5 sticky top-5">
+                <h1 class="text-white">Event Navigation</h1>
+                <p class="text-white">
+                  Is this event a draft? Is it today? Did it happen 2 years ago? Who knows!
+                </p>
+              </div>
+            </div>
+
+            <div class="h-[800px]">
+              <div class="p-5 sticky top-5">
+                <h1 class="text-white">Reducing Global Navigation</h1>
+                <p class="text-white">
+                  Is this event a draft? Is it today? Did it happen 2 years ago? Who knows!
+                </p>
+              </div>
+            </div>
+
+            <div class="h-[600px]">
+              <div class="p-5 sticky top-5">
+                <h1 class="text-white">Colors For Event States</h1>
+                <p class="text-white">
+                  Is this event a draft? Is it today? Did it happen 2 years ago? Who knows!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="sticky top-5 h-fit p-5 flex flex-col">
+            <Vue3Lottie
+              class="content-center"
+              loop="true"
+              ref="timeline"
+              :animationData="Timeline"
+              :autoPlay="true"
+              speed="1"
+            />
           </div>
         </div>
       </div>
@@ -159,7 +189,7 @@ import { useStyleStore } from '@/stores/styles'
 import { Vue3Lottie } from 'vue3-lottie'
 import Timeline from './images/Timeline.json'
 import { useScroll, useWindowScroll, useElementSize } from '@vueuse/core'
-import { ref, computed, useTemplateRef } from 'vue'
+import { ref, computed, useTemplateRef, watch } from 'vue'
 
 const store = useStyleStore()
 
@@ -181,14 +211,19 @@ const { height: secondHeight } = useElementSize(secondSection)
 
 const firstSecondSectionHeight = firstHeight + secondHeight
 
-console.log(secondSectionHeight.height)
-
 let sectionHeights = 97 + firstSectionHeight.height.value + secondSectionHeight.height.value
 
+let scrollPlayAnimation = computed(() => {
+  return windowScroll.y.value - 6200
+})
+
+watch(windowScroll.y, () => {
+  console.log(windowScroll.y.value - 6200)
+  jumpToFrame((windowScroll.y.value - 6200) / 8)
+})
+
 const jumpToFrame = (frame) => {
-  const frameStart = frame - firstSecondSectionHeight.value
-  console.log(frameStart)
-  timeline.value.goToAndStop(frameStart, true)
+  timeline.value.goToAndStop(frame, true)
 }
 
 const playLottie = () => {
