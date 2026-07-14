@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NavBar class="sticky"></NavBar>
+    <NavBar class="sticky z-1"></NavBar>
 
     <router-view></router-view>
   </div>
