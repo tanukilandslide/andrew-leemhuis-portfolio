@@ -122,13 +122,13 @@
 
         <div class="h-[7000px] flex">
           <div class="w-1/3">
-            <div class="h-[2500px]">
+            <div class="h-35/100">
               <div class="p-5 sticky top-5">
                 <h1 class="text-white sticky">Timeline</h1>
               </div>
             </div>
 
-            <div class="h-[500px]">
+            <div class="h-10/100">
               <div class="p-5 sticky top-5">
                 <h1 class="text-white">Feature Cards</h1>
                 <p class="text-white">
@@ -137,7 +137,7 @@
               </div>
             </div>
 
-            <div class="h-[1200px]">
+            <div class="h-19/100">
               <div class="p-5 sticky top-5">
                 <h1 class="text-white">Event Navigation</h1>
                 <p class="text-white">
@@ -146,7 +146,7 @@
               </div>
             </div>
 
-            <div class="h-[800px]">
+            <div class="h-6/100">
               <div class="p-5 sticky top-5">
                 <h1 class="text-white">Reducing Global Navigation</h1>
                 <p class="text-white">
@@ -155,7 +155,7 @@
               </div>
             </div>
 
-            <div class="h-[600px]">
+            <div class="h-5/24">
               <div class="p-5 sticky top-5">
                 <h1 class="text-white">Colors For Event States</h1>
                 <p class="text-white">
@@ -166,18 +166,67 @@
           </div>
 
           <!-- Right Column -->
-          <div class="sticky top-5 h-fit p-5 flex flex-col">
-            <Vue3Lottie
-              class="content-center"
-              loop="true"
-              ref="timeline"
-              :animationData="Timeline"
-              :autoPlay="true"
-              speed="1"
-            />
+          <div class="sticky top-0 h-screen flex items-center">
+            <div
+              class="h-fit rounded-2xl bg-linear-to-r from-[#903283] to-[#E63573] flex-col items-center"
+            >
+              <div class="w-full rounded-2xl py-20 px-10 bg-linear-to-b to-zaiko to-50%">
+                <Vue3Lottie
+                  class="content-center"
+                  loop="true"
+                  ref="timeline"
+                  :animationData="Timeline"
+                  :autoPlay="true"
+                  speed="1"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 4 -->
+
+        <div class="flex h-screen sm:flex-col md:flex-col lg:flex-row">
+          <!-- Left Column -->
+          <div class="w-1/3">
+            <div class="p-5 sticky top-5">
+              <h1 class="text-white">Light Mode</h1>
+              <p class="text-white">
+                Analytics showed that the majority of users in Japan used light mode, so I focussed
+                on making colors that would work in that context as well
+              </p>
+              <!-- <h2 class="text-white">Problem: No obvious event state</h2>
+            <h2 class="text-white">Section Height: {{ secondSectionHeight }}</h2> -->
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="sticky w-full top-0 h-screen flex items-center">
+            <div class="bg-[#EEDEE4] w-full rounded-2xl overflow-clip">
+              <div
+                class="h-fit w-full bg-linear-to-r from-[#90328350] to-[#E6357350] flex-col items-center"
+              >
+                <div class="w-full py-20 px-10 bg-linear-to-b to-[#EEDEE4] to-50%">
+                  <Lightmode class="w-full"></Lightmode>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="m-auto w-fit flex gap-5 py-5">
+      <RouterLink to="/">
+        <Button class="border-white">
+          <h2 class="no-underline text-white mt-0 mb-1">Home</h2>
+        </Button>
+      </RouterLink>
+      <RouterLink to="/astrazeneca">
+        <Button class="border-white">
+          <h2 class="no-underline text-white mt-0 mb-1">Next Project</h2>
+        </Button>
+      </RouterLink>
     </div>
   </main>
 </template>
@@ -185,11 +234,14 @@
 <script setup>
 import Box from '@/components/Box.vue'
 import SlidingBox from '@/components/SlidingBox.vue'
+import Button from '@/components/Button.vue'
 import { useStyleStore } from '@/stores/styles'
 import { Vue3Lottie } from 'vue3-lottie'
 import Timeline from './images/Timeline.json'
 import { useScroll, useWindowScroll, useElementSize } from '@vueuse/core'
 import { ref, computed, useTemplateRef, watch } from 'vue'
+
+import Lightmode from '../../../assets/zaiko-admin-assets/lightmode.svg'
 
 const store = useStyleStore()
 
@@ -218,8 +270,8 @@ let scrollPlayAnimation = computed(() => {
 })
 
 watch(windowScroll.y, () => {
-  console.log(windowScroll.y.value - 6200)
-  jumpToFrame((windowScroll.y.value - 6200) / 8)
+  console.log(windowScroll.y.value - firstHeight.value - secondHeight.value)
+  jumpToFrame((windowScroll.y.value - firstHeight.value - secondHeight.value) / 8)
 })
 
 const jumpToFrame = (frame) => {

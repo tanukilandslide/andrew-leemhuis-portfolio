@@ -136,7 +136,13 @@
             usability testing and collaborating with developers to deliver it in the next 6 months.
           </p>
         </Box>
+
         <div class="m-auto w-fit flex gap-5 pb-5">
+          <RouterLink to="/zaiko-admin">
+            <Button class="border-white">
+              <h2 class="text-white mt-0 mb-1">Previous Project</h2>
+            </Button>
+          </RouterLink>
           <RouterLink to="/">
             <Button class="border-white">
               <h2 class="no-underline text-white mt-0 mb-1">Home</h2>
