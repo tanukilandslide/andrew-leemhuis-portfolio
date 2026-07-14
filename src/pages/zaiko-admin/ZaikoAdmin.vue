@@ -4,8 +4,8 @@
       <div
         :class="
           windowScroll.isScrolling.value || timelineScrolling.isScrolling.value
-            ? ` h-full w-screen absolute left-0 top-0 z-0 bg-[url(/00_medical_pattern.png)] opacity-20 duration-1000 pointer-events-none transition-opacity z-0`
-            : `h-full w-screen absolute left-0 top-0 z-0 bg-[url(/00_medical_pattern.png)] opacity-0 duration-1000 pointer-events-none transition-opacity z-0`
+            ? ` h-full w-screen absolute left-0 top-0 z-0 bg-[url(/00_medical_pattern.png)] opacity-20 duration-1000 pointer-events-none transition-opacity`
+            : `h-full w-screen absolute left-0 top-0 z-0 bg-[url(/00_medical_pattern.png)] opacity-0 duration-1000 pointer-events-none transition-opacity `
         "
       ></div>
 

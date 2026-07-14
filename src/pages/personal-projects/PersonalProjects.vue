@@ -34,9 +34,9 @@ const store = useStyleStore()
 store.setNavbarColor('summer')
 store.setBackgroundColor('summer')
 
-function setImagePath(path) {
-  return new URL(`./images/${path}`, import.meta.url).href
-}
+// function setImagePath(path) {
+//   return new URL(`./images/${path}`, import.meta.url).href
+// }
 
 const projects = [
   {
