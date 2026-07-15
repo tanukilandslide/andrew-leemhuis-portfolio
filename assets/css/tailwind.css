@@ -27,6 +27,8 @@
   --color-linkshmewebsite-navbar: #52adcc;
 
   --color-linkshmewebsite-accent: #f1684e;
+
+  --color-zaiko: #1f2128;
 }
 
 @layer base {
@@ -47,7 +49,7 @@
     font-size: 2em;
     line-height: 1em;
     font-weight: bold;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
   }
 
   h2 {
@@ -81,7 +83,6 @@
   }
 
   main {
-    max-width: 980px;
     margin: 0 auto;
   }
 
