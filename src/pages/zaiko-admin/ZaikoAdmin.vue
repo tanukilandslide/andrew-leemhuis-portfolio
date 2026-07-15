@@ -1,13 +1,4 @@
 <template>
-  <!-- <div class="snap-y snap-mandatory h-200 overflow-scroll p-5 bg-zaiko">
-    <div class="m-5 mx-auto w-100 h-100 bg-blue-500 snap-start"></div>
-    <div class="m-5 mx-auto w-100 h-100 bg-amber-500 snap-start"></div>
-    <div class="m-5 mx-auto w-100 h-100 bg-fuchsia-600 snap-start"></div>
-    <div class="m-5 mx-auto w-100 h-100 bg-green-500 snap-start"></div>
-    <div class="m-5 mx-auto w-100 h-100 bg-teal-500 snap-start"></div>
-    <div class="m-5 mx-auto w-100 h-100 bg-red-500 snap-start"></div>
-  </div> -->
-
   <main class="bg-zaiko">
     <div class="w-screen flex flex-col sticky pt-5">
       <div
@@ -38,8 +29,6 @@
                 user friendly page. We were now getting data about how users actually used our
                 services, so we decided to better match their common patterns.
               </p>
-              <!-- <h2 class="text-white">First Section Height: {{ firstSectionHeight.height }}</h2>
-            <h2 class="text-white">Section Height: {{ firstHeight + secondHeight + 97 }}</h2> -->
             </Box>
           </div>
 
@@ -60,8 +49,6 @@
                     improvement from the previous legacy software, it was still a first draft with
                     some problems that needed solving.
                   </p>
-                  <!-- <h2 class="text-white">Problem: No obvious event state</h2>
-            <h2 class="text-white">Section Height: {{ secondSectionHeight }}</h2> -->
                 </div>
               </div>
 
@@ -73,8 +60,6 @@
                     every event goes through the same steps, we wanted to incorporate that into our
                     new design to better indicate what users could do at each step.
                   </p>
-                  <!-- <h2 class="text-white">Problem: No obvious event state</h2>
-            <h2 class="text-white">Section Height: {{ secondSectionHeight }}</h2> -->
                 </div>
               </div>
             </div>
@@ -98,8 +83,6 @@
                     indicate which page you were on. The features that were part of Zaiko's
                     competitive advantage were also hidden.
                   </p>
-                  <!-- <h2 class="text-white">Problem: No obvious event state</h2>
-            <h2 class="text-white">Section Height: {{ secondSectionHeight }}</h2> -->
                 </div>
               </div>
             </div>
@@ -121,8 +104,6 @@
                   Each page had a large amount of trapped space that was really only used on the
                   overview page, forcing the rest of the page to be more complex.
                 </p>
-                <!-- <h2 class="text-white">Problem: No obvious event state</h2>
-            <h2 class="text-white">Section Height: {{ secondSectionHeight }}</h2> -->
               </div>
             </div>
 
@@ -181,7 +162,7 @@
             </div>
 
             <div class="h-5/24">
-              <div class="p-5 mx-5 sticky top-5 rounded-md bg-zaiko">
+              <div class="p-5 sticky top-5 rounded-md bg-zaiko">
                 <h1 class="text-white">Colors For Event States</h1>
                 <p class="text-white">
                   Finally, I felt there was an opportunity to add colors to help indicate what state
@@ -211,17 +192,15 @@
 
         <!-- Section 4 -->
 
-        <div class="flex h-fit sm:flex-col md:flex-col lg:flex-row">
+        <div class="flex w-full h-fit sm:flex-col md:flex-col lg:flex-row">
           <!-- Left Column -->
-          <div class="w-2/3">
-            <div class="p-5 mx-5 sticky top-5 rounded-md bg-zaiko">
+          <div class="w-1/3">
+            <div class="p-5 sticky top-5 rounded-md bg-zaiko">
               <h1 class="text-white">Final State: Light Mode</h1>
               <p class="text-white">
                 Analytics showed that the majority of users in Japan used light mode, so I focussed
                 on making colors that would work in that context as well
               </p>
-              <!-- <h2 class="text-white">Problem: No obvious event state</h2>
-            <h2 class="text-white">Section Height: {{ secondSectionHeight }}</h2> -->
             </div>
           </div>
 
@@ -257,13 +236,12 @@
 
 <script setup>
 import Box from '@/components/Box.vue'
-import SlidingBox from '@/components/SlidingBox.vue'
 import Button from '@/components/Button.vue'
 import { useStyleStore } from '@/stores/styles'
 import { Vue3Lottie } from 'vue3-lottie'
 import Timeline from './images/Timeline.json'
 import { useScroll, useWindowScroll, useElementSize } from '@vueuse/core'
-import { ref, computed, useTemplateRef, watch } from 'vue'
+import { ref, useTemplateRef, watch } from 'vue'
 
 import Lightmode from '../../../assets/zaiko-admin-assets/lightmode.svg'
 
@@ -271,27 +249,18 @@ const store = useStyleStore()
 
 const timeline = ref(null)
 const timelineSection = ref(null)
-const container = ref(null)
+
 const windowScroll = useWindowScroll()
 
-let pageScrolling = useScroll(container)
 let timelineScrolling = useScroll(timelineSection)
 
 const firstSection = useTemplateRef('firstSection')
-let firstSectionHeight = useElementSize(firstSection)
+
 const { height: firstHeight } = useElementSize(firstSection)
 
 const secondSection = useTemplateRef('secondSection')
-let secondSectionHeight = useElementSize(secondSection)
+
 const { height: secondHeight } = useElementSize(secondSection)
-
-const firstSecondSectionHeight = firstHeight + secondHeight
-
-let sectionHeights = 97 + firstSectionHeight.height.value + secondSectionHeight.height.value
-
-let scrollPlayAnimation = computed(() => {
-  return windowScroll.y.value - 6200
-})
 
 watch(windowScroll.y, () => {
   console.log(windowScroll.y.value - firstHeight.value - secondHeight.value)
@@ -300,19 +269,6 @@ watch(windowScroll.y, () => {
 
 const jumpToFrame = (frame) => {
   timeline.value.goToAndStop(frame, true)
-}
-
-const playLottie = () => {
-  let currentFrame = pageScrolling.y.value
-
-  const intervalAnimation = setInterval(() => {
-    jumpToFrame(currentFrame)
-    currentFrame++
-    pageScrolling.y.value = currentFrame
-    if (currentFrame >= 650) {
-      clearInterval(intervalAnimation)
-    }
-  }, 33)
 }
 
 store.setNavbarColor('zaiko')

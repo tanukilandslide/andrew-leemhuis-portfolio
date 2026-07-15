@@ -14,7 +14,6 @@ import LoanProgressSimulator from './pages/loan-progress-simulator/LoanProgressS
 import NotFound from './pages/NotFound.vue'
 import PortfolioBlog from './pages/blog/PortfolioBlog.vue'
 import ZaikoAdmin from './pages/zaiko-admin/ZaikoAdmin.vue'
-import TestPage from './pages/test-page/TestPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -37,7 +36,6 @@ const router = createRouter({
       ],
     },
     { path: '/personal-projects', component: PersonalProjects },
-    { path: '/test', component: TestPage },
     { path: '/:notFound(.*)', component: NotFound },
   ],
   scrollBehavior(to, from, savedPosition) {
