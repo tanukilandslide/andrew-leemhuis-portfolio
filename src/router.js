@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Homepage from './pages/homepage/Homepage.vue'
-import About from './pages/about/About.vue'
+import About from './pages/about/AboutPage.vue/index.js'
 import AcquisitionFeeWaivers from './pages/acquisition-fee-waivers/AcquisitionFeeWaivers.vue'
 import AstraZeneca from './pages/astrazenica/AstraZeneca.vue'
 import LinksHMEWebsite from './pages/linkshme-website/LinksHMEWebsite.vue'

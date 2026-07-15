@@ -1,6 +1,6 @@
 <template>
   <div :class="` bg-${store.backgroundColor}`">
-    <main :class="`max-w-[980px] h-[95vh]`">
+    <main :class="`max-w-245 h-[95vh]`">
       <div class="mt-20 flex gap-20">
         <img
           src="./images/me.jpeg"
@@ -44,7 +44,6 @@
 </template>
 
 <script setup>
-import ScrollPractice from '@/components/ScrollPractice.vue'
 import { useStyleStore } from '@/stores/styles'
 
 const store = useStyleStore()

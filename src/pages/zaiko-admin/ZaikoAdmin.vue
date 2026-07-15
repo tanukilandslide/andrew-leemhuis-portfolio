@@ -116,7 +116,7 @@
 
         <!-- Section 3 -->
 
-        <div class="h-[7000px] w-full flex mb-20">
+        <div class="h-1750 w-full flex mb-20">
           <div class="w-1/3">
             <div class="h-35/100">
               <div class="p-5 sticky top-5 rounded-md bg-zaiko">
