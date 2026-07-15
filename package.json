@@ -13,14 +13,13 @@
     "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
-    "-": "^0.0.1",
     "@tailwindcss/vite": "^4.2.0",
     "@vueuse/core": "^14.2.1",
     "gh-pages": "^6.3.0",
-    "node": "^25.7.0",
+
     "pg": "^8.21.0",
     "pinia": "^3.0.4",
-    "save-dev": "^0.0.1-security",
+
     "vue": "^3.5.28",
     "vue-router": "^5.0.3",
     "vue3-lottie": "^3.3.1"

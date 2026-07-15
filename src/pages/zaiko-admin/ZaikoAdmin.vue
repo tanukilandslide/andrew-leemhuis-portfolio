@@ -40,7 +40,7 @@
         <div ref="secondSection" class="h-fit flex flex-col gap-5 mb-20">
           <div class="flex h-[200vh] sm:flex-col md:flex-col lg:flex-row">
             <!-- Left Column -->
-            <div class="w-2/3">
+            <div class="w-1/3">
               <div class="h-1/2">
                 <div class="p-5 sticky top-5 bg-zaiko">
                   <h1 class="text-white">The Current Admin Page</h1>
@@ -65,8 +65,8 @@
             </div>
 
             <!-- Right Column -->
-            <div class="sticky top-5 h-fit px-5 flex flex-col">
-              <img class="rounded-md" src="/assets/zaiko-admin-assets/webpage-before.png" alt="" />
+            <div class=" h-full w-full px-5 flex flex-col">
+              <img class="sticky top-5 rounded-md" src="/assets/zaiko-admin-assets/webpage-before.png" alt="" />
             </div>
           </div>
 
@@ -74,7 +74,7 @@
 
           <div class="flex h-fit sm:flex-col md:flex-col lg:flex-row">
             <!-- Left Column -->
-            <div class="w-2/3">
+            <div class="w-1/3">
               <div class="h-screen">
                 <div class="p-5 sticky top-5 bg-zaiko">
                   <h1 class="text-white">Unintuitive navigation and hidden tools</h1>
@@ -88,8 +88,8 @@
             </div>
 
             <!-- Right Column -->
-            <div class="sticky top-5 h-fit px-5 flex flex-col">
-              <img class="rounded-md" src="/assets/zaiko-admin-assets/timeline-before.png" alt="" />
+            <div class="h-screen w-full px-5 flex flex-col">
+              <img class="sticky top-5 rounded-md" src="/assets/zaiko-admin-assets/timeline-before.png" alt="" />
             </div>
           </div>
 
@@ -97,7 +97,7 @@
 
           <div class="flex h-fit sm:flex-col md:flex-col lg:flex-row">
             <!-- Left Column -->
-            <div class="w-2/3">
+            <div class="w-1/3 h-screen">
               <div class="p-5 sticky top-5 bg-zaiko">
                 <h1 class="text-white">Wasted space</h1>
                 <p class="text-white">
@@ -108,15 +108,15 @@
             </div>
 
             <!-- Right Column -->
-            <div class="sticky top-5 h-fit px-5 flex flex-col">
-              <img class="rounded-md" src="/assets/zaiko-admin-assets/wasted-space.png" alt="" />
+            <div class="h-screen w-full px-5 flex flex-col">
+              <img class="sticky top-5 rounded-md" src="/assets/zaiko-admin-assets/wasted-space.png" alt="" />
             </div>
           </div>
         </div>
 
         <!-- Section 3 -->
 
-        <div class="h-1750 w-full flex mb-20">
+        <div class="h-1750 w-screen flex mb-20">
           <div class="w-1/3">
             <div class="h-35/100">
               <div class="p-5 sticky top-5 rounded-md bg-zaiko">
@@ -161,7 +161,7 @@
               </div>
             </div>
 
-            <div class="h-5/24">
+            <div class="h-30/100">
               <div class="p-5 sticky top-5 rounded-md bg-zaiko">
                 <h1 class="text-white">Colors For Event States</h1>
                 <p class="text-white">
@@ -174,9 +174,9 @@
 
           <!-- Right Column -->
 
-          <div class="sticky w-2/3 top-5 px-5 flex flex-col">
-            <div class="sticky w-full top-5 rounded-2xl bg-linear-to-r from-[#903283] to-[#E63573]">
-              <div class="h-[95vh] w-full rounded-2xl py-20 px-5 bg-linear-to-b to-zaiko to-50%">
+          <div class="sticky w-full top-5 px-5 flex flex-col">
+            <div class="sticky  top-5 rounded-2xl bg-linear-to-r from-[#903283] to-[#E63573]">
+              <div class=" rounded-2xl py-20 px-5 bg-linear-to-b to-zaiko to-50%">
                 <Vue3Lottie
                   class="content-center"
                   loop="true"
@@ -206,14 +206,16 @@
 
           <!-- Right Column -->
 
+          <div class="w-full px-5">
           <div class="bg-[#EEDEE4] w-full h-fit rounded-2xl overflow-clip">
             <div
               class="h-fit w-full bg-linear-to-r from-[#90328350] to-[#E6357350] flex-col items-center"
             >
-              <div class="w-full h-fit py-20 px-10 bg-linear-to-b to-[#EEDEE4] to-50%">
+              <div class=" w-full py-20 px-5 flex flex-col bg-linear-to-b to-[#EEDEE4] to-50%">
                 <Lightmode class="w-full mx-auto"></Lightmode>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
