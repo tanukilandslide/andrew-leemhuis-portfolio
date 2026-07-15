@@ -5,7 +5,7 @@
         <img
           src="./images/me.jpeg"
           alt="A portrait of Andrew sitting in a comfortable cafe environment."
-          class="rounded-full w-1/4 h-max self-center"
+          class="rounded-full w-1/4 self-center"
         />
 
         <div class="w-3/4">
