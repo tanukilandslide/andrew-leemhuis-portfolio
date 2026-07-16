@@ -1,6 +1,6 @@
 <template>
   <main class="bg-zaiko">
-    <div class="w-screen flex flex-col sticky pt-5">
+    <div class="w-screen flex flex-col sticky sm:pt-5">
       <div
         :class="
           windowScroll.isScrolling.value || timelineScrolling.isScrolling.value
@@ -12,39 +12,35 @@
       <!-- First Section -->
 
       <div class="z-1 w-screen max-w-245 mx-auto mb-20">
-        <div class="sm:flex-col-reverse md:flex-col-reverse lg:flex-row" ref="firstSection">
-          <!-- Left Column -->
-          <div class="max-w-245 mx-auto mb-[10vh] h-fit sticky top-5">
-            <Box :style="'bg-zaiko  rounded-xl overflow-hidden'">
-              <video class="w-full" loop autoplay controls>
-                <source src="/assets/zaiko-admin-assets/zaiko-sizzle-reel.mp4" type="video/mp4" />
-              </video>
-              <div class="px-5 pb-5">
-                <p class="text-white mx-auto text-center mb-10">
-                  A sizzle real I made to advertise our services.
-                </p>
-                <h1 class="text-white">Zaiko's New Admin Dashboard</h1>
-                <h2 class="text-white">A New UI for Better Managing Events</h2>
-                <p class="text-white">
-                  Zaiko had finally made the switch from a legacy event administration page to a
-                  more user friendly page. We were now getting data about how users actually used
-                  our services, so we decided to better match their common patterns.
-                </p>
-              </div>
-            </Box>
-          </div>
-
-          <!-- Right Column -->
+        <!-- Left Column -->
+        <div class="max-w-245 mx-auto mb-[10vh] h-fit" ref="firstSection">
+          <Box :style="'bg-zaiko  sm :rounded-xl overflow-hidden'">
+            <video class="w-full" loop autoplay controls>
+              <source src="/assets/zaiko-admin-assets/zaiko-sizzle-reel.mp4" type="video/mp4" />
+            </video>
+            <div class="px-5 pb-5">
+              <p class="text-white mx-auto text-center mb-10">
+                A sizzle real I made to advertise our services.
+              </p>
+              <h1 class="text-white">Zaiko's New Admin Dashboard</h1>
+              <h2 class="text-white">A New UI for Better Managing Events</h2>
+              <p class="text-white">
+                Zaiko had finally made the switch from a legacy event administration page to a more
+                user friendly page. We were now getting data about how users actually used our
+                services, so we decided to better match their common patterns.
+              </p>
+            </div>
+          </Box>
         </div>
 
         <!-- Second Section: Part one -->
 
         <div ref="secondSection" class="h-fit flex flex-col gap-5 mb-20">
-          <div class="flex h-[200vh] sm:flex-col md:flex-col lg:flex-row">
+          <div class="flex h-[200vh] flex-col-reverse sm:flex-row">
             <!-- Left Column -->
-            <div class="w-1/3">
+            <div class="sm:w-1/3 h-full">
               <div class="h-1/2">
-                <div class="p-5 sticky top-5 bg-zaiko">
+                <div class="p-5 sticky top-55 sm:top-5 bg-zaiko">
                   <h1 class="text-white">The Current Admin Page</h1>
                   <p class="text-white">
                     This was the starting point for our redsign project. White it was a large
@@ -55,7 +51,7 @@
               </div>
 
               <div class="h-1/2">
-                <div class="p-5 sticky top-5 bg-zaiko">
+                <div class="p-5 sticky top-55 sm:top-5 bg-zaiko">
                   <h1 class="text-white">No obvious event state</h1>
                   <p class="text-white">
                     Is this event a draft? Is it today? Did it happen 2 years ago? Who knows! Since
@@ -67,9 +63,9 @@
             </div>
 
             <!-- Right Column -->
-            <div class="h-full w-full px-5 flex flex-col">
+            <div class="sm:h-full w-full sticky top-0 sm:top-5 sm:px-5 flex flex-col">
               <img
-                class="sticky top-5 rounded-md"
+                class="rounded-md sm:sticky sm:top-5"
                 src="/assets/zaiko-admin-assets/webpage-before.png"
                 alt=""
               />
@@ -78,11 +74,11 @@
 
           <!-- Second Section: Part two -->
 
-          <div class="flex h-fit sm:flex-col md:flex-col lg:flex-row">
+          <div class="flex h-fit flex-col-reverse sm:flex-row">
             <!-- Left Column -->
-            <div class="w-1/3">
+            <div class="sm:w-1/3">
               <div class="h-screen">
-                <div class="p-5 sticky top-5 bg-zaiko">
+                <div class="p-5 sticky top-15 sm:top-5 bg-zaiko">
                   <h1 class="text-white">Unintuitive navigation and hidden tools</h1>
                   <p class="text-white">
                     Each tab had a different layout with no obvious title outside of the tab name to
@@ -94,7 +90,7 @@
             </div>
 
             <!-- Right Column -->
-            <div class="h-screen w-full px-5 flex flex-col">
+            <div class="sm:h-full w-full sticky top-0 sm:top-5 sm:px-5 flex flex-col">
               <img
                 class="sticky top-5 rounded-md"
                 src="/assets/zaiko-admin-assets/timeline-before.png"
@@ -105,10 +101,10 @@
 
           <!-- Second Section: Part three -->
 
-          <div class="flex h-fit sm:flex-col md:flex-col lg:flex-row">
+          <div class="flex h-fit flex-col-reverse sm:flex-row">
             <!-- Left Column -->
-            <div class="w-1/3 h-screen">
-              <div class="p-5 sticky top-5 bg-zaiko">
+            <div class="sm:w-1/3 h-screen">
+              <div class="p-5 sticky top-55 sm:top-5 bg-zaiko">
                 <h1 class="text-white">Wasted space</h1>
                 <p class="text-white">
                   Each page had a large amount of trapped space that was really only used on the
@@ -118,23 +114,20 @@
             </div>
 
             <!-- Right Column -->
-            <div class="h-screen w-full px-5 flex flex-col">
-              <img
-                class="sticky top-5 rounded-md"
-                src="/assets/zaiko-admin-assets/wasted-space.png"
-                alt=""
-              />
+            <div class="sm:h-full w-full sticky top-0 sm:top-5 sm:px-5 flex flex-col">
+              <img class="rounded-md" src="/assets/zaiko-admin-assets/wasted-space.png" alt="" />
             </div>
           </div>
         </div>
 
         <!-- Section 3 -->
 
-        <div class="h-1750 w-screen flex mb-20">
-          <div class="w-1/3">
+        <div class="h-1750 w-full flex flex-col-reverse justify-end sm:flex-row mb-20">
+          <div class="sm:w-1/3 h-full">
             <div class="h-35/100">
-              <div class="p-5 sticky top-5 rounded-md bg-zaiko">
+              <div :class="`p-5 sticky top-[${montageHeight}px] sm:top-5 rounded-md bg-zaiko`">
                 <h1 class="text-white sticky">Timeline</h1>
+                <h2>{{ montageHeight }}</h2>
                 <p class="text-white">
                   The timeline was a key area for indicating what state the event was in. It would
                   also help indicate what should be done by users at each step.
@@ -143,7 +136,7 @@
             </div>
 
             <div class="h-10/100">
-              <div class="p-5 sticky top-5 rounded-md bg-zaiko">
+              <div class="p-5 sticky top-83 sm:top-5 rounded-md bg-zaiko">
                 <h1 class="text-white">Feature Cards</h1>
                 <p class="text-white">
                   We wanted to indicate what features could be used for a ticket, so my co-designer
@@ -155,7 +148,7 @@
             </div>
 
             <div class="h-19/100">
-              <div class="p-5 sticky top-5 rounded-md bg-zaiko">
+              <div class="p-5 sticky top-83 sm:top-5 rounded-md bg-zaiko">
                 <h1 class="text-white">Event Navigation</h1>
                 <p class="text-white">
                   Navigation was another issue that we saw users having. Our tabs weren't intuitive,
@@ -166,7 +159,7 @@
             </div>
 
             <div class="h-6/100">
-              <div class="p-5 sticky top-5 rounded-md bg-zaiko">
+              <div class="p-5 sticky top-83 sm:top-5 rounded-md bg-zaiko">
                 <h1 class="text-white">Reducing Global Navigation</h1>
                 <p class="text-white">
                   The global navigation took up too much space. Reducing it's size also created an
@@ -176,7 +169,7 @@
             </div>
 
             <div class="h-30/100">
-              <div class="p-5 sticky top-5 rounded-md bg-zaiko">
+              <div class="p-5 sticky top-83 sm:top-5 rounded-md bg-zaiko">
                 <h1 class="text-white">Colors For Event States</h1>
                 <p class="text-white">
                   Finally, I felt there was an opportunity to add colors to help indicate what state
@@ -188,9 +181,11 @@
 
           <!-- Right Column -->
 
-          <div class="sticky w-full top-5 px-5 flex flex-col">
-            <div class="sticky top-5 rounded-2xl bg-linear-to-r from-[#903283] to-[#E63573]">
-              <div class="rounded-2xl py-20 px-5 bg-linear-to-b to-zaiko to-50%">
+          <div class="sticky w-full top-0 sm:top-5 sm:px-5 flex flex-col" ref="montage">
+            <div
+              class="sticky sm:rounded-2xl overflow-hidden bg-linear-to-r from-[#903283] to-[#E63573]"
+            >
+              <div class="py-10 px-5 bg-linear-to-b to-zaiko to-50%">
                 <Vue3Lottie
                   class="content-center"
                   loop="true"
@@ -206,9 +201,9 @@
 
         <!-- Section 4 -->
 
-        <div class="flex w-full h-fit sm:flex-col md:flex-col lg:flex-row">
+        <div class="flex w-full h-fit flex-col-reverse sm:flex-row">
           <!-- Left Column -->
-          <div class="w-1/3">
+          <div class="sm:w-1/3">
             <div class="p-5 sticky top-5 rounded-md bg-zaiko">
               <h1 class="text-white">Final State: Light Mode</h1>
               <p class="text-white">
@@ -220,12 +215,12 @@
 
           <!-- Right Column -->
 
-          <div class="w-full px-5">
-            <div class="bg-[#EEDEE4] w-full h-fit rounded-2xl overflow-clip">
+          <div class="w-full sm:px-5">
+            <div class="bg-[#EEDEE4] w-full h-fit sm:rounded-2xl overflow-clip">
               <div
                 class="h-fit w-full bg-linear-to-r from-[#90328350] to-[#E6357350] flex-col items-center"
               >
-                <div class="w-full py-20 px-5 flex flex-col bg-linear-to-b to-[#EEDEE4] to-50%">
+                <div class="w-full py-10 px-5 flex flex-col bg-linear-to-b to-[#EEDEE4] to-50%">
                   <Lightmode class="w-full mx-auto"></Lightmode>
                 </div>
               </div>
@@ -277,6 +272,10 @@ const { height: firstHeight } = useElementSize(firstSection)
 const secondSection = useTemplateRef('secondSection')
 
 const { height: secondHeight } = useElementSize(secondSection)
+
+const montage = useTemplateRef('montage')
+
+const { height: montageHeight } = useElementSize(montage)
 
 watch(windowScroll.y, () => {
   console.log(windowScroll.y.value - firstHeight.value - secondHeight.value)
