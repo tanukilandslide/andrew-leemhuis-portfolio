@@ -15,7 +15,7 @@
         <!-- Left Column -->
         <div class="max-w-245 mx-auto mb-[10vh] h-fit" ref="firstSection">
           <Box :style="'bg-zaiko  sm:rounded-xl overflow-hidden'">
-            <video class="w-full" loop autoplay controls>
+            <video class="w-full" loop autoplay playsinline controls>
               <source src="/assets/zaiko-admin-assets/zaiko-sizzle-reel.mp4" type="video/mp4" />
             </video>
             <div class="px-5 pb-5">
