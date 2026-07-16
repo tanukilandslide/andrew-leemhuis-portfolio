@@ -4,8 +4,8 @@
       <div
         :class="
           windowScroll.isScrolling.value || timelineScrolling.isScrolling.value
-            ? ` h-full w-screen absolute left-0 top-0 z-0 bg-[url(/00_medical_pattern.png)] opacity-20 duration-1000 pointer-events-none transition-opacity`
-            : `h-full w-screen absolute left-0 top-0 z-0 bg-[url(/00_medical_pattern.png)] opacity-0 duration-1000 pointer-events-none transition-opacity `
+            ? ` h-full w-screen absolute left-0 top-0 z-0 bg-[url(/00_medical_pattern.png)] opacity-20 duration-500 pointer-events-none transition-opacity`
+            : `h-full w-screen absolute left-0 top-0 z-0 bg-[url(/00_medical_pattern.png)] opacity-0 duration-500 pointer-events-none transition-opacity `
         "
       ></div>
 
@@ -14,7 +14,7 @@
       <div class="z-1 w-screen max-w-245 mx-auto mb-20">
         <!-- Left Column -->
         <div class="max-w-245 mx-auto mb-[10vh] h-fit" ref="firstSection">
-          <Box :style="'bg-zaiko  sm :rounded-xl overflow-hidden'">
+          <Box :style="'bg-zaiko  sm:rounded-xl overflow-hidden'">
             <video class="w-full" loop autoplay controls>
               <source src="/assets/zaiko-admin-assets/zaiko-sizzle-reel.mp4" type="video/mp4" />
             </video>
@@ -40,7 +40,7 @@
             <!-- Left Column -->
             <div class="sm:w-1/3 h-full">
               <div class="h-1/2">
-                <div class="p-5 sticky top-55 sm:top-5 bg-zaiko">
+                <div class="p-5 sticky sm:top-5 bg-zaiko original-page-text">
                   <h1 class="text-white">The Current Admin Page</h1>
                   <p class="text-white">
                     This was the starting point for our redsign project. White it was a large
@@ -51,7 +51,7 @@
               </div>
 
               <div class="h-1/2">
-                <div class="p-5 sticky top-55 sm:top-5 bg-zaiko">
+                <div class="p-5 sticky sm:top-5 bg-zaiko original-page-text">
                   <h1 class="text-white">No obvious event state</h1>
                   <p class="text-white">
                     Is this event a draft? Is it today? Did it happen 2 years ago? Who knows! Since
@@ -63,7 +63,10 @@
             </div>
 
             <!-- Right Column -->
-            <div class="sm:h-full w-full sticky top-0 sm:top-5 sm:px-5 flex flex-col">
+            <div
+              class="sm:h-full w-full sticky top-0 sm:top-5 sm:px-5 flex flex-col"
+              ref="originalPage"
+            >
               <img
                 class="rounded-md sm:sticky sm:top-5"
                 src="/assets/zaiko-admin-assets/webpage-before.png"
@@ -78,7 +81,7 @@
             <!-- Left Column -->
             <div class="sm:w-1/3">
               <div class="h-screen">
-                <div class="p-5 sticky top-15 sm:top-5 bg-zaiko">
+                <div class="p-5 sticky original-timeline-text bg-zaiko">
                   <h1 class="text-white">Unintuitive navigation and hidden tools</h1>
                   <p class="text-white">
                     Each tab had a different layout with no obvious title outside of the tab name to
@@ -90,7 +93,10 @@
             </div>
 
             <!-- Right Column -->
-            <div class="sm:h-full w-full sticky top-0 sm:top-5 sm:px-5 flex flex-col">
+            <div
+              class="sm:h-full w-full sticky top-0 sm:top-5 sm:px-5 flex flex-col"
+              ref="originalTimeline"
+            >
               <img
                 class="sticky top-5 rounded-md"
                 src="/assets/zaiko-admin-assets/timeline-before.png"
@@ -104,7 +110,7 @@
           <div class="flex h-fit flex-col-reverse sm:flex-row">
             <!-- Left Column -->
             <div class="sm:w-1/3 h-screen">
-              <div class="p-5 sticky top-55 sm:top-5 bg-zaiko">
+              <div class="p-5 sticky bg-zaiko original-page-text">
                 <h1 class="text-white">Wasted space</h1>
                 <p class="text-white">
                   Each page had a large amount of trapped space that was really only used on the
@@ -125,9 +131,8 @@
         <div class="h-1750 w-full flex flex-col-reverse justify-end sm:flex-row mb-20">
           <div class="sm:w-1/3 h-full">
             <div class="h-35/100">
-              <div :class="`p-5 sticky top-[${montageHeight}px] sm:top-5 rounded-md bg-zaiko`">
+              <div :class="'p-5 sticky sm:top-5 rounded-md bg-zaiko montage'">
                 <h1 class="text-white sticky">Timeline</h1>
-                <h2>{{ montageHeight }}</h2>
                 <p class="text-white">
                   The timeline was a key area for indicating what state the event was in. It would
                   also help indicate what should be done by users at each step.
@@ -136,7 +141,7 @@
             </div>
 
             <div class="h-10/100">
-              <div class="p-5 sticky top-83 sm:top-5 rounded-md bg-zaiko">
+              <div :class="'p-5 sticky sm:top-5 rounded-md bg-zaiko montage'">
                 <h1 class="text-white">Feature Cards</h1>
                 <p class="text-white">
                   We wanted to indicate what features could be used for a ticket, so my co-designer
@@ -148,7 +153,7 @@
             </div>
 
             <div class="h-19/100">
-              <div class="p-5 sticky top-83 sm:top-5 rounded-md bg-zaiko">
+              <div :class="'p-5 sticky sm:top-5 rounded-md bg-zaiko montage'">
                 <h1 class="text-white">Event Navigation</h1>
                 <p class="text-white">
                   Navigation was another issue that we saw users having. Our tabs weren't intuitive,
@@ -159,7 +164,7 @@
             </div>
 
             <div class="h-6/100">
-              <div class="p-5 sticky top-83 sm:top-5 rounded-md bg-zaiko">
+              <div :class="'p-5 sticky sm:top-5 rounded-md bg-zaiko montage'">
                 <h1 class="text-white">Reducing Global Navigation</h1>
                 <p class="text-white">
                   The global navigation took up too much space. Reducing it's size also created an
@@ -169,7 +174,7 @@
             </div>
 
             <div class="h-30/100">
-              <div class="p-5 sticky top-83 sm:top-5 rounded-md bg-zaiko">
+              <div class="p-5 sticky top-83 sm:top-5 rounded-md bg-zaiko montage">
                 <h1 class="text-white">Colors For Event States</h1>
                 <p class="text-white">
                   Finally, I felt there was an opportunity to add colors to help indicate what state
@@ -183,7 +188,7 @@
 
           <div class="sticky w-full top-0 sm:top-5 sm:px-5 flex flex-col" ref="montage">
             <div
-              class="sticky sm:rounded-2xl overflow-hidden bg-linear-to-r from-[#903283] to-[#E63573]"
+              class="sticky top-0 sm:top-5 sm:rounded-2xl overflow-hidden bg-linear-to-r from-[#903283] to-[#E63573]"
             >
               <div class="py-10 px-5 bg-linear-to-b to-zaiko to-50%">
                 <Vue3Lottie
@@ -277,8 +282,17 @@ const montage = useTemplateRef('montage')
 
 const { height: montageHeight } = useElementSize(montage)
 
+const originalPage = useTemplateRef('originalPage')
+
+const { height: originalPageHeight } = useElementSize(originalPage)
+
+const originalTimeline = useTemplateRef('originalTimeline')
+
+const { height: originalTimelineHeight } = useElementSize(originalTimeline)
+
 watch(windowScroll.y, () => {
   console.log(windowScroll.y.value - firstHeight.value - secondHeight.value)
+  console.log(Math.floor(montageHeight.value))
   jumpToFrame((windowScroll.y.value - firstHeight.value - secondHeight.value) / 8)
 })
 
@@ -289,3 +303,31 @@ const jumpToFrame = (frame) => {
 store.setNavbarColor('zaiko')
 store.setBackgroundColor('zaiko')
 </script>
+
+<style scoped>
+.montage {
+  top: v-bind(montageHeight + 'px');
+}
+
+.original-page-text {
+  top: v-bind(originalPageHeight + 'px');
+}
+
+.original-timeline-text {
+  top: v-bind(originalTimelineHeight + 'px');
+}
+
+@media (min-width: 640px) {
+  .montage {
+    top: calc(var(--spacing) * 5);
+  }
+
+  .original-page-text {
+    top: calc(var(--spacing) * 5);
+  }
+
+  .original-timeline-text {
+    top: calc(var(--spacing) * 5);
+  }
+}
+</style>
