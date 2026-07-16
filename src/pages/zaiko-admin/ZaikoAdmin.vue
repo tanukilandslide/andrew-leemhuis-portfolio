@@ -11,24 +11,26 @@
 
       <!-- First Section -->
 
-      <div class="z-1 w-screen mb-20">
+      <div class="z-1 w-screen max-w-245 mx-auto mb-20">
         <div class="sm:flex-col-reverse md:flex-col-reverse lg:flex-row" ref="firstSection">
           <!-- Left Column -->
-          <div class="max-w-245 mx-auto mb-[10vh] p-5 h-fit sticky top-5">
-            <Box :style="'bg-zaiko p-5 rounded-xl'">
+          <div class="max-w-245 mx-auto mb-[10vh] h-fit sticky top-5">
+            <Box :style="'bg-zaiko  rounded-xl overflow-hidden'">
               <video class="w-full" loop autoplay controls>
                 <source src="/assets/zaiko-admin-assets/zaiko-sizzle-reel.mp4" type="video/mp4" />
               </video>
-              <p class="text-white mx-auto text-center mb-10">
-                A sizzle real I made to advertise our services.
-              </p>
-              <h1 class="text-white">Zaiko's New Admin Dashboard</h1>
-              <h2 class="text-white">A New UI for Better Managing Events</h2>
-              <p class="text-white">
-                Zaiko had finally made the switch from a legacy event administration page to a more
-                user friendly page. We were now getting data about how users actually used our
-                services, so we decided to better match their common patterns.
-              </p>
+              <div class="px-5 pb-5">
+                <p class="text-white mx-auto text-center mb-10">
+                  A sizzle real I made to advertise our services.
+                </p>
+                <h1 class="text-white">Zaiko's New Admin Dashboard</h1>
+                <h2 class="text-white">A New UI for Better Managing Events</h2>
+                <p class="text-white">
+                  Zaiko had finally made the switch from a legacy event administration page to a
+                  more user friendly page. We were now getting data about how users actually used
+                  our services, so we decided to better match their common patterns.
+                </p>
+              </div>
             </Box>
           </div>
 
@@ -65,8 +67,12 @@
             </div>
 
             <!-- Right Column -->
-            <div class=" h-full w-full px-5 flex flex-col">
-              <img class="sticky top-5 rounded-md" src="/assets/zaiko-admin-assets/webpage-before.png" alt="" />
+            <div class="h-full w-full px-5 flex flex-col">
+              <img
+                class="sticky top-5 rounded-md"
+                src="/assets/zaiko-admin-assets/webpage-before.png"
+                alt=""
+              />
             </div>
           </div>
 
@@ -89,7 +95,11 @@
 
             <!-- Right Column -->
             <div class="h-screen w-full px-5 flex flex-col">
-              <img class="sticky top-5 rounded-md" src="/assets/zaiko-admin-assets/timeline-before.png" alt="" />
+              <img
+                class="sticky top-5 rounded-md"
+                src="/assets/zaiko-admin-assets/timeline-before.png"
+                alt=""
+              />
             </div>
           </div>
 
@@ -109,7 +119,11 @@
 
             <!-- Right Column -->
             <div class="h-screen w-full px-5 flex flex-col">
-              <img class="sticky top-5 rounded-md" src="/assets/zaiko-admin-assets/wasted-space.png" alt="" />
+              <img
+                class="sticky top-5 rounded-md"
+                src="/assets/zaiko-admin-assets/wasted-space.png"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -175,8 +189,8 @@
           <!-- Right Column -->
 
           <div class="sticky w-full top-5 px-5 flex flex-col">
-            <div class="sticky  top-5 rounded-2xl bg-linear-to-r from-[#903283] to-[#E63573]">
-              <div class=" rounded-2xl py-20 px-5 bg-linear-to-b to-zaiko to-50%">
+            <div class="sticky top-5 rounded-2xl bg-linear-to-r from-[#903283] to-[#E63573]">
+              <div class="rounded-2xl py-20 px-5 bg-linear-to-b to-zaiko to-50%">
                 <Vue3Lottie
                   class="content-center"
                   loop="true"
@@ -207,15 +221,15 @@
           <!-- Right Column -->
 
           <div class="w-full px-5">
-          <div class="bg-[#EEDEE4] w-full h-fit rounded-2xl overflow-clip">
-            <div
-              class="h-fit w-full bg-linear-to-r from-[#90328350] to-[#E6357350] flex-col items-center"
-            >
-              <div class=" w-full py-20 px-5 flex flex-col bg-linear-to-b to-[#EEDEE4] to-50%">
-                <Lightmode class="w-full mx-auto"></Lightmode>
+            <div class="bg-[#EEDEE4] w-full h-fit rounded-2xl overflow-clip">
+              <div
+                class="h-fit w-full bg-linear-to-r from-[#90328350] to-[#E6357350] flex-col items-center"
+              >
+                <div class="w-full py-20 px-5 flex flex-col bg-linear-to-b to-[#EEDEE4] to-50%">
+                  <Lightmode class="w-full mx-auto"></Lightmode>
+                </div>
               </div>
             </div>
-          </div>
           </div>
         </div>
       </div>
