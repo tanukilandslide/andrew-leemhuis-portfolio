@@ -13,7 +13,7 @@
           <!-- <a href="index.html"><button><li class="nav-item">Projects</li></button></a> -->
 
           <a
-            href="/andrew-leemhuis-resume.pdf"
+            href="/assets/andrew-leemhuis-resume.pdf"
             class="no-underline text-white border rounded-full px-4 py-1 sm:py-2 my-auto"
           >
             <li class="">Resume</li>
