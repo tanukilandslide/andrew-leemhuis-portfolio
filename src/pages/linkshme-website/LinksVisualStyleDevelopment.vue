@@ -1,6 +1,6 @@
 <template>
   <main class="bg-linkshmewebsite">
-    <div class="w-screen flex flex-col sticky pt-5">
+    <div class="w-screen flex flex-col sticky">
       <div
         :class="
           windowScroll.isScrolling.value
@@ -20,13 +20,25 @@
             work at HME companies.
           </p>
 
-          <div class="flex justify-between">
-            <img src="./images/13_bebbeh.jpg" alt="" class="h-60" />
-            <img src="./images/14_bebbeh_vector.jpg" alt="" class="h-60" />
-            <img src="./images/15_iv_stand.jpg" alt="" class="h-60" />
-            <img src="./images/16_iv_stand_vector.jpg" alt="" class="h-60" />
-            <img src="./images/17_kimberlin.jpg" alt="" class="h-60" />
-            <img src="./images/18_kimberlin_vector.jpg" alt="" class="h-60" />
+          <div class="flex justify-between mt-5 h-25 md:h-60">
+            <div class="">
+              <img src="./images/13_bebbeh.jpg" alt="" class="h-full w-auto" />
+            </div>
+            <div class="">
+              <img src="./images/14_bebbeh_vector.jpg" alt="" class="h-full w-auto" />
+            </div>
+            <div class="">
+              <img src="./images/15_iv_stand.jpg" alt="" class="h-full w-auto" />
+            </div>
+            <div class="">
+              <img src="./images/16_iv_stand_vector.jpg" alt="" class="h-full w-auto" />
+            </div>
+            <div class="">
+              <img src="./images/17_kimberlin.jpg" alt="" class="h-full w-auto" />
+            </div>
+            <div class="">
+              <img src="./images/18_kimberlin_vector.jpg" alt="" class="h-full w-auto" />
+            </div>
           </div>
         </SlidingBox>
 
@@ -70,8 +82,8 @@
 
           <FeatureIllustrations
             :title="'Real Time Billing'"
-            :final-image="'/src/pages/linkshme-website/images/28_feature-banner-automatic-real-time-billing.png'"
-            :sketch="'/src/pages/linkshme-website/images/29_feature-banner-cloud-connectivity_sketch.jpg'"
+            :final-image="'/src/pages/linkshme-website/images/29_feature-banner-automatic-real-time-billing.png'"
+            :sketch="'/src/pages/linkshme-website/images/30_feature-banner-automatic-real-time-billing_sketch.jpg'"
           />
         </Box>
 

@@ -58,7 +58,7 @@
           alt=""
           class="w-full"
         /> -->
-          <LenderDealerCustomerRelationship class="w-4/5 mx-auto" />
+          <LenderDealerCustomerRelationship class="w-full sm:w-4/5 mx-auto" />
         </Box>
 
         <Box>
@@ -75,7 +75,11 @@
         <Box>
           <h2>But what could be so bad about one spreadsheet O_O</h2>
 
-          <img src="./images/05-acq-fee-waiver-spreadsheet.PNG" alt="" class="w-4/5 m-auto" />
+          <img
+            src="./images/05-acq-fee-waiver-spreadsheet.PNG"
+            alt=""
+            class="w-full sm:w-4/5 m-auto"
+          />
 
           <h2>What&apos;s wrong with the current tool?</h2>
 
@@ -155,15 +159,15 @@
 
           <h4>1&rpar; In Progress</h4>
 
-          <img src="./images/06-in-progress.jpg" alt="" class="w-4/5 mx-auto mb-7" />
+          <img src="./images/06-in-progress.jpg" alt="" class="w-full sm:w-4/5 mx-auto mb-7" />
 
           <h4>2&rpar; Pending Approval</h4>
 
-          <img src="./images/07-pending-approval.jpg" alt="" class="w-4/5 mx-auto mb-7" />
+          <img src="./images/07-pending-approval.jpg" alt="" class="w-full sm:w-4/5 mx-auto mb-7" />
 
           <h4>3&rpar; Manager Approved</h4>
 
-          <img src="./images/08-manager-approved.jpg" alt="" class="w-4/5 mx-auto mb-7" />
+          <img src="./images/08-manager-approved.jpg" alt="" class="w-full sm:w-4/5 mx-auto mb-7" />
 
           <div class="flex">
             <img src="./images/09-search-icon.svg" alt="" class="" />
@@ -176,14 +180,18 @@
             them to the cart.
           </h3>
 
-          <img src="./images/10-last-months-waivers.jpg" alt="" class="w-4/5 mx-auto mb-7" />
+          <img
+            src="./images/10-last-months-waivers.jpg"
+            alt=""
+            class="w-full sm:w-4/5 mx-auto mb-7"
+          />
 
           <h3>
             Now the vehicles have been added and sorted by make and model with filters at the top
             for easy searching
           </h3>
 
-          <img src="./images/11-vehicles-added.png" alt="" class="w-4/5 mx-auto mb-7" />
+          <img src="./images/11-vehicles-added.png" alt="" class="w-full sm:w-4/5 mx-auto mb-7" />
 
           <div class="flex">
             <img src="./images/12-cart-icon.svg" alt="" class="" />
@@ -196,7 +204,7 @@
             websites
           </h3>
 
-          <img src="./images/13-vehicle-cart.jpg" alt="" class="w-4/5 mx-auto mb-7" />
+          <img src="./images/13-vehicle-cart.jpg" alt="" class="w-full sm:w-4/5 mx-auto mb-7" />
 
           <h2>Mass Update</h2>
 
@@ -206,7 +214,7 @@
             and update all. Updated waivers are outlined in blue.
           </h3>
 
-          <img src="./images/14-mass-update.jpg" alt="" class="w-4/5 mx-auto mb-7" />
+          <img src="./images/14-mass-update.jpg" alt="" class="w-full sm:w-4/5 mx-auto mb-7" />
 
           <h2>Mananger Review</h2>
           <h3>
@@ -216,7 +224,7 @@
             to get fixed.
           </h3>
 
-          <img src="./images/15-rejected-waivers.jpg" alt="" class="w-4/5 mx-auto mb-7" />
+          <img src="./images/15-rejected-waivers.jpg" alt="" class="w-full sm:w-4/5 mx-auto mb-7" />
         </Box>
 
         <Box>
@@ -260,7 +268,11 @@
 
           <h2>Clear Action Confirmation Messaging</h2>
 
-          <img src="./images/16-system-notifications.jpg" alt="" class="w-4/5 mx-auto mb-7" />
+          <img
+            src="./images/16-system-notifications.jpg"
+            alt=""
+            class="w-full sm:w-4/5 mx-auto mb-7"
+          />
 
           <h2>Search&sol;Vehicle Cart Toggle</h2>
           <h3>
@@ -269,7 +281,7 @@
             scroll.
           </h3>
 
-          <img src="./images/17-page-toggle.jpg" alt="" class="w-4/5 mx-auto mb-7" />
+          <img src="./images/17-page-toggle.jpg" alt="" class="w-full sm:w-4/5 mx-auto mb-7" />
 
           <h2>Checkbox Adds to Cart</h2>
           <h3>
@@ -277,7 +289,11 @@
             that vehicle to the cart without needing an &quot;Add To Cart&quot; button
           </h3>
 
-          <img src="./images/18-checkbox-added-to-cart.jpg" alt="" class="w-4/5 mx-auto mb-7" />
+          <img
+            src="./images/18-checkbox-added-to-cart.jpg"
+            alt=""
+            class="w-full sm:w-4/5 mx-auto mb-7"
+          />
 
           <h2>Rejected Vehicles are Shown at Top of List</h2>
           <h3>
@@ -287,7 +303,7 @@
             vehicles.
           </h3>
 
-          <img src="./images/19-rejected-waivers.jpg" alt="" class="w-4/5 mx-auto mb-7" />
+          <img src="./images/19-rejected-waivers.jpg" alt="" class="w-full sm:w-4/5 mx-auto mb-7" />
         </Box>
 
         <Box>

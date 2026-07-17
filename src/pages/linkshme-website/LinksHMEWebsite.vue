@@ -1,9 +1,9 @@
 <template>
   <div :class="'w-screen h-[95vh] bg-' + store.backgroundColor">
     <banner />
-    <main class="max-w-245 bg-linkshmewebsite">
-      <Box class="flex m-0">
-        <div class="max-w-2/3">
+    <main class="max-w-245 bg-linkshmewebsite h-fit">
+      <Box :style="'flex flex-col-reverse lg:flex-row m-0 bg-white rounded-2xl'">
+        <div class="w-full sm:max-w-2/3 p-5">
           <h1 class="h1-inline">Links HME Marketing Website</h1>
 
           <h2 class="h2-inline">(Links HME)</h2>
@@ -22,12 +22,12 @@
         <img
           src="./images/02_Robo_Calendar.jpg"
           alt="Robot showing a calendar to a warehouse employee"
-          class="self-center h-max"
+          class="self-center w-full"
         />
       </Box>
     </main>
 
-    <div class="m-auto w-fit flex gap-5 pb-5">
+    <div class="m-auto w-fit flex gap-5 my-5">
       <RouterLink to="/acquisition-fee-waivers">
         <Button class="border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
           <h2 class="mb-1">Previous project</h2>

@@ -1,6 +1,5 @@
 <template>
   <Box :style="' my-5'">
-    <h2 class="text-linkshmewebsite-accent top-640">Homepage First Draft</h2>
     <div class="homepage_image_bottom">
       <h2 class="links_header text-linkshmewebsite-accent">Final Homepage</h2>
       <img
@@ -9,12 +8,14 @@
         alt=""
       />
     </div>
-
-    <img
-      class="homepage_image_top rounded-md"
-      src="/src/pages/linkshme-website/images/32_homepage_first_draft.jpg"
-      alt=""
-    />
+    <div class="homepage_image_top bg-linkshmewebsite">
+      <h2 class="text-linkshmewebsite-accent">Homepage First Draft</h2>
+      <img
+        class="rounded-md"
+        src="/src/pages/linkshme-website/images/32_homepage_first_draft.jpg"
+        alt=""
+      />
+    </div>
   </Box>
 </template>
 
@@ -46,7 +47,25 @@ import Box from '@/components/Box.vue'
 .homepage_image_top {
   max-width: 100%;
   position: relative;
-  top: -160rem;
+  top: -93rem;
   z-index: 5;
+}
+
+@media (min-width: 640px) {
+  .homepage_image_bottom {
+    max-width: 100%;
+    z-index: 3;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10rem;
+    /* border-radius: 0 0 16px 16px; */
+  }
+
+  .homepage_image_top {
+    max-width: 100%;
+    position: relative;
+    top: -157rem;
+    z-index: 5;
+  }
 }
 </style>

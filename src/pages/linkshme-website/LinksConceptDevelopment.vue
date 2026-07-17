@@ -1,6 +1,6 @@
 <template>
   <main class="bg-linkshmewebsite">
-    <div class="w-screen flex flex-col sticky pt-5">
+    <div class="w-screen flex flex-col sticky">
       <div
         :class="
           windowScroll.isScrolling.value
