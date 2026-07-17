@@ -11,7 +11,7 @@
 
       <div class="z-1 max-w-245 mx-auto">
         <Box>
-          <div class="w-3/5 mx-auto mb-5">
+          <div class="w-full sm:w-3/5 mx-auto mb-5">
             <Vue3Lottie class="rounded-xl" :animationData="MRDashboard" speed="1" />
           </div>
           <h1 class="h1-inline">AstraZeneca's Tool Problem</h1>
@@ -31,7 +31,7 @@
         </SlidingBox>
 
         <Box>
-          <img src="./images/02-workshop-planning.jpg" alt="" class="w-4/5 m-auto mb-5" />
+          <img src="./images/02-workshop-planning.jpg" alt="" class="w-full m-auto mb-5" />
 
           <h2>Process</h2>
 
@@ -74,12 +74,12 @@
 
         <Box>
           <h1 class="mb-5">Primary Persona: High-Tech Hiroyuki</h1>
-          <HiroyukiPersona class="w-full h-max" />
+          <HiroyukiPersona class="w-full" />
         </Box>
 
         <Box>
           <h1 class="mb-5">Secondary Persona: Reliable Tool Reiko</h1>
-          <ReikoPersona class="w-full h-max" />
+          <ReikoPersona class="w-full" />
         </Box>
 
         <Box class="flex flex-col gap-5">
@@ -91,35 +91,52 @@
             that would determine a direction.
           </p>
 
-          <img src="./images/05-tower-of-the-sun.jpeg" alt="" class="w-2/5 m-auto" />
+          <img src="./images/05-tower-of-the-sun.jpeg" alt="" class="w-full sm:w-2/5 m-auto" />
 
           <p class="text-center">Off to Osaka!</p>
 
-          <img src="./images/06-round-robin.jpeg" alt="" class="w-4/5 m-auto" />
+          <img src="./images/06-round-robin.jpeg" alt="" class="w-full sm:w-4/5 m-auto" />
 
-          <h2>5 Concepts to Rule Them All, Or Just Frankenstein Together</h2>
-          <div class="flex gap-3">
-            <img src="./images/07-game-changing-innovation.jpg" alt="" class="w-4/5 m-auto" />
-            <img src="./images/08-memorever.jpg" alt="" class="w-4/5" />
-            <img src="./images/09-avengers-research-program.jpg" alt="" class="w-4/5" />
-            <img src="./images/10-suggestions-for-mrs.jpg" alt="" class="w-4/5" />
-            <img src="./images/11-champion-system.jpg" alt="" class="w-4/5" />
+          <h2 class="mt-5">5 Magazine Cover Concepts</h2>
+          <div class="flex flex-col lg:flex-row gap-3 justify-between h-full lg:h-full">
+            <div class="">
+              <img src="./images/07-game-changing-innovation.jpg" alt="" class="h-full w-auto" />
+            </div>
+            <div class="">
+              <img src="./images/08-memorever.jpg" alt="" class="h-full w-auto" />
+            </div>
+            <div class="">
+              <img src="./images/09-avengers-research-program.jpg" alt="" class="h-full w-auto" />
+            </div>
+            <div class="">
+              <img src="./images/10-suggestions-for-mrs.jpg" alt="" class="h-full w-auto" />
+            </div>
+            <div class="">
+              <img src="./images/11-champion-system.jpg" alt="" class="h-full w-auto" />
+            </div>
           </div>
+          <!-- <div class="flex flex-col sm:flex-row gap-3 w-full">
+            <img src="./images/07-game-changing-innovation.jpg" alt="" class="max-w-full m-auto" />
+            <img src="./images/08-memorever.jpg" alt="" class="max-w-full m-auto" />
+            <img src="./images/09-avengers-research-program.jpg" alt="" class="max-w-full m-auto" />
+            <img src="./images/10-suggestions-for-mrs.jpg" alt="" class="max-w-full m-auto" />
+            <img src="./images/11-champion-system.jpg" alt="" class="max-w-full m-auto" />
+          </div> -->
         </Box>
 
         <SlidingBox>
           <h2>A Nautical Themed Retro to Keep Things Fun</h2>
-          <img src="./images/12-retro-board.jpg" alt="" class="w-4/5 m-auto" />
+          <img src="./images/12-retro-board.jpg" alt="" class="w-full m-auto" />
         </SlidingBox>
 
         <SlidingBox>
           <h2>Now It's Time To Start Storyboarding, Right?</h2>
-          <img src="./images/13-mr-storyboard.jpg" alt="" class="w-4/5 m-auto" />
+          <img src="./images/13-mr-storyboard.jpg" alt="" class="w-full m-auto" />
         </SlidingBox>
 
         <Box>
           <h2>So What Did We Make?</h2>
-          <img src="./images/14-az-clickable-prototype.gif" alt="" class="w-4/5 m-auto" />
+          <img src="./images/14-az-clickable-prototype.gif" alt="" class="w-full m-auto" />
           <h2>Healthcare Provider Dashboard</h2>
           <img src="./images/15-dashboard-landing page-description.svg" alt="" />
           <h2>Expanded Widget</h2>

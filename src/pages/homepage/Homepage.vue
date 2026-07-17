@@ -1,9 +1,7 @@
 <template>
-  <div :class="'w-screen -z-1 bg-' + store.backgroundColor">
-    <main :class="'max-w-245'">
-      <div
-        class="flex flex-wrap content-center justify-center gap-20 md:h-[calc(100vh-97px)] sm:h-fit sm:pb-20"
-      >
+  <div :class="'w-screen screen-height -z-1 bg-' + store.backgroundColor">
+    <main :class="'max-w-245 bg-' + store.backgroundColor">
+      <div :class="`flex flex-wrap content-center justify-center gap-20 py-20`">
         <RouterLink class="no-underline" to="/zaiko-admin">
           <ProjectItem :project-name="'Zaiko Admin Dashboard'">
             <ZaikoLogo />
@@ -90,3 +88,9 @@ store.setBackgroundColor('summer')
 //   },
 // ]
 </script>
+
+<style scoped>
+.screen-height {
+  height: calc(100vh - v-bind(store.navbarHeight + 'px'));
+}
+</style>

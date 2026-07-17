@@ -5,7 +5,7 @@
       alt="Patients, warehouse employees, and robot wave happily"
       class="w-full"
     />
-    <div class="flex justify-between m-3">
+    <div class="flex flex-col gap-3 md:flex-row justify-between m-3">
       <RouterLink
         to="/linkshme-website"
         :class="
@@ -14,7 +14,7 @@
             : 'no-underline decoration-linkshmewebsite-navbar'
         "
       >
-        <h2 class="mb-1 text-linkshmewebsite-navbar">Project Overview</h2>
+        <h2 class="mb-1 text-xl lg:text-2xl text-linkshmewebsite-navbar">Project Overview</h2>
       </RouterLink>
 
       <RouterLink
@@ -25,7 +25,7 @@
             : 'no-underline decoration-linkshmewebsite-navbar'
         "
       >
-        <h2 class="mb-1 text-linkshmewebsite-navbar no-underline">Research</h2>
+        <h2 class="mb-1 text-xl lg:text-2xl text-linkshmewebsite-navbar no-underline">Research</h2>
       </RouterLink>
 
       <RouterLink
@@ -36,7 +36,9 @@
             : 'no-underline decoration-linkshmewebsite-navbar'
         "
       >
-        <h2 class="mb-1 text-linkshmewebsite-navbar no-underline">Concept Development</h2>
+        <h2 class="mb-1 text-xl lg:text-2xl text-linkshmewebsite-navbar no-underline">
+          Concept Development
+        </h2>
       </RouterLink>
 
       <RouterLink
@@ -47,7 +49,9 @@
             : 'no-underline decoration-linkshmewebsite-navbar'
         "
       >
-        <h2 class="mb-1 text-linkshmewebsite-navbar">Visual Style Development</h2>
+        <h2 class="mb-1 text-xl lg:text-2xl text-linkshmewebsite-navbar">
+          Visual Style Development
+        </h2>
       </RouterLink>
     </div>
   </div>

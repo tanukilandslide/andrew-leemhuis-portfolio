@@ -1,11 +1,11 @@
 <template>
   <div :class="` bg-${store.backgroundColor}`">
     <main :class="`max-w-245 h-[95vh]`">
-      <div class="mt-20 flex gap-20">
+      <div class="mt-20 px-5 lg:px-0 flex flex-col md:flex-row gap-20">
         <img
           src="./images/me.jpeg"
           alt="A portrait of Andrew sitting in a comfortable cafe environment."
-          class="rounded-full w-1/4 self-center"
+          class="rounded-full w-3/4 md:w-1/4 self-center"
         />
 
         <div class="w-3/4">

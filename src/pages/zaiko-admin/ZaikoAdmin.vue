@@ -20,7 +20,7 @@
             </video>
             <div class="px-5 pb-5">
               <p class="text-white mx-auto text-center mb-10">
-                A sizzle real I made to advertise our services.
+                A sizzle reel I made to advertise our services.
               </p>
               <h1 class="text-white">Zaiko's New Admin Dashboard</h1>
               <h2 class="text-white">A New UI for Better Managing Events</h2>

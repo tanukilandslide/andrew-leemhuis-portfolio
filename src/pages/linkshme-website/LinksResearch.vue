@@ -1,6 +1,6 @@
 <template>
   <main class="bg-linkshmewebsite">
-    <div class="w-screen flex flex-col sticky pt-5">
+    <div class="w-screen flex flex-col sticky">
       <div
         :class="
           windowScroll.isScrolling.value
@@ -53,14 +53,14 @@
           </p>
         </Box>
 
-        <SlidingBox :style="'mb-5 flex flex-col'">
+        <Box :style="'mb-5 flex flex-col '">
           <img
             src="./images/04_craig.jpg"
-            class="w-1/3 h-max"
+            class="sm:w-1/3 rounded-none sm:rounded-md"
             alt="CEO of the company, Craig, sitting in a business suit, looking attentive to customer's needs"
           />
           <div class="flex w-full justify-end">
-            <div class="bg-white w-2/3 p-5 rounded-md">
+            <div class="bg-white w-full sm:w-2/3 p-5 rounded-none sm:rounded-md">
               <h1 class="persona_h1">Craig (53): Primary Persona</h1>
 
               <h2>Owner</h2>
@@ -101,13 +101,13 @@
               </ul>
             </div>
           </div>
-        </SlidingBox>
+        </Box>
 
-        <SlidingBox :style="'mb-5 flex flex-col'">
-          <img src="./images/05_kaitlin.jpg" class="w-1/3 h-max" alt="" />
+        <Box :style="'mb-5 flex flex-col'">
+          <img src="./images/05_kaitlin.jpg" class="sm:w-1/3 rounded-none sm:rounded-md" alt="" />
 
           <div class="flex w-full justify-end">
-            <div class="bg-white w-2/3 p-5 rounded-md">
+            <div class="bg-white w-full sm:w-2/3 p-5 rounded-none sm:rounded-md">
               <h1 class="persona_h1">Kaitlin (31): Secondary Persona</h1>
 
               <h2>Customer Service Representative</h2>
@@ -148,13 +148,13 @@
               </ul>
             </div>
           </div>
-        </SlidingBox>
+        </Box>
 
-        <SlidingBox :style="'mb-5 flex flex-col'">
-          <img src="./images/06_frank.jpg" class="w-1/3 h-max" alt="" />
+        <Box :style="'mb-5 flex flex-col sticky top-5'">
+          <img src="./images/06_frank.jpg" class="sm:w-1/3 rounded-none sm:rounded-md" alt="" />
 
           <div class="flex w-full justify-end">
-            <div class="bg-white w-2/3 p-5 rounded-md">
+            <div class="bg-white w-full sm:w-2/3 p-5 rounded-none sm:rounded-md">
               <h1 class="persona_h1">Frank (35)</h1>
 
               <h2>Trainer/Compliance</h2>
@@ -191,7 +191,7 @@
               </ul>
             </div>
           </div>
-        </SlidingBox>
+        </Box>
 
         <div class="m-auto w-fit flex gap-5 pb-5">
           <RouterLink to="/linkshme-website">
