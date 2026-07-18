@@ -3,8 +3,22 @@
     class="flex rounded-full backdrop-blur-[2px] justify-center w-60 h-60 items-center"
     ref="hoveredElement"
   >
-    <slot class="" v-if="!isHovered"> </slot>
-    <h2 v-else class="text-white w-40 my-auto wrap-break-word text-center transition-all">
+    <div
+      :class="
+        !isHovered
+          ? 'my-auto mx-auto duration-150 transition-all '
+          : 'my-auto mx-auto transition-all duration-150 blur-[200px]'
+      "
+    >
+      <slot class=""> </slot>
+    </div>
+    <h2
+      :class="
+        !isHovered
+          ? 'text-white w-40 my-auto wrap-break-word text-center transition-all duration-150 blur-[200px] absolute'
+          : 'text-white w-40 my-auto wrap-break-word text-center duration-150 transition-all absolute'
+      "
+    >
       {{ projectName }}
     </h2>
 

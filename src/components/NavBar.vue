@@ -10,26 +10,16 @@
 
       <nav>
         <ul class="flex flex-col gap-2 sm:flex-row sm:gap-5">
-          <!-- <a href="index.html"><button><li class="nav-item">Projects</li></button></a> -->
-
           <a
             href="/andrew-leemhuis-resume.pdf"
-            :class="
-              store.currentSeason === 'summer'
-                ? 'no-underline text-white border border-white hover:bg-white hover:text-summer rounded-full px-4 py-1 sm:py-2 my-auto'
-                : 'no-underline text-white border border-white hover:bg-white hover:text-winter rounded-full px-4 py-1 sm:py-2 my-auto'
-            "
+            :class="` no-underline text-white border border-white hover:bg-white hover:text-${store.navbarColor} rounded-full px-4 py-1 sm:py-2 my-auto`"
           >
             <li class="">Resume</li>
           </a>
 
           <RouterLink
             to="/about"
-            :class="
-              store.currentSeason === 'summer'
-                ? 'no-underline text-white border border-white hover:bg-white hover:text-summer rounded-full px-4 py-1 sm:py-2 my-auto'
-                : 'no-underline text-white border border-white hover:bg-white hover:text-winter rounded-full px-4 py-1 sm:py-2 my-auto'
-            "
+            :class="` no-underline text-white border border-white hover:bg-white hover:text-${store.navbarColor} rounded-full px-4 py-1 sm:py-2 my-auto`"
           >
             <li class="text-center">About</li>
           </RouterLink>

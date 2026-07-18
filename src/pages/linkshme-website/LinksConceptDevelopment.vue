@@ -213,7 +213,6 @@
 import Banner from './components/Banner.vue'
 import Box from '@/components/Box.vue'
 import SlidingBox from '@/components/SlidingBox.vue'
-import Button from '@/components/Button.vue'
 import { useStyleStore } from '@/stores/styles'
 import { useWindowScroll } from '@vueuse/core'
 
