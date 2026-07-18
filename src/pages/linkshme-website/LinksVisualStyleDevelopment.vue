@@ -172,7 +172,6 @@
 import Banner from './components/Banner.vue'
 import Box from '@/components/Box.vue'
 import SlidingBox from '@/components/SlidingBox.vue'
-import Button from '@/components/Button.vue'
 import FeatureIllustrations from './components/FeatureIllustrations.vue'
 import WebsiteReveal from './components/WebsiteReveal.vue'
 import { useStyleStore } from '@/stores/styles'

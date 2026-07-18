@@ -360,7 +360,6 @@ import DirectPong from './components/DirectPong.vue'
 import PongServer from './components/PongServer.vue'
 import CarAndCoupon from './images/01_car-and-coupon.svg'
 import LenderDealerCustomerRelationship from './images/03-lender-dealer-customer-relationship.svg'
-import Button from '@/components/Button.vue'
 import { useStyleStore } from '@/stores/styles'
 import { useWindowScroll } from '@vueuse/core'
 
