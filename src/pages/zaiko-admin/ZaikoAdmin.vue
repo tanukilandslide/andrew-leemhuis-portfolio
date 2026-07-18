@@ -236,15 +236,19 @@
     </div>
 
     <div class="m-auto w-fit flex gap-5 py-5">
-      <RouterLink to="/">
-        <Button class="border-white">
-          <h2 class="no-underline text-white mt-0 mb-1">Home</h2>
-        </Button>
+      <RouterLink to="/" class="no-underline">
+        <h2
+          class="border border-white rounded-full my-auto hover:bg-white no-underline text-white hover:text-zaiko px-4 pt-2 pb-3"
+        >
+          Home
+        </h2>
       </RouterLink>
-      <RouterLink to="/astrazeneca">
-        <Button class="border-white">
-          <h2 class="no-underline text-white mt-0 mb-1">Next Project</h2>
-        </Button>
+      <RouterLink to="/astrazeneca" class="no-underline">
+        <h2
+          class="border border-white rounded-full my-auto hover:bg-white no-underline text-white hover:text-zaiko px-4 pt-2 pb-3"
+        >
+          Next Project
+        </h2>
       </RouterLink>
     </div>
   </main>

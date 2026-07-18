@@ -28,22 +28,28 @@
     </main>
 
     <div class="m-auto w-fit flex gap-5 my-5">
-      <RouterLink to="/acquisition-fee-waivers">
-        <Button class="border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
-          <h2 class="mb-1">Previous project</h2>
-        </Button>
+      <RouterLink to="/acquisition-fee-waivers" class="no-underline">
+        <h2
+          class="border border-linkshmewebsite-navbar rounded-full my-auto hover:bg-linkshmewebsite-navbar no-underline text-linkshmewebsite-navbar hover:text-white px-4 pt-2 pb-3"
+        >
+          Previous project
+        </h2>
       </RouterLink>
 
-      <RouterLink to="/">
-        <Button class="border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
-          <h2 class="mb-1">Home</h2>
-        </Button>
+      <RouterLink to="/" class="no-underline">
+        <h2
+          class="border border-linkshmewebsite-navbar rounded-full my-auto hover:bg-linkshmewebsite-navbar no-underline text-linkshmewebsite-navbar hover:text-white px-4 pt-2 pb-3"
+        >
+          Home
+        </h2>
       </RouterLink>
 
-      <RouterLink to="/linkshme-website/research">
-        <Button class="border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
-          <h2 class="mb-1">Research</h2>
-        </Button>
+      <RouterLink to="/linkshme-website/research" class="no-underline">
+        <h2
+          class="border border-linkshmewebsite-navbar rounded-full my-auto hover:bg-linkshmewebsite-navbar no-underline text-linkshmewebsite-navbar hover:text-white px-4 pt-2 pb-3"
+        >
+          Research
+        </h2>
       </RouterLink>
     </div>
   </div>

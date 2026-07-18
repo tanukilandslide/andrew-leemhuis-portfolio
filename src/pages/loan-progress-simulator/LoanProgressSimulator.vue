@@ -255,24 +255,28 @@
         </SlidingBox>
 
         <div class="m-auto w-fit flex gap-5 pb-5">
-          <RouterLink to="/astrazeneca">
-            <Button class="border-loanprogresssimulator-navbar">
-              <h2 class="no-underline text-loanprogresssimulator-navbar mt-0 mb-1">
-                Previous Project
-              </h2>
-            </Button>
+          <RouterLink to="/astrazeneca" class="no-underline">
+            <h2
+              class="border border-loanprogresssimulator-navbar rounded-full my-auto hover:bg-loanprogresssimulator-navbar no-underline text-loanprogresssimulator-navbar hover:text-loanprogresssimulator px-4 pt-2 pb-3"
+            >
+              Previous Project
+            </h2>
           </RouterLink>
 
-          <RouterLink to="/">
-            <Button class="border-loanprogresssimulator-navbar">
-              <h2 class="no-underline text-loanprogresssimulator-navbar mt-0 mb-1">Home</h2>
-            </Button>
+          <RouterLink to="/" class="no-underline">
+            <h2
+              class="border border-loanprogresssimulator-navbar rounded-full my-auto hover:bg-loanprogresssimulator-navbar no-underline text-loanprogresssimulator-navbar hover:text-loanprogresssimulator px-4 pt-2 pb-3"
+            >
+              Home
+            </h2>
           </RouterLink>
 
-          <RouterLink to="/acquisition-fee-waivers">
-            <Button class="border-loanprogresssimulator-navbar">
-              <h2 class="no-underline text-loanprogresssimulator-navbar mt-0 mb-1">Next Project</h2>
-            </Button>
+          <RouterLink to="/acquisition-fee-waivers" class="no-underline">
+            <h2
+              class="border border-loanprogresssimulator-navbar rounded-full my-auto hover:bg-loanprogresssimulator-navbar no-underline text-loanprogresssimulator-navbar hover:text-loanprogresssimulator px-4 pt-2 pb-3"
+            >
+              Next Project
+            </h2>
           </RouterLink>
         </div>
       </div>
