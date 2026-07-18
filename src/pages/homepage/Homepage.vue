@@ -62,7 +62,7 @@ const store = useStyleStore()
 
 const season = new Date().getMonth() + 1
 
-// const season = 12
+const navbarHeight = store.navbarHeight
 
 if (4 <= season && season <= 9) {
   store.setCurrentSeason('summer')
@@ -78,6 +78,6 @@ store.setBackgroundColor(currentSeason)
 
 <style scoped>
 .screen-height {
-  height: calc(100vh - v-bind(store.navbarHeight + 'px'));
+  height: calc(100vh - v-bind(navbarHeight + 'px'));
 }
 </style>

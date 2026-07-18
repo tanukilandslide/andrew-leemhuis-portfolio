@@ -402,13 +402,13 @@ console.log(currentSeason.value)
   /* z-index: -1; */
   position: absolute;
   overflow: hidden;
-  right: -5%;
+  right: 0;
 
   bottom: 5%;
   height: 50vh;
   fill: none;
   stroke: #fff;
-  stroke-width: 0.2pt;
+  stroke-width: 0.4pt;
   stroke-dasharray: 1800;
   stroke-dashoffset: 1800;
   animation:
@@ -420,12 +420,12 @@ console.log(currentSeason.value)
 .palm {
   position: absolute;
   overflow: hidden;
-  right: -5%;
+  right: 0;
   bottom: 5%;
   height: 70vh;
   fill: none;
   stroke: #fff;
-  stroke-width: 0.2pt;
+  stroke-width: 0.4pt;
   stroke-dasharray: 4000;
   stroke-dashoffset: 4000;
   animation: dash 30s infinite alternate linear;
@@ -451,15 +451,15 @@ console.log(currentSeason.value)
 @media only screen and (max-width: 990px) {
   .snowflake {
     height: 60vw;
-    right: -15%;
+    right: 0;
     bottom: 44%;
   }
 
   .palm {
     height: 50vw;
-    right: -1%;
+    right: 0;
     bottom: 44%;
-    stroke-width: 1pt;
+
     overflow-x: hidden;
   }
 }

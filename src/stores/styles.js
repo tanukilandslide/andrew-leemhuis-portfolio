@@ -22,6 +22,10 @@ export const useStyleStore = defineStore('styles', () => {
     return backgroundColor.value
   }
 
+  function setNavbarHeight(height) {
+    navbarHeight.value = height
+  }
+
   function setCurrentSeason(newSeason) {
     currentSeason.value = newSeason
   }
@@ -33,6 +37,7 @@ export const useStyleStore = defineStore('styles', () => {
     currentSeason,
     setNavbarColor,
     setBackgroundColor,
+    setNavbarHeight,
     setCurrentSeason,
   }
 })
