@@ -5,8 +5,8 @@
     data-name="Layer 2"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 1461.06 1144.18"
+    v-if="currentSeason === 'summer'"
   >
-    <defs></defs>
     <g id="Layer_4" data-name="Layer 4">
       <g>
         <path
@@ -317,12 +317,13 @@
     </g>
   </svg>
 
-  <!-- <svg
+  <svg
     class="snowflake"
     id="snowflake"
     data-name="Layer 2"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 801.02 694"
+    v-else-if="currentSeason === 'winter'"
   >
     <defs></defs>
     <g id="Layer_1-2" data-name="Layer 1">
@@ -384,11 +385,16 @@
         d="m400.54,288.67c10.39,0,20.78-5.05,26.92-15.14l18.88-31.02-38.74-83.31,10.25-17.76,38.98,83.83,7.22-11.87-32.46-56.22,3.38-5.85,32.55,56.37,8.34-13.7-25.6-44.34,4.86-8.42,25.73,44.56,7.04-11.56-35.83-70.21,13.5-23.38,36.17,70.87,7.61-12.5-28.7-49.72,2.96-5.12,28.78,49.85,7.29-11.98-22.71-39.33,4.25-7.37,22.82,39.52,5.45-8.95-32.95-57.08,16.74-28.99,33.39,57.84,10.53-17.3-15.07-26.1L561.58.59h38.93"
       />
     </g>
-  </svg> -->
+  </svg>
 </template>
 
 <script setup>
-let currentSVG = ''
+import { useStyleStore } from '@/stores/styles'
+import { ref } from 'vue'
+
+let currentSeason = ref(useStyleStore().currentSeason)
+
+console.log(currentSeason.value)
 </script>
 
 <style scoped>

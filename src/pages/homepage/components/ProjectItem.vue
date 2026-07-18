@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex rounded-full backdrop-blur-sm justify-center w-60 h-60 items-center"
+    class="flex rounded-full backdrop-blur-[2px] justify-center w-60 h-60 items-center"
     ref="hoveredElement"
   >
     <slot class="" v-if="!isHovered"> </slot>

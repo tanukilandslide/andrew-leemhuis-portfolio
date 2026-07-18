@@ -37,6 +37,7 @@
             <PersonalProjectsLogo />
           </ProjectItem>
         </RouterLink>
+
         <BackgroundSVG class="z-0" />
       </div>
     </main>
@@ -59,9 +60,20 @@ import { useStyleStore } from '@/stores/styles'
 
 const store = useStyleStore()
 
-store.setNavbarColor('summer')
+const season = new Date().getMonth() + 1
 
-store.setBackgroundColor('summer')
+// const season = 12
+
+if (4 <= season && season <= 9) {
+  store.setCurrentSeason('summer')
+} else {
+  store.setCurrentSeason('winter')
+}
+
+let currentSeason = store.currentSeason
+
+store.setNavbarColor(currentSeason)
+store.setBackgroundColor(currentSeason)
 </script>
 
 <style scoped>
