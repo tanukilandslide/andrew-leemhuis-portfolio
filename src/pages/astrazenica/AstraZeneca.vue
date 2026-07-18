@@ -25,7 +25,7 @@
         </Box>
 
         <SlidingBox>
-          <h2 class="centered-text-box px-20 text-center m-0">
+          <h2 class="centered-text-box sm:px-20 text-center m-0">
             The medical representatives already had 16 tools, we didn&apos;t want to design a 17th.
           </h2>
         </SlidingBox>
@@ -155,20 +155,26 @@
         </Box>
 
         <div class="m-auto w-fit flex gap-5 pb-5">
-          <RouterLink to="/zaiko-admin">
-            <Button class="border-white">
-              <h2 class="text-white mt-0 mb-1">Previous Project</h2>
-            </Button>
+          <RouterLink to="/zaiko-admin" class="no-underline">
+            <h2
+              class="border border-white rounded-full my-auto hover:bg-white no-underline text-white hover:text-astrazeneca px-4 pt-2 pb-3"
+            >
+              Previous Project
+            </h2>
           </RouterLink>
-          <RouterLink to="/">
-            <Button class="border-white">
-              <h2 class="no-underline text-white mt-0 mb-1">Home</h2>
-            </Button>
+          <RouterLink to="/" class="no-underline">
+            <h2
+              class="border border-white rounded-full my-auto hover:bg-white no-underline text-white hover:text-astrazeneca px-4 pt-2 pb-3"
+            >
+              Home
+            </h2>
           </RouterLink>
-          <RouterLink to="/loan-progress-simulator">
-            <Button class="border-white">
-              <h2 class="no-underline text-white mt-0 mb-1">Next Project</h2>
-            </Button>
+          <RouterLink to="/loan-progress-simulator" class="no-underline">
+            <h2
+              class="border border-white rounded-full my-auto hover:bg-white no-underline text-white hover:text-astrazeneca px-4 pt-2 pb-3"
+            >
+              Next Project
+            </h2>
           </RouterLink>
         </div>
       </div>

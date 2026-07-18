@@ -14,14 +14,22 @@
 
           <a
             href="/andrew-leemhuis-resume.pdf"
-            class="no-underline text-white border rounded-full px-4 py-1 sm:py-2 my-auto"
+            :class="
+              store.currentSeason === 'summer'
+                ? 'no-underline text-white border border-white hover:bg-white hover:text-summer rounded-full px-4 py-1 sm:py-2 my-auto'
+                : 'no-underline text-white border border-white hover:bg-white hover:text-winter rounded-full px-4 py-1 sm:py-2 my-auto'
+            "
           >
             <li class="">Resume</li>
           </a>
 
           <RouterLink
             to="/about"
-            class="no-underline text-white border rounded-full px-4 py-1 sm:py-2 my-auto"
+            :class="
+              store.currentSeason === 'summer'
+                ? 'no-underline text-white border border-white hover:bg-white hover:text-summer rounded-full px-4 py-1 sm:py-2 my-auto'
+                : 'no-underline text-white border border-white hover:bg-white hover:text-winter rounded-full px-4 py-1 sm:py-2 my-auto'
+            "
           >
             <li class="text-center">About</li>
           </RouterLink>
@@ -41,5 +49,5 @@ const { height: navbarHeight } = useElementSize(navbar)
 
 const store = useStyleStore()
 
-store.navbarHeight = navbarHeight
+store.setNavbarHeight(navbarHeight)
 </script>

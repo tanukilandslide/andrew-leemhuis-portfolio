@@ -147,16 +147,20 @@
         <WebsiteReveal />
 
         <div class="m-auto w-fit flex gap-5 pb-5">
-          <RouterLink to="/linkshme-website/concept-development">
-            <Button class="border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
-              <h2 class="mb-1">Concept Development</h2>
-            </Button>
+          <RouterLink to="/linkshme-website/concept-development" class="no-underline">
+            <h2
+              class="border border-linkshmewebsite-navbar rounded-full my-auto hover:bg-linkshmewebsite-navbar no-underline text-linkshmewebsite-navbar hover:text-white px-4 pt-2 pb-3"
+            >
+              Concept Development
+            </h2>
           </RouterLink>
 
-          <RouterLink to="/">
-            <Button class="border-linkshmewebsite-navbar text-linkshmewebsite-navbar">
-              <h2 class="mb-1">Home</h2>
-            </Button>
+          <RouterLink to="/" class="no-underline">
+            <h2
+              class="border border-linkshmewebsite-navbar rounded-full my-auto hover:bg-linkshmewebsite-navbar no-underline text-linkshmewebsite-navbar hover:text-white px-4 pt-2 pb-3"
+            >
+              Home
+            </h2>
           </RouterLink>
         </div>
       </div>
