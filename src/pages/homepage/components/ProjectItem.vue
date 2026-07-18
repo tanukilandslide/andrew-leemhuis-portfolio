@@ -4,7 +4,9 @@
     ref="hoveredElement"
   >
     <slot class="" v-if="!isHovered"> </slot>
-    <h2 v-else class="text-white w-40 my-auto wrap-break-word text-center">{{ projectName }}</h2>
+    <h2 v-else class="text-white w-40 my-auto wrap-break-word text-center transition-all">
+      {{ projectName }}
+    </h2>
 
     <svg
       class="w-60 h-60 absolute"
