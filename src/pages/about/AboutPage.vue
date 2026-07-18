@@ -6,10 +6,10 @@
           <img
             src="./images/me.jpeg"
             alt="A portrait of Andrew sitting in a comfortable cafe environment."
-            class="rounded-full w-3/4 md:w-1/4 self-start"
+            class="rounded-full w-3/4 md:w-1/4 self-center md:self-start"
           />
 
-          <div class="w-3/4">
+          <div class="w-full sm:w-3/4">
             <h1>Hi there!</h1>
 
             <p class="mb-10">
