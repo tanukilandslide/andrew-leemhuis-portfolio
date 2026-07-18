@@ -25,7 +25,7 @@
         </Box>
 
         <SlidingBox>
-          <h2 class="centered-text-box px-20 text-center m-0">
+          <h2 class="centered-text-box sm:px-20 text-center m-0">
             The medical representatives already had 16 tools, we didn&apos;t want to design a 17th.
           </h2>
         </SlidingBox>
