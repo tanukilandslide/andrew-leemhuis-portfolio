@@ -1,41 +1,88 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Homepage from './pages/homepage/Homepage.vue'
-import About from './pages/about/AboutPage.vue'
-import AcquisitionFeeWaivers from './pages/acquisition-fee-waivers/AcquisitionFeeWaivers.vue'
-import AstraZeneca from './pages/astrazenica/AstraZeneca.vue'
-import LinksHMEWebsite from './pages/linkshme-website/LinksHMEWebsite.vue'
-import LinksResearch from './pages/linkshme-website/LinksResearch.vue'
-import LinksConceptDevelopment from './pages/linkshme-website/LinksConceptDevelopment.vue'
-import LinksVisualStyleDevelopment from './pages/linkshme-website/LinksVisualStyleDevelopment.vue'
-import PersonalProjects from './pages/personal-projects/PersonalProjects.vue'
-import Resume from './pages/resume/Resume.vue'
-import LoanProgressSimulator from './pages/loan-progress-simulator/LoanProgressSimulator.vue'
 import NotFound from './pages/NotFound.vue'
-import PortfolioBlog from './pages/blog/PortfolioBlog.vue'
-import ZaikoAdmin from './pages/zaiko-admin/ZaikoAdmin.vue'
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: '/', name: 'home', component: Homepage },
-    { path: '/resume', component: Resume },
-    { path: '/about', component: About },
-    { path: '/blog', component: PortfolioBlog },
-    { path: '/zaiko-admin', component: ZaikoAdmin },
-    { path: '/astrazeneca', component: AstraZeneca },
-    { path: '/loan-progress-simulator', component: LoanProgressSimulator },
-    { path: '/acquisition-fee-waivers', component: AcquisitionFeeWaivers },
+    {
+      path: '/resume',
+      component: () => import(/* webpackChunkName: "Resume" */ './pages/resume/Resume.vue'),
+    },
+    {
+      path: '/about',
+      component: () => import(/* webpackChunkName: "about" */ './pages/about/AboutPage.vue'),
+    },
+    {
+      path: '/blog',
+      component: () => import(/* webpackChunkName: "Blog" */ './pages/blog/PortfolioBlog.vue'),
+    },
+    {
+      path: '/zaiko-admin',
+      component: () => import(/* webpackChunkName: "Zaiko" */ './pages/zaiko-admin/ZaikoAdmin.vue'),
+    },
+    {
+      path: '/astrazeneca',
+      component: () =>
+        import(/* webpackChunkName: "AstraZeneca" */ './pages/astrazenica/AstraZeneca.vue'),
+    },
+    {
+      path: '/loan-progress-simulator',
+      component: () =>
+        import(
+          /* webpackChunkName: "LoanProgressSimulator" */ './pages/loan-progress-simulator/LoanProgressSimulator.vue'
+        ),
+    },
+    {
+      path: '/acquisition-fee-waivers',
+      component: () =>
+        import(
+          /* webpackChunkName: "AcqFeeWaivers" */ './pages/acquisition-fee-waivers/AcquisitionFeeWaivers.vue'
+        ),
+    },
     {
       path: '/linkshme-website',
       children: [
-        { path: '', name: 'linkshme-overview', component: LinksHMEWebsite },
-        { path: 'research', component: LinksResearch },
-        { path: 'concept-development', component: LinksConceptDevelopment },
-        { path: 'visual-style-development', component: LinksVisualStyleDevelopment },
+        {
+          path: '',
+          name: 'linkshme-overview',
+          component: () =>
+            import(
+              /* webpackChunkName: "LinksIntro" */ './pages/linkshme-website/LinksHMEWebsite.vue'
+            ),
+        },
+        {
+          path: 'research',
+          component: () =>
+            import(
+              /* webpackChunkName: "LinksResearch" */ './pages/linkshme-website/LinksResearch.vue'
+            ),
+        },
+        {
+          path: 'concept-development',
+          component: () =>
+            import(
+              /* webpackChunkName: "LinksConceptDevelopment" */ './pages/linkshme-website/LinksConceptDevelopment.vue'
+            ),
+        },
+        {
+          path: 'visual-style-development',
+          component: () =>
+            import(
+              /* webpackChunkName: "LinksStyleDevelopment" */ './pages/linkshme-website/LinksVisualStyleDevelopment.vue'
+            ),
+        },
       ],
     },
-    { path: '/personal-projects', component: PersonalProjects },
+    {
+      path: '/personal-projects',
+      component: () =>
+        import(
+          /* webpackChunkName: "PersonalProjects" */ './pages/personal-projects/PersonalProjects.vue'
+        ),
+    },
     { path: '/:notFound(.*)', component: NotFound },
   ],
   scrollBehavior(to, from, savedPosition) {
