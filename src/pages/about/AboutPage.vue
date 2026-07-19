@@ -10,7 +10,7 @@
           />
 
           <div class="w-full sm:w-3/4">
-            <h1>Hi there!</h1>
+            <h1 class="text-loanprogresssimulator-navbar">Hi there!</h1>
 
             <p class="mb-10">
               I'm a UX Developer with a background in design and experience in event ticketing,
@@ -59,10 +59,14 @@
         <div class="w-full flex flex-col gap-3">
           <p class="w-full text-center">This page was lovingly handmade with:</p>
           <div class="flex mx-auto h-10 gap-10">
-            <Vue />
-            <Pinia />
-            <Figma />
-            <AfterEffects />
+            <img src="../../../assets/about/vue-logo.svg" class="rounded-none" alt="" />
+            <img src="../../../assets/about/pinialogo.svg" class="rounded-none" alt="" />
+            <img src="../../../assets/about/figma.svg" class="rounded-none" alt="" />
+            <img
+              src="../../../assets/about/adobe-after-effects-logo.svg"
+              class="rounded-none"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -75,11 +79,6 @@ import { useStyleStore } from '@/stores/styles'
 import LinkedIn from '../../../assets/about/linkedIn-logo.svg'
 import GitHub from '../../../assets/about/github.svg'
 import Email from '../../../assets/about/email-icon.svg'
-
-import Vue from '../../../assets/about/vue-logo.svg'
-import Pinia from '../../../assets/about/pinialogo.svg'
-import Figma from '../../../assets/about/figma.svg'
-import AfterEffects from '../../../assets/about/adobe-after-effects-logo.svg'
 
 const store = useStyleStore()
 

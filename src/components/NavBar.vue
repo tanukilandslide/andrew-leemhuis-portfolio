@@ -12,14 +12,14 @@
         <ul class="flex flex-col gap-2 sm:flex-row sm:gap-5">
           <a
             href="/andrew-leemhuis-resume.pdf"
-            :class="` no-underline text-white border border-white hover:bg-white hover:text-${store.navbarColor} rounded-full px-4 py-1 sm:py-2 my-auto`"
+            class="no-underline text-white border border-white hover:border-4 hover:*:font-bold hover:px-3 hover:py-1.5 rounded-full px-4 sm:py-2 my-auto"
           >
             <li class="">Resume</li>
           </a>
 
           <RouterLink
             to="/about"
-            :class="` no-underline text-white border border-white hover:bg-white hover:text-${store.navbarColor} rounded-full px-4 py-1 sm:py-2 my-auto`"
+            class="no-underline text-white border border-white hover:border-4 hover:*:font-bold hover:px-3 hover:py-1.5 rounded-full px-4 sm:py-2 my-auto"
           >
             <li class="text-center">About</li>
           </RouterLink>
