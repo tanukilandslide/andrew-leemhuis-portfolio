@@ -421,7 +421,7 @@ console.log(currentSeason.value)
   position: absolute;
   overflow: hidden;
   right: 0;
-  bottom: 5%;
+  top: 20%;
   height: 70vh;
   fill: none;
   stroke: #fff;

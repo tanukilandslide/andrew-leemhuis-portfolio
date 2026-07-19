@@ -59,13 +59,13 @@
         <div class="w-full flex flex-col gap-3">
           <p class="w-full text-center">This page was lovingly handmade with:</p>
           <div class="flex mx-auto h-10 gap-10">
-            <img src="../../../assets/about/vue-logo.svg" class="rounded-none" alt="" />
-            <img src="../../../assets/about/pinialogo.svg" class="rounded-none" alt="" />
-            <img src="../../../assets/about/figma.svg" class="rounded-none" alt="" />
+            <img src="../../../assets/about/vue-logo.svg" class="rounded-none" alt="Vue.js" />
+            <img src="../../../assets/about/pinialogo.svg" class="rounded-none" alt="Pinia" />
+            <img src="../../../assets/about/figma.svg" class="rounded-none" alt="Figma" />
             <img
               src="../../../assets/about/adobe-after-effects-logo.svg"
               class="rounded-none"
-              alt=""
+              alt="After Effects"
             />
           </div>
         </div>
