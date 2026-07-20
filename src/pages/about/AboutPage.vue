@@ -59,10 +59,10 @@
         <div class="w-full flex flex-col gap-3">
           <p class="w-full text-center">This page was lovingly handmade with:</p>
           <div class="flex mx-auto h-10 gap-10">
-            <VueLogo />
-            <PiniaLogo />
-            <FigmaLogo />
-            <AfterEffectsLogo />
+            <VueLogo class="h-full w-full" />
+            <PiniaLogo class="h-full w-full" />
+            <FigmaLogo class="h-full w-full" />
+            <AfterEffectsLogo class="h-full w-full" />
           </div>
         </div>
       </div>
