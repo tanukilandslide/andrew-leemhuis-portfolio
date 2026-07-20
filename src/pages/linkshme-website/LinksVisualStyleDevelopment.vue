@@ -4,8 +4,8 @@
       <div
         :class="
           windowScroll.isScrolling.value
-            ? ` h-full w-screen absolute left-0 top-0 z-0 bg-[url(/00_medical_pattern.png)] opacity-50 duration-1000 pointer-events-none transition-opacity`
-            : `h-full w-screen absolute left-0 top-0 z-0 bg-[url(/00_medical_pattern.png)] opacity-0 duration-1000 pointer-events-none transition-opacity `
+            ? ` h-full w-screen absolute left-0 top-0 z-0 bg-[url(@/assets/links-hme/00_medical_pattern.png)] opacity-50 duration-1000 pointer-events-none transition-opacity`
+            : `h-full w-screen absolute left-0 top-0 z-0 bg-[url(@/assets/links-hme/00_medical_pattern.png)] opacity-0 duration-1000 pointer-events-none transition-opacity `
         "
       ></div>
 
@@ -22,22 +22,22 @@
 
           <div class="flex justify-between mt-5 h-25 md:h-60">
             <div class="">
-              <img src="./images/13_bebbeh.jpg" alt="" class="h-full w-auto" />
+              <img src="@/assets/links-hme/13_bebbeh.jpg" alt="" class="h-full w-auto" />
             </div>
             <div class="">
-              <img src="./images/14_bebbeh_vector.jpg" alt="" class="h-full w-auto" />
+              <img src="@/assets/links-hme/14_bebbeh_vector.jpg" alt="" class="h-full w-auto" />
             </div>
             <div class="">
-              <img src="./images/15_iv_stand.jpg" alt="" class="h-full w-auto" />
+              <img src="@/assets/links-hme/15_iv_stand.jpg" alt="" class="h-full w-auto" />
             </div>
             <div class="">
-              <img src="./images/16_iv_stand_vector.jpg" alt="" class="h-full w-auto" />
+              <img src="@/assets/links-hme/16_iv_stand_vector.jpg" alt="" class="h-full w-auto" />
             </div>
             <div class="">
-              <img src="./images/17_kimberlin.jpg" alt="" class="h-full w-auto" />
+              <img src="@/assets/links-hme/17_kimberlin.jpg" alt="" class="h-full w-auto" />
             </div>
             <div class="">
-              <img src="./images/18_kimberlin_vector.jpg" alt="" class="h-full w-auto" />
+              <img src="@/assets/links-hme/18_kimberlin_vector.jpg" alt="" class="h-full w-auto" />
             </div>
           </div>
         </SlidingBox>
@@ -52,38 +52,38 @@
 
           <FeatureIllustrations
             :title="'Customer Center Portal'"
-            :final-image="'/src/pages/linkshme-website//images/19_feature-banner-customer-center-portal.png'"
-            :sketch="'/src/pages/linkshme-website/images/20_feature-banner-customer-center-portal_sketch.jpg'"
+            :final-image="'/src/assets/links-hme/19_feature-banner-customer-center-portal.png'"
+            :sketch="'/src/assets/links-hme/20_feature-banner-customer-center-portal_sketch.jpg'"
           />
 
           <FeatureIllustrations
             :title="'Integration with Vendor Catalogs'"
-            :final-image="'/src/pages/linkshme-website/images/21_feature-banner-integration-with-vendor-catalogs.png'"
-            :sketch="'/src/pages/linkshme-website/images/22_feature-banner-integration-with-vendor-catalogs_sketch.jpg'"
+            :final-image="'/src/assets/links-hme/21_feature-banner-integration-with-vendor-catalogs.png'"
+            :sketch="'/src/assets/links-hme/22_feature-banner-integration-with-vendor-catalogs_sketch.jpg'"
           />
 
           <FeatureIllustrations
             :title="'Fulfillment Service Integration'"
-            :final-image="'/src/pages/linkshme-website/images/23_feature-banner-fulfillment-service-integration.png'"
-            :sketch="'/src/pages/linkshme-website/images/24_feature-banner-fulfillment-service-integration_sketch.jpg'"
+            :final-image="'/src/assets/links-hme/23_feature-banner-fulfillment-service-integration.png'"
+            :sketch="'/src/assets/links-hme/24_feature-banner-fulfillment-service-integration_sketch.jpg'"
           />
 
           <FeatureIllustrations
             :title="'Conversion'"
-            :final-image="'/src/pages/linkshme-website/images/25_feature-banner-conversion.png'"
-            :sketch="'/src/pages/linkshme-website/images/26_feature-banner-conversion_sketch.jpg'"
+            :final-image="'/src/assets/links-hme/25_feature-banner-conversion.png'"
+            :sketch="'/src/assets/links-hme/26_feature-banner-conversion_sketch.jpg'"
           />
 
           <FeatureIllustrations
             :title="'Cloud Connectivity'"
-            :final-image="'/src/pages/linkshme-website/images/27_feature-banner-cloud-connectivity.png'"
-            :sketch="'/src/pages/linkshme-website/images/28_feature-banner-cloud-connectivity_sketch.jpg'"
+            :final-image="'/src/assets/links-hme/27_feature-banner-cloud-connectivity.png'"
+            :sketch="'/src/assets/links-hme/28_feature-banner-cloud-connectivity_sketch.jpg'"
           />
 
           <FeatureIllustrations
             :title="'Real Time Billing'"
-            :final-image="'/src/pages/linkshme-website/images/29_feature-banner-automatic-real-time-billing.png'"
-            :sketch="'/src/pages/linkshme-website/images/30_feature-banner-automatic-real-time-billing_sketch.jpg'"
+            :final-image="'/src/assets/links-hme/29_feature-banner-automatic-real-time-billing.png'"
+            :sketch="'/src/assets/links-hme/30_feature-banner-automatic-real-time-billing_sketch.jpg'"
           />
         </Box>
 
@@ -100,7 +100,7 @@
           </p>
 
           <div class="flex m-5 justify-around">
-            <img src="./images/31_re-testing.jpg" alt="" class="w-2/5" />
+            <img src="@/assets/links-hme/31_re-testing.jpg" alt="" class="w-2/5" />
             <div>
               <h3 class="text-linkshmewebsite-accent">Top Adjective Results</h3>
               <div class="flex">

@@ -16,7 +16,7 @@
         <div class="max-w-245 mx-auto mb-[10vh] h-fit" ref="firstSection">
           <Box :style="'bg-zaiko  sm:rounded-xl overflow-hidden'">
             <video class="w-full" loop autoplay playsinline controls>
-              <source src="/assets/zaiko-admin-assets/zaiko-sizzle-reel.mp4" type="video/mp4" />
+              <source src="@/assets/zaiko-admin-assets/zaiko-sizzle-reel.mp4" type="video/mp4" />
             </video>
             <div class="px-5 pb-5">
               <p class="text-white mx-auto text-center mb-10">
@@ -69,7 +69,7 @@
             >
               <img
                 class="rounded-md sm:sticky sm:top-5"
-                src="/assets/zaiko-admin-assets/webpage-before.png"
+                src="@/assets/zaiko-admin-assets/webpage-before.png"
                 alt=""
               />
             </div>
@@ -99,7 +99,7 @@
             >
               <img
                 class="sticky top-5 rounded-md"
-                src="/assets/zaiko-admin-assets/timeline-before.png"
+                src="@/assets/zaiko-admin-assets/timeline-before.png"
                 alt=""
               />
             </div>
@@ -121,7 +121,7 @@
 
             <!-- Right Column -->
             <div class="sm:h-full w-full sticky top-0 sm:top-5 sm:px-5 flex flex-col">
-              <img class="rounded-md" src="/assets/zaiko-admin-assets/wasted-space.png" alt="" />
+              <img class="rounded-md" src="@/assets/zaiko-admin-assets/wasted-space.png" alt="" />
             </div>
           </div>
         </div>
@@ -263,7 +263,7 @@ import Timeline from './images/Timeline.json'
 import { useScroll, useWindowScroll, useElementSize } from '@vueuse/core'
 import { ref, useTemplateRef, watch } from 'vue'
 
-import Lightmode from '../../../assets/zaiko-admin-assets/lightmode.svg'
+import Lightmode from '@/assets/zaiko-admin-assets/lightmode.svg'
 
 const store = useStyleStore()
 

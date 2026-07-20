@@ -4,8 +4,8 @@
       <div
         :class="
           windowScroll.isScrolling.value
-            ? ` h-full w-screen absolute left-0 top-0 z-0 bg-[url(/00_medical_pattern.png)] opacity-50 duration-1000 pointer-events-none transition-opacity`
-            : `h-full w-screen absolute left-0 top-0 z-0 bg-[url(/00_medical_pattern.png)] opacity-0 duration-1000 pointer-events-none transition-opacity `
+            ? ` h-full w-screen absolute left-0 top-0 z-0 bg-[url(@/assets/links-hme/00_medical_pattern.png)] opacity-50 duration-1000 pointer-events-none transition-opacity`
+            : `h-full w-screen absolute left-0 top-0 z-0 bg-[url(@/assets/links-hme/00_medical_pattern.png)] opacity-0 duration-1000 pointer-events-none transition-opacity `
         "
       ></div>
 
@@ -37,7 +37,7 @@
             </p>
           </div>
           <img
-            src="./images/03_affinity_diagram.jpg"
+            src="@/assets/links-hme/03_affinity_diagram.jpg"
             alt="Whiteboard with copious amounts of sticky notes arranged in an affinity diagram"
             class=""
           />
@@ -55,7 +55,7 @@
 
         <Box :style="'mb-5 flex flex-col '">
           <img
-            src="./images/04_craig.jpg"
+            src="@/assets/links-hme/04_craig.jpg"
             class="sm:w-1/3 rounded-none sm:rounded-md"
             alt="CEO of the company, Craig, sitting in a business suit, looking attentive to customer's needs"
           />
@@ -104,7 +104,11 @@
         </Box>
 
         <Box :style="'mb-5 flex flex-col'">
-          <img src="./images/05_kaitlin.jpg" class="sm:w-1/3 rounded-none sm:rounded-md" alt="" />
+          <img
+            src="@/assets/links-hme/05_kaitlin.jpg"
+            class="sm:w-1/3 rounded-none sm:rounded-md"
+            alt=""
+          />
 
           <div class="flex w-full justify-end">
             <div class="bg-white w-full sm:w-2/3 p-5 rounded-none sm:rounded-md">
@@ -151,7 +155,11 @@
         </Box>
 
         <Box :style="'mb-5 flex flex-col sticky top-5'">
-          <img src="./images/06_frank.jpg" class="sm:w-1/3 rounded-none sm:rounded-md" alt="" />
+          <img
+            src="@/assets/links-hme/06_frank.jpg"
+            class="sm:w-1/3 rounded-none sm:rounded-md"
+            alt=""
+          />
 
           <div class="flex w-full justify-end">
             <div class="bg-white w-full sm:w-2/3 p-5 rounded-none sm:rounded-md">

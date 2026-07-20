@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-245 m-auto">
     <img
-      src="../images/01_banner.jpg"
+      src="@/assets/links-hme/01_banner.jpg"
       alt="Patients, warehouse employees, and robot wave happily"
       class="w-full"
     />

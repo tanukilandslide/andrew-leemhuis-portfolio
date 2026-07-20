@@ -31,7 +31,11 @@
         </SlidingBox>
 
         <Box>
-          <img src="./images/02-workshop-planning.jpg" alt="" class="w-full m-auto mb-5" />
+          <img
+            src="@/assets/astrazeneca/02-workshop-planning.jpg"
+            alt=""
+            class="w-full m-auto mb-5"
+          />
 
           <h2>Process</h2>
 
@@ -91,58 +95,75 @@
             that would determine a direction.
           </p>
 
-          <img src="./images/05-tower-of-the-sun.jpeg" alt="" class="w-full sm:w-2/5 m-auto" />
+          <img
+            src="@/assets/astrazeneca/05-tower-of-the-sun.jpeg"
+            alt=""
+            class="w-full sm:w-2/5 m-auto"
+          />
 
           <p class="text-center">Off to Osaka!</p>
 
-          <img src="./images/06-round-robin.jpeg" alt="" class="w-full sm:w-4/5 m-auto" />
+          <img
+            src="@/assets/astrazeneca/06-round-robin.jpeg"
+            alt=""
+            class="w-full sm:w-4/5 m-auto"
+          />
 
           <h2 class="mt-5">5 Magazine Cover Concepts</h2>
           <div class="flex flex-col lg:flex-row gap-3 justify-between h-full lg:h-full">
             <div class="">
-              <img src="./images/07-game-changing-innovation.jpg" alt="" class="h-full w-auto" />
+              <img
+                src="@/assets/astrazeneca/07-game-changing-innovation.jpg"
+                alt=""
+                class="h-full w-auto"
+              />
             </div>
             <div class="">
-              <img src="./images/08-memorever.jpg" alt="" class="h-full w-auto" />
+              <img src="@/assets/astrazeneca/08-memorever.jpg" alt="" class="h-full w-auto" />
             </div>
             <div class="">
-              <img src="./images/09-avengers-research-program.jpg" alt="" class="h-full w-auto" />
+              <img
+                src="@/assets/astrazeneca/09-avengers-research-program.jpg"
+                alt=""
+                class="h-full w-auto"
+              />
             </div>
             <div class="">
-              <img src="./images/10-suggestions-for-mrs.jpg" alt="" class="h-full w-auto" />
+              <img
+                src="@/assets/astrazeneca/10-suggestions-for-mrs.jpg"
+                alt=""
+                class="h-full w-auto"
+              />
             </div>
             <div class="">
-              <img src="./images/11-champion-system.jpg" alt="" class="h-full w-auto" />
+              <img src="@/assets/astrazeneca/11-champion-system.jpg" alt="" class="h-full w-auto" />
             </div>
           </div>
-          <!-- <div class="flex flex-col sm:flex-row gap-3 w-full">
-            <img src="./images/07-game-changing-innovation.jpg" alt="" class="max-w-full m-auto" />
-            <img src="./images/08-memorever.jpg" alt="" class="max-w-full m-auto" />
-            <img src="./images/09-avengers-research-program.jpg" alt="" class="max-w-full m-auto" />
-            <img src="./images/10-suggestions-for-mrs.jpg" alt="" class="max-w-full m-auto" />
-            <img src="./images/11-champion-system.jpg" alt="" class="max-w-full m-auto" />
-          </div> -->
         </Box>
 
         <SlidingBox>
           <h2>A Nautical Themed Retro to Keep Things Fun</h2>
-          <img src="./images/12-retro-board.jpg" alt="" class="w-full m-auto" />
+          <img src="@/assets/astrazeneca/12-retro-board.jpg" alt="" class="w-full m-auto" />
         </SlidingBox>
 
         <SlidingBox>
           <h2>Now It's Time To Start Storyboarding, Right?</h2>
-          <img src="./images/13-mr-storyboard.jpg" alt="" class="w-full m-auto" />
+          <img src="@/assets/astrazeneca/13-mr-storyboard.jpg" alt="" class="w-full m-auto" />
         </SlidingBox>
 
         <Box>
           <h2>So What Did We Make?</h2>
-          <img src="./images/14-az-clickable-prototype.gif" alt="" class="w-full m-auto" />
+          <img
+            src="@/assets/astrazeneca/14-az-clickable-prototype.gif"
+            alt=""
+            class="w-full m-auto"
+          />
           <h2>Healthcare Provider Dashboard</h2>
-          <img src="./images/15-dashboard-landing page-description.svg" alt="" />
+          <img src="@/assets/astrazeneca/15-dashboard-landing page-description.svg" alt="" />
           <h2>Expanded Widget</h2>
-          <img src="./images/16-widget-detail.svg" alt="" />
+          <img src="@/assets/astrazeneca/16-widget-detail.svg" alt="" />
           <h2>Data Input Page</h2>
-          <img src="./images/17-data-input.svg" alt="" />
+          <img src="@/assets/astrazeneca/17-data-input.svg" alt="" />
         </Box>
 
         <Box>
@@ -185,11 +206,11 @@
 <script setup>
 import Box from '@/components/Box.vue'
 import SlidingBox from '@/components/SlidingBox.vue'
-import Button from '@/components/Button.vue'
+
 import { Vue3Lottie } from 'vue3-lottie'
-import MRDashboard from './images/01-mr-dashboard-animation.json'
-import HiroyukiPersona from './images/03-hiroyuki.svg'
-import ReikoPersona from './images/04-reiko.svg'
+import MRDashboard from '@/assets/astrazeneca/01-mr-dashboard-animation.json'
+import HiroyukiPersona from '@/assets/astrazeneca/03-hiroyuki.svg'
+import ReikoPersona from '@/assets/astrazeneca/04-reiko.svg'
 import { useStyleStore } from '@/stores/styles'
 import { useWindowScroll } from '@vueuse/core'
 

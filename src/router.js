@@ -7,15 +7,11 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import(/* webpackChunkName: "Resume" */ './pages/homepage/Homepage.vue'),
-    },
-    {
-      path: '/resume',
-      component: () => import(/* webpackChunkName: "Resume" */ './pages/resume/Resume.vue'),
+      component: () => import(/* webpackChunkName: "Homepage" */ '@/pages/homepage/HomePage.vue'),
     },
     {
       path: '/about',
-      component: () => import(/* webpackChunkName: "about" */ './pages/about/AboutPage.vue'),
+      component: () => import(/* webpackChunkName: "About" */ './pages/about/AboutPage.vue'),
     },
     {
       path: '/blog',
