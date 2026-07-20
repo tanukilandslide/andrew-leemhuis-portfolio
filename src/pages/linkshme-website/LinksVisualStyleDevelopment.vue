@@ -169,7 +169,7 @@
 </template>
 
 <script setup>
-import Banner from './components/Banner.vue'
+import Banner from './components/LinksBanner.vue'
 import Box from '@/components/Box.vue'
 import SlidingBox from '@/components/SlidingBox.vue'
 import FeatureIllustrations from './components/FeatureIllustrations.vue'

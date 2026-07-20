@@ -259,7 +259,7 @@ import Box from '@/components/Box.vue'
 import Button from '@/components/Button.vue'
 import { useStyleStore } from '@/stores/styles'
 import { Vue3Lottie } from 'vue3-lottie'
-import Timeline from './images/Timeline.json'
+import Timeline from '@/assets/zaiko-admin-assets/Timeline.json'
 import { useScroll, useWindowScroll, useElementSize } from '@vueuse/core'
 import { ref, useTemplateRef, watch } from 'vue'
 
