@@ -7,7 +7,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import(/* webpackChunkName: "Homepage" */ '@/pages/homepage/HomePage.vue'),
+      component: () => import(/* webpackChunkName: "Homepage" */ './pages/homepage/Homepage.vue'),
     },
     {
       path: '/about',
@@ -83,7 +83,7 @@ const router = createRouter({
     },
     { path: '/:notFound(.*)', component: NotFound },
   ],
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior() {
     // always scroll to top
     return { top: 0 }
   },
