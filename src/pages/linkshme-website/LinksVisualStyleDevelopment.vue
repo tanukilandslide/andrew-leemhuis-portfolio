@@ -52,38 +52,38 @@
 
           <FeatureIllustrations
             :title="'Customer Center Portal'"
-            :final-image="'@/assets/links-hme/19_feature-banner-customer-center-portal.png'"
-            :sketch="'@/assets/links-hme/20_feature-banner-customer-center-portal_sketch.jpg'"
+            :final-image="CustomerPortal"
+            :sketch="CustomerPortalSketch"
           />
 
           <FeatureIllustrations
             :title="'Integration with Vendor Catalogs'"
-            :final-image="'/src/assets/links-hme/21_feature-banner-integration-with-vendor-catalogs.png'"
-            :sketch="'/src/assets/links-hme/22_feature-banner-integration-with-vendor-catalogs_sketch.jpg'"
+            :final-image="VendorCatalogs"
+            :sketch="VendorCatalogsSketch"
           />
 
           <FeatureIllustrations
             :title="'Fulfillment Service Integration'"
-            :final-image="'/src/assets/links-hme/23_feature-banner-fulfillment-service-integration.png'"
-            :sketch="'/src/assets/links-hme/24_feature-banner-fulfillment-service-integration_sketch.jpg'"
+            :final-image="Fullfillment"
+            :sketch="FullfillmentSketch"
           />
 
           <FeatureIllustrations
             :title="'Conversion'"
-            :final-image="'/src/assets/links-hme/25_feature-banner-conversion.png'"
-            :sketch="'/src/assets/links-hme/26_feature-banner-conversion_sketch.jpg'"
+            :final-image="Conversion"
+            :sketch="ConversionSketch"
           />
 
           <FeatureIllustrations
             :title="'Cloud Connectivity'"
-            :final-image="'/src/assets/links-hme/27_feature-banner-cloud-connectivity.png'"
-            :sketch="'/src/assets/links-hme/28_feature-banner-cloud-connectivity_sketch.jpg'"
+            :final-image="Cloud"
+            :sketch="CloudSketch"
           />
 
           <FeatureIllustrations
             :title="'Real Time Billing'"
-            :final-image="'/src/assets/links-hme/29_feature-banner-automatic-real-time-billing.png'"
-            :sketch="'/src/assets/links-hme/30_feature-banner-automatic-real-time-billing_sketch.jpg'"
+            :final-image="Billing"
+            :sketch="BillingSketch"
           />
         </Box>
 
@@ -176,6 +176,24 @@ import FeatureIllustrations from './components/FeatureIllustrations.vue'
 import WebsiteReveal from './components/WebsiteReveal.vue'
 import { useStyleStore } from '@/stores/styles'
 import { useWindowScroll } from '@vueuse/core'
+
+import CustomerPortal from '@/assets/links-hme/19_feature-banner-customer-center-portal.png'
+import CustomerPortalSketch from '@/assets/links-hme/20_feature-banner-customer-center-portal_sketch.jpg'
+
+import VendorCatalogs from '@/assets/links-hme/21_feature-banner-integration-with-vendor-catalogs.png'
+import VendorCatalogsSketch from '@/assets/links-hme/22_feature-banner-integration-with-vendor-catalogs_sketch.jpg'
+
+import Fullfillment from '@/assets/links-hme/23_feature-banner-fulfillment-service-integration.png'
+import FullfillmentSketch from '@/assets/links-hme/24_feature-banner-fulfillment-service-integration_sketch.jpg'
+
+import Conversion from '@/assets/links-hme/25_feature-banner-conversion.png'
+import ConversionSketch from '@/assets/links-hme/26_feature-banner-conversion_sketch.jpg'
+
+import Cloud from '@/assets/links-hme/27_feature-banner-cloud-connectivity.png'
+import CloudSketch from '@/assets/links-hme/28_feature-banner-cloud-connectivity_sketch.jpg'
+
+import Billing from '@/assets/links-hme/29_feature-banner-automatic-real-time-billing.png'
+import BillingSketch from '@/assets/links-hme/30_feature-banner-automatic-real-time-billing_sketch.jpg'
 
 const windowScroll = useWindowScroll()
 
