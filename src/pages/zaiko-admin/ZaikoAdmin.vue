@@ -256,7 +256,6 @@
 
 <script setup>
 import Box from '@/components/Box.vue'
-import Button from '@/components/Button.vue'
 import { useStyleStore } from '@/stores/styles'
 import { Vue3Lottie } from 'vue3-lottie'
 import Timeline from '@/assets/zaiko-admin-assets/Timeline.json'
