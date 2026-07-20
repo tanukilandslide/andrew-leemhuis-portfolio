@@ -4,7 +4,7 @@
       <div class="flex flex-col justify-between h-[90vh]">
         <div class="mt-20 px-5 lg:px-0 flex flex-col md:flex-row gap-20">
           <img
-            src="@/public/about/me.jpeg"
+            src="/public/about/me.jpeg"
             alt="A portrait of Andrew sitting in a comfortable cafe environment."
             class="rounded-full w-3/4 md:w-1/4 self-center md:self-start"
           />
@@ -72,14 +72,14 @@
 
 <script setup>
 import { useStyleStore } from '@/stores/styles'
-import LinkedIn from '@/public/about/linkedIn-logo.svg'
-import GitHub from '@/public/about/github.svg'
-import Email from '@/public/about/email-icon.svg'
+import LinkedIn from '/public/about/linkedIn-logo.svg'
+import GitHub from '/public/about/github.svg'
+import Email from '/public/about/email-icon.svg'
 
-import VueLogo from '@/public/about/vue-logo.svg'
-import PiniaLogo from '@/public/about/pinia-logo.svg'
-import FigmaLogo from '@/public/about/figma-logo.svg'
-import AfterEffectsLogo from '@/public/about/adobe-after-effects-logo.svg'
+import VueLogo from '/public/about/vue-logo.svg'
+import PiniaLogo from '/public/about/pinia-logo.svg'
+import FigmaLogo from '/public/about/figma-logo.svg'
+import AfterEffectsLogo from '/public/about/adobe-after-effects-logo.svg'
 
 const store = useStyleStore()
 
