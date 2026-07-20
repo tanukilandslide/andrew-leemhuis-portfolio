@@ -52,8 +52,8 @@
 
           <FeatureIllustrations
             :title="'Customer Center Portal'"
-            :final-image="'/src/assets/links-hme/19_feature-banner-customer-center-portal.png'"
-            :sketch="'/src/assets/links-hme/20_feature-banner-customer-center-portal_sketch.jpg'"
+            :final-image="'@/assets/links-hme/19_feature-banner-customer-center-portal.png'"
+            :sketch="'@/assets/links-hme/20_feature-banner-customer-center-portal_sketch.jpg'"
           />
 
           <FeatureIllustrations
