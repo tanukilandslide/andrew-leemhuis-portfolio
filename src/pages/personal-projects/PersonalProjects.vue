@@ -34,10 +34,6 @@ const store = useStyleStore()
 store.setNavbarColor('summer')
 store.setBackgroundColor('summer')
 
-// function setImagePath(path) {
-//   return new URL(`./images/${path}`, import.meta.url).href
-// }
-
 const projects = [
   {
     name: 'Breathe Chair',
@@ -45,7 +41,7 @@ const projects = [
       'A student project to design a chair based on a poem, taking mercurial meanings and turning them alchemy-like into a physical object. I took inspiration for a humble form from a haiku and used bent plywood to make a pleasing and ergonomic form.',
     thumbnail: '/src/public/personal-projects/chair_project/00-chair-icon.jpg',
     images: [
-      '/src/public/personal-projects/chair_project/01-initial-chair-sketches.jpg',
+      '/personal-projects/chair_project/01-initial-chair-sketches.jpg',
       '/src/public/personal-projects/chair_project/02-chairs-color.jpg',
       '/src/public/personal-projects/chair_project/03-chair-construction.jpg',
       '/src/public/personal-projects/chair_project/04-process-photos.jpg',
