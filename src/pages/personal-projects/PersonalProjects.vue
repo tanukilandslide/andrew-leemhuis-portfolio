@@ -19,7 +19,6 @@
           :thumbnail="currentProject.thumbnail"
           :images="currentProject.images"
         />
-        <img :src="InitialChair" alt="" />
       </div>
     </main>
   </div>
@@ -30,8 +29,29 @@ import ImageGallery from '@/components/ImageGallery.vue'
 import { ref } from 'vue'
 import { useStyleStore } from '@/stores/styles'
 
-import InitialChair from '/src/public/personal-projects/chair_project/01-initial-chair-sketches.jpg'
+import ChairThumb from '/src/public/personal-projects/chair_project/00-chair-icon.jpg'
+
+import ChairInitial from '/src/public/personal-projects/chair_project/01-initial-chair-sketches.jpg'
 import ChairsColor from '/src/public/personal-projects/chair_project/02-chairs-color.jpg'
+import ChairConstruction from '/src/public/personal-projects/chair_project/03-chair-construction.jpg'
+import ChairProcess from '/src/public/personal-projects/chair_project/04-process-photos.jpg'
+import ChairFinal from '/src/public/personal-projects/chair_project/05-final-chair.jpg'
+
+import FlowerPotThumb from '/src/public/personal-projects/flower_pot/00_flower-pot-icon.jpg'
+
+import FlowerPotSketch from '/src/public/personal-projects/flower_pot/01_initial_sketch.jpg'
+import FlowerPotModel from '/src/public/personal-projects/flower_pot/02_3d_model_rendering.jpg'
+import FlowerPotPrinting from '/src/public/personal-projects/flower_pot/03_flower_pot_printing.gif'
+import FlowerPotOnFence from '/src/public/personal-projects/flower_pot/04_flower_pot_on_fence.jpg'
+import FlowerPotPlant from '/src/public/personal-projects/flower_pot/05_flower_pot_with_plant.jpg'
+
+import SketchesThumb from '/src/public/personal-projects/sketches/00-fringilla-icon.jpg'
+
+import SketchFringilla from '/src/public/personal-projects/sketches/01-fringilla.jpg'
+import SketchLeighton from '/src/public/personal-projects/sketches/02-leighton-on-a-mountain.jpg'
+import SketchHelmetSciFi from '/src/public/personal-projects/sketches/03-sci-fi-helmet.jpg'
+import SketchHelmet from '/src/public/personal-projects/sketches/04-helmet.jpg'
+import SketchPotter from '/src/public/personal-projects/sketches/05-pottery-throwdown-pickup.jpg'
 
 const store = useStyleStore()
 
@@ -43,39 +63,21 @@ const projects = [
     name: 'Breathe Chair',
     description:
       'A student project to design a chair based on a poem, taking mercurial meanings and turning them alchemy-like into a physical object. I took inspiration for a humble form from a haiku and used bent plywood to make a pleasing and ergonomic form.',
-    thumbnail: '/src/public/personal-projects/chair_project/00-chair-icon.jpg',
-    images: [
-      InitialChair,
-      ChairsColor,
-      '/src/public/personal-projects/chair_project/03-chair-construction.jpg',
-      '/src/public/personal-projects/chair_project/04-process-photos.jpg',
-      '/src/public/personal-projects/chair_project/05-final-chair.jpg',
-    ],
+    thumbnail: ChairThumb,
+    images: [ChairInitial, ChairsColor, ChairConstruction, ChairProcess, ChairFinal],
   },
   {
     name: 'Fence Flower Pot',
     description:
       'After seeing a similar flowerpot I had made, a friend commisioned me to design and print a version that would fit his fence. Though he lived thousands of miles away&comma; I was able to use the measurments provided to create a modular bracket that fit snuggly and allowed his plant friends to get enough sunlight, drain properly, and avoid cat-tastrophes &#128576;',
-    thumbnail: '/src/public/personal-projects/flower_pot/00_flower-pot-icon.jpg',
-    images: [
-      '/src/public/personal-projects/flower_pot/01_initial_sketch.jpg',
-      '/src/public/personal-projects/flower_pot/02_3d_model_rendering.jpg',
-      '/src/public/personal-projects/flower_pot/03_flower_pot_printing.gif',
-      '/src/public/personal-projects/flower_pot/04_flower_pot_on_fence.jpg',
-      '/src/public/personal-projects/flower_pot/05_flower_pot_with_plant.jpg',
-    ],
+    thumbnail: FlowerPotThumb,
+    images: [FlowerPotSketch, FlowerPotModel, FlowerPotPrinting, FlowerPotOnFence, FlowerPotPlant],
   },
   {
     name: 'Sketches',
     description: 'Periodically I like to catch up on making some art.',
-    thumbnail: '/src/public/personal-projects/sketches/00-fringilla-icon.jpg',
-    images: [
-      '/src/public/personal-projects/sketches/01-fringilla.jpg',
-      '/src/public/personal-projects/sketches/02-leighton-on-a-mountain.jpg',
-      '/src/public/personal-projects/sketches/03-sci-fi-helmet.jpg',
-      '/src/public/personal-projects/sketches/04-helmet.jpg',
-      '/src/public/personal-projects/sketches/05-pottery-throwdown-pickup.jpg',
-    ],
+    thumbnail: SketchesThumb,
+    images: [SketchFringilla, SketchLeighton, SketchHelmetSciFi, SketchHelmet, SketchPotter],
   },
 ]
 

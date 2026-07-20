@@ -4,7 +4,6 @@
     <p class="text-white">{{ projectData.description }}</p>
 
     <div class="flex justify-between gap-2">
-      <img src="/src/public/personal-projects/chair_project/00-chair-icon.jpg" alt="" />
       <img
         v-for="image in projectData.images"
         :src="image"
