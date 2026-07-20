@@ -6,7 +6,6 @@ import svgLoader from 'vite-svg-loader'
 
 import { fileURLToPath, URL } from 'node:url'
 
-// https://vite.dev/config/
 export default defineConfig({
   base: '/',
   plugins: [vue(), vueDevTools(), tailwindcss(), svgLoader()],
@@ -14,8 +13,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
-  },
-  css: {
-    postcss: './postcss.config.js',
   },
 })

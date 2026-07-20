@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
+    "@tailwindcss/postcss": "^4.3.3",
     "@vitejs/plugin-vue": "^6.0.4",
     "autoprefixer": "^10.5.4",
     "eslint": "^9.39.2",

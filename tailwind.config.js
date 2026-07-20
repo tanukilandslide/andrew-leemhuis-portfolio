@@ -1,4 +1,9 @@
 export default {
+  content: ['./src/**/*.{html,js,vue}'],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
   safelist: [
     'bg-summer',
     'bg-winter',
@@ -8,6 +13,6 @@ export default {
     'bg-acquisitionfeewaivers',
     'bg-linkshmewebsite',
     'bg-linkshmewebsite-navbar',
-    'bg-linkshmewebsite-accent'
-  ]
+    'bg-linkshmewebsite-accent',
+  ],
 }
