@@ -19,6 +19,7 @@
           :thumbnail="currentProject.thumbnail"
           :images="currentProject.images"
         />
+        <img :src="InitialChair" alt="" />
       </div>
     </main>
   </div>
@@ -28,6 +29,9 @@
 import ImageGallery from '@/components/ImageGallery.vue'
 import { ref } from 'vue'
 import { useStyleStore } from '@/stores/styles'
+
+import InitialChair from '/src/public/personal-projects/chair_project/01-initial-chair-sketches.jpg'
+import ChairsColor from '/src/public/personal-projects/chair_project/02-chairs-color.jpg'
 
 const store = useStyleStore()
 
@@ -41,8 +45,8 @@ const projects = [
       'A student project to design a chair based on a poem, taking mercurial meanings and turning them alchemy-like into a physical object. I took inspiration for a humble form from a haiku and used bent plywood to make a pleasing and ergonomic form.',
     thumbnail: '/src/public/personal-projects/chair_project/00-chair-icon.jpg',
     images: [
-      '/personal-projects/chair_project/01-initial-chair-sketches.jpg',
-      '/src/public/personal-projects/chair_project/02-chairs-color.jpg',
+      InitialChair,
+      ChairsColor,
       '/src/public/personal-projects/chair_project/03-chair-construction.jpg',
       '/src/public/personal-projects/chair_project/04-process-photos.jpg',
       '/src/public/personal-projects/chair_project/05-final-chair.jpg',
