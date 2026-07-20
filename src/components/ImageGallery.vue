@@ -37,6 +37,8 @@ let projectData = defineProps({
   },
 })
 
+console.log(projectData)
+
 let heroImage = ref(projectData.images[0])
 
 function imageChange(image) {

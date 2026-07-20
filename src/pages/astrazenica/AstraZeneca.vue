@@ -12,7 +12,7 @@
       <div class="z-1 max-w-245 mx-auto">
         <Box>
           <div class="w-full sm:w-3/5 mx-auto mb-5">
-            <Vue3Lottie class="rounded-xl" :animationData="MRDashboard" speed="1" />
+            <Vue3Lottie class="rounded-xl" :animationData="MRDashboard" :speed="1" />
           </div>
           <h1 class="h1-inline">AstraZeneca's Tool Problem</h1>
 
@@ -159,11 +159,11 @@
             class="w-full m-auto"
           />
           <h2>Healthcare Provider Dashboard</h2>
-          <img src="@/assets/astrazeneca/15-dashboard-landing page-description.svg" alt="" />
+          <HPDashboard />
           <h2>Expanded Widget</h2>
-          <img src="@/assets/astrazeneca/16-widget-detail.svg" alt="" />
+          <ExpandedWidget />
           <h2>Data Input Page</h2>
-          <img src="@/assets/astrazeneca/17-data-input.svg" alt="" />
+          <DataInput />
         </Box>
 
         <Box>
@@ -211,6 +211,10 @@ import { Vue3Lottie } from 'vue3-lottie'
 import MRDashboard from '@/assets/astrazeneca/01-mr-dashboard-animation.json'
 import HiroyukiPersona from '@/assets/astrazeneca/03-hiroyuki.svg'
 import ReikoPersona from '@/assets/astrazeneca/04-reiko.svg'
+import HPDashboard from '@/assets/astrazeneca/15-dashboard-landing-page-description.svg'
+import ExpandedWidget from '@/assets/astrazeneca/16-widget-detail.svg'
+import DataInput from '@/assets/astrazeneca/17-data-input.svg'
+
 import { useStyleStore } from '@/stores/styles'
 import { useWindowScroll } from '@vueuse/core'
 

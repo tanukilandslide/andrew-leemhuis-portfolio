@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import 'tailwindcss';
+/* @import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/preflight.css' layer(base);
+@import 'tailwindcss/utilities.css' layer(utilities); */
+/* @layer theme, base, components, utilities; */
+
+@theme {
+  --font-sans: 'Noto Sans JP', sans-serif;
+
+  --text-primary: rgb(22, 56, 87);
+
+  --color-summer: #914626;
+
+  --color-winter: #3a6185;
+
+  --color-astrazeneca: #7f1f50;
+
+  --color-loanprogresssimulator: #e2f4fa;
+
+  --color-loanprogresssimulator-navbar: #156884;
+
+  --color-acquisitionfeewaivers: #2e76ad;
+
+  --color-linkshmewebsite: #e2f4fa;
+
+  --color-linkshmewebsite-navbar: #52adcc;
+
+  --color-linkshmewebsite-accent: #f1684e;
+
+  --color-zaiko: #1f2128;
+}
+
+@layer base {
+  * {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.7em;
+  }
+
+  svg {
+    overflow: hidden;
+  }
+
+  img {
+    border-radius: var(--radius-md);
+  }
+
+  h1 {
+    font-size: 2em;
+    line-height: 1em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  h3 {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  h4 {
+    font-weight: bold;
+    margin-bottom: 0.25em;
+  }
+
+  p {
+    margin-bottom: 0.25em;
+  }
+
+  .h1-inline {
+    display: inline;
+  }
+
+  .h2-inline {
+    margin-left: 1rem;
+    display: inline;
+  }
+
+  main {
+    margin: 0 auto;
+  }
+
+  a {
+    color: var(--color-blue-600);
+    text-decoration-line: underline;
+  }
+}

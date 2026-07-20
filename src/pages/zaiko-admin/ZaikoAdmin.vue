@@ -4,8 +4,8 @@
       <div
         :class="
           windowScroll.isScrolling.value || timelineScrolling.isScrolling.value
-            ? ` h-full w-screen absolute left-0 top-0 z-0 bg-[url(/assets/zaiko-admin-assets/00-zaiko-background-pattern.png)] opacity-20 duration-500 pointer-events-none transition-opacity`
-            : `h-full w-screen absolute left-0 top-0 z-0 bg-[url(/assets/zaiko-admin-assets/00-zaiko-background-pattern.png)] opacity-0 duration-500 pointer-events-none transition-opacity `
+            ? ` h-full w-screen absolute left-0 top-0 z-0 bg-[url(/src/assets/zaiko-admin-assets/00-zaiko-background-pattern.png)] opacity-20 duration-500 pointer-events-none transition-opacity`
+            : `h-full w-screen absolute left-0 top-0 z-0 bg-[url(/src/assets/zaiko-admin-assets/00-zaiko-background-pattern.png)] opacity-0 duration-500 pointer-events-none transition-opacity `
         "
       ></div>
 
@@ -43,7 +43,7 @@
                 <div class="p-5 sticky sm:top-5 bg-zaiko original-page-text">
                   <h1 class="text-white">The Current Admin Page</h1>
                   <p class="text-white">
-                    This was the starting point for our redsign project. White it was a large
+                    This was the starting point for our redsign project. While it was a large
                     improvement from the previous legacy software, it was still a first draft with
                     some problems that needed solving.
                   </p>
@@ -157,8 +157,8 @@
                 <h1 class="text-white">Event Navigation</h1>
                 <p class="text-white">
                   Navigation was another issue that we saw users having. Our tabs weren't intuitive,
-                  and I felt that mapping navigating within an event with our current navigation
-                  would help make a better mental model for our customers.
+                  and I felt that mapping the event navigation next to the global navigation would
+                  help make a better mental model for our customers.
                 </p>
               </div>
             </div>

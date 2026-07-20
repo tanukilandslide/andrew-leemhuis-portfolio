@@ -16,7 +16,8 @@
           <h2 class="h2-inline">(Santander Consumer USA)</h2>
 
           <h2>
-            Role: UX Designer in charge of leading research, development of a loan education tool
+            Role: UX Designer in charge of leading research and development of a patented loan
+            education tool
           </h2>
 
           <p class="mb-5">
