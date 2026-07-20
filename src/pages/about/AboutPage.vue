@@ -4,7 +4,7 @@
       <div class="flex flex-col justify-between h-[90vh]">
         <div class="mt-20 px-5 lg:px-0 flex flex-col md:flex-row gap-20">
           <img
-            src="./images/me.jpeg"
+            src="@/assets/about/me.jpeg"
             alt="A portrait of Andrew sitting in a comfortable cafe environment."
             class="rounded-full w-3/4 md:w-1/4 self-center md:self-start"
           />
@@ -59,14 +59,10 @@
         <div class="w-full flex flex-col gap-3">
           <p class="w-full text-center">This page was lovingly handmade with:</p>
           <div class="flex mx-auto h-10 gap-10">
-            <img src="../../../assets/about/vue-logo.svg" class="rounded-none" alt="Vue.js" />
-            <img src="../../../assets/about/pinialogo.svg" class="rounded-none" alt="Pinia" />
-            <img src="../../../assets/about/figma.svg" class="rounded-none" alt="Figma" />
-            <img
-              src="../../../assets/about/adobe-after-effects-logo.svg"
-              class="rounded-none"
-              alt="After Effects"
-            />
+            <VueLogo />
+            <PiniaLogo />
+            <FigmaLogo />
+            <AfterEffectsLogo />
           </div>
         </div>
       </div>
@@ -76,9 +72,14 @@
 
 <script setup>
 import { useStyleStore } from '@/stores/styles'
-import LinkedIn from '../../../assets/about/linkedIn-logo.svg'
-import GitHub from '../../../assets/about/github.svg'
-import Email from '../../../assets/about/email-icon.svg'
+import LinkedIn from '@/assets/about/linkedIn-logo.svg'
+import GitHub from '@/assets/about/github.svg'
+import Email from '@/assets/about/email-icon.svg'
+
+import VueLogo from '@/assets/about/vue-logo.svg'
+import PiniaLogo from '@/assets/about/pinia-logo.svg'
+import FigmaLogo from '@/assets/about/figma-logo.svg'
+import AfterEffectsLogo from '@/assets/about/adobe-after-effects-logo.svg'
 
 const store = useStyleStore()
 

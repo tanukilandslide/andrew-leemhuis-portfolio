@@ -4,8 +4,8 @@
       <div
         :class="
           windowScroll.isScrolling.value
-            ? ` h-full w-screen absolute left-0 top-0 z-0 bg-[url(/00_medical_pattern.png)] opacity-50 duration-1000 pointer-events-none transition-opacity`
-            : `h-full w-screen absolute left-0 top-0 z-0 bg-[url(/00_medical_pattern.png)] opacity-0 duration-1000 pointer-events-none transition-opacity `
+            ? ` h-full w-screen absolute left-0 top-0 z-0 bg-[url(@/assets/links-hme/00_medical_pattern.png)] opacity-50 duration-1000 pointer-events-none transition-opacity`
+            : `h-full w-screen absolute left-0 top-0 z-0 bg-[url(@/assets/links-hme/00_medical_pattern.png)] opacity-0 duration-1000 pointer-events-none transition-opacity `
         "
       ></div>
 
@@ -26,12 +26,12 @@
           <h2>Competitor's Websites</h2>
           <div class="flex gap-3">
             <div class="flex flex-col gap-3">
-              <img src="./images/07_brightree.jpg" alt="" class="w-full h-max" />
-              <img src="./images/08_team_dme.jpg" alt="" class="w-full h-max" />
+              <img src="@/assets/links-hme/07_brightree.jpg" alt="" class="w-full h-max" />
+              <img src="@/assets/links-hme/08_team_dme.jpg" alt="" class="w-full h-max" />
             </div>
             <div class="flex flex-col gap-3">
-              <img src="./images/09_bflow.jpg" alt="" class="w-full h-max" />
-              <img src="./images/10_dme_works.jpg" alt="" class="w-full h-max" />
+              <img src="@/assets/links-hme/09_bflow.jpg" alt="" class="w-full h-max" />
+              <img src="@/assets/links-hme/10_dme_works.jpg" alt="" class="w-full h-max" />
             </div>
           </div>
         </Box>
@@ -46,7 +46,7 @@
             competition.
           </p>
 
-          <img src="./images/11_voice_and_tone_comparison.svg" alt="" />
+          <img src="@/assets/links-hme/11_voice_and_tone_comparison.svg" alt="" />
         </Box>
 
         <Box>
@@ -118,7 +118,7 @@
           <div>
             <img
               class="error_robot absolute w-1/2 left-1/2 -translate-y-22"
-              src="./images/12_error_robot.png"
+              src="@/assets/links-hme/12_error_robot.png"
               alt="Robot being resuscitated by a mechanic using a defibrillator"
             />
             <h2>Error Message</h2>
@@ -210,7 +210,7 @@
 </template>
 
 <script setup>
-import Banner from './components/Banner.vue'
+import Banner from './components/LinksBanner.vue'
 import Box from '@/components/Box.vue'
 import SlidingBox from '@/components/SlidingBox.vue'
 import { useStyleStore } from '@/stores/styles'

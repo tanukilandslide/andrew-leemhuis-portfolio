@@ -47,12 +47,12 @@
 <script setup>
 import ProjectItem from './components/ProjectItem.vue'
 
-import ZaikoLogo from '../../../assets/icons/zaiko-logo.svg'
-import AstraZenecaLogo from '../../../assets/icons/astrazeneca-logo.svg'
-import LoanProgressSimulatorLogo from '../../../assets/icons/santander-logo.svg'
-import AcqFeeWaiversLogo from '../../../assets/icons/acquisition-fee-waivers.svg'
-import LinksHMELogo from '../../../assets/icons/links-hme-logo.svg'
-import PersonalProjectsLogo from '../../../assets/icons/personal-projects.svg'
+import ZaikoLogo from '@/assets/icons/zaiko-logo.svg'
+import AstraZenecaLogo from '@/assets/icons/astrazeneca-logo.svg'
+import LoanProgressSimulatorLogo from '@/assets/icons/santander-logo.svg'
+import AcqFeeWaiversLogo from '@/assets/icons/acquisition-fee-waivers.svg'
+import LinksHMELogo from '@/assets/icons/links-hme-logo.svg'
+import PersonalProjectsLogo from '@/assets/icons/personal-projects.svg'
 
 import BackgroundSVG from './components/BackgroundSVG.vue'
 

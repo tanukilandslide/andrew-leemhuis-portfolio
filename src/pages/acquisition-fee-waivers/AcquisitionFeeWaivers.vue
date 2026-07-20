@@ -4,8 +4,8 @@
       <div
         :class="
           windowScroll.isScrolling.value
-            ? ` h-full w-screen absolute left-0 top-0 z-0 bg-[url(/acquisition-fee-waivers-assets/00_acq_fee_background_pattern.png)] opacity-20 duration-1000 pointer-events-none transition-opacity`
-            : `h-full w-screen absolute left-0 top-0 z-0 bg-[url(/acquisition-fee-waivers-assets/00_acq_fee_background_pattern.png)] opacity-0 duration-1000 pointer-events-none transition-opacity `
+            ? ` h-full w-screen absolute left-0 top-0 z-0 bg-[url(@/assets/acquisition-fee-wavers/00_acq_fee_background_pattern.png)] opacity-20 duration-1000 pointer-events-none transition-opacity`
+            : `h-full w-screen absolute left-0 top-0 z-0 bg-[url(@/assets/acquisition-fee-wavers/00_acq_fee_background_pattern.png)] opacity-0 duration-1000 pointer-events-none transition-opacity `
         "
       ></div>
 
@@ -47,7 +47,7 @@
             The current process includes mailing an excel document back and forth, leading to… less
             than accurate results…
           </h2>
-          <!-- <img src="./images/02_pong.svg" alt="" class="w-4/5" /> -->
+          <!-- <img src="@/assets/acquisition-fee-wavers/02_pong.svg" alt="" class="w-4/5" /> -->
           <DirectPong class="w-full h-full rounded-md" />
         </SlidingBox>
 
@@ -62,7 +62,7 @@
         </Box>
 
         <Box>
-          <img src="./images/04-rbm-map.svg" alt="" class="w-4/5 m-auto" />
+          <img src="@/assets/acquisition-fee-wavers/04-rbm-map.svg" alt="" class="w-4/5 m-auto" />
           <h2>Who will use the new software?</h2>
 
           <p>
@@ -76,7 +76,7 @@
           <h2>But what could be so bad about one spreadsheet O_O</h2>
 
           <img
-            src="./images/05-acq-fee-waiver-spreadsheet.PNG"
+            src="@/assets/acquisition-fee-wavers/05-acq-fee-waiver-spreadsheet.PNG"
             alt=""
             class="w-full sm:w-4/5 m-auto"
           />
@@ -159,18 +159,30 @@
 
           <h4>1&rpar; In Progress</h4>
 
-          <img src="./images/06-in-progress.jpg" alt="" class="w-full sm:w-4/5 mx-auto mb-7" />
+          <img
+            src="@/assets/acquisition-fee-wavers/06-in-progress.jpg"
+            alt=""
+            class="w-full sm:w-4/5 mx-auto mb-7"
+          />
 
           <h4>2&rpar; Pending Approval</h4>
 
-          <img src="./images/07-pending-approval.jpg" alt="" class="w-full sm:w-4/5 mx-auto mb-7" />
+          <img
+            src="@/assets/acquisition-fee-wavers/07-pending-approval.jpg"
+            alt=""
+            class="w-full sm:w-4/5 mx-auto mb-7"
+          />
 
           <h4>3&rpar; Manager Approved</h4>
 
-          <img src="./images/08-manager-approved.jpg" alt="" class="w-full sm:w-4/5 mx-auto mb-7" />
+          <img
+            src="@/assets/acquisition-fee-wavers/08-manager-approved.jpg"
+            alt=""
+            class="w-full sm:w-4/5 mx-auto mb-7"
+          />
 
           <div class="flex">
-            <img src="./images/09-search-icon.svg" alt="" class="" />
+            <img src="@/assets/acquisition-fee-wavers/09-search-icon.svg" alt="" class="" />
             <h2>Search</h2>
           </div>
 
@@ -181,7 +193,7 @@
           </h3>
 
           <img
-            src="./images/10-last-months-waivers.jpg"
+            src="@/assets/acquisition-fee-wavers/10-last-months-waivers.jpg"
             alt=""
             class="w-full sm:w-4/5 mx-auto mb-7"
           />
@@ -191,10 +203,14 @@
             for easy searching
           </h3>
 
-          <img src="./images/11-vehicles-added.png" alt="" class="w-full sm:w-4/5 mx-auto mb-7" />
+          <img
+            src="@/assets/acquisition-fee-wavers/11-vehicles-added.png"
+            alt=""
+            class="w-full sm:w-4/5 mx-auto mb-7"
+          />
 
           <div class="flex">
-            <img src="./images/12-cart-icon.svg" alt="" class="" />
+            <img src="@/assets/acquisition-fee-wavers/12-cart-icon.svg" alt="" class="" />
             <h2>Vehicle Cart</h2>
           </div>
 
@@ -204,7 +220,11 @@
             websites
           </h3>
 
-          <img src="./images/13-vehicle-cart.jpg" alt="" class="w-full sm:w-4/5 mx-auto mb-7" />
+          <img
+            src="@/assets/acquisition-fee-wavers/13-vehicle-cart.jpg"
+            alt=""
+            class="w-full sm:w-4/5 mx-auto mb-7"
+          />
 
           <h2>Mass Update</h2>
 
@@ -214,7 +234,11 @@
             and update all. Updated waivers are outlined in blue.
           </h3>
 
-          <img src="./images/14-mass-update.jpg" alt="" class="w-full sm:w-4/5 mx-auto mb-7" />
+          <img
+            src="@/assets/acquisition-fee-wavers/14-mass-update.jpg"
+            alt=""
+            class="w-full sm:w-4/5 mx-auto mb-7"
+          />
 
           <h2>Mananger Review</h2>
           <h3>
@@ -224,7 +248,11 @@
             to get fixed.
           </h3>
 
-          <img src="./images/15-rejected-waivers.jpg" alt="" class="w-full sm:w-4/5 mx-auto mb-7" />
+          <img
+            src="@/assets/acquisition-fee-wavers/15-rejected-waivers.jpg"
+            alt=""
+            class="w-full sm:w-4/5 mx-auto mb-7"
+          />
         </Box>
 
         <Box>
@@ -269,7 +297,7 @@
           <h2>Clear Action Confirmation Messaging</h2>
 
           <img
-            src="./images/16-system-notifications.jpg"
+            src="@/assets/acquisition-fee-wavers/16-system-notifications.jpg"
             alt=""
             class="w-full sm:w-4/5 mx-auto mb-7"
           />
@@ -281,7 +309,11 @@
             scroll.
           </h3>
 
-          <img src="./images/17-page-toggle.jpg" alt="" class="w-full sm:w-4/5 mx-auto mb-7" />
+          <img
+            src="@/assets/acquisition-fee-wavers/17-page-toggle.jpg"
+            alt=""
+            class="w-full sm:w-4/5 mx-auto mb-7"
+          />
 
           <h2>Checkbox Adds to Cart</h2>
           <h3>
@@ -290,7 +322,7 @@
           </h3>
 
           <img
-            src="./images/18-checkbox-added-to-cart.jpg"
+            src="@/assets/acquisition-fee-wavers/18-checkbox-added-to-cart.jpg"
             alt=""
             class="w-full sm:w-4/5 mx-auto mb-7"
           />
@@ -303,7 +335,11 @@
             vehicles.
           </h3>
 
-          <img src="./images/19-rejected-waivers.jpg" alt="" class="w-full sm:w-4/5 mx-auto mb-7" />
+          <img
+            src="@/assets/acquisition-fee-wavers/19-rejected-waivers.jpg"
+            alt=""
+            class="w-full sm:w-4/5 mx-auto mb-7"
+          />
         </Box>
 
         <Box>
@@ -358,8 +394,8 @@ import Box from '@/components/Box.vue'
 import SlidingBox from '@/components/SlidingBox.vue'
 import DirectPong from './components/DirectPong.vue'
 import PongServer from './components/PongServer.vue'
-import CarAndCoupon from './images/01_car-and-coupon.svg'
-import LenderDealerCustomerRelationship from './images/03-lender-dealer-customer-relationship.svg'
+import CarAndCoupon from '@/assets/acquisition-fee-wavers/01_car-and-coupon.svg'
+import LenderDealerCustomerRelationship from '@/assets/acquisition-fee-wavers/03-lender-dealer-customer-relationship.svg'
 import { useStyleStore } from '@/stores/styles'
 import { useWindowScroll } from '@vueuse/core'
 

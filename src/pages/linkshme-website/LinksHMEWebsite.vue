@@ -20,7 +20,7 @@
           </p>
         </div>
         <img
-          src="./images/02_Robo_Calendar.jpg"
+          src="@/assets/links-hme/02_Robo_Calendar.jpg"
           alt="Robot showing a calendar to a warehouse employee"
           class="self-center w-full"
         />
@@ -56,7 +56,7 @@
 </template>
 
 <script setup>
-import Banner from './components/Banner.vue'
+import Banner from './components/LinksBanner.vue'
 import Box from '@/components/Box.vue'
 import { useStyleStore } from '@/stores/styles'
 

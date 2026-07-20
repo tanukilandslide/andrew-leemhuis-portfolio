@@ -11,7 +11,7 @@
       <nav>
         <ul class="flex flex-col gap-2 sm:flex-row sm:gap-5">
           <a
-            href="/andrew-leemhuis-resume.pdf"
+            :href="Resume"
             class="no-underline text-white border border-white hover:border-4 hover:*:font-bold hover:px-3 hover:py-1.5 rounded-full px-4 sm:py-2 my-auto"
           >
             <li class="">Resume</li>
@@ -36,6 +36,8 @@ import { useElementSize } from '@vueuse/core'
 
 const navbar = useTemplateRef('navbar')
 const { height: navbarHeight } = useElementSize(navbar)
+
+import Resume from '@/assets/andrew-leemhuis-resume.pdf'
 
 const store = useStyleStore()
 

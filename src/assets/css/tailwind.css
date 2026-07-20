@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
 @import 'tailwindcss';
-/* @import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/preflight.css' layer(base);
-@import 'tailwindcss/utilities.css' layer(utilities); */
-/* @layer theme, base, components, utilities; */
+@import 'tailwindcss/utilities.css' layer(utilities);
+@layer theme, base, components, utilities;
 
 @theme {
   --font-sans: 'Noto Sans JP', sans-serif;

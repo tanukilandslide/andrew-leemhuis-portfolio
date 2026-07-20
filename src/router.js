@@ -1,19 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
-
-import Homepage from './pages/homepage/Homepage.vue'
 import NotFound from './pages/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/', name: 'home', component: Homepage },
     {
-      path: '/resume',
-      component: () => import(/* webpackChunkName: "Resume" */ './pages/resume/Resume.vue'),
+      path: '/',
+      name: 'home',
+      component: () => import(/* webpackChunkName: "Homepage" */ '@/pages/homepage/HomePage.vue'),
     },
     {
       path: '/about',
-      component: () => import(/* webpackChunkName: "about" */ './pages/about/AboutPage.vue'),
+      component: () => import(/* webpackChunkName: "About" */ './pages/about/AboutPage.vue'),
     },
     {
       path: '/blog',

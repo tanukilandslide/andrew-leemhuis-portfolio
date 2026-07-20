@@ -2,19 +2,11 @@
   <Box :style="' my-5'">
     <div class="homepage_image_bottom">
       <h2 class="links_header text-linkshmewebsite-accent">Final Homepage</h2>
-      <img
-        class="homepage_image_bottom"
-        src="/src/pages/linkshme-website/images/33_homepage_final.jpg"
-        alt=""
-      />
+      <img class="homepage_image_bottom" src="@/assets/links-hme/33_homepage_final.jpg" alt="" />
     </div>
     <div class="homepage_image_top bg-linkshmewebsite">
       <h2 class="text-linkshmewebsite-accent">Homepage First Draft</h2>
-      <img
-        class="rounded-md"
-        src="/src/pages/linkshme-website/images/32_homepage_first_draft.jpg"
-        alt=""
-      />
+      <img class="rounded-md" src="@/assets/links-hme/32_homepage_first_draft.jpg" alt="" />
     </div>
   </Box>
 </template>
