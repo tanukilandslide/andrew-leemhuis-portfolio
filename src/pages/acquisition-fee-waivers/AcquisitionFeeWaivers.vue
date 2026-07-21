@@ -62,7 +62,7 @@
         </Box>
 
         <Box>
-          <img src="@/assets/acquisition-fee-wavers/04-rbm-map.svg" alt="" class="w-4/5 m-auto" />
+          <RBMMap />
           <h2>Who will use the new software?</h2>
 
           <p>
@@ -395,6 +395,7 @@ import SlidingBox from '@/components/SlidingBox.vue'
 import DirectPong from './components/DirectPong.vue'
 import PongServer from './components/PongServer.vue'
 import CarAndCoupon from '@/assets/acquisition-fee-wavers/01_car-and-coupon.svg'
+import RBMMap from '@/assets/acquisition-fee-wavers/04-rbm-map.svg'
 import LenderDealerCustomerRelationship from '@/assets/acquisition-fee-wavers/03-lender-dealer-customer-relationship.svg'
 import { useStyleStore } from '@/stores/styles'
 import { useWindowScroll } from '@vueuse/core'
