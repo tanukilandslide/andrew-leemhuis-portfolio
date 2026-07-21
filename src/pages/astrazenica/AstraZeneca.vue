@@ -33,7 +33,7 @@
         <Box>
           <img
             src="@/assets/astrazeneca/02-workshop-planning.jpg"
-            alt=""
+            alt="Cards with descriptions of various design thinking activities are arranged on the floor in the order that they will be carried out during a workshop. Each activity has hand written text indicating what the goal of each activity is."
             class="w-full m-auto mb-5"
           />
 
@@ -97,7 +97,7 @@
 
           <img
             src="@/assets/astrazeneca/05-tower-of-the-sun.jpeg"
-            alt=""
+            alt="Image of the Tower of the Sun, a symbol of Osaka"
             class="w-full sm:w-2/5 m-auto"
           />
 
@@ -105,7 +105,7 @@
 
           <img
             src="@/assets/astrazeneca/06-round-robin.jpeg"
-            alt=""
+            alt="Handwritten concepts written by participants at our first workshop are shown on a desk with stickers indicating their ranking after sticker voting."
             class="w-full sm:w-4/5 m-auto"
           />
 
@@ -148,14 +148,18 @@
 
         <SlidingBox>
           <h2>Now It's Time To Start Storyboarding, Right?</h2>
-          <img src="@/assets/astrazeneca/13-mr-storyboard.jpg" alt="" class="w-full m-auto" />
+          <img
+            src="@/assets/astrazeneca/13-mr-storyboard.jpg"
+            alt="A fun looking retrospective board that includes areas titled wind, sun, anchor, and reef. It has sticky notes in each section indicating what went well and what could be improved upon from the previous workshop."
+            class="w-full m-auto"
+          />
         </SlidingBox>
 
         <Box>
           <h2>So What Did We Make?</h2>
           <img
             src="@/assets/astrazeneca/14-az-clickable-prototype.gif"
-            alt=""
+            alt="As hand drawn storyboard showing conceptually how the new tool could solve problems at each step in a medical representative's day. Each frame has a box above that gives context about the tools solutions."
             class="w-full m-auto"
           />
           <h2>Healthcare Provider Dashboard</h2>

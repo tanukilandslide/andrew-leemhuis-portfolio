@@ -51,7 +51,10 @@
         <SlidingBox>
           <h2>How customers think simple interest works:</h2>
           <div class="flex justify-center gap-3 mb-5">
-            <InterestPerception class="w-4/5" />
+            <InterestPerception
+              class="w-4/5"
+              alt="A bar graph showing interest and principal staying the same each month"
+            />
             <div class="flex flex-col justify-around">
               <h3 class="text-[#E72E31]">Interest</h3>
               <h3 class="text-[#0087AA]">Principal</h3>
@@ -59,7 +62,10 @@
           </div>
           <h2>How simple interest actually works:</h2>
           <div class="flex justify-center gap-3">
-            <InterestReality class="w-4/5" />
+            <InterestReality
+              class="w-4/5"
+              alt="A bar graph showing principal interest decreasing while interest increases"
+            />
             <div class="flex flex-col justify-around">
               <h3 class="text-[#E72E31]">Interest</h3>
               <h3 class="text-[#0087AA]">Principal</h3>
@@ -84,13 +90,16 @@
             calls, I compiled my notes to create 3 personas.
           </p>
 
-          <img src="@/assets/loan-progress-simulator/03_call-center.jpg" alt="" />
+          <img
+            src="@/assets/loan-progress-simulator/03_call-center.jpg"
+            alt="Image of customer service center with agents taking calls in a corporate setting"
+          />
         </SlidingBox>
 
         <Box>
           <img
             src="@/assets/loan-progress-simulator/04_early-stage-customer.png"
-            alt=""
+            alt="Dapper guy looking to fix his loan payments"
             class="w-4/5 mx-auto max-w-60 mb-5"
           />
           <h1>Primary Persona: Early Stage Delinquency Customer</h1>
@@ -133,7 +142,7 @@
         <Box>
           <img
             src="@/assets/loan-progress-simulator/05_proactive-customer.png"
-            alt=""
+            alt="Casual guy looking into the distance, seeing his loan-free future"
             class="w-4/5 mx-auto max-w-60 mb-5"
           />
           <h1>Secondary Persona: Proactive Customer</h1>
@@ -163,7 +172,7 @@
         <Box>
           <img
             src="@/assets/loan-progress-simulator/06_customer-service-agent.png"
-            alt=""
+            alt="Helpful looking customer service agent ready to get customers out of delinquency"
             class="w-4/5 mx-auto max-w-60 mb-5"
           />
           <h1>Customer Service Agent</h1>
@@ -207,7 +216,7 @@
           <h2>First Prototype</h2>
           <img
             src="@/assets/loan-progress-simulator/08_first-prototype.jpg"
-            alt=""
+            alt="Image of customer service center with agents taking calls in a corporate setting"
             class="w-full mb-5"
           />
           <h2>Usability Test Results</h2>
