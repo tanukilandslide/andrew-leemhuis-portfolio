@@ -181,8 +181,8 @@
             class="w-full sm:w-4/5 mx-auto mb-7"
           />
 
-          <div class="flex">
-            <img src="@/assets/acquisition-fee-wavers/09-search-icon.svg" alt="" class="" />
+          <div class="flex gap-3">
+            <SearchIcon class="h-12" />
             <h2>Search</h2>
           </div>
 
@@ -209,8 +209,8 @@
             class="w-full sm:w-4/5 mx-auto mb-7"
           />
 
-          <div class="flex">
-            <img src="@/assets/acquisition-fee-wavers/12-cart-icon.svg" alt="" class="" />
+          <div class="flex gap-3">
+            <CartIcon class="h-12" />
             <h2>Vehicle Cart</h2>
           </div>
 
@@ -280,7 +280,7 @@
             <li>More specificity in button names</li>
           </ul>
 
-          <h2>Considerations Raised Developers About Wireframes</h2>
+          <h2>Considerations Raised By Developers About Wireframes</h2>
 
           <ul>
             <li>
@@ -397,6 +397,9 @@ import PongServer from './components/PongServer.vue'
 import CarAndCoupon from '@/assets/acquisition-fee-wavers/01_car-and-coupon.svg'
 import RBMMap from '@/assets/acquisition-fee-wavers/04-rbm-map.svg'
 import LenderDealerCustomerRelationship from '@/assets/acquisition-fee-wavers/03-lender-dealer-customer-relationship.svg'
+import SearchIcon from '@/assets/acquisition-fee-wavers/09-search-icon.svg'
+import CartIcon from '@/assets/acquisition-fee-wavers/12-cart-icon.svg'
+
 import { useStyleStore } from '@/stores/styles'
 import { useWindowScroll } from '@vueuse/core'
 

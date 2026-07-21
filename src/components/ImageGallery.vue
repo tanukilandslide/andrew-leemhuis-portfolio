@@ -14,7 +14,7 @@
       />
     </div>
     <div class="h-[65vh]">
-      <img :src="`${heroImage}`" alt="" class="m-auto w-max max-h-full" />
+      <img :src="`${heroImage}`" alt="" class="m-auto max-w-full max-h-full" />
     </div>
   </div>
 </template>

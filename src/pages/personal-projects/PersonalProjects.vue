@@ -29,29 +29,29 @@ import ImageGallery from '@/components/ImageGallery.vue'
 import { ref } from 'vue'
 import { useStyleStore } from '@/stores/styles'
 
-import ChairThumb from '/public/personal-projects/chair_project/00-chair-icon.jpg'
+import ChairThumb from '/personal-projects/chair_project/00-chair-icon.jpg'
 
-import ChairInitial from '/public/personal-projects/chair_project/01-initial-chair-sketches.jpg'
-import ChairsColor from '/public/personal-projects/chair_project/02-chairs-color.jpg'
-import ChairConstruction from '/public/personal-projects/chair_project/03-chair-construction.jpg'
-import ChairProcess from '/public/personal-projects/chair_project/04-process-photos.jpg'
-import ChairFinal from '/public/personal-projects/chair_project/05-final-chair.jpg'
+import ChairInitial from '/personal-projects/chair_project/01-initial-chair-sketches.jpg'
+import ChairsColor from '/personal-projects/chair_project/02-chairs-color.jpg'
+import ChairConstruction from '/personal-projects/chair_project/03-chair-construction.jpg'
+import ChairProcess from '/personal-projects/chair_project/04-process-photos.jpg'
+import ChairFinal from '/personal-projects/chair_project/05-final-chair.jpg'
 
-import FlowerPotThumb from '/public/personal-projects/flower_pot/00_flower-pot-icon.jpg'
+import FlowerPotThumb from '/personal-projects/flower_pot/00_flower-pot-icon.jpg'
 
-import FlowerPotSketch from '/public/personal-projects/flower_pot/01_initial_sketch.jpg'
-import FlowerPotModel from '/public/personal-projects/flower_pot/02_3d_model_rendering.jpg'
-import FlowerPotPrinting from '/public/personal-projects/flower_pot/03_flower_pot_printing.gif'
-import FlowerPotOnFence from '/public/personal-projects/flower_pot/04_flower_pot_on_fence.jpg'
-import FlowerPotPlant from '/public/personal-projects/flower_pot/05_flower_pot_with_plant.jpg'
+import FlowerPotSketch from '/personal-projects/flower_pot/01_initial_sketch.jpg'
+import FlowerPotModel from '/personal-projects/flower_pot/02_3d_model_rendering.jpg'
+import FlowerPotPrinting from '/personal-projects/flower_pot/03_flower_pot_printing.gif'
+import FlowerPotOnFence from '/personal-projects/flower_pot/04_flower_pot_on_fence.jpg'
+import FlowerPotPlant from '/personal-projects/flower_pot/05_flower_pot_with_plant.jpg'
 
-import SketchesThumb from '/public/personal-projects/sketches/00-fringilla-icon.jpg'
+import SketchesThumb from '/personal-projects/sketches/00-fringilla-icon.jpg'
 
-import SketchFringilla from '/public/personal-projects/sketches/01-fringilla.jpg'
-import SketchLeighton from '/public/personal-projects/sketches/02-leighton-on-a-mountain.jpg'
-import SketchHelmetSciFi from '/public/personal-projects/sketches/03-sci-fi-helmet.jpg'
-import SketchHelmet from '/public/personal-projects/sketches/04-helmet.jpg'
-import SketchPotter from '/public/personal-projects/sketches/05-pottery-throwdown-pickup.jpg'
+import SketchFringilla from '/personal-projects/sketches/01-fringilla.jpg'
+import SketchLeighton from '/personal-projects/sketches/02-leighton-on-a-mountain.jpg'
+import SketchHelmetSciFi from '/personal-projects/sketches/03-sci-fi-helmet.jpg'
+import SketchHelmet from '/personal-projects/sketches/04-helmet.jpg'
+import SketchPotter from '/personal-projects/sketches/05-pottery-throwdown-pickup.jpg'
 
 const store = useStyleStore()
 

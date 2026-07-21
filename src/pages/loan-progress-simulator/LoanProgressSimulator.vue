@@ -24,7 +24,7 @@
             A tool to give Customer Service Agents and customers transparency into their loan
             payments. The goal for this project was to make a tool that would go beyond a basic loan
             calculator and give personalized information about how simple interest is calculated on
-            a customer's loan.
+            a customer's loan. The solution from this project was applied for and received a patent.
           </p>
 
           <h2>Don't want to read? Watch the case study I created for our World Design Summit!</h2>
