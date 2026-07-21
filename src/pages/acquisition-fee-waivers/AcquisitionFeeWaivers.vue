@@ -31,7 +31,7 @@
             Chrysler Capital over other auto lenders.
           </p>
 
-          <CarAndCoupon class="w-4/5 mx-auto" />
+          <CarAndCoupon class="w-4/5 mx-auto" alt="A car with a fancy bow attached next to a coupon indicating you can get a $535 discount on that vehicle." />
         </Box>
 
         <Box>
@@ -47,18 +47,14 @@
             The current process includes mailing an excel document back and forth, leading to… less
             than accurate results…
           </h2>
-          <!-- <img src="@/assets/acquisition-fee-wavers/02_pong.svg" alt="" class="w-4/5" /> -->
+
           <DirectPong class="w-full h-full rounded-md" />
         </SlidingBox>
 
         <Box>
           <h2>Lender, Dealer, and Customer Relationship</h2>
-          <!-- <img
-          src="/assets/images/acquisition-fee-waivers/03-lender-dealer-customer-relationship.svg"
-          alt=""
-          class="w-full"
-        /> -->
-          <LenderDealerCustomerRelationship class="w-full sm:w-4/5 mx-auto" />
+
+          <LenderDealerCustomerRelationship class="w-full sm:w-4/5 mx-auto" alt="A triangle indicating the relationship between Chrysler Captital and it's two customers: car dealerships and car shoppers"/>
         </Box>
 
         <Box>
@@ -77,7 +73,7 @@
 
           <img
             src="@/assets/acquisition-fee-wavers/05-acq-fee-waiver-spreadsheet.PNG"
-            alt=""
+            alt="Map of the United States with 8 regional brand manager icons placed over 9 regions."
             class="w-full sm:w-4/5 m-auto"
           />
 
