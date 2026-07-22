@@ -107,7 +107,7 @@
           <img
             src="@/assets/links-hme/05_kaitlin.jpg"
             class="sm:w-1/3 rounded-none sm:rounded-md"
-            alt=""
+            alt="A portrait of Kaitlin, a customer service respresentative"
           />
 
           <div class="flex w-full justify-end">
@@ -158,7 +158,7 @@
           <img
             src="@/assets/links-hme/06_frank.jpg"
             class="sm:w-1/3 rounded-none sm:rounded-md"
-            alt=""
+            alt="Frank, the compliance officer, seen training employees in front of a white board."
           />
 
           <div class="flex w-full justify-end">

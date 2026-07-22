@@ -22,22 +22,46 @@
 
           <div class="flex justify-between mt-5 h-25 md:h-60">
             <div class="">
-              <img src="@/assets/links-hme/13_bebbeh.jpg" alt="" class="h-full w-auto" />
+              <img
+                src="@/assets/links-hme/13_bebbeh.jpg"
+                alt="A sketch of a man holding a baby and with a package of diapers."
+                class="h-full w-auto"
+              />
             </div>
             <div class="">
-              <img src="@/assets/links-hme/14_bebbeh_vector.jpg" alt="" class="h-full w-auto" />
+              <img
+                src="@/assets/links-hme/14_bebbeh_vector.jpg"
+                alt="A color vector image of a man holding a baby wrapped in a medical blanket and with a package of diapers."
+                class="h-full w-auto"
+              />
             </div>
             <div class="">
-              <img src="@/assets/links-hme/15_iv_stand.jpg" alt="" class="h-full w-auto" />
+              <img
+                src="@/assets/links-hme/15_iv_stand.jpg"
+                alt="A sketch of a girl with an IV stand."
+                class="h-full w-auto"
+              />
             </div>
             <div class="">
-              <img src="@/assets/links-hme/16_iv_stand_vector.jpg" alt="" class="h-full w-auto" />
+              <img
+                src="@/assets/links-hme/16_iv_stand_vector.jpg"
+                alt="A color vector of a girl with an IV stand."
+                class="h-full w-auto"
+              />
             </div>
             <div class="">
-              <img src="@/assets/links-hme/17_kimberlin.jpg" alt="" class="h-full w-auto" />
+              <img
+                src="@/assets/links-hme/17_kimberlin.jpg"
+                alt="A sketch of a woman with a portable oxygen pack."
+                class="h-full w-auto"
+              />
             </div>
             <div class="">
-              <img src="@/assets/links-hme/18_kimberlin_vector.jpg" alt="" class="h-full w-auto" />
+              <img
+                src="@/assets/links-hme/18_kimberlin_vector.jpg"
+                alt="A color vector of a woman with a suitcase-like oxygen pack."
+                class="h-full w-auto"
+              />
             </div>
           </div>
         </SlidingBox>
@@ -100,7 +124,11 @@
           </p>
 
           <div class="flex m-5 justify-around">
-            <img src="@/assets/links-hme/31_re-testing.jpg" alt="" class="w-2/5" />
+            <img
+              src="@/assets/links-hme/31_re-testing.jpg"
+              alt="Two sheets of paper with many different adjectives. Users have circled the words that feel applicable to the LinksHME website."
+              class="w-2/5"
+            />
             <div>
               <h3 class="text-linkshmewebsite-accent">Top Adjective Results</h3>
               <div class="flex">

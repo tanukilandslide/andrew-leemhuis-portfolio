@@ -26,12 +26,28 @@
           <h2>Competitor's Websites</h2>
           <div class="flex gap-3">
             <div class="flex flex-col gap-3">
-              <img src="@/assets/links-hme/07_brightree.jpg" alt="" class="w-full h-max" />
-              <img src="@/assets/links-hme/08_team_dme.jpg" alt="" class="w-full h-max" />
+              <img
+                src="@/assets/links-hme/07_brightree.jpg"
+                alt="brightree, the primary competitor has a well considered website design with a pleasing palette."
+                class="w-full h-max"
+              />
+              <img
+                src="@/assets/links-hme/08_team_dme.jpg"
+                alt="Bflow's website, whose most eyecatching image is of a trashcan with money in it."
+                class="w-full h-max"
+              />
             </div>
             <div class="flex flex-col gap-3">
-              <img src="@/assets/links-hme/09_bflow.jpg" alt="" class="w-full h-max" />
-              <img src="@/assets/links-hme/10_dme_works.jpg" alt="" class="w-full h-max" />
+              <img
+                src="@/assets/links-hme/09_bflow.jpg"
+                alt="Team DME's website, with each section having either a black or white background that feels jarring. Their clipart also feels like it's very outdated and taken from Microsoft Word."
+                class="w-full h-max"
+              />
+              <img
+                src="@/assets/links-hme/10_dme_works.jpg"
+                alt="DME Works website, whose page is a wall of text and no clear indication of what someone should do on that page."
+                class="w-full h-max"
+              />
             </div>
           </div>
         </Box>
@@ -46,7 +62,7 @@
             competition.
           </p>
 
-          <img src="@/assets/links-hme/11_voice_and_tone_comparison.svg" alt="" />
+          <CompetitiveAnalysis />
         </Box>
 
         <Box>
@@ -215,6 +231,8 @@ import Box from '@/components/Box.vue'
 import SlidingBox from '@/components/SlidingBox.vue'
 import { useStyleStore } from '@/stores/styles'
 import { useWindowScroll } from '@vueuse/core'
+
+import CompetitiveAnalysis from '@/assets/links-hme/11_voice_and_tone_comparison.svg'
 
 const windowScroll = useWindowScroll()
 
