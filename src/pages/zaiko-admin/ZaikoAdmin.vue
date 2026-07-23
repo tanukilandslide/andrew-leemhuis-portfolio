@@ -128,8 +128,8 @@
 
         <!-- Section 3 -->
 
-        <div class="h-1750 w-full flex flex-col-reverse justify-end sm:flex-row mb-20">
-          <div class="sm:w-1/3 h-full">
+        <div class="h-1750 w-full flex flex-col-reverse justify-end mb-20">
+          <div class="h-full">
             <div class="h-35/100">
               <div :class="'p-5 sticky sm:top-5 rounded-md bg-zaiko montage'">
                 <h1 class="text-white sticky">Timeline</h1>
@@ -186,11 +186,11 @@
 
           <!-- Right Column -->
 
-          <div class="sticky w-full top-0 sm:top-5 sm:px-5 flex flex-col" ref="montage">
+          <div class="sticky h-fit top-0 sm:top-5 flex flex-col" ref="montage">
             <div
-              class="sticky top-0 sm:top-5 sm:rounded-2xl overflow-hidden bg-linear-to-r from-[#903283] to-[#E63573]"
+              class="sticky top-0 sm:rounded-md overflow-hidden bg-linear-to-r from-[#903283] to-[#E63573]"
             >
-              <div class="py-10 px-5 bg-linear-to-b to-zaiko to-50%">
+              <div class="py-10 px-5 h-full bg-linear-to-b to-zaiko to-50%">
                 <Vue3Lottie
                   class="content-center"
                   loop="true"
@@ -309,7 +309,7 @@ store.setBackgroundColor('zaiko')
 
 <style scoped>
 .montage {
-  top: v-bind(montageHeight + 'px');
+  top: v-bind(montageHeight + 20 + 'px');
 }
 
 .original-page-text {
@@ -322,7 +322,7 @@ store.setBackgroundColor('zaiko')
 
 @media (min-width: 640px) {
   .montage {
-    top: calc(var(--spacing) * 5);
+    top: v-bind(montageHeight + 40 + 'px');
   }
 
   .original-page-text {
