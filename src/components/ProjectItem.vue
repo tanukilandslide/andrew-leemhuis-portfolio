@@ -1,7 +1,9 @@
 <template>
   <div class="flex justify-center w-60 h-60 items-center" ref="hoveredElement">
     <slot class="" v-if="!isHovered"> </slot>
-    <h2 v-else class="text-white w-40 my-auto wrap-break-word text-center">{{ projectName }}</h2>
+    <h2 v-else class="text-white z-10 w-40 my-auto wrap-break-word text-center">
+      {{ projectName }}
+    </h2>
 
     <svg
       class="w-60 h-60 absolute"
