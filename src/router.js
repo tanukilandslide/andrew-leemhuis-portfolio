@@ -81,6 +81,13 @@ const router = createRouter({
           /* webpackChunkName: "PersonalProjects" */ './pages/personal-projects/PersonalProjects.vue'
         ),
     },
+    {
+      path: '/crochet-counter',
+      component: () =>
+        import(
+          /* webpackChunkName: "LoanProgressSimulator" */ './pages/crochet-counter/CrochetCounter.vue'
+        ),
+    },
     { path: '/:notFound(.*)', component: NotFound },
   ],
   scrollBehavior() {
