@@ -1,5 +1,9 @@
 <template>
-  <main class="bg-winter h-screen">
+  <main
+    :class="
+      counter === stitchGoal && !inputStitchGoal ? ' bg-green-900 h-screen' : 'bg-winter h-screen'
+    "
+  >
     <div class="mx-auto w-screen h-fit justify-center flex">
       <div
         v-if="inputStitchGoal"
@@ -13,11 +17,12 @@
           <label for="goal" class="text-white"><h2>Number of Stitches in Row</h2></label>
           <div class="flex w-full justify-end gap-5">
             <input
-              type="text"
+              type="number"
               id="goal"
               class="border-b-2 border-white text-2xl text-white text-right w-24"
               v-model="stitchGoal"
             />
+
             <input
               class="border-2 border-white text-white rounded-full px-3 py-1"
               type="submit"
@@ -42,6 +47,12 @@
             Reset Stitches
           </button>
           <button
+            @click="removeStitch()"
+            class="text-white border border-white hover:border-4 hover:*:font-bold px-3 py-1.5 rounded-full my-auto"
+          >
+            Remove 1 Stitch
+          </button>
+          <button
             @click="newStitchGoal()"
             class="text-white border border-white hover:border-4 hover:*:font-bold px-3 py-1.5 rounded-full my-auto"
           >
@@ -64,7 +75,15 @@ let stitchGoal = ref(0)
 let inputStitchGoal = ref(true)
 
 function addStitch() {
-  counter.value++
+  if (counter.value < stitchGoal.value) {
+    counter.value++
+  }
+}
+
+function removeStitch() {
+  if (counter.value > 0) {
+    counter.value--
+  }
 }
 
 function resetToZero() {
@@ -81,5 +100,5 @@ function newStitchGoal() {
 }
 
 store.setNavbarColor('winter')
-store.setBackgroundColor('loanprogresssimulator-navbar')
+store.setBackgroundColor('winter')
 </script>
