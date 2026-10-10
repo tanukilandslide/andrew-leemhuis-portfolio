@@ -1,7 +1,7 @@
 <template>
   <main
     :class="
-      counter === stitchGoal && !inputStitchGoal
+      stitchCounter === stitchGoal && !inputStitchGoal
         ? ' bg-green-900 screen-height'
         : 'bg-winter screen-height'
     "
@@ -39,7 +39,7 @@
           class="h-[70vh] w-screen flex flex-col justify-center items-center"
           @click="addStitch()"
         >
-          <h2 class="text-8xl text-white">{{ counter }} / {{ stitchGoal }}</h2>
+          <h2 class="text-8xl text-white">{{ stitchCounter }} / {{ stitchGoal }}</h2>
         </div>
         <div class="flex justify-around">
           <button
@@ -68,43 +68,65 @@
 
 <script setup>
 import { useStyleStore } from '@/stores/styles'
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const store = useStyleStore()
 
 const navbarHeight = store.navbarHeight
 
-let counter = ref(0)
+let stitchCounter = ref(0)
 let stitchGoal = ref(0)
 let inputStitchGoal = ref(true)
 
 function addStitch() {
-  if (counter.value < stitchGoal.value) {
-    counter.value++
+  if (stitchCounter.value < stitchGoal.value) {
+    stitchCounter.value++
+    setStitches()
   }
 }
 
 function removeStitch() {
-  if (counter.value > 0) {
-    counter.value--
+  if (stitchCounter.value > 0) {
+    stitchCounter.value--
+    setStitches()
   }
 }
 
 function resetToZero() {
-  counter.value = 0
+  stitchCounter.value = 0
+  setStitches()
 }
 
 function setStitchGoal() {
   inputStitchGoal.value = false
+  stitchCounter.value = 0
+  localStorage.setItem('stitchGoal', stitchGoal.value)
 }
 
 function newStitchGoal() {
+  stitchCounter.value = 0
+  stitchGoal.value = null
   inputStitchGoal.value = true
-  counter.value = 0
 }
 
 store.setNavbarColor('winter')
 store.setBackgroundColor('winter')
+
+function setStitches() {
+  localStorage.setItem('completedStitches', stitchCounter.value)
+}
+
+function getStitches() {
+  stitchCounter.value = parseInt(localStorage.getItem('completedStitches'))
+  stitchGoal.value = parseInt(localStorage.getItem('stitchGoal'))
+}
+
+onMounted(() => {
+  getStitches()
+  if (stitchCounter.value || stitchGoal.value) {
+    inputStitchGoal.value = false
+  }
+})
 </script>
 
 <style scoped>
