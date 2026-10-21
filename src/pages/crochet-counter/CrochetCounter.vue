@@ -26,12 +26,55 @@
             />
 
             <input
-              class="border-2 border-white text-white rounded-full px-3 py-1"
+              class="border-2 border-white text-white rounded-full px-3 py-1 cursor-pointer"
               type="submit"
               value="Submit"
             />
           </div>
         </form>
+        <div>
+          {{ stitches }}
+          <div v-for="stitch in stitches">
+            <div
+              v-if="stitch.stitch === 'single'"
+              class="bg-emerald-700 px-5 rounded-full cursor-pointer w-fit text-white"
+            >
+              <h3>single</h3>
+            </div>
+            <div
+              v-if="stitch.stitch === 'increase'"
+              class="bg-blue-700 px-5 rounded-full cursor-pointer w-fit text-white"
+            >
+              <h3>increase</h3>
+            </div>
+            <div
+              v-if="stitch.stitch === 'decrease'"
+              class="bg-purple-700 px-5 rounded-full cursor-pointer w-fit text-white"
+            >
+              <h3>decrease</h3>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <div
+            class="bg-emerald-700 px-5 pt-2 rounded-full cursor-pointer"
+            @click="addStitchType('single')"
+          >
+            <h1>Single +</h1>
+          </div>
+          <div
+            class="bg-blue-700 px-5 pt-2 rounded-full cursor-pointer"
+            @click="addStitchType('increase')"
+          >
+            <h1>Increase +</h1>
+          </div>
+          <div
+            class="bg-purple-700 px-5 pt-2 rounded-full cursor-pointer"
+            @click="addStitchType('decrease')"
+          >
+            <h1>Decrease +</h1>
+          </div>
+        </div>
       </div>
 
       <div v-else>
@@ -77,6 +120,18 @@ const navbarHeight = store.navbarHeight
 let stitchCounter = ref(0)
 let stitchGoal = ref(0)
 let inputStitchGoal = ref(true)
+let stitches = ref([])
+
+function addStitchType(type) {
+  console.log(stitches.value[stitches.value.length - 1])
+  if (stitches.value.length === 0) {
+    stitches.value.push({ stitch: type, number: 1 })
+  } else if (stitches.value[stitches.value.length - 1].stitch === type) {
+    stitches.value[stitches.value.length - 1].number++
+  } else {
+    stitches.value.push({ stitch: type, number: 1 })
+  }
+}
 
 function addStitch() {
   if (stitchCounter.value < stitchGoal.value) {
