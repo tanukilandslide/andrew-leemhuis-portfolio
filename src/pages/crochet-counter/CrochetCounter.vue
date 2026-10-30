@@ -32,26 +32,69 @@
             />
           </div>
         </form>
+
+        <!-- New Crochet Counter -->
         <div>
           {{ stitches }}
           <div v-for="stitch in stitches">
-            <div
-              v-if="stitch.stitch === 'single'"
-              class="bg-emerald-700 px-5 rounded-full cursor-pointer w-fit text-white"
-            >
-              <h3>single</h3>
+            <div class="flex" v-if="stitch.stitch === 'single'">
+              <div
+                class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
+                @click="deleteStichType(stitch.id)"
+              >
+                X
+              </div>
+              <div
+                class="bg-emerald-700 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
+              >
+                <h3>single</h3>
+                <input
+                  type="number"
+                  id="goal"
+                  class="border-b-2 border-white text-2xl text-white text-right w-24"
+                  v-model="stitch.number"
+                />
+              </div>
             </div>
-            <div
-              v-if="stitch.stitch === 'increase'"
-              class="bg-blue-700 px-5 rounded-full cursor-pointer w-fit text-white"
-            >
-              <h3>increase</h3>
+
+            <div class="flex" v-if="stitch.stitch === 'increase'">
+              <div
+                class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
+                @click="deleteStichType(stitch.id)"
+              >
+                X
+              </div>
+              <div
+                class="bg-blue-700 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
+              >
+                <h3>increase</h3>
+                <input
+                  type="number"
+                  id="goal"
+                  class="border-b-2 border-white text-2xl text-white text-right w-24"
+                  v-model="stitch.number"
+                />
+              </div>
             </div>
-            <div
-              v-if="stitch.stitch === 'decrease'"
-              class="bg-purple-700 px-5 rounded-full cursor-pointer w-fit text-white"
-            >
-              <h3>decrease</h3>
+
+            <div class="flex" v-if="stitch.stitch === 'decrease'">
+              <div
+                class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
+                @click="deleteStichType(stitch.id)"
+              >
+                X
+              </div>
+              <div
+                class="bg-purple-700 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
+              >
+                <h3>decrease</h3>
+                <input
+                  type="number"
+                  id="goal"
+                  class="border-b-2 border-white text-2xl text-white text-right w-24"
+                  v-model="stitch.number"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -111,7 +154,7 @@
 
 <script setup>
 import { useStyleStore } from '@/stores/styles'
-import { ref, onMounted } from 'vue'
+import { ref, reactive, onMounted } from 'vue'
 
 const store = useStyleStore()
 
@@ -120,16 +163,28 @@ const navbarHeight = store.navbarHeight
 let stitchCounter = ref(0)
 let stitchGoal = ref(0)
 let inputStitchGoal = ref(true)
-let stitches = ref([])
+let stitches = reactive([])
 
 function addStitchType(type) {
-  console.log(stitches.value[stitches.value.length - 1])
-  if (stitches.value.length === 0) {
-    stitches.value.push({ stitch: type, number: 1 })
-  } else if (stitches.value[stitches.value.length - 1].stitch === type) {
-    stitches.value[stitches.value.length - 1].number++
+  console.log(stitches[stitches.length - 1])
+  if (stitches.length === 0) {
+    stitches.push({ id: 1, stitch: type, number: 1 })
+  } else if (stitches[stitches.length - 1].stitch === type) {
+    stitches[stitches.length - 1].number++
   } else {
-    stitches.value.push({ stitch: type, number: 1 })
+    stitches.push({
+      id: stitches[stitches.length - 1].id + 1,
+      stitch: type,
+      number: 1,
+    })
+  }
+}
+
+function deleteStichType(identifier) {
+  for (let i = 0; i < stitches.length; i++) {
+    if (stitches[i].id === identifier) {
+      stitches.splice(i, 1)
+    }
   }
 }
 
