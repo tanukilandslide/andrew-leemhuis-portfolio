@@ -36,6 +36,7 @@
         <!-- New Crochet Counter -->
         <div>
           {{ stitches }}
+          <h3>{{ sumOfStitches }}</h3>
           <div v-for="stitch in stitches">
             <div class="flex" v-if="stitch.stitch === 'single'">
               <div
@@ -125,7 +126,12 @@
           class="h-[70vh] w-screen flex flex-col justify-center items-center"
           @click="addStitch()"
         >
+          <div>
+            {{ stitches }}
+          </div>
+
           <h2 class="text-8xl text-white">{{ stitchCounter }} / {{ stitchGoal }}</h2>
+          <h3>{{ sumOfStitches }} here!</h3>
         </div>
         <div class="flex justify-around">
           <button
@@ -165,6 +171,8 @@ let stitchGoal = ref(0)
 let inputStitchGoal = ref(true)
 let stitches = reactive([])
 
+let sumOfStitches = ref(0)
+
 function addStitchType(type) {
   console.log(stitches[stitches.length - 1])
   if (stitches.length === 0) {
@@ -178,6 +186,7 @@ function addStitchType(type) {
       number: 1,
     })
   }
+  calculateTotalStitches()
 }
 
 function deleteStichType(identifier) {
@@ -185,6 +194,14 @@ function deleteStichType(identifier) {
     if (stitches[i].id === identifier) {
       stitches.splice(i, 1)
     }
+  }
+  calculateTotalStitches()
+}
+
+function calculateTotalStitches() {
+  sumOfStitches.value = 0
+  for (let i = 0; i < stitches.length; i++) {
+    sumOfStitches.value += stitches[i].number
   }
 }
 
