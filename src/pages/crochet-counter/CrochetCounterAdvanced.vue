@@ -14,7 +14,7 @@
         <!-- New Crochet Counter -->
         <h2>{{ sumOfStitches }}</h2>
         {{ stitches }}
-        <div class="flex">
+        <div class="flex flex-wrap gap-5">
           <div v-for="stitch in stitches">
             <div class="flex" v-if="stitch.stitch === 'single'">
               <div
@@ -76,7 +76,9 @@
               </div>
             </div>
           </div>
-          <div class="flex w-full justify-end gap-5">
+
+          <form action="" class="flex gap-5 items-center w-fit" @submit.prevent="setStitchGoal()">
+            <h2>x</h2>
             <input
               type="number"
               id="goal"
@@ -89,7 +91,7 @@
               type="submit"
               value="Submit"
             />
-          </div>
+          </form>
         </div>
         <div class="flex gap-3">
           <div
@@ -113,7 +115,48 @@
         </div>
       </div>
 
+      <!-- Counter After Submit -->
+
       <div v-else>
+        <div class="flex justify-center flex-wrap gap-5" @click="addStitch()">
+          <div v-for="stitch in stitches">
+            <div class="flex" v-if="stitch.stitch === 'single'">
+              <div
+                :class="
+                  stitch.selected
+                    ? 'bg-emerald-700 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                    : ' border-emerald-700 border-2 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                "
+              >
+                <h3>single</h3>
+              </div>
+            </div>
+
+            <div class="flex" v-if="stitch.stitch === 'increase'">
+              <div
+                :class="
+                  stitch.selected
+                    ? 'bg-blue-700 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                    : 'border-blue-700 border-2 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                "
+              >
+                <h3>increase</h3>
+              </div>
+            </div>
+
+            <div class="flex" v-if="stitch.stitch === 'decrease'">
+              <div
+                :class="
+                  stitch.selected
+                    ? 'bg-purple-700 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                    : 'border-purple-700 border-2 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                "
+              >
+                <h3>decrease</h3>
+              </div>
+            </div>
+          </div>
+        </div>
         <div
           class="h-[70vh] w-screen flex flex-col justify-center items-center"
           @click="addStitch()"
@@ -122,7 +165,7 @@
             {{ stitches }}
           </div>
 
-          <h2 class="text-8xl text-white">{{ stitchCounter }} / {{ stitchGoal }}</h2>
+          <h2 class="text-8xl text-white">{{ stitchCounter }} / {{ sumOfStitches }}</h2>
           <h3>{{ sumOfStitches }} here!</h3>
         </div>
         <div class="flex justify-around">
@@ -164,12 +207,14 @@ let inputStitchGoal = ref(true)
 let stitches = reactive([])
 let multiplier = ref(1)
 
+let stitchHighlighter = 0
+
 let sumOfStitches = ref(0)
 
 function addStitchType(type) {
   console.log(stitches[stitches.length - 1])
   if (stitches.length === 0) {
-    stitches.push({ id: 1, stitch: type, number: 1 })
+    stitches.push({ id: 1, stitch: type, number: 1, selected: false })
   } else if (stitches[stitches.length - 1].stitch === type) {
     stitches[stitches.length - 1].number++
   } else {
@@ -177,6 +222,7 @@ function addStitchType(type) {
       id: stitches[stitches.length - 1].id + 1,
       stitch: type,
       number: 1,
+      selected: false,
     })
   }
 }
@@ -194,10 +240,27 @@ function calculateTotalStitches() {
   for (let i = 0; i < stitches.length; i++) {
     sumOfStitches.value += stitches[i].number
   }
+
+  sumOfStitches.value *= multiplier.value
 }
 
 function addStitch() {
-  if (stitchCounter.value < stitchGoal.value) {
+  if (stitchHighlighter < stitches.length) {
+    console.log(stitches[stitchHighlighter])
+    stitches[stitchHighlighter].selected = true
+    stitchHighlighter++
+  } else if (stitchCounter.value === sumOfStitches.value) {
+    return
+  } else {
+    stitchHighlighter = 1
+    for (let stitch of stitches) {
+      if (stitch !== stitches[0]) {
+        stitch.selected = false
+      }
+    }
+  }
+
+  if (stitchCounter.value < sumOfStitches.value) {
     stitchCounter.value++
     setStitches()
   }
@@ -212,6 +275,10 @@ function removeStitch() {
 
 function resetToZero() {
   stitchCounter.value = 0
+  stitchHighlighter = 0
+  for (let stitch of stitches) {
+    stitch.selected = false
+  }
   setStitches()
 }
 
@@ -239,7 +306,7 @@ function getStitches() {
   stitchGoal.value = parseInt(localStorage.getItem('stitchGoal'))
 }
 
-watch(stitches, () => {
+watch([stitches, multiplier], () => {
   calculateTotalStitches()
 })
 
