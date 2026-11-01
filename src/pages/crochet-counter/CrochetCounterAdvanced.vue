@@ -9,12 +9,12 @@
     <div class="mx-auto w-screen h-fit justify-center flex">
       <div
         v-if="inputStitchGoal"
-        class="h-[70vh] w-screen flex flex-col justify-center items-center"
+        class="h-[70vh] w-screen flex flex-col gap-3 justify-center items-center"
       >
         <!-- New Crochet Counter -->
-        <div>
-          {{ stitches }}
-          <h3>{{ sumOfStitches }}</h3>
+        <h2>{{ sumOfStitches }}</h2>
+        {{ stitches }}
+        <div class="flex">
           <div v-for="stitch in stitches">
             <div class="flex" v-if="stitch.stitch === 'single'">
               <div
@@ -75,6 +75,20 @@
                 />
               </div>
             </div>
+          </div>
+          <div class="flex w-full justify-end gap-5">
+            <input
+              type="number"
+              id="goal"
+              class="border-b-2 border-white text-2xl text-white text-right w-24"
+              v-model="multiplier"
+            />
+
+            <input
+              class="border-2 border-white text-white rounded-full px-3 py-1 cursor-pointer"
+              type="submit"
+              value="Submit"
+            />
           </div>
         </div>
         <div class="flex gap-3">
@@ -138,7 +152,7 @@
 
 <script setup>
 import { useStyleStore } from '@/stores/styles'
-import { ref, reactive, onMounted } from 'vue'
+import { ref, reactive, onMounted, watch } from 'vue'
 
 const store = useStyleStore()
 
@@ -148,6 +162,7 @@ let stitchCounter = ref(0)
 let stitchGoal = ref(0)
 let inputStitchGoal = ref(true)
 let stitches = reactive([])
+let multiplier = ref(1)
 
 let sumOfStitches = ref(0)
 
@@ -164,7 +179,6 @@ function addStitchType(type) {
       number: 1,
     })
   }
-  calculateTotalStitches()
 }
 
 function deleteStichType(identifier) {
@@ -173,7 +187,6 @@ function deleteStichType(identifier) {
       stitches.splice(i, 1)
     }
   }
-  calculateTotalStitches()
 }
 
 function calculateTotalStitches() {
@@ -225,6 +238,10 @@ function getStitches() {
   stitchCounter.value = parseInt(localStorage.getItem('completedStitches'))
   stitchGoal.value = parseInt(localStorage.getItem('stitchGoal'))
 }
+
+watch(stitches, () => {
+  calculateTotalStitches()
+})
 
 onMounted(() => {
   getStitches()
