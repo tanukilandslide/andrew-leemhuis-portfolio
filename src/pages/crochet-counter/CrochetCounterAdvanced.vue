@@ -175,7 +175,6 @@
           </div>
 
           <h2 class="text-8xl text-white">{{ stitchCounter }} / {{ sumOfStitches }}</h2>
-          <h3>{{ sumOfStitches }} here!</h3>
         </div>
         <div class="flex justify-around">
           <button
@@ -300,7 +299,7 @@ function removeStitch() {
 function resetToZero() {
   stitchCounter.value = 0
   stitchHighlighter = 0
-  for (let stitch of stitches) {
+  for (let stitch of stitchRhythm) {
     stitch.selected = false
   }
   setStitches()
@@ -347,6 +346,10 @@ function setStitchGoal() {
 function newStitchGoal() {
   stitchCounter.value = 0
   stitchGoal.value = null
+  stitches.length = 0
+  stitchRhythm.length = 0
+  stitchHighlighter = 0
+  multiplier.value = 1
   inputStitchGoal.value = true
 }
 
