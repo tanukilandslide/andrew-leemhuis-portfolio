@@ -144,43 +144,47 @@
       <!-- Counter After Submit -->
 
       <div v-else>
-        <div class="flex justify-center flex-wrap gap-5" @click="addStitch()">
-          <div v-for="stitch in stitchRhythm" :key="stitch.id">
-            <div class="flex" v-if="stitch.stitch === 'single'">
-              <div
-                :class="
-                  stitch.selected
-                    ? 'bg-emerald-700 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
-                    : ' border-emerald-700 border-2 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
-                "
-              >
-                <h3>single</h3>
+        <div
+          class="h-[70vh] w-screen flex flex-col justify-center items-center border border-dashed border-white mb-5 rounded-2xl"
+          @click="addStitch()"
+        >
+          <div class="flex justify-center flex-wrap gap-5" @click="addStitch()">
+            <div v-for="stitch in stitchRhythm" :key="stitch.id">
+              <div class="flex" v-if="stitch.stitch === 'single'">
+                <div
+                  :class="
+                    stitch.selected
+                      ? 'bg-emerald-700 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                      : ' border-emerald-700 border-2 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                  "
+                >
+                  <h3>single</h3>
+                </div>
               </div>
-            </div>
 
-            <div class="flex" v-if="stitch.stitch === 'double'">
-              <div
-                :class="
-                  stitch.selected
-                    ? 'bg-lime-400 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
-                    : ' border-lime-700 border-2 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
-                "
-              >
-                <h3>double</h3>
+              <div class="flex" v-if="stitch.stitch === 'double'">
+                <div
+                  :class="
+                    stitch.selected
+                      ? 'bg-lime-400 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                      : ' border-lime-700 border-2 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                  "
+                >
+                  <h3>double</h3>
+                </div>
               </div>
-            </div>
 
-            <div class="flex" v-if="stitch.stitch === 'increase'">
-              <div
-                :class="
-                  stitch.selected
-                    ? 'bg-blue-700 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
-                    : 'border-blue-700 border-2 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
-                "
-              >
-                <h3>increase</h3>
-              </div>
-              <!-- <div
+              <div class="flex" v-if="stitch.stitch === 'increase'">
+                <div
+                  :class="
+                    stitch.selected
+                      ? 'bg-blue-700 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                      : 'border-blue-700 border-2 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                  "
+                >
+                  <h3>increase</h3>
+                </div>
+                <!-- <div
                 :class="
                   stitch.secondSelected
                     ? 'bg-blue-700 px-5 pt-2 object-center rounded-r-full cursor-pointer w-fit text-white flex'
@@ -189,25 +193,21 @@
               >
                 <h3>increase</h3>
               </div> -->
-            </div>
+              </div>
 
-            <div class="flex" v-if="stitch.stitch === 'decrease'">
-              <div
-                :class="
-                  stitch.selected
-                    ? 'bg-purple-700 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
-                    : 'border-purple-700 border-2 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
-                "
-              >
-                <h3>decrease</h3>
+              <div class="flex" v-if="stitch.stitch === 'decrease'">
+                <div
+                  :class="
+                    stitch.selected
+                      ? 'bg-purple-700 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                      : 'border-purple-700 border-2 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                  "
+                >
+                  <h3>decrease</h3>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="h-[70vh] w-screen flex flex-col justify-center items-center"
-          @click="addStitch()"
-        >
           <!-- <div>
             {{ stitchRhythm }}
           </div> -->
@@ -330,6 +330,8 @@ function addStitch() {
 function removeStitch() {
   if (stitchCounter.value > 0) {
     stitchCounter.value--
+    stitchRhythm[stitchHighlighter - 1].selected = false
+    stitchHighlighter--
     setStitches()
   }
 }
