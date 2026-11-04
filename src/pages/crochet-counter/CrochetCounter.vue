@@ -37,7 +37,7 @@
         <div>
           {{ stitches }}
           <h3>{{ sumOfStitches }}</h3>
-          <div v-for="stitch in stitches">
+          <div v-for="stitch in stitches" :key="stitch.id">
             <div class="flex" v-if="stitch.stitch === 'single'">
               <div
                 class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"

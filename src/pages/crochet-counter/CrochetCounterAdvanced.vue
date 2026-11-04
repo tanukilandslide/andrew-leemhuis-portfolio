@@ -15,7 +15,7 @@
         <h1 class="text-white">Total stitches: {{ sumOfStitches }}</h1>
         <!-- {{ stitches }} -->
         <div class="flex flex-wrap gap-5">
-          <div v-for="stitch in stitches">
+          <div v-for="stitch in stitches" :key="stitch.id">
             <div class="flex" v-if="stitch.stitch === 'single'">
               <div
                 class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
