@@ -83,10 +83,22 @@ const router = createRouter({
     },
     {
       path: '/crochet-counter',
-      component: () =>
-        import(
-          /* webpackChunkName: "LoanProgressSimulator" */ './pages/crochet-counter/CrochetCounter.vue'
-        ),
+      children: [
+        {
+          path: '',
+          component: () =>
+            import(
+              /* webpackChunkName: "CrochetCounter" */ './pages/crochet-counter/CrochetCounter.vue'
+            ),
+        },
+        {
+          path: 'advanced',
+          component: () =>
+            import(
+              /* webpackChunkName: "CrochetCounterAdvanced" */ './pages/crochet-counter/CrochetCounterAdvanced.vue'
+            ),
+        },
+      ],
     },
     { path: '/:notFound(.*)', component: NotFound },
   ],
