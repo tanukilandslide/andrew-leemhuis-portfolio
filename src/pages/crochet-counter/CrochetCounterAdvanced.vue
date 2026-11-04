@@ -119,7 +119,7 @@
 
       <div v-else>
         <div class="flex justify-center flex-wrap gap-5" @click="addStitch()">
-          <div v-for="stitch in stitches">
+          <div v-for="stitch in stitchRhythm" :key="stitch.id">
             <div class="flex" v-if="stitch.stitch === 'single'">
               <div
                 :class="
@@ -142,6 +142,15 @@
               >
                 <h3>increase</h3>
               </div>
+              <!-- <div
+                :class="
+                  stitch.secondSelected
+                    ? 'bg-blue-700 px-5 pt-2 object-center rounded-r-full cursor-pointer w-fit text-white flex'
+                    : 'border-blue-700 border-2 px-5 pt-2 object-center rounded-r-full cursor-pointer w-fit text-white flex'
+                "
+              >
+                <h3>increase</h3>
+              </div> -->
             </div>
 
             <div class="flex" v-if="stitch.stitch === 'decrease'">
@@ -162,7 +171,7 @@
           @click="addStitch()"
         >
           <div>
-            {{ stitches }}
+            {{ stitchRhythm }}
           </div>
 
           <h2 class="text-8xl text-white">{{ stitchCounter }} / {{ sumOfStitches }}</h2>
@@ -205,6 +214,7 @@ let stitchCounter = ref(0)
 let stitchGoal = ref(0)
 let inputStitchGoal = ref(true)
 let stitches = reactive([])
+let stitchRhythm = reactive([])
 let multiplier = ref(1)
 
 let stitchHighlighter = 0
@@ -213,6 +223,7 @@ let sumOfStitches = ref(0)
 
 function addStitchType(type) {
   console.log(stitches[stitches.length - 1])
+
   if (stitches.length === 0) {
     stitches.push({ id: 1, stitch: type, number: 1, selected: false })
   } else if (stitches[stitches.length - 1].stitch === type) {
@@ -238,23 +249,36 @@ function deleteStichType(identifier) {
 function calculateTotalStitches() {
   sumOfStitches.value = 0
   for (let i = 0; i < stitches.length; i++) {
-    sumOfStitches.value += stitches[i].number
+    console.log(stitches[i].stitch)
+    if (stitches[i].stitch === 'increase') {
+      sumOfStitches.value += stitches[i].number * 2
+    } else {
+      sumOfStitches.value += stitches[i].number
+    }
   }
 
   sumOfStitches.value *= multiplier.value
 }
 
 function addStitch() {
-  if (stitchHighlighter < stitches.length) {
-    console.log(stitches[stitchHighlighter])
-    stitches[stitchHighlighter].selected = true
+  // if (stitchHighlighter < stitches.length && stitches[stitchHighlighter].stitch === 'increase') {
+  //   if (stitches[stitchHighlighter].firstSelected === true) {
+  //     stitches[stitchHighlighter].secondSelectedSelected = true
+  //   } else {
+  //     stitches[stitchHighlighter].firstSelected = true
+  //   }
+  //   stitchHighlighter++
+  // } else
+  if (stitchHighlighter < stitchRhythm.length) {
+    console.log(stitchRhythm[stitchHighlighter])
+    stitchRhythm[stitchHighlighter].selected = true
     stitchHighlighter++
   } else if (stitchCounter.value === sumOfStitches.value) {
     return
   } else {
     stitchHighlighter = 1
-    for (let stitch of stitches) {
-      if (stitch !== stitches[0]) {
+    for (let stitch of stitchRhythm) {
+      if (stitch !== stitchRhythm[0]) {
         stitch.selected = false
       }
     }
@@ -286,6 +310,38 @@ function setStitchGoal() {
   inputStitchGoal.value = false
   stitchCounter.value = 0
   localStorage.setItem('stitchGoal', stitchGoal.value)
+
+  for (let i = 0; i < multiplier.value; i++) {
+    for (let stitch in stitches) {
+      if (stitches[stitch].number === 1) {
+        if (stitches[stitch].stitch === 'increase') {
+          for (let i = 1; i <= 2; i++) {
+            stitchRhythm.push({
+              stitch: 'increase',
+              selected: false,
+            })
+          }
+        } else {
+          stitchRhythm.push({ stitch: stitches[stitch].stitch, selected: false })
+        }
+      } else {
+        for (let i = 1; i <= stitches[stitch].number; i++) {
+          if (stitches[stitch].stitch === 'increase') {
+            for (let i = 1; i <= 2; i++) {
+              stitchRhythm.push({
+                stitch: 'increase',
+                selected: false,
+              })
+            }
+          } else {
+            stitchRhythm.push({ stitch: stitches[stitch].stitch, selected: false })
+          }
+        }
+      }
+    }
+  }
+
+  console.log(stitchRhythm)
 }
 
 function newStitchGoal() {
