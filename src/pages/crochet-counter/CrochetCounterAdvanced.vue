@@ -12,8 +12,8 @@
         class="h-[70vh] w-screen flex flex-col gap-3 justify-center items-center"
       >
         <!-- New Crochet Counter -->
-        <h2>{{ sumOfStitches }}</h2>
-        {{ stitches }}
+        <h1 class="text-white">Total stitches: {{ sumOfStitches }}</h1>
+        <!-- {{ stitches }} -->
         <div class="flex flex-wrap gap-5">
           <div v-for="stitch in stitches">
             <div class="flex" v-if="stitch.stitch === 'single'">
@@ -27,6 +27,26 @@
                 class="bg-emerald-700 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
               >
                 <h3>single</h3>
+                <input
+                  type="number"
+                  id="goal"
+                  class="border-b-2 border-white text-2xl text-white text-right w-24"
+                  v-model="stitch.number"
+                />
+              </div>
+            </div>
+
+            <div class="flex" v-if="stitch.stitch === 'double'">
+              <div
+                class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
+                @click="deleteStichType(stitch.id)"
+              >
+                X
+              </div>
+              <div
+                class="bg-lime-400 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
+              >
+                <h3>double</h3>
                 <input
                   type="number"
                   id="goal"
@@ -78,7 +98,7 @@
           </div>
 
           <form action="" class="flex gap-5 items-center w-fit" @submit.prevent="setStitchGoal()">
-            <h2>x</h2>
+            <h1 class="text-white">*</h1>
             <input
               type="number"
               id="goal"
@@ -99,6 +119,12 @@
             @click="addStitchType('single')"
           >
             <h1>Single +</h1>
+          </div>
+          <div
+            class="bg-lime-400 px-5 pt-2 rounded-full cursor-pointer"
+            @click="addStitchType('double')"
+          >
+            <h1>Double +</h1>
           </div>
           <div
             class="bg-blue-700 px-5 pt-2 rounded-full cursor-pointer"
@@ -129,6 +155,18 @@
                 "
               >
                 <h3>single</h3>
+              </div>
+            </div>
+
+            <div class="flex" v-if="stitch.stitch === 'double'">
+              <div
+                :class="
+                  stitch.selected
+                    ? 'bg-lime-400 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                    : ' border-lime-700 border-2 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                "
+              >
+                <h3>double</h3>
               </div>
             </div>
 
@@ -170,9 +208,9 @@
           class="h-[70vh] w-screen flex flex-col justify-center items-center"
           @click="addStitch()"
         >
-          <div>
+          <!-- <div>
             {{ stitchRhythm }}
-          </div>
+          </div> -->
 
           <h2 class="text-8xl text-white">{{ stitchCounter }} / {{ sumOfStitches }}</h2>
         </div>
