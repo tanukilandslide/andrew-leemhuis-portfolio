@@ -1,160 +1,159 @@
 <template>
-  <main
-    :class="
-      stitchCounter === stitchGoal && !inputStitchGoal
-        ? ' bg-green-900 screen-height'
-        : 'bg-winter screen-height'
-    "
-  >
+  <main class="bg-winter h-full">
     <div class="mx-auto w-screen h-fit justify-center flex">
       <div
         v-if="inputStitchGoal"
-        class="h-[70vh] w-screen flex flex-col gap-3 justify-center items-center"
+        class="screen-height h-full w-screen flex flex-col gap-3 justify-start items-center"
       >
-        <div class="flex opacity-70 mb-50">
-          <RouterLink to="/crochet-counter" class="no-underline font-bold flex items-center">
-            <h2 class="text-white px-3 border-white border rounded-l-full">Basic</h2>
-          </RouterLink>
-          <div class="flex items-center">
-            <h2 class="text-winter px-3 bg-white border-white border rounded-r-full">Advanced</h2>
-          </div>
-        </div>
-        <!-- New Crochet Counter -->
-        <h1 class="text-white">Total stitches: {{ sumOfStitches }}</h1>
-        <!-- {{ stitches }} -->
-        <div class="flex flex-wrap gap-5">
-          <div v-for="stitch in stitches" :key="stitch.id">
-            <div class="flex" v-if="stitch.stitch === 'single'">
-              <div
-                class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
-                @click="deleteStichType(stitch.id)"
-              >
-                X
-              </div>
-              <div
-                class="bg-emerald-700 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
-              >
-                <h3>single</h3>
-                <input
-                  type="number"
-                  id="goal"
-                  class="border-b-2 border-white text-2xl text-white text-right w-24"
-                  v-model="stitch.number"
-                />
-              </div>
-            </div>
-
-            <div class="flex" v-if="stitch.stitch === 'double'">
-              <div
-                class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
-                @click="deleteStichType(stitch.id)"
-              >
-                X
-              </div>
-              <div
-                class="bg-lime-400 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
-              >
-                <h3>double</h3>
-                <input
-                  type="number"
-                  id="goal"
-                  class="border-b-2 border-white text-2xl text-white text-right w-24"
-                  v-model="stitch.number"
-                />
-              </div>
-            </div>
-
-            <div class="flex" v-if="stitch.stitch === 'increase'">
-              <div
-                class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
-                @click="deleteStichType(stitch.id)"
-              >
-                X
-              </div>
-              <div
-                class="bg-blue-700 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
-              >
-                <h3>increase</h3>
-                <input
-                  type="number"
-                  id="goal"
-                  class="border-b-2 border-white text-2xl text-white text-right w-24"
-                  v-model="stitch.number"
-                />
-              </div>
-            </div>
-
-            <div class="flex" v-if="stitch.stitch === 'decrease'">
-              <div
-                class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
-                @click="deleteStichType(stitch.id)"
-              >
-                X
-              </div>
-              <div
-                class="bg-purple-700 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
-              >
-                <h3>decrease</h3>
-                <input
-                  type="number"
-                  id="goal"
-                  class="border-b-2 border-white text-2xl text-white text-right w-24"
-                  v-model="stitch.number"
-                />
-              </div>
+        <div class="py-10 m-5 flex flex-col justify-center items-center mb-5 rounded-2xl relative">
+          <div class="flex opacity-70 mb-50">
+            <RouterLink to="/crochet-counter" class="no-underline font-bold flex items-center">
+              <h2 class="text-white px-3 border-white border rounded-l-full">Basic</h2>
+            </RouterLink>
+            <div class="flex items-center">
+              <h2 class="text-winter px-3 bg-white border-white border rounded-r-full">Advanced</h2>
             </div>
           </div>
+          <!-- New Crochet Counter -->
+          <div class="flex">
+            <h1 class="text-white">Total stitches: {{ sumOfStitches }} *</h1>
+            <form action="" class="flex gap-5 items-center w-fit" @submit.prevent="setStitchGoal()">
+              <input
+                type="number"
+                id="goal"
+                class="border-b-2 border-white text-2xl text-white text-right w-20"
+                v-model="multiplier"
+              />
 
-          <form action="" class="flex gap-5 items-center w-fit" @submit.prevent="setStitchGoal()">
-            <h1 class="text-white">*</h1>
-            <input
-              type="number"
-              id="goal"
-              class="border-b-2 border-white text-2xl text-white text-right w-24"
-              v-model="multiplier"
-            />
+              <input
+                class="border-2 border-white text-white rounded-full px-3 py-1 cursor-pointer"
+                type="submit"
+                value="Submit"
+              />
+            </form>
+          </div>
 
-            <input
-              class="border-2 border-white text-white rounded-full px-3 py-1 cursor-pointer"
-              type="submit"
-              value="Submit"
-            />
-          </form>
-        </div>
-        <div class="flex gap-3">
-          <div
-            class="bg-emerald-700 px-5 pt-2 rounded-full cursor-pointer"
-            @click="addStitchType('single')"
-            @keyup.s="addStitchType('single')"
-          >
-            <h1>Single +</h1>
+          <div class="flex flex-wrap gap-5">
+            <div v-for="stitch in stitches" :key="stitch.id">
+              <div class="flex" v-if="stitch.stitch === 'single'">
+                <div
+                  class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
+                  @click="deleteStichType(stitch.id)"
+                >
+                  X
+                </div>
+                <div
+                  class="bg-emerald-700 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
+                >
+                  <h3>single</h3>
+                  <input
+                    type="number"
+                    id="goal"
+                    class="border-b-2 border-white text-2xl text-white text-right w-24"
+                    v-model="stitch.number"
+                  />
+                </div>
+              </div>
+
+              <div class="flex" v-if="stitch.stitch === 'double'">
+                <div
+                  class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
+                  @click="deleteStichType(stitch.id)"
+                >
+                  X
+                </div>
+                <div
+                  class="bg-lime-400 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
+                >
+                  <h3>double</h3>
+                  <input
+                    type="number"
+                    id="goal"
+                    class="border-b-2 border-white text-2xl text-white text-right w-24"
+                    v-model="stitch.number"
+                  />
+                </div>
+              </div>
+
+              <div class="flex" v-if="stitch.stitch === 'increase'">
+                <div
+                  class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
+                  @click="deleteStichType(stitch.id)"
+                >
+                  X
+                </div>
+                <div
+                  class="bg-blue-700 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
+                >
+                  <h3>increase</h3>
+                  <input
+                    type="number"
+                    id="goal"
+                    class="border-b-2 border-white text-2xl text-white text-right w-24"
+                    v-model="stitch.number"
+                  />
+                </div>
+              </div>
+
+              <div class="flex" v-if="stitch.stitch === 'decrease'">
+                <div
+                  class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
+                  @click="deleteStichType(stitch.id)"
+                >
+                  X
+                </div>
+                <div
+                  class="bg-purple-700 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
+                >
+                  <h3>decrease</h3>
+                  <input
+                    type="number"
+                    id="goal"
+                    class="border-b-2 border-white text-2xl text-white text-right w-24"
+                    v-model="stitch.number"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <div
-            class="bg-lime-400 px-5 pt-2 rounded-full cursor-pointer"
-            @click="addStitchType('double')"
-          >
-            <h1>Double +</h1>
-          </div>
-          <div
-            class="bg-blue-700 px-5 pt-2 rounded-full cursor-pointer"
-            @click="addStitchType('increase')"
-          >
-            <h1>Increase +</h1>
-          </div>
-          <div
-            class="bg-purple-700 px-5 pt-2 rounded-full cursor-pointer"
-            @click="addStitchType('decrease')"
-          >
-            <h1>Decrease +</h1>
+          <div class="flex gap-3 my-10 flex-wrap text-white">
+            <div
+              class="bg-emerald-700 px-5 pt-2 rounded-full cursor-pointer"
+              @click="addStitchType('single')"
+              @keyup.s="addStitchType('single')"
+            >
+              <h2>Single +</h2>
+            </div>
+            <div
+              class="bg-lime-400 px-5 pt-2 rounded-full cursor-pointer"
+              @click="addStitchType('double')"
+            >
+              <h2>Double +</h2>
+            </div>
+            <div
+              class="bg-blue-700 px-5 pt-2 rounded-full cursor-pointer"
+              @click="addStitchType('increase')"
+            >
+              <h2>Increase +</h2>
+            </div>
+            <div
+              class="bg-purple-700 px-5 pt-2 rounded-full cursor-pointer"
+              @click="addStitchType('decrease')"
+            >
+              <h2>Decrease +</h2>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Counter After Submit -->
 
-      <div v-else>
+      <div
+        v-else
+        class="w-screen flex flex-col gap-3 justify-start items-center mb-10 min-h-[90vh]"
+      >
         <div
-          class="h-[70vh] w-screen flex flex-col justify-center items-center border border-dashed border-white mb-5 rounded-2xl"
+          class="py-10 m-5 w-[95vw] min-h-5/6 flex flex-col justify-center items-center border border-dashed border-white mb-5 rounded-2xl relative"
           @click="addStitch()"
         >
           <div class="flex justify-center flex-wrap gap-5">
@@ -222,6 +221,8 @@
           </div> -->
 
           <h2 class="text-8xl text-white">{{ stitchCounter }} / {{ sumOfStitches }}</h2>
+
+          <h3 class="text-white opacity-50 absolute bottom-0">Click inside to add a stitch!</h3>
         </div>
         <div class="flex justify-around">
           <button
@@ -251,7 +252,7 @@
 <script setup>
 import { useStyleStore } from '@/stores/styles'
 import { ref, reactive, onMounted, watch } from 'vue'
-import { onKeyUp } from '@vueuse/core'
+import { onKeyUp, onKeyDown } from '@vueuse/core'
 
 const store = useStyleStore()
 
@@ -417,6 +418,10 @@ watch([stitches, multiplier], () => {
   calculateTotalStitches()
 })
 
+onKeyDown(' ', (e) => {
+  e.preventDefault()
+})
+
 onKeyUp(' ', (e) => {
   e.preventDefault()
   addStitch()
@@ -432,12 +437,12 @@ onKeyUp('r', (e) => {
   resetToZero()
 })
 
-onMounted(() => {
-  getStitches()
-  if (stitchCounter.value || stitchGoal.value) {
-    inputStitchGoal.value = false
-  }
-})
+// onMounted(() => {
+//   getStitches()
+//   if (stitchCounter.value || stitchGoal.value) {
+//     inputStitchGoal.value = false
+//   }
+// })
 </script>
 
 <style scoped>
