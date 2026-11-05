@@ -11,6 +11,14 @@
         v-if="inputStitchGoal"
         class="h-[70vh] w-screen flex flex-col gap-3 justify-center items-center"
       >
+        <div class="flex opacity-70 mb-50">
+          <RouterLink to="/crochet-counter" class="no-underline font-bold flex items-center">
+            <h2 class="text-white px-3 border-white border rounded-l-full">Basic</h2>
+          </RouterLink>
+          <div class="flex items-center">
+            <h2 class="text-winter px-3 bg-white border-white border rounded-r-full">Advanced</h2>
+          </div>
+        </div>
         <!-- New Crochet Counter -->
         <h1 class="text-white">Total stitches: {{ sumOfStitches }}</h1>
         <!-- {{ stitches }} -->
@@ -117,6 +125,7 @@
           <div
             class="bg-emerald-700 px-5 pt-2 rounded-full cursor-pointer"
             @click="addStitchType('single')"
+            @keyup.s="addStitchType('single')"
           >
             <h1>Single +</h1>
           </div>
@@ -242,6 +251,7 @@
 <script setup>
 import { useStyleStore } from '@/stores/styles'
 import { ref, reactive, onMounted, watch } from 'vue'
+import { onKeyUp } from '@vueuse/core'
 
 const store = useStyleStore()
 
@@ -405,6 +415,21 @@ function getStitches() {
 
 watch([stitches, multiplier], () => {
   calculateTotalStitches()
+})
+
+onKeyUp(' ', (e) => {
+  e.preventDefault()
+  addStitch()
+})
+
+onKeyUp('Backspace', (e) => {
+  e.preventDefault()
+  removeStitch()
+})
+
+onKeyUp('r', (e) => {
+  e.preventDefault()
+  resetToZero()
 })
 
 onMounted(() => {
