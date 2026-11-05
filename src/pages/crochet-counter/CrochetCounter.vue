@@ -11,6 +11,17 @@
         v-if="inputStitchGoal"
         class="h-[70vh] w-screen flex flex-col justify-center items-center"
       >
+        <div class="flex opacity-70 mb-50">
+          <div class="no-underline font-bold flex items-center">
+            <h2 class="text-winter px-3 bg-white border-white border rounded-l-full">Basic</h2>
+          </div>
+          <RouterLink
+            to="/crochet-counter/advanced"
+            class="no-underline font-bold flex items-center"
+          >
+            <h2 class="text-white px-3 border-white border rounded-r-full">Advanced</h2>
+          </RouterLink>
+        </div>
         <form
           action=""
           class="flex flex-col gap-5 items-center w-fit"
@@ -32,93 +43,6 @@
             />
           </div>
         </form>
-
-        <!-- New Crochet Counter -->
-        <div>
-          {{ stitches }}
-          <h3>{{ sumOfStitches }}</h3>
-          <div v-for="stitch in stitches" :key="stitch.id">
-            <div class="flex" v-if="stitch.stitch === 'single'">
-              <div
-                class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
-                @click="deleteStichType(stitch.id)"
-              >
-                X
-              </div>
-              <div
-                class="bg-emerald-700 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
-              >
-                <h3>single</h3>
-                <input
-                  type="number"
-                  id="goal"
-                  class="border-b-2 border-white text-2xl text-white text-right w-24"
-                  v-model="stitch.number"
-                />
-              </div>
-            </div>
-
-            <div class="flex" v-if="stitch.stitch === 'increase'">
-              <div
-                class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
-                @click="deleteStichType(stitch.id)"
-              >
-                X
-              </div>
-              <div
-                class="bg-blue-700 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
-              >
-                <h3>increase</h3>
-                <input
-                  type="number"
-                  id="goal"
-                  class="border-b-2 border-white text-2xl text-white text-right w-24"
-                  v-model="stitch.number"
-                />
-              </div>
-            </div>
-
-            <div class="flex" v-if="stitch.stitch === 'decrease'">
-              <div
-                class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
-                @click="deleteStichType(stitch.id)"
-              >
-                X
-              </div>
-              <div
-                class="bg-purple-700 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
-              >
-                <h3>decrease</h3>
-                <input
-                  type="number"
-                  id="goal"
-                  class="border-b-2 border-white text-2xl text-white text-right w-24"
-                  v-model="stitch.number"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex gap-3">
-          <div
-            class="bg-emerald-700 px-5 pt-2 rounded-full cursor-pointer"
-            @click="addStitchType('single')"
-          >
-            <h1>Single +</h1>
-          </div>
-          <div
-            class="bg-blue-700 px-5 pt-2 rounded-full cursor-pointer"
-            @click="addStitchType('increase')"
-          >
-            <h1>Increase +</h1>
-          </div>
-          <div
-            class="bg-purple-700 px-5 pt-2 rounded-full cursor-pointer"
-            @click="addStitchType('decrease')"
-          >
-            <h1>Decrease +</h1>
-          </div>
-        </div>
       </div>
 
       <div v-else>
@@ -126,12 +50,7 @@
           class="h-[70vh] w-screen flex flex-col justify-center items-center"
           @click="addStitch()"
         >
-          <div>
-            {{ stitches }}
-          </div>
-
           <h2 class="text-8xl text-white">{{ stitchCounter }} / {{ stitchGoal }}</h2>
-          <h3>{{ sumOfStitches }} here!</h3>
         </div>
         <div class="flex justify-around">
           <button
