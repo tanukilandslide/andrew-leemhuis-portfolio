@@ -148,7 +148,7 @@
           class="h-[70vh] w-screen flex flex-col justify-center items-center border border-dashed border-white mb-5 rounded-2xl"
           @click="addStitch()"
         >
-          <div class="flex justify-center flex-wrap gap-5" @click="addStitch()">
+          <div class="flex justify-center flex-wrap gap-5">
             <div v-for="stitch in stitchRhythm" :key="stitch.id">
               <div class="flex" v-if="stitch.stitch === 'single'">
                 <div
@@ -350,9 +350,20 @@ function setStitchGoal() {
   stitchCounter.value = 0
   localStorage.setItem('stitchGoal', stitchGoal.value)
 
-  for (let i = 0; i < multiplier.value; i++) {
-    for (let stitch in stitches) {
-      if (stitches[stitch].number === 1) {
+  for (let stitch in stitches) {
+    if (stitches[stitch].number === 1) {
+      if (stitches[stitch].stitch === 'increase') {
+        for (let i = 1; i <= 2; i++) {
+          stitchRhythm.push({
+            stitch: 'increase',
+            selected: false,
+          })
+        }
+      } else {
+        stitchRhythm.push({ stitch: stitches[stitch].stitch, selected: false })
+      }
+    } else {
+      for (let i = 1; i <= stitches[stitch].number; i++) {
         if (stitches[stitch].stitch === 'increase') {
           for (let i = 1; i <= 2; i++) {
             stitchRhythm.push({
@@ -362,19 +373,6 @@ function setStitchGoal() {
           }
         } else {
           stitchRhythm.push({ stitch: stitches[stitch].stitch, selected: false })
-        }
-      } else {
-        for (let i = 1; i <= stitches[stitch].number; i++) {
-          if (stitches[stitch].stitch === 'increase') {
-            for (let i = 1; i <= 2; i++) {
-              stitchRhythm.push({
-                stitch: 'increase',
-                selected: false,
-              })
-            }
-          } else {
-            stitchRhythm.push({ stitch: stitches[stitch].stitch, selected: false })
-          }
         }
       }
     }
