@@ -341,9 +341,16 @@ function addStitch() {
 function removeStitch() {
   if (stitchCounter.value > 0) {
     stitchCounter.value--
-    stitchRhythm[stitchHighlighter - 1].selected = false
-    stitchHighlighter--
-    setStitches()
+    if (stitchHighlighter === 0) {
+      for (let i = 0; i < stitchRhythm.length - 1; i++) {
+        stitchRhythm[i].selected = true
+      }
+      stitchHighlighter = stitchRhythm.length - 1
+    } else {
+      stitchRhythm[stitchHighlighter - 1].selected = false
+      stitchHighlighter--
+      setStitches()
+    }
   }
 }
 
