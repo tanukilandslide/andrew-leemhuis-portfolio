@@ -5,7 +5,9 @@
         v-if="inputStitchGoal"
         class="screen-height h-full w-screen flex flex-col gap-3 justify-start items-center"
       >
-        <div class="py-10 m-5 flex flex-col justify-center items-center mb-5 rounded-2xl relative">
+        <div
+          class="py-10 m-5 flex flex-col gap-5 justify-center items-center mb-5 rounded-2xl relative"
+        >
           <div class="flex opacity-70 mb-50">
             <RouterLink to="/crochet-counter" class="no-underline font-bold flex items-center">
               <h2 class="text-white px-3 border-white border rounded-l-full">Basic</h2>
@@ -16,12 +18,12 @@
           </div>
           <!-- New Crochet Counter -->
           <div class="flex">
-            <h1 class="text-white">Total stitches: {{ sumOfStitches }} *</h1>
+            <h1 class="text-white">Total stitches: &nbsp; {{ sumOfStitches }} &nbsp; *</h1>
             <form action="" class="flex gap-5 items-center w-fit" @submit.prevent="setStitchGoal()">
               <input
                 type="number"
                 id="goal"
-                class="border-b-2 border-white text-2xl text-white text-right w-20"
+                class="border-b-2 border-white text-2xl text-white text-center w-20"
                 v-model="multiplier"
               />
 
@@ -39,11 +41,12 @@
 
               <div class="flex" v-if="stitch.stitch === 'slip'">
                 <div
-                  class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
+                  class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex items-center"
                   @click="deleteStichType(stitch.id)"
                 >
-                  X
+                  <h2 class="m-0">X</h2>
                 </div>
+
                 <div
                   class="bg-orange-300 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
                 >
@@ -51,7 +54,7 @@
                   <input
                     type="number"
                     id="goal"
-                    class="border-b-2 border-white text-2xl text-white text-right w-24"
+                    class="border-b-2 border-white text-2xl text-white text-center w-24"
                     v-model="stitch.number"
                   />
                 </div>
@@ -64,7 +67,7 @@
                   class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
                   @click="deleteStichType(stitch.id)"
                 >
-                  X
+                  <h2 class="m-0">X</h2>
                 </div>
                 <div
                   class="bg-orange-600 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
@@ -73,7 +76,7 @@
                   <input
                     type="number"
                     id="goal"
-                    class="border-b-2 border-white text-2xl text-white text-right w-24"
+                    class="border-b-2 border-white text-2xl text-white text-center w-24"
                     v-model="stitch.number"
                   />
                 </div>
@@ -84,7 +87,7 @@
                   class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
                   @click="deleteStichType(stitch.id)"
                 >
-                  X
+                  <h2 class="m-0">X</h2>
                 </div>
                 <div
                   class="bg-emerald-700 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
@@ -93,7 +96,7 @@
                   <input
                     type="number"
                     id="goal"
-                    class="border-b-2 border-white text-2xl text-white text-right w-24"
+                    class="border-b-2 border-white text-2xl text-white text-center w-24"
                     v-model="stitch.number"
                   />
                 </div>
@@ -104,7 +107,7 @@
                   class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
                   @click="deleteStichType(stitch.id)"
                 >
-                  X
+                  <h2 class="m-0">X</h2>
                 </div>
                 <div
                   class="bg-sky-500 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
@@ -113,7 +116,7 @@
                   <input
                     type="number"
                     id="goal"
-                    class="border-b-2 border-white text-2xl text-white text-right w-24"
+                    class="border-b-2 border-white text-2xl text-white text-center w-24"
                     v-model="stitch.number"
                   />
                 </div>
@@ -124,16 +127,16 @@
                   class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
                   @click="deleteStichType(stitch.id)"
                 >
-                  X
+                  <h2 class="m-0">X</h2>
                 </div>
                 <div
                   class="bg-lime-400 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
                 >
-                  <h3>double</h3>
+                  <h3>Double</h3>
                   <input
                     type="number"
                     id="goal"
-                    class="border-b-2 border-white text-2xl text-white text-right w-24"
+                    class="border-b-2 border-white text-2xl text-white text-center w-24"
                     v-model="stitch.number"
                   />
                 </div>
@@ -144,16 +147,16 @@
                   class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
                   @click="deleteStichType(stitch.id)"
                 >
-                  X
+                  <h2 class="m-0">X</h2>
                 </div>
                 <div
                   class="bg-blue-700 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
                 >
-                  <h3>increase</h3>
+                  <h3>Increase</h3>
                   <input
                     type="number"
                     id="goal"
-                    class="border-b-2 border-white text-2xl text-white text-right w-24"
+                    class="border-b-2 border-white text-2xl text-white text-center w-24"
                     v-model="stitch.number"
                   />
                 </div>
@@ -164,68 +167,74 @@
                   class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
                   @click="deleteStichType(stitch.id)"
                 >
-                  X
+                  <h2 class="m-0">X</h2>
                 </div>
                 <div
                   class="bg-purple-700 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
                 >
-                  <h3>decrease</h3>
+                  <h3>Decrease</h3>
                   <input
                     type="number"
                     id="goal"
-                    class="border-b-2 border-white text-2xl text-white text-right w-24"
+                    class="border-b-2 border-white text-2xl text-white text-center w-24"
                     v-model="stitch.number"
                   />
                 </div>
               </div>
             </div>
           </div>
-          <div class="flex gap-3 my-10 flex-wrap text-white">
+          <div class="flex gap-5 my-10 flex-wrap justify-center text-white">
             <div
-              class="bg-orange-300 px-5 pt-2 rounded-full cursor-pointer"
+              class="bg-orange-300 px-4 py-1 flex items-center rounded-full cursor-pointer"
               @click="addStitchType('slip')"
               @keyup.s="addStitchType('slip')"
             >
-              <h2>Slip +</h2>
+              <h2 class="m-0">Slip +</h2>
             </div>
+
             <div
-              class="bg-orange-600 px-5 pt-2 rounded-full cursor-pointer"
+              class="bg-orange-600 px-4 py-1 items-center flex rounded-full cursor-pointer"
               @click="addStitchType('chain')"
               @keyup.s="addStitchType('chain')"
             >
-              <h2>Chain +</h2>
+              <h2 class="m-0">Chain +</h2>
             </div>
+
             <div
-              class="bg-emerald-700 px-5 pt-2 rounded-full cursor-pointer"
+              class="bg-emerald-700 px-4 py-1 flex items-center rounded-full cursor-pointer"
               @click="addStitchType('single')"
               @keyup.s="addStitchType('single')"
             >
-              <h2>Single +</h2>
+              <h2 class="m-0">Single +</h2>
             </div>
+
             <div
-              class="bg-sky-500 px-5 pt-2 rounded-full cursor-pointer"
+              class="bg-sky-500 px-4 py-1 flex items-center rounded-full cursor-pointer"
               @click="addStitchType('halfDouble')"
               @keyup.s="addStitchType('halfDouble')"
             >
-              <h2>Half double +</h2>
+              <h2 class="m-0">Half double +</h2>
             </div>
+
             <div
-              class="bg-lime-400 px-5 pt-2 rounded-full cursor-pointer"
+              class="bg-lime-400 px-4 py-1 flex items-center rounded-full cursor-pointer"
               @click="addStitchType('double')"
             >
-              <h2>Double +</h2>
+              <h2 class="m-0">Double +</h2>
             </div>
+
             <div
-              class="bg-blue-700 px-5 pt-2 rounded-full cursor-pointer"
+              class="bg-blue-700 px-4 py-1 flex items-center rounded-full cursor-pointer"
               @click="addStitchType('increase')"
             >
-              <h2>Increase +</h2>
+              <h2 class="m-0">Increase +</h2>
             </div>
+
             <div
-              class="bg-purple-700 px-5 pt-2 rounded-full cursor-pointer"
+              class="bg-purple-700 px-4 py-1 flex items-center rounded-full cursor-pointer"
               @click="addStitchType('decrease')"
             >
-              <h2>Decrease +</h2>
+              <h2 class="m-0">Decrease +</h2>
             </div>
           </div>
         </div>
