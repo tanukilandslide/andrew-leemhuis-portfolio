@@ -35,6 +35,50 @@
 
           <div class="flex flex-wrap gap-5">
             <div v-for="stitch in stitches" :key="stitch.id">
+              <!-- Slip -->
+
+              <div class="flex" v-if="stitch.stitch === 'slip'">
+                <div
+                  class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
+                  @click="deleteStichType(stitch.id)"
+                >
+                  X
+                </div>
+                <div
+                  class="bg-orange-300 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
+                >
+                  <h3>Slip</h3>
+                  <input
+                    type="number"
+                    id="goal"
+                    class="border-b-2 border-white text-2xl text-white text-right w-24"
+                    v-model="stitch.number"
+                  />
+                </div>
+              </div>
+
+              <!-- Chain -->
+
+              <div class="flex" v-if="stitch.stitch === 'chain'">
+                <div
+                  class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
+                  @click="deleteStichType(stitch.id)"
+                >
+                  X
+                </div>
+                <div
+                  class="bg-orange-600 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
+                >
+                  <h3>Chain</h3>
+                  <input
+                    type="number"
+                    id="goal"
+                    class="border-b-2 border-white text-2xl text-white text-right w-24"
+                    v-model="stitch.number"
+                  />
+                </div>
+              </div>
+
               <div class="flex" v-if="stitch.stitch === 'single'">
                 <div
                   class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
@@ -45,7 +89,27 @@
                 <div
                   class="bg-emerald-700 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
                 >
-                  <h3>single</h3>
+                  <h3>Single</h3>
+                  <input
+                    type="number"
+                    id="goal"
+                    class="border-b-2 border-white text-2xl text-white text-right w-24"
+                    v-model="stitch.number"
+                  />
+                </div>
+              </div>
+
+              <div class="flex" v-if="stitch.stitch === 'halfDouble'">
+                <div
+                  class="bg-red-600 px-5 py-2 object-center rounded-l-full cursor-pointer w-fit text-white flex"
+                  @click="deleteStichType(stitch.id)"
+                >
+                  X
+                </div>
+                <div
+                  class="bg-sky-500 px-5 py-2 object-center rounded-r-full cursor-pointer w-fit text-white flex"
+                >
+                  <h3>Half Double</h3>
                   <input
                     type="number"
                     id="goal"
@@ -118,11 +182,32 @@
           </div>
           <div class="flex gap-3 my-10 flex-wrap text-white">
             <div
+              class="bg-orange-300 px-5 pt-2 rounded-full cursor-pointer"
+              @click="addStitchType('slip')"
+              @keyup.s="addStitchType('slip')"
+            >
+              <h2>Slip +</h2>
+            </div>
+            <div
+              class="bg-orange-600 px-5 pt-2 rounded-full cursor-pointer"
+              @click="addStitchType('chain')"
+              @keyup.s="addStitchType('chain')"
+            >
+              <h2>Chain +</h2>
+            </div>
+            <div
               class="bg-emerald-700 px-5 pt-2 rounded-full cursor-pointer"
               @click="addStitchType('single')"
               @keyup.s="addStitchType('single')"
             >
               <h2>Single +</h2>
+            </div>
+            <div
+              class="bg-sky-500 px-5 pt-2 rounded-full cursor-pointer"
+              @click="addStitchType('halfDouble')"
+              @keyup.s="addStitchType('halfDouble')"
+            >
+              <h2>Half double +</h2>
             </div>
             <div
               class="bg-lime-400 px-5 pt-2 rounded-full cursor-pointer"
@@ -158,6 +243,30 @@
         >
           <div class="flex justify-center flex-wrap gap-5">
             <div v-for="stitch in stitchRhythm" :key="stitch.id">
+              <div class="flex" v-if="stitch.stitch === 'slip'">
+                <div
+                  :class="
+                    stitch.selected
+                      ? 'bg-orange-300 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                      : 'border-orange-300 border-2 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                  "
+                >
+                  <h3>Slip</h3>
+                </div>
+              </div>
+
+              <div class="flex" v-if="stitch.stitch === 'chain'">
+                <div
+                  :class="
+                    stitch.selected
+                      ? 'bg-orange-600 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                      : 'border-orange-600 border-2 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                  "
+                >
+                  <h3>Chain</h3>
+                </div>
+              </div>
+
               <div class="flex" v-if="stitch.stitch === 'single'">
                 <div
                   :class="
@@ -166,7 +275,19 @@
                       : ' border-emerald-700 border-2 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
                   "
                 >
-                  <h3>single</h3>
+                  <h3>Single</h3>
+                </div>
+              </div>
+
+              <div class="flex" v-if="stitch.stitch === 'halfDouble'">
+                <div
+                  :class="
+                    stitch.selected
+                      ? 'bg-sky-500 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                      : 'border-sky-500  border-2 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
+                  "
+                >
+                  <h3>Half Double</h3>
                 </div>
               </div>
 
@@ -178,7 +299,7 @@
                       : ' border-lime-700 border-2 px-5 pt-2 object-center rounded-full cursor-pointer w-fit text-white flex'
                   "
                 >
-                  <h3>double</h3>
+                  <h3>Double</h3>
                 </div>
               </div>
 
