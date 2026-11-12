@@ -159,11 +159,11 @@ store.setNavbarColor('winter')
 store.setBackgroundColor('winter')
 
 function setStitches() {
-  localStorage.setItem('completedStitches', stitchCounter.value)
+  localStorage.setItem('stitchCounter', stitchCounter.value)
 }
 
 function getStitches() {
-  stitchCounter.value = parseInt(localStorage.getItem('completedStitches'))
+  stitchCounter.value = parseInt(localStorage.getItem('stitchCounter'))
   stitchGoal.value = parseInt(localStorage.getItem('stitchGoal'))
 }
 

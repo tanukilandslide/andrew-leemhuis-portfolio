@@ -381,7 +381,7 @@
 
           <h3 class="text-white opacity-50 absolute bottom-0">Click inside to add a stitch!</h3>
         </div>
-        <div class="flex justify-around">
+        <div class="flex justify-around gap-3">
           <button
             @click="resetToZero()"
             class="text-white border border-white hover:border-4 hover:*:font-bold px-3 py-1.5 rounded-full my-auto"
@@ -417,18 +417,18 @@ const navbarHeight = store.navbarHeight
 
 let stitchCounter = ref(0)
 let stitchGoal = ref(0)
-let inputStitchGoal = ref(true)
+let inputStitchGoal = ref(false)
 let stitches = reactive([])
 let stitchRhythm = reactive([])
 let multiplier = ref(1)
+
+let stringifiedRhythm = reactive(JSON.stringify(stitchRhythm))
 
 let stitchHighlighter = 0
 
 let sumOfStitches = ref(0)
 
 function addStitchType(type) {
-  console.log(stitches[stitches.length - 1])
-
   if (stitches.length === 0) {
     stitches.push({ id: 1, stitch: type, number: 1, selected: false })
   } else if (stitches[stitches.length - 1].stitch === type) {
@@ -454,7 +454,6 @@ function deleteStichType(identifier) {
 function calculateTotalStitches() {
   sumOfStitches.value = 0
   for (let i = 0; i < stitches.length; i++) {
-    console.log(stitches[i].stitch)
     if (stitches[i].stitch === 'increase') {
       sumOfStitches.value += stitches[i].number * 2
     } else {
@@ -466,16 +465,7 @@ function calculateTotalStitches() {
 }
 
 function addStitch() {
-  // if (stitchHighlighter < stitches.length && stitches[stitchHighlighter].stitch === 'increase') {
-  //   if (stitches[stitchHighlighter].firstSelected === true) {
-  //     stitches[stitchHighlighter].secondSelectedSelected = true
-  //   } else {
-  //     stitches[stitchHighlighter].firstSelected = true
-  //   }
-  //   stitchHighlighter++
-  // } else
   if (stitchHighlighter < stitchRhythm.length) {
-    console.log(stitchRhythm[stitchHighlighter])
     stitchRhythm[stitchHighlighter].selected = true
     stitchHighlighter++
   } else if (stitchCounter.value === sumOfStitches.value) {
@@ -493,6 +483,9 @@ function addStitch() {
     stitchCounter.value++
     setStitches()
   }
+  localStorage.setItem('stitchCounterAdvanced', stitchCounter.value)
+  localStorage.setItem('stitchRhythm', JSON.stringify(stitchRhythm))
+  localStorage.setItem('stitchHighlighter', stitchHighlighter)
 }
 
 function removeStitch() {
@@ -523,7 +516,6 @@ function resetToZero() {
 function setStitchGoal() {
   inputStitchGoal.value = false
   stitchCounter.value = 0
-  localStorage.setItem('stitchGoal', stitchGoal.value)
 
   for (let stitch in stitches) {
     if (stitches[stitch].number === 1) {
@@ -553,7 +545,9 @@ function setStitchGoal() {
     }
   }
 
-  console.log(stitchRhythm)
+  localStorage.setItem('stitchRhythm', JSON.stringify(stitchRhythm))
+  localStorage.setItem('stitchCounterAdvanced', stitchCounter.value)
+  localStorage.setItem('sumOfStitches', sumOfStitches.value)
 }
 
 function newStitchGoal() {
@@ -570,12 +564,16 @@ store.setNavbarColor('winter')
 store.setBackgroundColor('winter')
 
 function setStitches() {
-  localStorage.setItem('completedStitches', stitchCounter.value)
+  localStorage.setItem('stitchCounterAdvanced', stitchCounter.value)
+  localStorage.setItem('stitchRhythm', JSON.stringify(stitchRhythm))
+  localStorage.setItem('stitchHighlighter', stitchHighlighter)
 }
 
 function getStitches() {
-  stitchCounter.value = parseInt(localStorage.getItem('completedStitches'))
-  stitchGoal.value = parseInt(localStorage.getItem('stitchGoal'))
+  stitchCounter.value = parseInt(localStorage.getItem('stitchCounterAdvanced'))
+  sumOfStitches.value = parseInt(localStorage.getItem('sumOfStitches'))
+  stitchRhythm = JSON.parse(localStorage.getItem('stitchRhythm'))
+  stitchHighlighter = parseInt(localStorage.getItem('stitchHighlighter'))
 }
 
 watch([stitches, multiplier], () => {
@@ -601,12 +599,12 @@ onKeyUp('r', (e) => {
   resetToZero()
 })
 
-// onMounted(() => {
-//   getStitches()
-//   if (stitchCounter.value || stitchGoal.value) {
-//     inputStitchGoal.value = false
-//   }
-// })
+onMounted(() => {
+  getStitches()
+  if (stitchCounter.value || stitchGoal.value) {
+    inputStitchGoal.value = false
+  }
+})
 </script>
 
 <style scoped>
