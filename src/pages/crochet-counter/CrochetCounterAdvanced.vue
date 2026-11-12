@@ -273,7 +273,7 @@
           <div class="flex gap-5">
             <h1 class="text-white">Total stitches: {{ sumOfStitches }}</h1>
             <input
-              class="border-2 border-white text-white rounded-full px-3 py-1 cursor-pointer"
+              class="border-2 border-white text-winter bg-white hover:font-bold rounded-full px-3 py-1 cursor-pointer"
               type="submit"
               value="Submit"
             />
@@ -364,15 +364,6 @@
                 >
                   <h3>increase</h3>
                 </div>
-                <!-- <div
-                :class="
-                  stitch.secondSelected
-                    ? 'bg-blue-700 px-5 pt-2 object-center rounded-r-full cursor-pointer w-fit text-white flex'
-                    : 'border-blue-700 border-2 px-5 pt-2 object-center rounded-r-full cursor-pointer w-fit text-white flex'
-                "
-              >
-                <h3>increase</h3>
-              </div> -->
               </div>
 
               <div class="flex" v-if="stitch.stitch === 'decrease'">
@@ -388,9 +379,6 @@
               </div>
             </div>
           </div>
-          <!-- <div>
-            {{ stitchRhythm }}
-          </div> -->
 
           <h2 class="text-8xl text-white">{{ stitchCounter }} / {{ sumOfStitches }}</h2>
 
@@ -411,7 +399,7 @@
           </button>
           <button
             @click="newStitchGoal()"
-            class="text-white border border-white hover:border-4 hover:*:font-bold px-3 py-1.5 rounded-full my-auto"
+            class="text-winter border border-white bg-white hover:font-bold px-3 py-1.5 rounded-full my-auto cursor-pointer"
           >
             Input New Row
           </button>
@@ -565,7 +553,7 @@ function setStitchGoal() {
 
 function newStitchGoal() {
   stitchCounter.value = 0
-  stitchGoal.value = null
+  sumOfStitches.value = 0
   stitches.length = 0
   stitchRhythm = []
   stitchHighlighter = 0
