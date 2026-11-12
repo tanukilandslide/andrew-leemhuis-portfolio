@@ -619,7 +619,7 @@ onMounted(() => {
   if (stitchCounter.value || stitchGoal.value) {
     inputStitchGoal.value = false
   } else {
-    inputStitchGoal.value = false
+    inputStitchGoal.value = true
   }
 })
 </script>
