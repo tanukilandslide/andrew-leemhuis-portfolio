@@ -623,6 +623,7 @@ onMounted(() => {
     inputStitchGoal.value = false
   } else {
     inputStitchGoal.value = true
+    stitchRhythm = []
   }
 })
 </script>

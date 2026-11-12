@@ -79,7 +79,7 @@
 
 <script setup>
 import { useStyleStore } from '@/stores/styles'
-import { ref, reactive, onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const store = useStyleStore()
 
@@ -88,41 +88,6 @@ const navbarHeight = store.navbarHeight
 let stitchCounter = ref(0)
 let stitchGoal = ref(0)
 let inputStitchGoal = ref(true)
-let stitches = reactive([])
-
-let sumOfStitches = ref(0)
-
-function addStitchType(type) {
-  console.log(stitches[stitches.length - 1])
-  if (stitches.length === 0) {
-    stitches.push({ id: 1, stitch: type, number: 1 })
-  } else if (stitches[stitches.length - 1].stitch === type) {
-    stitches[stitches.length - 1].number++
-  } else {
-    stitches.push({
-      id: stitches[stitches.length - 1].id + 1,
-      stitch: type,
-      number: 1,
-    })
-  }
-  calculateTotalStitches()
-}
-
-function deleteStichType(identifier) {
-  for (let i = 0; i < stitches.length; i++) {
-    if (stitches[i].id === identifier) {
-      stitches.splice(i, 1)
-    }
-  }
-  calculateTotalStitches()
-}
-
-function calculateTotalStitches() {
-  sumOfStitches.value = 0
-  for (let i = 0; i < stitches.length; i++) {
-    sumOfStitches.value += stitches[i].number
-  }
-}
 
 function addStitch() {
   if (stitchCounter.value < stitchGoal.value) {
