@@ -569,7 +569,7 @@ function newStitchGoal() {
   stitchCounter.value = 0
   stitchGoal.value = null
   stitches.length = 0
-  stitchRhythm.length = 0
+  stitchRhythm = []
   stitchHighlighter = 0
   multiplier.value = 1
   inputStitchGoal.value = true
@@ -617,6 +617,8 @@ onKeyUp('r', (e) => {
 onMounted(() => {
   getStitches()
   if (stitchCounter.value || stitchGoal.value) {
+    inputStitchGoal.value = false
+  } else {
     inputStitchGoal.value = false
   }
 })
