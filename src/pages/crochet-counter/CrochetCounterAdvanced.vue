@@ -1,10 +1,7 @@
 <template>
-  <main class="bg-winter h-full">
-    <div class="mx-auto w-screen h-fit justify-center flex">
-      <div
-        v-if="inputStitchGoal"
-        class="screen-height h-full w-screen flex flex-col gap-3 justify-start items-center"
-      >
+  <main class="bg-winter">
+    <div class="mx-auto w-screen justify-center flex min-h-[92.5vh]">
+      <div v-if="inputStitchGoal" class="w-screen flex flex-col gap-3 justify-start items-center">
         <div
           class="py-10 m-5 flex flex-col gap-5 justify-center items-center mb-5 rounded-2xl relative"
         >
@@ -257,7 +254,7 @@
         <!-- <div class="flex flex-col flex-wrap gap-5"> -->
         <form
           action=""
-          class="flex flex-col gap-5 items-center w-fit"
+          class="flex flex-col gap-5 items-center w-fit mb-10"
           @submit.prevent="setStitchGoal()"
         >
           <div class="flex gap-5 flex-wrap">
@@ -439,8 +436,6 @@ let inputStitchGoal = ref(false)
 let stitches = reactive([])
 let stitchRhythm = reactive([])
 let multiplier = ref(1)
-
-let stringifiedRhythm = reactive(JSON.stringify(stitchRhythm))
 
 let stitchHighlighter = 0
 
